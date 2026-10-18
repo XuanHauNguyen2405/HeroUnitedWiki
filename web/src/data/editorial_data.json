@@ -1,0 +1,34 @@
+{
+  "tier_list": {
+    "status": "draft",
+    "title": "Bảng Xếp Hạng Tướng (Tier List)",
+    "message": "Chưa có nội dung biên tập chính thức. Nhóm biên tập viên đang kiểm nghiệm thực chiến để cập nhật thứ hạng chính xác.",
+    "sections": []
+  },
+  "guides": [
+    {
+      "id": "starter-guide",
+      "title": "Hướng Dẫn Nhập Môn Tân Thủ",
+      "category": "Cơ bản",
+      "status": "draft",
+      "summary": "Tổng quan cơ chế tướng, trang bị, cách build đội hình khởi đầu hiệu quả.",
+      "message": "Nội dung bài viết đang được nhóm biên tập hoàn thiện."
+    },
+    {
+      "id": "suit-synergy",
+      "title": "Tối Ưu Hóa Hiệu Ứng Bộ Trang Bị",
+      "category": "Trang bị",
+      "status": "draft",
+      "summary": "Phân tích mốc kích hoạt 2 món, 3 món, 4 món và cách kết hợp duyên phận tướng.",
+      "message": "Nội dung bài viết đang được nhóm biên tập hoàn thiện."
+    },
+    {
+      "id": "fate-gems-guide",
+      "title": "Cẩm Nang Ban Sức Vận Mệnh & Huy Hiệu",
+      "category": "Ban Sức",
+      "status": "draft",
+      "summary": "Chi tiết 10 hệ Đá Ban Sức và 112 Huy Hiệu kích hoạt kỹ năng tổ hợp đội hình.",
+      "message": "Nội dung bài viết đang được nhóm biên tập hoàn thiện."
+    }
+  ]
+}

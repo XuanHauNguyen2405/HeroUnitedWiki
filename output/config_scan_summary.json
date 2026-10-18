@@ -1,0 +1,3544 @@
+{
+  "json_files": {
+    "Refinement.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "count",
+        "quality_weights"
+      ]
+    },
+    "Refinement_cost.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "cost_lock",
+        "cost",
+        "unlock"
+      ]
+    },
+    "achieve.config": {
+      "type": "dict",
+      "count": 75,
+      "sample_keys": [
+        "reward_super_step",
+        "super_step",
+        "step",
+        "version",
+        "reward_step",
+        "bre",
+        "reward_bre"
+      ]
+    },
+    "active.config": {
+      "type": "dict",
+      "count": 23,
+      "sample_keys": [
+        "reward_show",
+        "des",
+        "open_flag",
+        "open_time_word",
+        "is_see",
+        "active_chapterID",
+        "button",
+        "level"
+      ]
+    },
+    "active_chapter.config": {
+      "type": "dict",
+      "count": 49,
+      "sample_keys": [
+        "reward_show",
+        "minus_sort",
+        "vip_buy",
+        "open_time_word",
+        "is_see",
+        "level",
+        "exp_character",
+        "open"
+      ]
+    },
+    "active_consume.config": {
+      "type": "dict",
+      "count": 1425,
+      "sample_keys": [
+        "server_id",
+        "repeat",
+        "level",
+        "show_time",
+        "start_time",
+        "des",
+        "show_id",
+        "num"
+      ]
+    },
+    "active_detail.config": {
+      "type": "dict",
+      "count": 180,
+      "sample_keys": [
+        "reward_sweep_base",
+        "reward2",
+        "reward3",
+        "reward_sweep_rate",
+        "boss_resource",
+        "combat_need",
+        "action_point",
+        "reward_first_base"
+      ]
+    },
+    "active_inreview.config": {
+      "type": "dict",
+      "count": 56,
+      "sample_keys": [
+        "story",
+        "VIP_limit",
+        "name",
+        "default",
+        "is_open",
+        "show_lv"
+      ]
+    },
+    "active_recharge.config": {
+      "type": "dict",
+      "count": 2529,
+      "sample_keys": [
+        "charge_type",
+        "server_id",
+        "repeat",
+        "show_id",
+        "level",
+        "show_time",
+        "start_time",
+        "des"
+      ]
+    },
+    "adver.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "word",
+        "title",
+        "start_time",
+        "mark",
+        "ad_title",
+        "end_time",
+        "time",
+        "adver_type"
+      ]
+    },
+    "afterlife.config": {
+      "type": "dict",
+      "count": 120,
+      "sample_keys": [
+        "building",
+        "mission2",
+        "mission3",
+        "active_chapterID",
+        "mission1",
+        "afterlife_point",
+        "des1",
+        "des2"
+      ]
+    },
+    "afterlife_chapter.config": {
+      "type": "dict",
+      "count": 140,
+      "sample_keys": [
+        "reward_show",
+        "minus_sort",
+        "vip_buy",
+        "open_time_word",
+        "is_see",
+        "level",
+        "exp_character",
+        "open"
+      ]
+    },
+    "afterlife_enemy.config": {
+      "type": "dict",
+      "count": 199,
+      "sample_keys": [
+        "water_dfs",
+        "crit",
+        "earth",
+        "speed",
+        "fire_dfs",
+        "loot_non",
+        "img",
+        "skill3"
+      ]
+    },
+    "afterlife_fight.config": {
+      "type": "dict",
+      "count": 139,
+      "sample_keys": [
+        "team_rage",
+        "position2",
+        "position3",
+        "alternate5",
+        "position1",
+        "position4",
+        "position5",
+        "reward_exp_role"
+      ]
+    },
+    "anti_group.config": {
+      "type": "dict",
+      "count": 299,
+      "sample_keys": [
+        "card",
+        "anti_group"
+      ]
+    },
+    "arena_shop.config": {
+      "type": "dict",
+      "count": 10,
+      "sample_keys": [
+        "shop_icon",
+        "shop_reward",
+        "refresh",
+        "times",
+        "need_point",
+        "show_level"
+      ]
+    },
+    "assistant.config": {
+      "type": "dict",
+      "count": 9,
+      "sample_keys": [
+        "sort",
+        "level_up",
+        "actlv",
+        "att_value",
+        "cardlimit",
+        "lock",
+        "price",
+        "att_type"
+      ]
+    },
+    "assistant_random.config": {
+      "type": "dict",
+      "count": 572,
+      "sample_keys": [
+        "quality",
+        "ability",
+        "weight"
+      ]
+    },
+    "auto_sweep.config": {
+      "type": "dict",
+      "count": 25,
+      "sample_keys": [
+        "150003",
+        "178003",
+        "147012",
+        "173001",
+        "152011",
+        "140004",
+        "172004",
+        "142020"
+      ]
+    },
+    "background_charge.config": {
+      "type": "dict",
+      "count": 10,
+      "sample_keys": [
+        "music_show",
+        "background_button",
+        "background_animation",
+        "background_tree",
+        "music",
+        "background",
+        "is_open"
+      ]
+    },
+    "badge.config": {
+      "type": "dict",
+      "count": 112,
+      "sample_keys": [
+        "image_S",
+        "skill_num",
+        "need_exp",
+        "sprite_py",
+        "base_up",
+        "badge_level",
+        "badge_sort",
+        "image_L"
+      ]
+    },
+    "badge_equip.config": {
+      "type": "dict",
+      "count": 160,
+      "sample_keys": [
+        "trans_exp"
+      ]
+    },
+    "badge_refinement.config": {
+      "type": "dict",
+      "count": 30,
+      "sample_keys": [
+        "effect_increase",
+        "des",
+        "skill_quality",
+        "effect",
+        "skill_sort",
+        "icon"
+      ]
+    },
+    "badge_skill_combination.config": {
+      "type": "dict",
+      "count": 9,
+      "sample_keys": [
+        "pre_cd",
+        "badge_sort",
+        "attr_effect",
+        "sprite_py",
+        "trigger_type",
+        "type_des",
+        "skill_quality",
+        "effect"
+      ]
+    },
+    "badge_txet.config": {
+      "type": "dict",
+      "count": 6,
+      "sample_keys": [
+        "sort",
+        "des",
+        "name"
+      ]
+    },
+    "bandit.config": {
+      "type": "dict",
+      "count": 231,
+      "sample_keys": [
+        "notice",
+        "git_coin",
+        "start_time",
+        "version",
+        "end_time",
+        "coin",
+        "reward_coin",
+        "id"
+      ]
+    },
+    "bigholiday.config": {
+      "type": "dict",
+      "count": 1810,
+      "sample_keys": [
+        "reward",
+        "version",
+        "des",
+        "num",
+        "holiday_sort",
+        "type",
+        "icon"
+      ]
+    },
+    "bigholiday_time.config": {
+      "type": "dict",
+      "count": 52,
+      "sample_keys": [
+        "start_time",
+        "end_time"
+      ]
+    },
+    "bounty_detail.config": {
+      "type": "dict",
+      "count": 11554,
+      "sample_keys": [
+        "story",
+        "target_data",
+        "target_sort",
+        "open_sort",
+        "close_data",
+        "rate",
+        "version",
+        "close_sort"
+      ]
+    },
+    "bounty_order.config": {
+      "type": "dict",
+      "count": 109,
+      "sample_keys": [
+        "charge_type",
+        "notice",
+        "reward_show_3",
+        "reward_show_2",
+        "reward_show_1",
+        "start_time",
+        "refresh",
+        "end_time"
+      ]
+    },
+    "bounty_reward.config": {
+      "type": "dict",
+      "count": 1308,
+      "sample_keys": [
+        "sort",
+        "team_id",
+        "version",
+        "reward"
+      ]
+    },
+    "bowl.config": {
+      "type": "dict",
+      "count": 371,
+      "sample_keys": [
+        "notice",
+        "start_time",
+        "get_score",
+        "need_num",
+        "end_time",
+        "need_sort"
+      ]
+    },
+    "bowl_reward.config": {
+      "type": "dict",
+      "count": 1113,
+      "sample_keys": [
+        "sort",
+        "reward_show",
+        "version",
+        "id",
+        "need_score2",
+        "need_score1",
+        "personal_limit",
+        "reward"
+      ]
+    },
+    "box.config": {
+      "type": "dict",
+      "count": 1974,
+      "sample_keys": []
+    },
+    "breakthrough.config": {
+      "type": "dict",
+      "count": 3400,
+      "sample_keys": [
+        "need_material",
+        "character_id",
+        "need_money",
+        "abilitys"
+      ]
+    },
+    "card_collection.config": {
+      "type": "dict",
+      "count": 302,
+      "sample_keys": [
+        "collect_card",
+        "start_time",
+        "version",
+        "end_time",
+        "id",
+        "card"
+      ]
+    },
+    "chain.config": {
+      "type": "dict",
+      "count": 1363,
+      "sample_keys": [
+        "condition_sort",
+        "des",
+        "data",
+        "name",
+        "effect"
+      ]
+    },
+    "character_break_new.config": {
+      "type": "dict",
+      "count": 393,
+      "sample_keys": [
+        "story_detail2",
+        "character_id",
+        "break_story10",
+        "material10",
+        "material1",
+        "material2",
+        "material3",
+        "material4"
+      ]
+    },
+    "character_detail.config": {
+      "type": "dict",
+      "count": 721,
+      "sample_keys": [
+        "occupation_shade",
+        "base_hp",
+        "chain",
+        "skill_5_source",
+        "break5",
+        "break4",
+        "is_skin",
+        "super_evo"
+      ]
+    },
+    "character_skin.config": {
+      "type": "dict",
+      "count": 5,
+      "sample_keys": [
+        "open_cost",
+        "add_ability",
+        "refresh_cost"
+      ]
+    },
+    "character_strengthen.config": {
+      "type": "dict",
+      "count": 60,
+      "sample_keys": [
+        "need_crstal_patk",
+        "need_time",
+        "need_crstal_speed",
+        "need_crstal_def",
+        "need_crstal_matk",
+        "add_patk",
+        "need_crstal_hp",
+        "add_speed"
+      ]
+    },
+    "charge.config": {
+      "type": "dict",
+      "count": 22,
+      "sample_keys": [
+        "is_show",
+        "is_double",
+        "gift_coin",
+        "point_card",
+        "vip_exp",
+        "price",
+        "des",
+        "name"
+      ]
+    },
+    "chuzheng_rank.config": {
+      "type": "dict",
+      "count": 300,
+      "sample_keys": [
+        "version",
+        "rank",
+        "reward"
+      ]
+    },
+    "chuzheng_task.config": {
+      "type": "dict",
+      "count": 8,
+      "sample_keys": [
+        "break_ss",
+        "reward_s",
+        "evolution_ss",
+        "name",
+        "evolution_sss",
+        "evolution_s",
+        "reward_sss",
+        "break_s"
+      ]
+    },
+    "chuzheng_version.config": {
+      "type": "dict",
+      "count": 75,
+      "sample_keys": [
+        "task",
+        "score_sss",
+        "start_time",
+        "attention",
+        "score_s",
+        "end_time",
+        "score_ss",
+        "need"
+      ]
+    },
+    "clone_lane.config": {
+      "type": "dict",
+      "count": 277,
+      "sample_keys": [
+        "reward_1",
+        "reward_2",
+        "reward_3",
+        "reward_4",
+        "reward_5",
+        "reward_1_show",
+        "des_1",
+        "start_time"
+      ]
+    },
+    "code.config": {
+      "type": "dict",
+      "count": 758,
+      "sample_keys": [
+        "name",
+        "open",
+        "reward_des",
+        "refresh",
+        "unite_code",
+        "close",
+        "reward",
+        "type"
+      ]
+    },
+    "colosseum_limited.config": {
+      "type": "dict",
+      "count": 26,
+      "sample_keys": [
+        "card_sort",
+        "time_spend",
+        "recover_time",
+        "name",
+        "img",
+        "map_sort",
+        "recover_money",
+        "card_id"
+      ]
+    },
+    "colosseum_mp.config": {
+      "type": "dict",
+      "count": 78,
+      "sample_keys": [
+        "sort",
+        "column11",
+        "column10",
+        "column13",
+        "column12",
+        "column9",
+        "column8",
+        "list_id"
+      ]
+    },
+    "colosseum_num.config": {
+      "type": "dict",
+      "count": 26,
+      "sample_keys": [
+        "sort",
+        "elite_num",
+        "boss_num",
+        "time"
+      ]
+    },
+    "colosseum_opening.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "sort_time",
+        "open",
+        "sort_sort"
+      ]
+    },
+    "colosseum_rankreward.config": {
+      "type": "dict",
+      "count": 1014,
+      "sample_keys": [
+        "sort",
+        "version",
+        "rank",
+        "award"
+      ]
+    },
+    "combiner.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "growth_hp",
+        "story",
+        "combine_card",
+        "name",
+        "img",
+        "combine_ani",
+        "base_matk",
+        "ability_rate"
+      ]
+    },
+    "combiner_advanced.config": {
+      "type": "dict",
+      "count": 49,
+      "sample_keys": [
+        "name",
+        "nature",
+        "des",
+        "des1",
+        "nature_show",
+        "skill",
+        "quality"
+      ]
+    },
+    "combiner_base.config": {
+      "type": "dict",
+      "count": 120,
+      "sample_keys": [
+        "exp",
+        "level"
+      ]
+    },
+    "combiner_evo.config": {
+      "type": "dict",
+      "count": 28,
+      "sample_keys": [
+        "level",
+        "nature",
+        "des",
+        "advanced_item",
+        "step",
+        "nature_show",
+        "need",
+        "quality"
+      ]
+    },
+    "combiner_skill_detail.config": {
+      "type": "dict",
+      "count": 28,
+      "sample_keys": [
+        "attr_effect",
+        "skill_icon",
+        "cd",
+        "rate",
+        "skill_story",
+        "effect_lvchange",
+        "is_learn",
+        "sprite_py"
+      ]
+    },
+    "commander_recipe.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "sort",
+        "name",
+        "pvp_rate",
+        "pve_rate",
+        "part",
+        "is_show",
+        "exp",
+        "quality"
+      ]
+    },
+    "constellation_detail.config": {
+      "type": "dict",
+      "count": 12,
+      "sample_keys": [
+        "fight50",
+        "active_start",
+        "fight20",
+        "tiltle_name",
+        "limit_capacity",
+        "fight30",
+        "fight31",
+        "fight18"
+      ]
+    },
+    "constellation_reward.config": {
+      "type": "dict",
+      "count": 12,
+      "sample_keys": [
+        "reward_boss5",
+        "reward_boss3",
+        "reward_luck",
+        "reward_luck2",
+        "luck_time",
+        "reward_boss4",
+        "reward_boss1",
+        "boss_end"
+      ]
+    },
+    "contract.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "notice",
+        "start_time",
+        "fire_time",
+        "rate",
+        "end_time",
+        "fire_des",
+        "score_add_max",
+        "fire_score"
+      ]
+    },
+    "contract_detail.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "sort",
+        "reward_show_final",
+        "vip_limit",
+        "max_rate",
+        "reward_show_base",
+        "server_score",
+        "version",
+        "coin"
+      ]
+    },
+    "contract_fire_cup.config": {
+      "type": "dict",
+      "count": 8,
+      "sample_keys": [
+        "reward_send",
+        "fire_id",
+        "version",
+        "server_player",
+        "coin",
+        "max_score",
+        "id"
+      ]
+    },
+    "contract_rate.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "sort",
+        "score",
+        "rate",
+        "version",
+        "has_reduce",
+        "reward",
+        "id"
+      ]
+    },
+    "contract_reduce.config": {
+      "type": "dict",
+      "count": 16,
+      "sample_keys": [
+        "day_2",
+        "day_3",
+        "day_1"
+      ]
+    },
+    "contract_reward.config": {
+      "type": "dict",
+      "count": 6,
+      "sample_keys": [
+        "sort",
+        "version",
+        "gamer",
+        "time",
+        "mail",
+        "reward",
+        "id"
+      ]
+    },
+    "contract_score_reward.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "version",
+        "cost",
+        "id",
+        "reward"
+      ]
+    },
+    "cosmic_war.config": {
+      "type": "dict",
+      "count": 45,
+      "sample_keys": [
+        "register_end_time",
+        "fight_end_time",
+        "prepare_time",
+        "active_end_time",
+        "vip",
+        "register_start_time",
+        "fight_start_time",
+        "limit_attack"
+      ]
+    },
+    "cosmic_war_city.config": {
+      "type": "dict",
+      "count": 40,
+      "sample_keys": [
+        "sort",
+        "point",
+        "move",
+        "zoom",
+        "effect",
+        "points",
+        "icon"
+      ]
+    },
+    "cosmic_war_group.config": {
+      "type": "dict",
+      "count": 2143,
+      "sample_keys": []
+    },
+    "cosmic_war_reward.config": {
+      "type": "dict",
+      "count": 135,
+      "sample_keys": [
+        "version",
+        "rank",
+        "reward"
+      ]
+    },
+    "cosmic_war_reward_attack.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "num",
+        "reward"
+      ]
+    },
+    "cosmic_war_reward_personal.config": {
+      "type": "dict",
+      "count": 205,
+      "sample_keys": [
+        "version",
+        "rank",
+        "reward"
+      ]
+    },
+    "cosmic_war_txt.config": {
+      "type": "dict",
+      "count": 23,
+      "sample_keys": [
+        "txt"
+      ]
+    },
+    "crowdfunding.config": {
+      "type": "dict",
+      "count": 8,
+      "sample_keys": [
+        "reward_time",
+        "title",
+        "image",
+        "des",
+        "pay_number",
+        "content",
+        "end_time",
+        "reward_pay"
+      ]
+    },
+    "dinner.config": {
+      "type": "dict",
+      "count": 236,
+      "sample_keys": [
+        "dinner_plus_num",
+        "notice",
+        "dinner_limit",
+        "dinner_num",
+        "dinner_plus_give",
+        "start_time",
+        "dinner",
+        "dinner_give"
+      ]
+    },
+    "egg_diamond.config": {
+      "type": "dict",
+      "count": 146,
+      "sample_keys": [
+        "reward_1",
+        "reward_2",
+        "reward_3",
+        "super_item_higher",
+        "price",
+        "notice",
+        "number",
+        "reward_chance"
+      ]
+    },
+    "egg_item.config": {
+      "type": "dict",
+      "count": 146,
+      "sample_keys": [
+        "reward_1",
+        "reward_2",
+        "reward_3",
+        "notice",
+        "price",
+        "number",
+        "need_recharge",
+        "reward_chance"
+      ]
+    },
+    "equip.config": {
+      "type": "dict",
+      "count": 4366,
+      "sample_keys": [
+        "image",
+        "cd",
+        "exchange_id",
+        "quality",
+        "sprite_py",
+        "afterlife",
+        "is_resolve",
+        "chain_id"
+      ]
+    },
+    "equip_evolution.config": {
+      "type": "dict",
+      "count": 3550,
+      "sample_keys": [
+        "equip_material_1",
+        "equip_material_3",
+        "equip_material_2",
+        "metal"
+      ]
+    },
+    "equip_gacha.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "good_point",
+        "consume_sort",
+        "gacha_name",
+        "gacha_team",
+        "get_card",
+        "image_active",
+        "is_box",
+        "story"
+      ]
+    },
+    "equip_gem_fate_skill.config": {
+      "type": "dict",
+      "count": 40,
+      "sample_keys": [
+        "name",
+        "sprite_py",
+        "des",
+        "skill_quality",
+        "effect",
+        "cd",
+        "skill_type",
+        "effect_type"
+      ]
+    },
+    "equip_gem_fate_txt.config": {
+      "type": "dict",
+      "count": 11,
+      "sample_keys": [
+        "sort",
+        "txt"
+      ]
+    },
+    "equip_gem_fate_word.config": {
+      "type": "dict",
+      "count": 120,
+      "sample_keys": [
+        "sort",
+        "level",
+        "des",
+        "skill_quality",
+        "level4_lack",
+        "level6_lack",
+        "level5_lack",
+        "minimum_name"
+      ]
+    },
+    "exchange.config": {
+      "type": "dict",
+      "count": 422,
+      "sample_keys": [
+        "change_sort",
+        "change_time",
+        "change_id",
+        "need_metal",
+        "need_item",
+        "need_num",
+        "need_food",
+        "shade"
+      ]
+    },
+    "famous.config": {
+      "type": "dict",
+      "count": 116,
+      "sample_keys": [
+        "gate6_3",
+        "gate6_2",
+        "gate6_1",
+        "gate7_2",
+        "gate7_3",
+        "gate7_1",
+        "gate4_1",
+        "gate4_3"
+      ]
+    },
+    "famous_group.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "famous_id",
+        "group_banner",
+        "group_name"
+      ]
+    },
+    "fate_rune_character.config": {
+      "type": "dict",
+      "count": 162,
+      "sample_keys": [
+        "character_id",
+        "weight"
+      ]
+    },
+    "fight_weak.config": {
+      "type": "dict",
+      "count": 20,
+      "sample_keys": [
+        "reward_show",
+        "target_sort_1",
+        "reset_num",
+        "target_data2",
+        "target_data1",
+        "target_des1",
+        "fight_ID",
+        "is_hard"
+      ]
+    },
+    "fire_reward.config": {
+      "type": "dict",
+      "count": 128,
+      "sample_keys": [
+        "common_reward3",
+        "limit_ins",
+        "common_reward1",
+        "notice_1",
+        "common_reward3_show",
+        "common_reward2",
+        "limite_reward_num",
+        "start_time"
+      ]
+    },
+    "fire_score.config": {
+      "type": "dict",
+      "count": 128,
+      "sample_keys": [
+        "score_add_max",
+        "score_add1",
+        "min_score",
+        "score",
+        "score_add"
+      ]
+    },
+    "fire_shop.config": {
+      "type": "dict",
+      "count": 40,
+      "sample_keys": [
+        "type",
+        "num",
+        "selloff",
+        "all_num",
+        "coin"
+      ]
+    },
+    "foundation.config": {
+      "type": "dict",
+      "count": 432,
+      "sample_keys": [
+        "reward_show",
+        "notice",
+        "day4",
+        "day6",
+        "day7",
+        "start_time",
+        "day5",
+        "day2"
+      ]
+    },
+    "funeng_competiton.config": {
+      "type": "dict",
+      "count": 141,
+      "sample_keys": [
+        "mail_title",
+        "start_time",
+        "end_time",
+        "show_end_time",
+        "tips"
+      ]
+    },
+    "funeng_competiton_gacha.config": {
+      "type": "dict",
+      "count": 141,
+      "sample_keys": [
+        "special_times",
+        "gacha_reward",
+        "need_2",
+        "need_1",
+        "special_reward"
+      ]
+    },
+    "funeng_competiton_rank.config": {
+      "type": "dict",
+      "count": 1160,
+      "sample_keys": [
+        "version",
+        "rank_id",
+        "rank_reward"
+      ]
+    },
+    "funeng_competiton_task.config": {
+      "type": "dict",
+      "count": 2951,
+      "sample_keys": [
+        "task_reward",
+        "task_type",
+        "version",
+        "fraction",
+        "task_des",
+        "task_num1"
+      ]
+    },
+    "game_config_version.config": {
+      "type": "dict",
+      "count": 526,
+      "sample_keys": []
+    },
+    "gashapon.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "reward_0",
+        "reward_1",
+        "reward_2",
+        "reward_3",
+        "reward_4",
+        "reward_5",
+        "reward_6",
+        "start_time"
+      ]
+    },
+    "gashapon_exp.config": {
+      "type": "dict",
+      "count": 6,
+      "sample_keys": [
+        "need_exp"
+      ]
+    },
+    "gashapon_price.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "price_diamond",
+        "limit_item",
+        "exp_item",
+        "price_item",
+        "exp_diamond"
+      ]
+    },
+    "global_value.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "value"
+      ]
+    },
+    "god_field_exchange.config": {
+      "type": "dict",
+      "count": 26,
+      "sample_keys": [
+        "des",
+        "refresh",
+        "times",
+        "cost1",
+        "cost2",
+        "show_level",
+        "reward"
+      ]
+    },
+    "godfield_arena_shop.config": {
+      "type": "dict",
+      "count": 13,
+      "sample_keys": [
+        "shop_icon",
+        "shop_reward",
+        "refresh",
+        "times",
+        "need_point",
+        "show_level"
+      ]
+    },
+    "gringotts.config": {
+      "type": "dict",
+      "count": 145,
+      "sample_keys": [
+        "time1",
+        "quickly_point",
+        "start_time",
+        "des1",
+        "time2",
+        "refresh_coin",
+        "coin_point3",
+        "coin_point2"
+      ]
+    },
+    "gringotts_rate.config": {
+      "type": "dict",
+      "count": 1305,
+      "sample_keys": [
+        "coin_down",
+        "coin_up",
+        "id",
+        "version",
+        "limit",
+        "refresh_rate_down",
+        "refresh_rate_up"
+      ]
+    },
+    "group_outpost.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "keep_time",
+        "ticket_guild",
+        "fail_return",
+        "map_random_type",
+        "open_time",
+        "best_reward",
+        "ticket_single",
+        "maze_reward"
+      ]
+    },
+    "group_outpost_enemy.config": {
+      "type": "dict",
+      "count": 17,
+      "sample_keys": [
+        "des",
+        "water_dfs",
+        "subAttrHurt",
+        "crit",
+        "earth",
+        "skill",
+        "speed",
+        "hp_inherit"
+      ]
+    },
+    "group_outpost_first.config": {
+      "type": "dict",
+      "count": 17,
+      "sample_keys": [
+        "sort",
+        "need_times",
+        "boss_list",
+        "attr",
+        "des",
+        "enemy_list",
+        "name",
+        "attack_cd"
+      ]
+    },
+    "group_outpost_maze.config": {
+      "type": "dict",
+      "count": 98,
+      "sample_keys": [
+        "sort",
+        "column11",
+        "column10",
+        "column13",
+        "column12",
+        "column9",
+        "column8",
+        "list_id"
+      ]
+    },
+    "group_rank.config": {
+      "type": "dict",
+      "count": 820,
+      "sample_keys": [
+        "diamond_off",
+        "version",
+        "des",
+        "rank",
+        "active_id"
+      ]
+    },
+    "group_score.config": {
+      "type": "dict",
+      "count": 82,
+      "sample_keys": [
+        "score_add_max",
+        "min_score",
+        "reward",
+        "score",
+        "score_add"
+      ]
+    },
+    "group_shop.config": {
+      "type": "dict",
+      "count": 410,
+      "sample_keys": [
+        "coin",
+        "num",
+        "version",
+        "selloff",
+        "shop_id",
+        "reward"
+      ]
+    },
+    "group_show.config": {
+      "type": "dict",
+      "count": 984,
+      "sample_keys": [
+        "sort",
+        "item",
+        "version"
+      ]
+    },
+    "group_version.config": {
+      "type": "dict",
+      "count": 82,
+      "sample_keys": [
+        "notice_1",
+        "notice_2",
+        "start_time",
+        "des",
+        "end_time",
+        "date"
+      ]
+    },
+    "guild_high_war_base.config": {
+      "type": "dict",
+      "count": 35,
+      "sample_keys": [
+        "money",
+        "start_time",
+        "freecard",
+        "end_time",
+        "daily_num"
+      ]
+    },
+    "guild_high_war_box.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "get_max",
+        "des",
+        "box_reward",
+        "box_icon"
+      ]
+    },
+    "guild_high_war_build.config": {
+      "type": "dict",
+      "count": 49,
+      "sample_keys": [
+        "sort",
+        "box",
+        "city_icon",
+        "city_zone",
+        "buff1",
+        "attack_num",
+        "radiation",
+        "city_des"
+      ]
+    },
+    "guild_high_war_card.config": {
+      "type": "dict",
+      "count": 140,
+      "sample_keys": [
+        "card_sort",
+        "buy_id",
+        "version",
+        "start_time",
+        "card_price",
+        "send_num",
+        "level_8",
+        "level_9"
+      ]
+    },
+    "guild_high_war_fate.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "sort",
+        "is_battle",
+        "fate_id",
+        "get_max",
+        "fate_max",
+        "fate_num",
+        "need",
+        "reward"
+      ]
+    },
+    "guild_high_war_group.config": {
+      "type": "dict",
+      "count": 269,
+      "sample_keys": [
+        "servers_world",
+        "servers_body",
+        "atk_limit",
+        "servers_brain",
+        "servers_hand",
+        "version",
+        "group_id",
+        "hire_limit"
+      ]
+    },
+    "guild_high_war_open.config": {
+      "type": "dict",
+      "count": 12,
+      "sample_keys": [
+        "show_day",
+        "sort",
+        "timing",
+        "open_des"
+      ]
+    },
+    "guild_high_war_pic.config": {
+      "type": "dict",
+      "count": 12,
+      "sample_keys": [
+        "union_icon"
+      ]
+    },
+    "guild_high_war_product.config": {
+      "type": "dict",
+      "count": 5,
+      "sample_keys": [
+        "place_num",
+        "bulid_level",
+        "taxation",
+        "product3",
+        "product2",
+        "product1",
+        "build_sort"
+      ]
+    },
+    "guild_high_war_reward_person.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "reward",
+        "rank"
+      ]
+    },
+    "guild_high_war_reward_season.config": {
+      "type": "dict",
+      "count": 11,
+      "sample_keys": [
+        "need",
+        "reward"
+      ]
+    },
+    "guild_high_war_science.config": {
+      "type": "dict",
+      "count": 10,
+      "sample_keys": [
+        "buff6",
+        "science_icon",
+        "buff2",
+        "level",
+        "price",
+        "des",
+        "item",
+        "rate"
+      ]
+    },
+    "guild_high_war_sciencestar.config": {
+      "type": "dict",
+      "count": 14,
+      "sample_keys": [
+        "reward"
+      ]
+    },
+    "guild_high_war_shop.config": {
+      "type": "dict",
+      "count": 128,
+      "sample_keys": [
+        "shop",
+        "show_time",
+        "shop_reward",
+        "need_value",
+        "need_sort",
+        "show_level",
+        "buy_limit"
+      ]
+    },
+    "guild_high_war_text.config": {
+      "type": "dict",
+      "count": 58,
+      "sample_keys": [
+        "text_id",
+        "sort",
+        "des"
+      ]
+    },
+    "guild_high_war_word.config": {
+      "type": "dict",
+      "count": 30,
+      "sample_keys": [
+        "sort",
+        "des"
+      ]
+    },
+    "guild_shop_item.config": {
+      "type": "dict",
+      "count": 32,
+      "sample_keys": [
+        "need_gongxian",
+        "shop_icon",
+        "total_num",
+        "shop_reward",
+        "refresh",
+        "show_type",
+        "need_shoplevel",
+        "show_level"
+      ]
+    },
+    "hero_chapter.config": {
+      "type": "dict",
+      "count": 32,
+      "sample_keys": [
+        "reward_show",
+        "minus_sort",
+        "vip_buy",
+        "open_time_word",
+        "is_see",
+        "level",
+        "exp_character",
+        "open"
+      ]
+    },
+    "highway_lack.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "reward_luck",
+        "score",
+        "rank"
+      ]
+    },
+    "highway_num.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "sort",
+        "lack",
+        "bufffix"
+      ]
+    },
+    "highway_reward.config": {
+      "type": "dict",
+      "count": 17,
+      "sample_keys": [
+        "sort",
+        "reward",
+        "target2",
+        "target1"
+      ]
+    },
+    "highway_ship.config": {
+      "type": "dict",
+      "count": 5,
+      "sample_keys": [
+        "power",
+        "showtime",
+        "odds",
+        "levelfix",
+        "limit",
+        "basic",
+        "moneyfix",
+        "resources"
+      ]
+    },
+    "highway_shop.config": {
+      "type": "dict",
+      "count": 50,
+      "sample_keys": [
+        "sort",
+        "price",
+        "limit",
+        "fresh_price",
+        "fresh",
+        "reward",
+        "type"
+      ]
+    },
+    "highway_task.config": {
+      "type": "dict",
+      "count": 26,
+      "sample_keys": [
+        "sort",
+        "target2",
+        "des",
+        "num",
+        "target1"
+      ]
+    },
+    "highway_time.config": {
+      "type": "dict",
+      "count": 10,
+      "sample_keys": [
+        "point",
+        "extra_time",
+        "odd_limit",
+        "timelist",
+        "ready_time",
+        "open_area",
+        "open",
+        "end_time"
+      ]
+    },
+    "highway_trans.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "lack",
+        "rate",
+        "flash",
+        "limit",
+        "score"
+      ]
+    },
+    "highway_txt.config": {
+      "type": "dict",
+      "count": 67,
+      "sample_keys": [
+        "sort",
+        "des"
+      ]
+    },
+    "homeland_grow.config": {
+      "type": "dict",
+      "count": 16,
+      "sample_keys": [
+        "increase_rate",
+        "item_grow_times",
+        "close_time",
+        "all_steal_times",
+        "start_time",
+        "ripe_period",
+        "item",
+        "tree_rate"
+      ]
+    },
+    "homeland_roulette.config": {
+      "type": "dict",
+      "count": 2,
+      "sample_keys": [
+        "common_reward1",
+        "start_time",
+        "price_10",
+        "end_time",
+        "price",
+        "refresh_price"
+      ]
+    },
+    "idol.config": {
+      "type": "dict",
+      "count": 22,
+      "sample_keys": [
+        "free_times",
+        "show",
+        "all_reward_1",
+        "all_reward_2",
+        "all_reward_3",
+        "personal_reward_4",
+        "price",
+        "water_mid"
+      ]
+    },
+    "inreview.config": {
+      "type": "dict",
+      "count": 133,
+      "sample_keys": [
+        "story",
+        "show_lv",
+        "is_open",
+        "name"
+      ]
+    },
+    "item.config": {
+      "type": "dict",
+      "count": 3707,
+      "sample_keys": [
+        "sort",
+        "story",
+        "use_effect",
+        "shade",
+        "name",
+        "is_sell",
+        "is_show",
+        "daily_use"
+      ]
+    },
+    "jigsaw.config": {
+      "type": "dict",
+      "count": 33,
+      "sample_keys": [
+        "notice",
+        "need_item",
+        "start_time",
+        "jigsaw_icon1",
+        "end_time",
+        "jigsaw_icon2"
+      ]
+    },
+    "jigsaw_reward.config": {
+      "type": "dict",
+      "count": 138,
+      "sample_keys": [
+        "version",
+        "day",
+        "reward"
+      ]
+    },
+    "lantern_reward.config": {
+      "type": "dict",
+      "count": 32,
+      "sample_keys": [
+        "lantern_reward5",
+        "lantern_reward4",
+        "lantern_reward1",
+        "lantern_reward3",
+        "lantern_reward2",
+        "lucky_value"
+      ]
+    },
+    "large_roulette.config": {
+      "type": "dict",
+      "count": 298,
+      "sample_keys": [
+        "day_refresh_num",
+        "start_time",
+        "instruction",
+        "must_reward",
+        "price_10",
+        "price",
+        "day_num",
+        "score"
+      ]
+    },
+    "large_roulette_reward.config": {
+      "type": "dict",
+      "count": 300,
+      "sample_keys": [
+        "common_reward3",
+        "limit_ins",
+        "common_reward1",
+        "common_reward3_show",
+        "common_reward2",
+        "best_reward_show",
+        "common_reward2_show",
+        "common_reward1_show"
+      ]
+    },
+    "large_super_all.config": {
+      "type": "dict",
+      "count": 798,
+      "sample_keys": [
+        "action_point",
+        "notice",
+        "start_time",
+        "des",
+        "percent",
+        "version",
+        "end_time",
+        "base"
+      ]
+    },
+    "large_super_rich.config": {
+      "type": "dict",
+      "count": 2280,
+      "sample_keys": [
+        "reward_12",
+        "reward_24",
+        "reward_21",
+        "start_time",
+        "rank",
+        "version",
+        "end_time",
+        "mail"
+      ]
+    },
+    "large_super_rich_all.config": {
+      "type": "dict",
+      "count": 2260,
+      "sample_keys": [
+        "reward_12",
+        "notice",
+        "show24",
+        "reward_21",
+        "show21",
+        "rank",
+        "version",
+        "reward_24"
+      ]
+    },
+    "loading.config": {
+      "type": "dict",
+      "count": 250,
+      "sample_keys": [
+        "loadingtips",
+        "loading_animition"
+      ]
+    },
+    "lucky_lottery.config": {
+      "type": "dict",
+      "count": 81,
+      "sample_keys": [
+        "notice",
+        "limit_num",
+        "start_time",
+        "reward_red_1",
+        "water",
+        "end_time",
+        "reward_red_2",
+        "reward_big"
+      ]
+    },
+    "lucky_lottery_achievement.config": {
+      "type": "dict",
+      "count": 5,
+      "sample_keys": [
+        "reward",
+        "number"
+      ]
+    },
+    "message.config": {
+      "type": "dict",
+      "count": 5,
+      "sample_keys": [
+        "text",
+        "vip",
+        "num",
+        "gift",
+        "cd"
+      ]
+    },
+    "message_ban.config": {
+      "type": "dict",
+      "count": 79,
+      "sample_keys": [
+        "ban"
+      ]
+    },
+    "metal_core_shop.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "sell_off",
+        "sell_max",
+        "shop_reward",
+        "need_value",
+        "need_sort",
+        "show_level",
+        "sell_sort"
+      ]
+    },
+    "middle_building_mine.config": {
+      "type": "dict",
+      "count": 112,
+      "sample_keys": [
+        "name",
+        "reward_item",
+        "image",
+        "detail",
+        "fight",
+        "reward_base",
+        "background",
+        "y"
+      ]
+    },
+    "middle_map.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "name",
+        "need_chapter",
+        "earth_name",
+        "close_level",
+        "map_data",
+        "line",
+        "middle_mapid",
+        "banner"
+      ]
+    },
+    "monopoly_shop.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "need_value",
+        "shop_reward",
+        "vip_level",
+        "sell_max"
+      ]
+    },
+    "month_award.config": {
+      "type": "dict",
+      "count": 21,
+      "sample_keys": [
+        "charge",
+        "limit_time",
+        "award",
+        "icon"
+      ]
+    },
+    "month_foundation.config": {
+      "type": "dict",
+      "count": 96,
+      "sample_keys": [
+        "reward_show",
+        "notice",
+        "level",
+        "day7",
+        "start_time",
+        "server_id",
+        "times",
+        "recharge_coin"
+      ]
+    },
+    "new_fight_forever.config": {
+      "type": "dict",
+      "count": 35,
+      "sample_keys": [
+        "reward_show",
+        "reset_num",
+        "target_sort",
+        "need_star",
+        "target_data",
+        "fight_ID",
+        "reward_first",
+        "target_des"
+      ]
+    },
+    "new_rocker.config": {
+      "type": "dict",
+      "count": 1526,
+      "sample_keys": [
+        "rate",
+        "version",
+        "times"
+      ]
+    },
+    "new_rocker_reward.config": {
+      "type": "dict",
+      "count": 111,
+      "sample_keys": [
+        "price_1",
+        "price_3",
+        "price_2",
+        "theme_reward1",
+        "score_probability",
+        "start_time",
+        "score_false_probability",
+        "notice"
+      ]
+    },
+    "new_roulette_diamond.config": {
+      "type": "dict",
+      "count": 355,
+      "sample_keys": [
+        "reward_show",
+        "reward_1",
+        "notice",
+        "reward_3",
+        "price",
+        "super_item",
+        "reward_2",
+        "reward_chance"
+      ]
+    },
+    "new_roulette_item.config": {
+      "type": "dict",
+      "count": 354,
+      "sample_keys": [
+        "reward_show",
+        "reward_1",
+        "notice",
+        "reward_3",
+        "start_time",
+        "super_item",
+        "reward_2",
+        "reward_chance"
+      ]
+    },
+    "new_vip_reward.config": {
+      "type": "dict",
+      "count": 16,
+      "sample_keys": [
+        "day6",
+        "day7",
+        "day4",
+        "day5",
+        "day2",
+        "day3",
+        "day1",
+        "everyday"
+      ]
+    },
+    "new_world.config": {
+      "type": "dict",
+      "count": 397,
+      "sample_keys": [
+        "world_id",
+        "score",
+        "country_id",
+        "duobao_id"
+      ]
+    },
+    "new_world_tree.config": {
+      "type": "dict",
+      "count": 70,
+      "sample_keys": [
+        "bless_next",
+        "notice",
+        "free_times",
+        "start_time",
+        "id",
+        "bless_first",
+        "version",
+        "end_time"
+      ]
+    },
+    "new_world_tree_level.config": {
+      "type": "dict",
+      "count": 639,
+      "sample_keys": [
+        "level",
+        "final_reward",
+        "state",
+        "version",
+        "exp",
+        "level_reward"
+      ]
+    },
+    "newstar_invitation.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "reward",
+        "des"
+      ]
+    },
+    "newstar_mission.config": {
+      "type": "dict",
+      "count": 15,
+      "sample_keys": [
+        "target_data",
+        "reward",
+        "des",
+        "version",
+        "target_sort"
+      ]
+    },
+    "newstar_reward.config": {
+      "type": "dict",
+      "count": 42,
+      "sample_keys": [
+        "des",
+        "type",
+        "version",
+        "num",
+        "reward"
+      ]
+    },
+    "newstar_seven.config": {
+      "type": "dict",
+      "count": 21,
+      "sample_keys": [
+        "day_id",
+        "version",
+        "id",
+        "reward"
+      ]
+    },
+    "newstar_time.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "start_time",
+        "end_time",
+        "servers"
+      ]
+    },
+    "newstar_veteran.config": {
+      "type": "dict",
+      "count": 36,
+      "sample_keys": [
+        "task",
+        "version",
+        "des",
+        "num",
+        "reward",
+        "type"
+      ]
+    },
+    "nightmare_enemy.config": {
+      "type": "dict",
+      "count": 219,
+      "sample_keys": [
+        "water_dfs",
+        "earth_dfs",
+        "crit",
+        "earth",
+        "speed",
+        "battle_point",
+        "loot_non",
+        "img"
+      ]
+    },
+    "normal_exchange.config": {
+      "type": "dict",
+      "count": 133,
+      "sample_keys": [
+        "break",
+        "show_id",
+        "exchange_num",
+        "need_item",
+        "exchange_time",
+        "start_time",
+        "material_type",
+        "step"
+      ]
+    },
+    "occupation.config": {
+      "type": "dict",
+      "count": 330,
+      "sample_keys": []
+    },
+    "omni_exchange.config": {
+      "type": "dict",
+      "count": 1878,
+      "sample_keys": [
+        "break",
+        "show_id",
+        "exchange_num",
+        "need_item",
+        "exchange_time",
+        "start_time",
+        "material_type",
+        "step"
+      ]
+    },
+    "one_piece.config": {
+      "type": "dict",
+      "count": 222,
+      "sample_keys": [
+        "show_ranking",
+        "one_coin",
+        "reward_1",
+        "score_3",
+        "vip_limit",
+        "ten_coin",
+        "start_time",
+        "max_rate"
+      ]
+    },
+    "one_piece_exchange.config": {
+      "type": "dict",
+      "count": 9924,
+      "sample_keys": [
+        "sort",
+        "player_limit",
+        "limit_num",
+        "need_key_num",
+        "version",
+        "reward"
+      ]
+    },
+    "one_piece_rank_reward.config": {
+      "type": "dict",
+      "count": 1100,
+      "sample_keys": [
+        "reward_time",
+        "mail",
+        "version",
+        "rank",
+        "rank_reward"
+      ]
+    },
+    "one_piece_rate.config": {
+      "type": "dict",
+      "count": 1776,
+      "sample_keys": [
+        "show_id",
+        "version",
+        "rate",
+        "score",
+        "has_reduce",
+        "reward",
+        "id"
+      ]
+    },
+    "opening.config": {
+      "type": "dict",
+      "count": 10,
+      "sample_keys": [
+        "story",
+        "all_num",
+        "name",
+        "title",
+        "target_sort",
+        "target_data1",
+        "target_data",
+        "reward"
+      ]
+    },
+    "pagoda.config": {
+      "type": "dict",
+      "count": 32,
+      "sample_keys": [
+        "notice",
+        "partake_rewerd",
+        "need_item",
+        "start_time",
+        "final_reward",
+        "end_time"
+      ]
+    },
+    "pagoda_reward.config": {
+      "type": "dict",
+      "count": 32,
+      "sample_keys": [
+        "pagoda_reward4",
+        "pagoda_reward5",
+        "pagoda_reward2",
+        "pagoda_reward3",
+        "pagoda_reward1"
+      ]
+    },
+    "pet_detail.config": {
+      "type": "dict",
+      "count": 18,
+      "sample_keys": [
+        "base_hp",
+        "resolve_num",
+        "growth_def",
+        "is_evo",
+        "quality",
+        "story",
+        "star_max",
+        "img"
+      ]
+    },
+    "pet_skill_detail.config": {
+      "type": "dict",
+      "count": 95,
+      "sample_keys": [
+        "attr_effect",
+        "skill_icon",
+        "cd",
+        "rate",
+        "skill_story",
+        "effect_lvchange",
+        "is_learn",
+        "sprite_py"
+      ]
+    },
+    "play_points.config": {
+      "type": "dict",
+      "count": 429,
+      "sample_keys": [
+        "id",
+        "reward",
+        "version",
+        "point"
+      ]
+    },
+    "play_rankreward.config": {
+      "type": "dict",
+      "count": 715,
+      "sample_keys": [
+        "version",
+        "id",
+        "rank",
+        "rank_reward"
+      ]
+    },
+    "play_redbag.config": {
+      "type": "dict",
+      "count": 715,
+      "sample_keys": [
+        "min",
+        "max",
+        "version",
+        "donate",
+        "id",
+        "quantity"
+      ]
+    },
+    "play_shop.config": {
+      "type": "dict",
+      "count": 2145,
+      "sample_keys": [
+        "sort",
+        "player_limit",
+        "limit_num",
+        "limit_type",
+        "version",
+        "cost_coin",
+        "time",
+        "reward"
+      ]
+    },
+    "player.config": {
+      "type": "dict",
+      "count": 143,
+      "sample_keys": [
+        "consume",
+        "start_time",
+        "instruction",
+        "version",
+        "end_time",
+        "donate",
+        "recharge"
+      ]
+    },
+    "pyramid.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "gap_time",
+        "show_banner",
+        "pay_sweep",
+        "add_morale",
+        "morale",
+        "morale_recovery_time",
+        "pay_add_morale",
+        "mail"
+      ]
+    },
+    "pyramid_lucky.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "mail",
+        "lucky_situation",
+        "reward",
+        "lucky_level",
+        "lucky_time"
+      ]
+    },
+    "pyramid_notice.config": {
+      "type": "dict",
+      "count": 9,
+      "sample_keys": [
+        "trigger_sort",
+        "is_self",
+        "trigger",
+        "notice_level",
+        "text"
+      ]
+    },
+    "pyramid_robot.config": {
+      "type": "dict",
+      "count": 50,
+      "sample_keys": [
+        "leader_skill_2_level",
+        "evo_level",
+        "name",
+        "leader_skill_3_level",
+        "leader_skill_3_key",
+        "leader_skill_1_level",
+        "character_level",
+        "leader_skill_2_key"
+      ]
+    },
+    "quarter_award.config": {
+      "type": "dict",
+      "count": 1080,
+      "sample_keys": [
+        "reward",
+        "version",
+        "id",
+        "value_month"
+      ]
+    },
+    "race_alpaca_main.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "game_count",
+        "speed_add_min",
+        "system_balance",
+        "speed_random_max",
+        "speed_random_min",
+        "start_time",
+        "lottery_buy_count",
+        "lottery_price"
+      ]
+    },
+    "race_alpaca_reward.config": {
+      "type": "dict",
+      "count": 116,
+      "sample_keys": [
+        "mess_reward",
+        "vwlr_count",
+        "vip_win_reward",
+        "fail_reward",
+        "mail_des",
+        "start_time",
+        "vip_win_lucky_reward",
+        "vip_fail_reward"
+      ]
+    },
+    "raiders.config": {
+      "type": "dict",
+      "count": 328,
+      "sample_keys": [
+        "button",
+        "des",
+        "des2",
+        "des3",
+        "end_time",
+        "reward",
+        "start_time"
+      ]
+    },
+    "raiders_reward.config": {
+      "type": "dict",
+      "count": 11,
+      "sample_keys": [
+        "point",
+        "des",
+        "cost_coin",
+        "reward"
+      ]
+    },
+    "raiders_roulette.config": {
+      "type": "dict",
+      "count": 328,
+      "sample_keys": [
+        "notice",
+        "price",
+        "price_10",
+        "limit_reward",
+        "common_reward",
+        "all_limit",
+        "end_time",
+        "need_sort"
+      ]
+    },
+    "rand_str_login.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "value"
+      ]
+    },
+    "rank_reward.config": {
+      "type": "dict",
+      "count": 175,
+      "sample_keys": [
+        "version",
+        "rank",
+        "reward"
+      ]
+    },
+    "recall_reward.config": {
+      "type": "dict",
+      "count": 6,
+      "sample_keys": [
+        "reward",
+        "des"
+      ]
+    },
+    "redpacket.config": {
+      "type": "dict",
+      "count": 86,
+      "sample_keys": [
+        "word",
+        "title",
+        "start_time",
+        "level",
+        "end_time",
+        "reward",
+        "banner"
+      ]
+    },
+    "richman_effect.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "sort",
+        "effects"
+      ]
+    },
+    "richman_plot.config": {
+      "type": "dict",
+      "count": 28,
+      "sample_keys": [
+        "character_id",
+        "plot_reward",
+        "start_time",
+        "plot_des",
+        "end_time",
+        "medal_img",
+        "show_level",
+        "plot_sort"
+      ]
+    },
+    "richman_shop.config": {
+      "type": "dict",
+      "count": 23,
+      "sample_keys": [
+        "value_sorts",
+        "sell_max",
+        "shop_reward",
+        "refresh",
+        "need_value",
+        "vip_level",
+        "sell_time"
+      ]
+    },
+    "roulette.config": {
+      "type": "dict",
+      "count": 275,
+      "sample_keys": [
+        "day_refresh_num",
+        "start_time",
+        "instruction",
+        "must_reward",
+        "price_10",
+        "price",
+        "day_num",
+        "score"
+      ]
+    },
+    "roulette_rank_reward.config": {
+      "type": "dict",
+      "count": 1096,
+      "sample_keys": [
+        "final_mail",
+        "rank",
+        "reward_time",
+        "final_reward",
+        "version",
+        "rank_reward",
+        "mail",
+        "id"
+      ]
+    },
+    "roulette_reward.config": {
+      "type": "dict",
+      "count": 275,
+      "sample_keys": [
+        "reward_show",
+        "common_reward2",
+        "common_reward1",
+        "common_reward3_show",
+        "limit_ins",
+        "best_reward_show",
+        "start_time",
+        "common_reward1_show"
+      ]
+    },
+    "seed.config": {
+      "type": "dict",
+      "count": 62,
+      "sample_keys": [
+        "building",
+        "name",
+        "quality",
+        "shade",
+        "time",
+        "reward",
+        "Steal",
+        "icon"
+      ]
+    },
+    "server_active_consume.config": {
+      "type": "dict",
+      "count": 66,
+      "sample_keys": [
+        "charge_type",
+        "show_id",
+        "repeat",
+        "level",
+        "start_time",
+        "des",
+        "charge_id",
+        "num"
+      ]
+    },
+    "server_active_recharge.config": {
+      "type": "dict",
+      "count": 148,
+      "sample_keys": [
+        "charge_type",
+        "show_id",
+        "repeat",
+        "level",
+        "start_time",
+        "des",
+        "charge_id",
+        "num"
+      ]
+    },
+    "server_adver.config": {
+      "type": "dict",
+      "count": 21,
+      "sample_keys": [
+        "server_time",
+        "title",
+        "start_time",
+        "mark",
+        "ad_title",
+        "end_time",
+        "time",
+        "word"
+      ]
+    },
+    "server_bandit.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "git_coin",
+        "coin",
+        "reward_coin"
+      ]
+    },
+    "server_bounty_detail.config": {
+      "type": "dict",
+      "count": 106,
+      "sample_keys": [
+        "story",
+        "target_data",
+        "target_sort",
+        "open_sort",
+        "close_data",
+        "rate",
+        "close_sort",
+        "team"
+      ]
+    },
+    "server_bounty_order.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "charge_type",
+        "notice",
+        "reward_show_3",
+        "reward_show_2",
+        "reward_show_1",
+        "refresh",
+        "tips",
+        "charge_num1"
+      ]
+    },
+    "server_card_collection.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "version",
+        "id",
+        "card",
+        "collect_card"
+      ]
+    },
+    "server_clone_lane.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "reward_1",
+        "reward_2",
+        "reward_3",
+        "reward_4",
+        "reward_5",
+        "reward_1_show",
+        "des_1",
+        "start_time"
+      ]
+    },
+    "server_contract.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "notice",
+        "fire_time",
+        "rate",
+        "fire_des",
+        "score_add_max",
+        "fire_score",
+        "contract_des",
+        "day"
+      ]
+    },
+    "server_contract_detail.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "sort",
+        "reward_show_final",
+        "vip_limit",
+        "max_rate",
+        "reward_show_base",
+        "server_score",
+        "version",
+        "coin"
+      ]
+    },
+    "server_contract_fire_cup.config": {
+      "type": "dict",
+      "count": 8,
+      "sample_keys": [
+        "reward_send",
+        "fire_id",
+        "version",
+        "server_player",
+        "coin",
+        "max_score",
+        "id"
+      ]
+    },
+    "server_contract_rate.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "sort",
+        "score",
+        "rate",
+        "version",
+        "has_reduce",
+        "reward",
+        "id"
+      ]
+    },
+    "server_contract_reduce.config": {
+      "type": "dict",
+      "count": 16,
+      "sample_keys": [
+        "day_2",
+        "day_3",
+        "day_1"
+      ]
+    },
+    "server_contract_reward.config": {
+      "type": "dict",
+      "count": 6,
+      "sample_keys": [
+        "sort",
+        "version",
+        "gamer",
+        "time",
+        "mail",
+        "reward",
+        "id"
+      ]
+    },
+    "server_contract_score_reward.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "version",
+        "cost",
+        "id",
+        "reward"
+      ]
+    },
+    "server_dinner.config": {
+      "type": "dict",
+      "count": 2,
+      "sample_keys": [
+        "dinner_plus_num",
+        "notice",
+        "dinner_limit",
+        "dinner_num",
+        "dinner_plus_give",
+        "start_time",
+        "dinner",
+        "dinner_give"
+      ]
+    },
+    "server_exchange.config": {
+      "type": "dict",
+      "count": 133,
+      "sample_keys": [
+        "break",
+        "show_id",
+        "exchange_num",
+        "need_item",
+        "exchange_time",
+        "start_time",
+        "material_type",
+        "step"
+      ]
+    },
+    "server_foundation.config": {
+      "type": "dict",
+      "count": 3,
+      "sample_keys": [
+        "reward_show",
+        "notice",
+        "day6",
+        "day7",
+        "day4",
+        "day5",
+        "day2",
+        "server_id"
+      ]
+    },
+    "server_group_rank.config": {
+      "type": "dict",
+      "count": 10,
+      "sample_keys": [
+        "diamond_off",
+        "version",
+        "des",
+        "rank",
+        "active_id"
+      ]
+    },
+    "server_group_score.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "score_add_max",
+        "min_score",
+        "reward",
+        "score",
+        "score_add"
+      ]
+    },
+    "server_group_show.config": {
+      "type": "dict",
+      "count": 12,
+      "sample_keys": [
+        "sort",
+        "item",
+        "version"
+      ]
+    },
+    "server_group_version.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "notice_1",
+        "des",
+        "notice_2"
+      ]
+    },
+    "server_inreview.config": {
+      "type": "dict",
+      "count": 21,
+      "sample_keys": [
+        "default",
+        "story",
+        "show_lv",
+        "is_open",
+        "name"
+      ]
+    },
+    "server_link.config": {
+      "type": "dict",
+      "count": 397,
+      "sample_keys": [
+        "world_id",
+        "score",
+        "country_id",
+        "duobao_id"
+      ]
+    },
+    "server_one_piece_exchange.config": {
+      "type": "dict",
+      "count": 126,
+      "sample_keys": [
+        "sort",
+        "player_limit",
+        "limit_num",
+        "need_key_num",
+        "version",
+        "reward"
+      ]
+    },
+    "server_one_piece_rate.config": {
+      "type": "dict",
+      "count": 24,
+      "sample_keys": [
+        "show_id",
+        "version",
+        "rate",
+        "score",
+        "has_reduce",
+        "reward",
+        "id"
+      ]
+    },
+    "server_richman_effect.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "sort",
+        "effects"
+      ]
+    },
+    "server_richman_shop.config": {
+      "type": "dict",
+      "count": 39,
+      "sample_keys": [
+        "value_sorts",
+        "sell_max",
+        "shop_reward",
+        "refresh",
+        "need_value",
+        "vip_level",
+        "sell_time"
+      ]
+    },
+    "server_roulette_reward.config": {
+      "type": "dict",
+      "count": 5,
+      "sample_keys": [
+        "reward_show",
+        "common_reward2",
+        "common_reward1",
+        "common_reward3_show",
+        "limit_ins",
+        "best_reward_show",
+        "common_reward2_show",
+        "common_reward1_show"
+      ]
+    },
+    "server_super_all.config": {
+      "type": "dict",
+      "count": 14,
+      "sample_keys": [
+        "notice",
+        "version",
+        "show",
+        "shop_id",
+        "base",
+        "score",
+        "reward"
+      ]
+    },
+    "server_super_rich.config": {
+      "type": "dict",
+      "count": 40,
+      "sample_keys": [
+        "reward_12",
+        "notice",
+        "reward_24",
+        "reward_21",
+        "des",
+        "rank",
+        "version",
+        "id"
+      ]
+    },
+    "server_vip_wheel_reward.config": {
+      "type": "dict",
+      "count": 10,
+      "sample_keys": [
+        "vip7",
+        "vip6",
+        "vip5",
+        "vip4",
+        "vip3",
+        "vip2",
+        "vip1",
+        "vip9"
+      ]
+    },
+    "server_wheel.config": {
+      "type": "dict",
+      "count": 5,
+      "sample_keys": [
+        "notice",
+        "refresh_time",
+        "refresh_cost",
+        "super_item",
+        "normal_reward",
+        "need_num",
+        "refresh",
+        "super_reward"
+      ]
+    },
+    "shop.config": {
+      "type": "dict",
+      "count": 85,
+      "sample_keys": [
+        "sell_off",
+        "server_sell_time",
+        "sell_max",
+        "shop_reward",
+        "need_value",
+        "need_sort",
+        "sell_time",
+        "show_level"
+      ]
+    },
+    "shop_recycle.config": {
+      "type": "dict",
+      "count": 22,
+      "sample_keys": [
+        "cost",
+        "max_num",
+        "sell_sort",
+        "reward"
+      ]
+    },
+    "shot.config": {
+      "type": "dict",
+      "count": 11,
+      "sample_keys": [
+        "need_item",
+        "start_time",
+        "limit",
+        "end_time",
+        "time",
+        "reward",
+        "extra_num",
+        "icon"
+      ]
+    },
+    "shot_shop.config": {
+      "type": "dict",
+      "count": 19,
+      "sample_keys": [
+        "sell_max",
+        "shop_reward",
+        "need_value",
+        "need_sort",
+        "need_price",
+        "show_level",
+        "sell_sort",
+        "is_piece"
+      ]
+    },
+    "skill_detail.config": {
+      "type": "dict",
+      "count": 10836,
+      "sample_keys": [
+        "effect_talent",
+        "attr_effect",
+        "skill_icon",
+        "cd",
+        "rate",
+        "skill_story",
+        "effect_lvchange",
+        "is_learn"
+      ]
+    },
+    "skill_detail_1.config": {
+      "type": "dict",
+      "count": 1352,
+      "sample_keys": [
+        "effect_talent",
+        "attr_effect",
+        "skill_icon",
+        "cd",
+        "rate",
+        "skill_story",
+        "effect_lvchange",
+        "is_learn"
+      ]
+    },
+    "sl_limit_reward.config": {
+      "type": "dict",
+      "count": 143,
+      "sample_keys": [
+        "chance",
+        "limit_reward",
+        "best_limit_reward"
+      ]
+    },
+    "sl_limit_time_shop.config": {
+      "type": "dict",
+      "count": 2145,
+      "sample_keys": [
+        "original_price",
+        "price",
+        "version",
+        "sell_max",
+        "reward"
+      ]
+    },
+    "sl_rank_reward.config": {
+      "type": "dict",
+      "count": 584,
+      "sample_keys": [
+        "version",
+        "rank",
+        "reward"
+      ]
+    },
+    "sl_shop.config": {
+      "type": "dict",
+      "count": 3861,
+      "sample_keys": [
+        "sell_max",
+        "need_item",
+        "need_value",
+        "version",
+        "need_sort",
+        "reward",
+        "sell_sort"
+      ]
+    },
+    "sl_unit.config": {
+      "type": "dict",
+      "count": 2860,
+      "sample_keys": [
+        "unit_content",
+        "version",
+        "unit_id",
+        "unit_reward"
+      ]
+    },
+    "sort_cards.config": {
+      "type": "dict",
+      "count": 14,
+      "sample_keys": [
+        "cards_include",
+        "name"
+      ]
+    },
+    "storehouse.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "sort",
+        "num",
+        "limit"
+      ]
+    },
+    "suit.config": {
+      "type": "dict",
+      "count": 729,
+      "sample_keys": [
+        "effect_2",
+        "effect_3",
+        "part",
+        "name",
+        "effect_4"
+      ]
+    },
+    "super_all.config": {
+      "type": "dict",
+      "count": 1918,
+      "sample_keys": [
+        "notice",
+        "reward",
+        "version",
+        "show",
+        "start_time",
+        "shop_id",
+        "end_time",
+        "base"
+      ]
+    },
+    "super_evo_team.config": {
+      "type": "dict",
+      "count": 1466,
+      "sample_keys": [
+        "ability_add",
+        "card_need"
+      ]
+    },
+    "super_evolution.config": {
+      "type": "dict",
+      "count": 323,
+      "sample_keys": [
+        "level_2_need",
+        "level_6_add",
+        "level_7_add",
+        "level_1_add",
+        "level_5_add",
+        "level_1_need",
+        "level_9_need",
+        "level_8_need"
+      ]
+    },
+    "super_luck.config": {
+      "type": "dict",
+      "count": 143,
+      "sample_keys": [
+        "notice",
+        "luck_unit_choose",
+        "need_item",
+        "start_time",
+        "need_num",
+        "end_time",
+        "unit_chance"
+      ]
+    },
+    "super_rich.config": {
+      "type": "dict",
+      "count": 5500,
+      "sample_keys": [
+        "reward_12",
+        "notice",
+        "reward_24",
+        "reward_21",
+        "start_time",
+        "des",
+        "rank",
+        "version"
+      ]
+    },
+    "survey.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "show_time",
+        "start_time",
+        "reward",
+        "end_time",
+        "active_url"
+      ]
+    },
+    "talisman.config": {
+      "type": "dict",
+      "count": 414,
+      "sample_keys": [
+        "talisman_break_id",
+        "base_hp",
+        "base_hr",
+        "image",
+        "base_dr",
+        "talisman_break",
+        "growth_def",
+        "star"
+      ]
+    },
+    "talisman_break.config": {
+      "type": "dict",
+      "count": 391,
+      "sample_keys": [
+        "talisman_level",
+        "talisman_material_1",
+        "talisman_material_3",
+        "talisman_material_2"
+      ]
+    },
+    "talisman_forging_list.config": {
+      "type": "dict",
+      "count": 23,
+      "sample_keys": [
+        "sprite_py",
+        "des",
+        "effect",
+        "cd",
+        "rate",
+        "effect_type",
+        "skill_type"
+      ]
+    },
+    "talisman_level.config": {
+      "type": "dict",
+      "count": 30,
+      "sample_keys": [
+        "is_star",
+        "exp",
+        "exp_price"
+      ]
+    },
+    "time_cards.config": {
+      "type": "dict",
+      "count": 12,
+      "sample_keys": [
+        "cards_include",
+        "name"
+      ]
+    },
+    "title_group.config": {
+      "type": "dict",
+      "count": 4,
+      "sample_keys": [
+        "id",
+        "group_name"
+      ]
+    },
+    "title_list.config": {
+      "type": "dict",
+      "count": 33,
+      "sample_keys": [
+        "buff1",
+        "buff2",
+        "des1",
+        "des2",
+        "name",
+        "animation",
+        "icon",
+        "replace"
+      ]
+    },
+    "toy.config": {
+      "type": "dict",
+      "count": 50,
+      "sample_keys": [
+        "reward_1",
+        "fresh_time",
+        "reward_3",
+        "reward_4",
+        "picture",
+        "notice",
+        "reward_chance",
+        "start_time"
+      ]
+    },
+    "toy_reward.config": {
+      "type": "dict",
+      "count": 500,
+      "sample_keys": [
+        "reward_12",
+        "version",
+        "des",
+        "rank"
+      ]
+    },
+    "training.config": {
+      "type": "dict",
+      "count": 25,
+      "sample_keys": [
+        "notice",
+        "show",
+        "start_time",
+        "end_time"
+      ]
+    },
+    "tree_shop.config": {
+      "type": "dict",
+      "count": 39,
+      "sample_keys": [
+        "sell_off",
+        "sell_max",
+        "shop_reward",
+        "need_value",
+        "need_sort",
+        "show_level",
+        "sell_sort"
+      ]
+    },
+    "universe_arena.config": {
+      "type": "dict",
+      "count": 15,
+      "sample_keys": [
+        "arena_3",
+        "arena_2",
+        "arena_1",
+        "start_time",
+        "rank",
+        "end_time",
+        "arena_all"
+      ]
+    },
+    "universe_arena_grade.config": {
+      "type": "dict",
+      "count": 15,
+      "sample_keys": [
+        "score",
+        "grade_score",
+        "reward"
+      ]
+    },
+    "universe_arena_shop.config": {
+      "type": "dict",
+      "count": 39,
+      "sample_keys": [
+        "arena_3",
+        "arena_2",
+        "arena_1",
+        "des",
+        "refresh",
+        "times",
+        "reward"
+      ]
+    },
+    "value_sign.config": {
+      "type": "dict",
+      "count": 366,
+      "sample_keys": [
+        "reward_25",
+        "charge_free",
+        "charge_num",
+        "des",
+        "double_chance",
+        "date",
+        "reward",
+        "id"
+      ]
+    },
+    "vip.config": {
+      "type": "dict",
+      "count": 18,
+      "sample_keys": [
+        "buy_godlike",
+        "fast_train",
+        "sweep_times",
+        "steal_num",
+        "fight_skip",
+        "auto_fight",
+        "train_times",
+        "exp_inherit"
+      ]
+    },
+    "vip_shop.config": {
+      "type": "dict",
+      "count": 17,
+      "sample_keys": [
+        "false_coin",
+        "reward",
+        "need_vip",
+        "name",
+        "need_coin"
+      ]
+    },
+    "vip_store.config": {
+      "type": "dict",
+      "count": 62,
+      "sample_keys": [
+        "need_value",
+        "shop_item",
+        "sell_ref",
+        "show_vip",
+        "sell_max"
+      ]
+    },
+    "week_award.config": {
+      "type": "dict",
+      "count": 1,
+      "sample_keys": [
+        "award",
+        "icon"
+      ]
+    },
+    "wheel.config": {
+      "type": "dict",
+      "count": 584,
+      "sample_keys": [
+        "notice",
+        "refresh_time",
+        "refresh_cost",
+        "start_time",
+        "super_item",
+        "normal_reward",
+        "need_num",
+        "refresh"
+      ]
+    },
+    "world_achievement.config": {
+      "type": "dict",
+      "count": 7,
+      "sample_keys": [
+        "version",
+        "number",
+        "reward"
+      ]
+    },
+    "world_cup_exchage.config": {
+      "type": "dict",
+      "count": 80,
+      "sample_keys": [
+        "sort",
+        "limit_num",
+        "fresh_num",
+        "version",
+        "cost_coin",
+        "fresh",
+        "reward"
+      ]
+    },
+    "world_cup_flag.config": {
+      "type": "dict",
+      "count": 72,
+      "sample_keys": [
+        "notice",
+        "img_small",
+        "score",
+        "start_time",
+        "name",
+        "cost",
+        "end_time",
+        "version"
+      ]
+    },
+    "world_guessing.config": {
+      "type": "dict",
+      "count": 104,
+      "sample_keys": [
+        "notice",
+        "cost",
+        "team_1",
+        "team_1_picture",
+        "team_3",
+        "double_2",
+        "start_time",
+        "game_type"
+      ]
+    }
+  },
+  "non_json_files": {}
+}

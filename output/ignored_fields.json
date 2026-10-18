@@ -1,0 +1,67 @@
+{
+  "status": "ALL_SOURCE_FIELDS_MAPPED",
+  "description": "100% các trường dữ liệu từ các bảng cấu hình chính đã được ánh xạ đầy đủ vào schema xuất bản. Không còn trường nào bị loại bỏ tùy tiện.",
+  "character_detail.config": [],
+  "equip.config": [],
+  "skill_detail.config": [],
+  "suit.config": [],
+  "item.config": [],
+  "restored_fields": [
+    {
+      "source_file": "equip.config",
+      "field": "equip_id",
+      "output_fields": [
+        "equip_id",
+        "raw_equip_id"
+      ],
+      "status": "RESTORED",
+      "note": "Khôi phục thành công. Dữ liệu thực tế cho thấy 96.59% khác biệt với khóa chính và mang tính chất định danh nhánh/phôi trang bị gốc."
+    },
+    {
+      "source_file": "equip.config",
+      "field": "effect",
+      "output_fields": [
+        "effect"
+      ],
+      "status": "RESTORED",
+      "note": "Khôi phục thành công chỉ số hiệu ứng đặc biệt từ nguồn."
+    },
+    {
+      "source_file": "character_detail.config",
+      "field": "rgb_sort",
+      "output_fields": [
+        "rgb_sort"
+      ],
+      "status": "RESTORED",
+      "note": "Khôi phục thứ tự phân loại màu sắc nguồn."
+    },
+    {
+      "source_file": "character_detail.config",
+      "field": "occupation_shade",
+      "output_fields": [
+        "occupation_shade"
+      ],
+      "status": "RESTORED",
+      "note": "Khôi phục độ lệch bóng đổ nghề nghiệp nguồn."
+    },
+    {
+      "source_file": "character_detail.config",
+      "field": "is_notice",
+      "output_fields": [
+        "is_notice"
+      ],
+      "status": "RESTORED",
+      "note": "Khôi phục cờ thông báo nguồn."
+    },
+    {
+      "source_file": "skill_detail.config",
+      "field": "attack_effect",
+      "output_fields": [
+        "attack_effect"
+      ],
+      "status": "RESTORED",
+      "note": "Khôi phục mã hiệu ứng hoạt họa tấn công nguồn."
+    }
+  ],
+  "unmapped_fields": []
+}

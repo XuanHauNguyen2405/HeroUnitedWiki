@@ -1,0 +1,175 @@
+{
+  "project": "Siêu Anh Hùng Hội Tụ WIKI (SAHHT WIKI)",
+  "schema_version": "1.2.0",
+  "generated_at": "2026-10-18T19:14:26.076491+02:00",
+  "directories": {
+    "config_dir": "config",
+    "output_dir": "output",
+    "resources_dir": "Resources",
+    "docs_dir": "docs"
+  },
+  "source_checksums": {
+    "character_detail.config": {
+      "path": "config/character_detail.config",
+      "sha256": "cd4bbe34064f2dc395dc1bf37e5abb6180423d73d77e9d4924cf27879ed993ad",
+      "records_count": 721
+    },
+    "skill_detail.config": {
+      "path": "config/skill_detail.config",
+      "sha256": "5664c5e3e82e5fa9602030fa30768c5241c12fee66efef5178145094b60a982f",
+      "records_count": 10836
+    },
+    "equip.config": {
+      "path": "config/equip.config",
+      "sha256": "515055043371c64c8da1baf526f07d7fe5eee79c3b2cc70c5cc384c7e766782a",
+      "records_count": 4366
+    },
+    "suit.config": {
+      "path": "config/suit.config",
+      "sha256": "328d4feabd2e3dbf5782acd7a9709738732518851b75125d88b8b6ba64b30c17",
+      "records_count": 729
+    },
+    "item.config": {
+      "path": "config/item.config",
+      "sha256": "272f106cc47cad418ee570c6315d92ac244b552276138562d18ce9c1b7d9854e",
+      "records_count": 3707
+    },
+    "chain.config": {
+      "path": "config/chain.config",
+      "sha256": "74910404100f93d3b057afc6b56bf9880d72e33b50358f6073daf45bb354ffc2",
+      "records_count": 1363
+    },
+    "equip_gem_fate_txt.config": {
+      "path": "config/equip_gem_fate_txt.config",
+      "sha256": "43ea5777d8207140d0ed63aff29b0a5539087962eb496491b8e9e6203995385e",
+      "records_count": 11
+    },
+    "equip_gem_fate_skill.config": {
+      "path": "config/equip_gem_fate_skill.config",
+      "sha256": "b48bdbab4e50228969a2eff00d12711dc1f4f879ee1a6a6ed6888185b23c904c",
+      "records_count": 40
+    },
+    "equip_gem_fate_word.config": {
+      "path": "config/equip_gem_fate_word.config",
+      "sha256": "0e9862be2a99ae218c5c3b3af2004844b55febff12cf613568dea68dba48e113",
+      "records_count": 120
+    },
+    "fate_rune_character.config": {
+      "path": "config/fate_rune_character.config",
+      "sha256": "49109c56ef1e127e70c8363be3ce91658374d2242cc95c4caff64decc4ae2cd0",
+      "records_count": 162
+    },
+    "badge.config": {
+      "path": "config/badge.config",
+      "sha256": "33ab34255992cc30084df72920453682117fa8cfb403c49bc085abf1009a9c2e",
+      "records_count": 112
+    },
+    "badge_txet.config": {
+      "path": "config/badge_txet.config",
+      "sha256": "9981f1030d62f32f4a9bc82e590691862d44538caf727764165e591bbc331f17",
+      "records_count": 6
+    },
+    "badge_skill_combination.config": {
+      "path": "config/badge_skill_combination.config",
+      "sha256": "d47dfa02ba92703f344c1076b7f16f1b045a8e873fc4a0cfdbb7e539f728f641",
+      "records_count": 9
+    },
+    "badge_refinement.config": {
+      "path": "config/badge_refinement.config",
+      "sha256": "076132399590e06c076e3282faa6e0dc150cab8f4139df9202fc6908a16de290",
+      "records_count": 30
+    },
+    "badge_equip.config": {
+      "path": "config/badge_equip.config",
+      "sha256": "19f372a797e945ee5e0428def7b319e6e37a1debf436f8255193c82acb8fc2b8",
+      "records_count": 160
+    },
+    "character_strengthen.config": {
+      "path": "config/character_strengthen.config",
+      "sha256": "658a10ac9b87700af08199d19bb1e22e7a15d84ca182af464b0f91107155dc6e",
+      "records_count": 60
+    },
+    "character_break_new.config": {
+      "path": "config/character_break_new.config",
+      "sha256": "1f83842492a58ab521503e7394a1a68eb9d91a88776cc7cd9bd2ec3571373521",
+      "records_count": 393
+    },
+    "breakthrough.config": {
+      "path": "config/breakthrough.config",
+      "sha256": "28bce1ff44bf380ccabb1c3e7ca8a00b4b2123c8695e7cca7370b8752977d76e",
+      "records_count": 3400
+    },
+    "equip_evolution.config": {
+      "path": "config/equip_evolution.config",
+      "sha256": "2b1165176aa82f167d90d395bedb9f0ea4790c7687ed7dc0887ccd3b37c922c0",
+      "records_count": 3550
+    }
+  },
+  "datasets": {
+    "heroes": {
+      "file": "output/heroes.json",
+      "count": 721,
+      "source": "character_detail.config",
+      "description": "Kho dữ liệu tướng và biến thể, bảo tồn 100% trường nguồn gốc"
+    },
+    "skills": {
+      "file": "output/skills.json",
+      "count": 10836,
+      "source": "skill_detail.config",
+      "description": "Toàn bộ kỹ năng, cơ chế thi triển, CD, tỷ lệ kích hoạt, bảo tồn action 0 và tiến hóa"
+    },
+    "equipment": {
+      "file": "output/equipment.json",
+      "count": 4366,
+      "source": "equip.config",
+      "description": "Trang bị theo 4 vị trí: 1: Vũ khí, 2: Trang sức, 3: Giáp/Áo, 4: Giày; khôi phục equip_id và effect"
+    },
+    "equipment_sets": {
+      "file": "output/equipment_sets.json",
+      "count": 729,
+      "source": "suit.config",
+      "description": "729 bộ trang bị, các mảnh hợp thành và hiệu ứng kích hoạt mốc 2, 3, 4 món"
+    },
+    "ban_suc": {
+      "file": "output/ban_suc.json",
+      "subsections": {
+        "fate_rules": 11,
+        "fate_skills": 40,
+        "fate_words": 120,
+        "fate_rune_characters": 162,
+        "badges": 112,
+        "badge_rules": 6,
+        "badge_combinations": 9,
+        "badge_refinements": 30
+      },
+      "description": "Hệ thống Ban Sức: Ban Sức Vận Mệnh (10 loại đá) & Huy Hiệu Tướng (Tinh Luyện Vận Mệnh, Tổ Hợp)"
+    },
+    "upgrade_mechanisms": {
+      "file": "output/upgrade_mechanisms.json",
+      "subsections": {
+        "character_strengthen_levels": 60,
+        "character_break_new_trees": 393,
+        "character_breakthrough_records": 3400,
+        "equipment_evolution_recipes": 3550
+      },
+      "description": "Cơ chế nâng cấp: Cường hóa tướng (60 cấp), Đột phá tướng mới (10 tầng), Đột phá thường (20 cấp), Tiến hóa trang bị"
+    },
+    "items": {
+      "file": "output/items.json",
+      "count": 3707,
+      "source": "item.config",
+      "description": "Từ điển vật phẩm, nguyên liệu nâng cấp, rương, thẻ bài"
+    }
+  },
+  "verification_metrics": {
+    "total_issues_logged": 318,
+    "errors_count": 0,
+    "warnings_count": 269,
+    "unverified_count": 49,
+    "missing_skill_reference_occurrences": 151,
+    "distinct_missing_skill_ids": 150,
+    "unnamed_heroes_count": 2,
+    "unnamed_skills_count": 28,
+    "unnamed_items_count": 19
+  }
+}

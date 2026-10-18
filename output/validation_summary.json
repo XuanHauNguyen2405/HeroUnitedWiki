@@ -1,0 +1,68 @@
+{
+  "status": "PASSED_WITH_WARNINGS",
+  "metrics": {
+    "errors_count": 0,
+    "warnings_count": 269,
+    "unverified_count": 49,
+    "string_id_failures": 0,
+    "broken_source_references": 0,
+    "field_reconciliation_failures": 0,
+    "hero_skill_references": {
+      "total_occurrences": 2788,
+      "valid_occurrences": 2637,
+      "missing_occurrences": 151,
+      "distinct_missing_ids": 150
+    },
+    "suit_part_references": {
+      "total_occurrences": 2916,
+      "valid_occurrences": 2908,
+      "missing_occurrences": 8,
+      "distinct_missing_ids": 8
+    },
+    "equip_suit_references": {
+      "unsuited_count": 133,
+      "valid_suited_count": 4233,
+      "broken_target_count": 0
+    },
+    "equip_evolution_recipe_references": {
+      "total_occurrences": 3451,
+      "valid_occurrences": 3442,
+      "missing_occurrences": 9,
+      "distinct_missing_ids": 9
+    },
+    "skill_evolution_target_references": {
+      "total_occurrences": 8019,
+      "valid_occurrences": 7918,
+      "missing_occurrences": 101,
+      "distinct_missing_ids": 81
+    },
+    "unnamed_counts": {
+      "heroes": 2,
+      "skills": 28,
+      "items": 19
+    },
+    "mutation_tests": {
+      "mutation_hp_detection": {
+        "passed": true,
+        "detail": "Mutated hero[8200].base_stats.hp to 999999; reconcile_heroes detected: 'Mismatch at hero[8200].base_stats.hp: output 999999 != source 2074'"
+      },
+      "mutation_id_type_detection": {
+        "passed": true,
+        "detail": "Mutated hero[8200].character_id to int(82); check_hero_id_types detected: 'Non-string ID (int: 82) at hero[8200].character_id'"
+      },
+      "mutation_link_detection": {
+        "passed": true,
+        "detail": "Mutated equip[16401].suit_id to 'CORRUPTED_SUIT_99999'; check_equip_suit_links detected warning: 'Broken suit target: equip[16401] references non-existent suit_id=CORRUPTED_SUIT_99999'"
+      },
+      "mutation_zero_preservation_detection": {
+        "passed": true,
+        "detail": "Mutated skill[65536].assets.action to None; reconcile_skills detected: 'Mismatch at skill[65536].assets.action: output None != source 0'"
+      },
+      "mutation_valid_but_wrong_target": {
+        "passed": true,
+        "detail": "Mutated equip[16401] (Đao Ninja) suit_id from '53' to valid-but-wrong suit '1'; reconcile_equipment detected: 'Mismatch at equip[16401].suit_id: output '1' != source '53''"
+      }
+    }
+  },
+  "errors_list": []
+}

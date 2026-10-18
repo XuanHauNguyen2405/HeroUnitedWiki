@@ -1,0 +1,44 @@
+# Dependency & build directories
+node_modules/
+web/node_modules/
+.next/
+web/.next/
+out/
+web/out/
+build/
+web/build/
+
+# Large binary game packages & archives (> 100MB)
+apk/
+apk_extracted/
+*.apk
+*.rar
+*.zip
+*.7z
+*.tar.gz
+*.pvr.ccz
+
+# Python cache & logs
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & local settings
+.env*.local
+.env
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+desktop.ini
+.DS_Store
+Thumbs.db

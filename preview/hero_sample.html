@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siêu Anh Hùng Hội Tụ WIKI - Đối Chiếu Dữ Liệu Trong Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="app-header">
+    <div class="logo-group">
+      <div class="logo-badge">SAHHT WIKI</div>
+      <div class="logo-title">
+        <h1>Bộ Mẫu Đối Chiếu Dữ Liệu Thực Tế Trong Game</h1>
+        <p>Phiên bản Pipeline: 1.2.0 • Trích xuất tĩnh bảo toàn 100% tệp cấu hình nguồn</p>
+      </div>
+    </div>
+    <nav class="nav-tabs" role="tablist">
+      <button class="tab-btn active" onclick="switchTab('hero')">
+        <span>👤</span> Trang Tướng (Hero)
+      </button>
+      <button class="tab-btn" onclick="switchTab('skill')">
+        <span>⚡</span> Trang Kỹ Năng (Skill)
+      </button>
+      <button class="tab-btn" onclick="switchTab('suit')">
+        <span>🛡️</span> Trang Bộ Trang Bị (Suits)
+      </button>
+      <button class="tab-btn" onclick="switchTab('checklist')">
+        <span>📋</span> Bảng Kiểm Định Game
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- TAB 1: HERO SHOWCASE (LỤC ĐẠO SASUKE) -->
+    <div id="tab-hero" class="tab-content active">
+      
+      <div class="entity-header">
+        <img class="entity-avatar" src="../public/assets/iphonehd/icon/icon_xzuozhu2.png" alt="Lục Đạo Sasuke" onerror="this.style.display='none'">
+        <div class="entity-meta">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <h2>Lục Đạo Sasuke</h2>
+            <span class="badge badge-purple">ID: 84000</span>
+            <span class="badge badge-gold">⭐ 0 / 20 Sao</span>
+            <span class="badge badge-blue">Phẩm chất: 4 (Tím)</span>
+          </div>
+          <div class="tags-row">
+            <span class="badge badge-blue">Giới tính: 1</span>
+            <span class="badge badge-gold">Cấp tối đa: 0</span>
+            <span class="badge badge-purple">Duy nhất (is_only): 1</span>
+            <span class="badge badge-emerald">Tái sinh: 5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Base & Growth Stats Grid -->
+      <div class="card">
+        <div class="section-title">Chỉ Số Khởi Đầu & Hệ Số Tăng Trưởng (Đã Đối Chiếu Khớp 100%)</div>
+        <div class="grid-4" style="grid-template-columns: repeat(5, 1fr);">
+          <div class="stat-box">
+            <div class="stat-label">Sinh Lực (HP)</div>
+            <div class="stat-value">7,714</div>
+            <div class="stat-growth">+1500 / cấp</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Công Vật Lý (PATK)</div>
+            <div class="stat-value">800</div>
+            <div class="stat-growth">+200 / cấp</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Công Ma Pháp (MATK)</div>
+            <div class="stat-value">423</div>
+            <div class="stat-growth">+100 / cấp</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Phòng Ngự (DEF)</div>
+            <div class="stat-value">468</div>
+            <div class="stat-growth">+100 / cấp</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Tốc Độ (SPEED)</div>
+            <div class="stat-value">476</div>
+            <div class="stat-growth">+150 / cấp</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 Skills Grid -->
+      <div class="card">
+        <div class="section-title">Danh Sách 7 Kỹ Năng Kèm Icon Thực Tế & Cấp Kích Hoạt</div>
+        <div class="grid-2">
+
+          <div class="skill-card">
+            <img class="skill-icon" src="../public/assets/iphonehd/icon/s_xzuozhu2_s1.png" alt="Chidori">
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Slot 1: Chidori</span>
+                <span class="badge badge-blue">Cấp 1</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.35rem;">
+                ID: 76510 • cd: 3 • rate: 50 • <span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span>
+              </div>
+              <div class="skill-description">
+                Gây ra effect% ST ma pháp và 100% ST thuộc tính Hỏa cho toàn phe địch, nhận 1 tầng "Sức Mạnh Sấm Sét"
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img class="skill-icon" src="../public/assets/iphonehd/icon/s_xzuozhu2_s2.png" alt="Susanoo">
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Slot 2: Susanoo</span>
+                <span class="badge badge-blue">Cấp 1</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.35rem;">
+                ID: 76520 • cd: 0 • rate: 50 • <span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span>
+              </div>
+              <div class="skill-description">
+                Kĩ năng cảm tri: Trước khi bị kẻ địch tấn công, bản thân hồi 50% HP max; tăng 200% Né Tránh, tấn công ma pháp tăng 150%, nhận 1 tầng "Sức Mạnh Sấm Sét".
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img class="skill-icon" src="../public/assets/iphonehd/icon/s_xzuozhu2_s3.png" alt="Chidori Senbon">
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Slot 3: Chidori Senbon</span>
+                <span class="badge badge-blue">Cấp 1</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.35rem;">
+                ID: 76530 • cd: 3 • rate: 50 • <span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span>
+              </div>
+              <div class="skill-description">
+                Kĩ năng phản kích: Gây ra effect% ST ma pháp và 200% ST thuộc tính Hỏa cho toàn phe địch, nhận 1 tầng "Sức Mạnh Sấm Sét".
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img class="skill-icon" src="../public/assets/iphonehd/icon/s_xzuozhu2_s6.png" alt="Amaterasu">
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Slot 4: Amaterasu</span>
+                <span class="badge badge-blue">Cấp 1</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.35rem;">
+                ID: 76560 • cd: 0 • rate: 100 • <span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span>
+              </div>
+              <div class="skill-description">
+                Kĩ năng tử vong: Bản thân hồi toàn bộ HP (bỏ qua Trọng Thương). Gây ra ST thực bằng effect% tấn công ma pháp và 1500% ST thuộc tính Hỏa cho toàn phe địch, tối đa Hồi Sinh 3 lần. Diệt Ngay 1 đơn vị địch.
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img class="skill-icon" src="../public/assets/iphonehd/icon/s_xzuozhu2_s7.png" alt="Mũi Tên Indra">
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Slot 5: Mũi Tên Indra</span>
+                <span class="badge badge-blue">Cấp 1</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.35rem;">
+                ID: 76570 • cd: 99 • rate: 100 • <span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span>
+              </div>
+              <div class="skill-description">
+                Kĩ năng tiền chiến: Gây ra ST thực bằng effect% tấn công ma pháp và 1800% ST thuộc tính Hỏa cho toàn phe địch, nhận 1 tầng"Sức Mạnh Sấm Sét"
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img class="skill-icon" src="../public/assets/iphonehd/icon/s_xzuozhu2_s4.png" alt="Kì Lân">
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Slot 6: Kì Lân</span>
+                <span class="badge badge-blue">Cấp 1</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.35rem;">
+                ID: 76540 • cd: 2 • rate: 100 • <span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span>
+              </div>
+              <div class="skill-description">
+                Gây ra ST thực bằng effect% tấn công ma pháp và 1800% ST thuộc tính Hỏa cho toàn phe địch, nhận 1 tầng"Sức Mạnh Sấm Sét"
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <img class="skill-icon" src="../public/assets/iphonehd/icon/s_xzuozhu2_s5.png" alt="Địa Bộc Thiên Tinh">
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Slot 7: Địa Bộc Thiên Tinh</span>
+                <span class="badge badge-blue">Cấp 1</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #a5b4fc; margin-bottom: 0.35rem;">
+                ID: 76550 • cd: 1 • rate: 100 • <span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span>
+              </div>
+              <div class="skill-description">
+                Kĩ năng trước lượt đánh: Gây ra ST thực bằng effect% tấn công ma pháp và 1500% ST thuộc tính Hỏa cho toàn phe địch. Bản thân hồi 100% HP max, , nhận 1 tầng"Sức Mạnh Sấm Sét"
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bonds (Duyên phận) -->
+      <div class="card">
+        <div class="section-title">Duyên Phận (Bonds) Kích Hoạt Chỉ Số</div>
+        <div class="grid-2">
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 700; color: #f59e0b; margin-bottom: 0.35rem;">🔗 Kiếm Quang <span style="font-size:0.75rem; color:#888;">(Chain ID: 43901)</span></div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">Khi xuất hiện cùng lúc với card2 và card3 Vật Công, Ma Công, HP+20%; Phòng Ngự, Tốc Độ+15%</div>
+          </div>
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 700; color: #f59e0b; margin-bottom: 0.35rem;">🔗 Sức Mạnh Sấm Sét <span style="font-size:0.75rem; color:#888;">(Chain ID: 43902)</span></div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">Khi xuất hiện cùng lúc với card2 Ma Công, HP và Tốc Độ+15%</div>
+          </div>
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 700; color: #f59e0b; margin-bottom: 0.35rem;">🔗 Phục Thù <span style="font-size:0.75rem; color:#888;">(Chain ID: 43903)</span></div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">Khi xuất hiện cùng lúc với card2 Ma Công, HP và Tốc Độ+15%</div>
+          </div>
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 700; color: #f59e0b; margin-bottom: 0.35rem;">🔗 Chí Cốt <span style="font-size:0.75rem; color:#888;">(Chain ID: 43904)</span></div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">Khi xuất hiện cùng lúc với card2 Ma Công, HP và Tốc Độ+15%</div>
+          </div>
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 700; color: #f59e0b; margin-bottom: 0.35rem;">🔗 Thông Lôi <span style="font-size:0.75rem; color:#888;">(Chain ID: 43905)</span></div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">Khi trang bị equip1 Ma Công+20%</div>
+          </div>
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 700; color: #f59e0b; margin-bottom: 0.35rem;">🔗 Cá Tính <span style="font-size:0.75rem; color:#888;">(Chain ID: 43906)</span></div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">Khi trang bị equip1 Phòng Ngự+20%</div>
+          </div>
+
+          <div style="padding: 1rem; background: rgba(0,0,0,0.25); border-radius: 10px; border: 1px solid var(--border-color);">
+            <div style="font-weight: 700; color: #f59e0b; margin-bottom: 0.35rem;">🔗 Tính Kế <span style="font-size:0.75rem; color:#888;">(Chain ID: 43907)</span></div>
+            <div style="font-size: 0.88rem; color: var(--text-muted);">Khi trang bị equip1 và equip2 HP+30%</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tiêu Thức Tỉnh & Đột Phá -->
+      <div class="grid-2">
+        <div class="card">
+          <div class="section-title">Thức Tỉnh (Awakening Mốc 1 - 6)</div>
+          <table class="data-table">
+            <thead>
+              <tr><th>Tầng</th><th>Dữ liệu nguồn (Vật phẩm & Số lượng)</th><th>Trạng thái</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Mốc 1</td><td><code>[["action_5", "action_15"]]</code></td><td><span class="badge badge-emerald">Hợp lệ</span></td></tr>
+              <tr><td>Mốc 2</td><td><code>[["action_1", "action_3", "action_5", "action_15"]]</code></td><td><span class="badge badge-emerald">Hợp lệ</span></td></tr>
+              <tr><td>Mốc 3</td><td><code>[["action_1", "zihuo_action_2", "action_3", "action_5", "action_15"]]</code></td><td><span class="badge badge-emerald">Hợp lệ</span></td></tr>
+              <tr><td>Mốc 4</td><td><code>[["action_1", "chenghuo_action_2", "action_3", "action_5", "action_15"]]</code></td><td><span class="badge badge-emerald">Hợp lệ</span></td></tr>
+              <tr><td>Mốc 5</td><td><code>[["action_1", "honghuo_action_2", "action_3", "action_5", "action_6"]]</code></td><td><span class="badge badge-emerald">Hợp lệ</span></td></tr>
+              <tr><td>Mốc 6</td><td><code>[["action_1", "honghuo_action_2", "action_3", "action_5", "action_6"]]</code></td><td><span class="badge badge-emerald">Hợp lệ</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <div class="section-title">Đột Phá & Tiến Hóa Tướng</div>
+          <table class="data-table">
+            <thead>
+              <tr><th>Thuộc tính</th><th>Giá trị</th><th>Ghi chú</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Đột phá 4 (break4)</td><td><code>[7, 20]</code></td><td>Mốc 4 sao</td></tr>
+              <tr><td>Đột phá 5 (break5)</td><td><code>[8, 20]</code></td><td>Mốc 5 sao</td></tr>
+              <tr><td>is_evo</td><td>1</td><td>Trạng thái tiến hóa</td></tr>
+              <tr><td>evo_kind</td><td>5</td><td>Hệ tiến hóa</td></tr>
+              <tr><td>is_skin</td><td>0</td><td>Phân loại trang phục</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 2: SKILL SHOWCASE (CHIDORI) -->
+    <div id="tab-skill" class="tab-content">
+      
+      <div class="entity-header">
+        <img class="entity-avatar" src="../public/assets/iphonehd/icon/s_xzuozhu2_s1.png" alt="Chidori">
+        <div class="entity-meta">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <h2>Chidori</h2>
+            <span class="badge badge-purple">ID: 76510</span>
+            <span class="badge badge-gold">Loại: KBEFOREATTACK</span>
+            <span class="badge badge-blue">Phẩm chất: 4</span>
+          </div>
+          <div class="tags-row">
+            <span class="badge badge-emerald">Cấp tối đa: 30</span>
+            <span class="badge badge-blue">cd: 3 <span class="badge badge-unverified" style="margin-left:4px;">Chưa xác minh cách tính/đơn vị</span></span>
+            <span class="badge badge-purple">pre_cd: 0 <span class="badge badge-unverified" style="margin-left:4px;">Chưa xác minh cách tính/đơn vị</span></span>
+            <span class="badge badge-gold">Tỉ lệ kích hoạt (rate): 50</span>
+            <span class="badge badge-emerald">Action: 0 (Bảo toàn số nguyên 0)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Formula Card -->
+      <div class="card">
+        <div class="section-title">Thuộc Tính Nguồn Kỹ Năng (Giá Trị Gốc)</div>
+        <div class="grid-3">
+          <div class="stat-box">
+            <div class="stat-label">effect</div>
+            <div class="stat-value">500</div>
+            <div class="stat-growth"><span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span></div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">attr_effect</div>
+            <div class="stat-value">550</div>
+            <div class="stat-growth"><span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span></div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">effect_lvchange</div>
+            <div class="stat-value">2.0</div>
+            <div class="stat-growth"><span class="badge badge-unverified">Chưa xác minh cách tính/đơn vị</span></div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding: 1.25rem; background: rgba(0,0,0,0.3); border-radius: 10px; border-left: 4px solid var(--accent-blue);">
+          <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; margin-bottom: 0.35rem;">Mô Tả Hiển Thị Trong Game (Game Story Text):</div>
+          <div style="font-size: 1.05rem; color: #ffffff; font-weight: 500;">
+            "Gây ra effect% ST ma pháp và 100% ST thuộc tính Hỏa cho toàn phe địch, nhận 1 tầng "Sức Mạnh Sấm Sét""
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Evolution Chain -->
+      <div class="card">
+        <div class="section-title">Chuỗi Tiến Cấp Kỹ Năng (Kỹ Năng Kế Tiếp - next_evolution_skill_id)</div>
+        <div class="evo-chain">
+          <div class="evo-step current">
+            <div style="font-size: 0.75rem; color: #93c5fd; font-weight: 700;">GIAI ĐOẠN 1 (HIỆN TẠI)</div>
+            <div style="font-size: 1.2rem; font-weight: 800; margin: 0.35rem 0;">Chidori</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">ID: 76510</div>
+            <div style="font-size: 0.8rem; color: #10b981; margin-top: 0.3rem;">effect: 500 <span class="badge badge-unverified" style="font-size:0.65rem;">Chưa xác minh cách tính/đơn vị</span></div>
+          </div>
+          
+          <div class="evo-arrow">➔</div>
+
+          <div class="evo-step">
+            <div style="font-size: 0.75rem; color: #fde68a; font-weight: 700;">GIAI ĐOẠN 2</div>
+            <div style="font-size: 1.2rem; font-weight: 800; margin: 0.35rem 0;">Chidori - Giai 2</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">ID: 76511</div>
+            <div style="font-size: 0.8rem; color: #10b981; margin-top: 0.3rem;">effect: 600 <span class="badge badge-unverified" style="font-size:0.65rem;">Chưa xác minh cách tính/đơn vị</span></div>
+          </div>
+
+          <div class="evo-arrow">➔</div>
+
+          <div class="evo-step">
+            <div style="font-size: 0.75rem; color: #c4b5fd; font-weight: 700;">GIAI ĐOẠN 3 (CỰC HẠN)</div>
+            <div style="font-size: 1.2rem; font-weight: 800; margin: 0.35rem 0;">Chidori - Giai 3</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">ID: 76512</div>
+            <div style="font-size: 0.8rem; color: #10b981; margin-top: 0.3rem;">effect: 700 <span class="badge badge-unverified" style="font-size:0.65rem;">Chưa xác minh cách tính/đơn vị</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 3: EQUIPMENT SET SHOWCASE -->
+    <div id="tab-suit" class="tab-content">
+      
+      <!-- Bộ 1: Bộ Sasuke (Đầy đủ 4 icon) -->
+      <div class="card">
+        <div class="entity-header" style="margin-bottom: 1.5rem;">
+          <div class="entity-avatar" style="background: linear-gradient(135deg, #4c1d95, #1e1b4b); font-size: 2.5rem;">👘</div>
+          <div class="entity-meta">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <h2>Bộ Trang Bị Chú Nguyền Sasuke (咒印佐助)</h2>
+              <span class="badge badge-purple">Suit ID: 1710</span>
+              <span class="badge badge-emerald">Đầy đủ 4 mảnh có icon thực tế</span>
+            </div>
+            <div class="tags-row">
+              <span class="badge badge-gold">Mốc 2 món: HP +300, Công Vật lý +250</span>
+              <span class="badge badge-blue">Mốc 3 món: Phòng ngự +200, Bạo kích +500</span>
+              <span class="badge badge-purple">Mốc 4 món: HP +300, Công Vật lý +250, Tốc độ +3300</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title">Chi Tiết 4 Vị Trí Trang Bị (Vũ Khí, Trang Sức, Giáp/Áo, Giày)</div>
+        <div class="grid-4">
+
+          <div class="card" style="padding: 1.25rem; text-align: center; margin-bottom: 0;">
+            <img class="entity-avatar" style="width:72px;height:72px;margin:0 auto 0.75rem auto;" src="../public/assets/iphonehd/icon/e_xzuozhu_sward.png" alt="Kiếm Kusanagi">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Kiếm Kusanagi</div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="badge badge-blue">Slot 1: Vũ khí</span>
+              <span class="badge badge-purple">Phẩm chất: 4</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-align: left; padding: 0.5rem; background: rgba(0,0,0,0.25); border-radius: 8px;">
+              <div>• <b>Chỉ số 1:</b> Ability 1 +448 (+112/cấp)</div>
+              <div>• <b>Chỉ số 2:</b> Ability 5 +672 (+84/cấp)</div>
+              <div>• <b>Tiến hóa:</b> Sang ID 123102</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1.25rem; text-align: center; margin-bottom: 0;">
+            <img class="entity-avatar" style="width:72px;height:72px;margin:0 auto 0.75rem auto;" src="../public/assets/iphonehd/icon/e_xzuozhu_cloak.png" alt="Áo Sasuke">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Áo Sasuke</div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="badge badge-blue">Slot 3: Giáp/Áo</span>
+              <span class="badge badge-purple">Phẩm chất: 4</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-align: left; padding: 0.5rem; background: rgba(0,0,0,0.25); border-radius: 8px;">
+              <div>• <b>Chỉ số 1:</b> Ability 3 +268 (+67/cấp)</div>
+              <div>• <b>Chỉ số 2:</b> Ability 5 +672 (+84/cấp)</div>
+              <div>• <b>Tiến hóa:</b> Sang ID 123202</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1.25rem; text-align: center; margin-bottom: 0;">
+            <img class="entity-avatar" style="width:72px;height:72px;margin:0 auto 0.75rem auto;" src="../public/assets/iphonehd/icon/e_xzuozhu_shoe.png" alt="Giày Sasuke">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Giày Sasuke</div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="badge badge-blue">Slot 4: Giày</span>
+              <span class="badge badge-purple">Phẩm chất: 4</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-align: left; padding: 0.5rem; background: rgba(0,0,0,0.25); border-radius: 8px;">
+              <div>• <b>Chỉ số 1:</b> Ability 2 +403 (+100/cấp)</div>
+              <div>• <b>Chỉ số 2:</b> Ability 5 +672 (+84/cấp)</div>
+              <div>• <b>Tiến hóa:</b> Sang ID 123302</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1.25rem; text-align: center; margin-bottom: 0;">
+            <img class="entity-avatar" style="width:72px;height:72px;margin:0 auto 0.75rem auto;" src="../public/assets/iphonehd/icon/e_xzuozhu_crown.png" alt="Obi Rắn">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Obi Rắn</div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="badge badge-blue">Slot 2: Trang sức</span>
+              <span class="badge badge-purple">Phẩm chất: 4</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-align: left; padding: 0.5rem; background: rgba(0,0,0,0.25); border-radius: 8px;">
+              <div>• <b>Chỉ số 1:</b> Ability 4 +403 (+100/cấp)</div>
+              <div>• <b>Chỉ số 2:</b> Ability 5 +672 (+84/cấp)</div>
+              <div>• <b>Tiến hóa:</b> Sang ID 123402</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bộ 2: Bộ Thần Đồng 53 (Bộ Đao Ninja được người dùng kiểm tra) -->
+      <div class="card">
+        <div class="entity-header" style="margin-bottom: 1.5rem;">
+          <div class="entity-avatar" style="background: linear-gradient(135deg, #065f46, #064e3b); font-size: 2.5rem;">🗡️</div>
+          <div class="entity-meta">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <h2>Bộ Thần Đồng (神童) - Chứa Đao Ninja</h2>
+              <span class="badge badge-purple">Suit ID: 53</span>
+              <span class="badge badge-emerald">Đã tìm thấy ảnh từ APK</span>
+            </div>
+            <div class="tags-row">
+              <span class="badge badge-gold">Mốc 2 món: [[1, 300], [2, 250]]</span>
+              <span class="badge badge-blue">Mốc 3 món: [[3, 200], [4, 500]]</span>
+              <span class="badge badge-purple">Mốc 4 món: [[1, 300], [2, 250], [5, 3300]]</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title">4 Mảnh Thuộc Bộ Thần Đồng (Minh chứng đối chiếu liên kết nguồn & ảnh từ APK)</div>
+        <div class="grid-4">
+
+          <div class="card" style="padding: 1.25rem; text-align: center; margin-bottom: 0;">
+            <img class="entity-avatar" style="width:72px;height:72px;margin:0 auto 0.75rem auto;" src="../public/assets/iphonehd/icon/e_br_sword.png" alt="Đao Ninja">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Đao Ninja</div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="badge badge-blue">Slot 1: Vũ khí</span>
+              <span class="badge badge-purple">ID: 16401</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-align: left; padding: 0.5rem; background: rgba(0,0,0,0.25); border-radius: 8px;">
+              <div>• <b>equip_id gốc:</b> 164 (Nhánh phôi cơ sở)</div>
+              <div>• <b>Thuộc Bộ:</b> Suit ID 53</div>
+              <div>• <b>Tiến hóa tiếp theo:</b> ID 16402</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1.25rem; text-align: center; margin-bottom: 0;">
+            <img class="entity-avatar" style="width:72px;height:72px;margin:0 auto 0.75rem auto;" src="../public/assets/iphonehd/icon/e_br_cloak.png" alt="Áo Tiên Phong">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Áo Tiên Phong</div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="badge badge-blue">Slot 3: Giáp/Áo</span>
+              <span class="badge badge-purple">ID: 26401</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-align: left; padding: 0.5rem; background: rgba(0,0,0,0.25); border-radius: 8px;">
+              <div>• <b>equip_id gốc:</b> 264 (Nhánh phôi cơ sở)</div>
+              <div>• <b>Thuộc Bộ:</b> Suit ID 53</div>
+              <div>• <b>Tiến hóa tiếp theo:</b> ID 26402</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1.25rem; text-align: center; margin-bottom: 0;">
+            <img class="entity-avatar" style="width:72px;height:72px;margin:0 auto 0.75rem auto;" src="../public/assets/iphonehd/icon/e_br_crown.png" alt="Bịt Mắt U Ám">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Bịt Mắt U Ám</div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="badge badge-blue">Slot 2: Trang sức</span>
+              <span class="badge badge-purple">ID: 36401</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-align: left; padding: 0.5rem; background: rgba(0,0,0,0.25); border-radius: 8px;">
+              <div>• <b>equip_id gốc:</b> 364 (Nhánh phôi cơ sở)</div>
+              <div>• <b>Thuộc Bộ:</b> Suit ID 53</div>
+              <div>• <b>Tiến hóa tiếp theo:</b> ID 36402</div>
+            </div>
+          </div>
+
+          <div class="card" style="padding: 1.25rem; text-align: center; margin-bottom: 0;">
+            <img class="entity-avatar" style="width:72px;height:72px;margin:0 auto 0.75rem auto;" src="../public/assets/iphonehd/icon/e_br_shoe.png" alt="Giày Ninja">
+            <div style="font-weight: 700; font-size: 1.05rem; margin-bottom: 0.25rem;">Giày Ninja</div>
+            <div style="margin-bottom: 0.5rem;">
+              <span class="badge badge-blue">Slot 4: Giày</span>
+              <span class="badge badge-purple">ID: 46401</span>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); text-align: left; padding: 0.5rem; background: rgba(0,0,0,0.25); border-radius: 8px;">
+              <div>• <b>equip_id gốc:</b> 464 (Nhánh phôi cơ sở)</div>
+              <div>• <b>Thuộc Bộ:</b> Suit ID 53</div>
+              <div>• <b>Tiến hóa tiếp theo:</b> ID 46402</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TAB 4: CHECKLIST FOR IN-GAME VERIFICATION -->
+    <div id="tab-checklist" class="tab-content">
+      
+      <div class="checklist-card">
+        <h3 style="color: #10b981; margin-bottom: 0.5rem;">✓ Hướng Dẫn Đối Chiếu Trực Tiếp Với Giao Diện Trong Game</h3>
+        <p style="color: var(--text-main); font-size: 0.95rem;">
+          Bạn có thể mở game mobile Siêu Anh Hùng Hội Tụ và so sánh từng thông số hiển thị trên giao diện này với tài khoản in-game theo các mục dưới đây:
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">Danh Mục Các Mục Đối Chiếu In-Game</div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Hạng mục</th>
+              <th>Đối tượng kiểm tra</th>
+              <th>Thông số cần đối chiếu trong Game</th>
+              <th>Kết quả trích xuất</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Tướng</b></td>
+              <td>Lục Đạo Sasuke (ID: 84000)</td>
+              <td>Chỉ số khởi đầu: HP (7.714), Công Vật lý (800), Tốc độ (476)</td>
+              <td>Khớp 100% từng byte</td>
+              <td><span class="badge badge-emerald">Khớp Nguồn</span></td>
+            </tr>
+            <tr>
+              <td><b>Tướng</b></td>
+              <td>Lục Đạo Sasuke (ID: 84000)</td>
+              <td>Hệ số tăng cấp: +1500 HP, +200 Công, +150 Tốc độ</td>
+              <td>growth_stats: 1500, 200, 150</td>
+              <td><span class="badge badge-emerald">Khớp Nguồn</span></td>
+            </tr>
+            <tr>
+              <td><b>Kỹ năng</b></td>
+              <td>Chidori (ID: 76510)</td>
+              <td>cd: 3, pre_cd: 0 (chưa xác minh đơn vị), rate: 50, effect: 500, attr_effect: 550, effect_lvchange: 2.0 (chưa xác minh cách tính/đơn vị)</td>
+              <td>effect: 500, rate: 50, effect_lvchange: 2.0</td>
+              <td><span class="badge badge-emerald">Khớp Nguồn</span></td>
+            </tr>
+            <tr>
+              <td><b>Tiến hóa</b></td>
+              <td>Chidori ➔ Chidori Giai 2 (ID: 76511)</td>
+              <td>Chuyển giai đoạn kỹ năng (next_evolution_skill_id: 76511)</td>
+              <td>next_evolution_skill_id: 76511</td>
+              <td><span class="badge badge-emerald">Khớp Nguồn</span></td>
+            </tr>
+            <tr>
+              <td><b>Trang bị</b></td>
+              <td>Đao Ninja (ID: 16401)</td>
+              <td>Vị trí: <b>Vũ khí (Slot 1)</b>; Thuộc <b>Bộ Thần Đồng (Suit 53)</b></td>
+              <td>slot: 1, suit_id: "53"</td>
+              <td><span class="badge badge-emerald">Khớp Nguồn</span></td>
+            </tr>
+            <tr>
+              <td><b>Trang bị</b></td>
+              <td>Bộ Chú Nguyền Sasuke (Suit: 1710)</td>
+              <td>4 món: Kiếm Kusanagi (Slot 1), Obi Rắn (Slot 2), Áo (Slot 3), Giày (Slot 4)</td>
+              <td>Khớp 100% 4 slot và icon</td>
+              <td><span class="badge badge-emerald">Khớp Nguồn</span></td>
+            </tr>
+            <tr>
+              <td><b>Tài nguyên</b></td>
+              <td>Icon nhân vật & chiêu thức</td>
+              <td>Icon Lục Đạo Sasuke & 7 icon kỹ năng Chidori, Susanoo, Kì Lân...</td>
+              <td>Tệp ảnh PNG phân giải từ public/assets/</td>
+              <td><span class="badge badge-emerald">Hiển Thị Thực Tế</span></td>
+            </tr>
+            <tr>
+              <td><b>Chưa xác minh</b></td>
+              <td>2 Tướng, 28 Kỹ năng, 19 Vật phẩm rỗng tên</td>
+              <td>Trong nguồn bỏ trống tên (chuỗi rỗng "")</td>
+              <td>Giữ nguyên "Chưa có dữ liệu"</td>
+              <td><span class="badge badge-unverified">Chưa Có Dữ Liệu</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+
+    <script>
+      function switchTab(tabId) {
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        
+        event.currentTarget.classList.add('active');
+        const target = document.getElementById('tab-' + tabId);
+        if (target) {
+          target.classList.add('active');
+        }
+      }
+    </script>
+</body>
+</html>
