@@ -1,0 +1,5695 @@
+{
+  "metadata": {
+    "title": "Cẩm Nang Ban Sức Khuyến Nghị Tướng",
+    "description": "Dữ liệu hướng dẫn ban sức tối ưu do người dùng cung cấp và cơ chế Thần Thư theo HP bản thân",
+    "updated_at": "2026-10-20"
+  },
+  "ban_suc_definitions": {
+    "con-lac": {
+      "id": "con-lac",
+      "name": "Con Lắc",
+      "fate_id": "11",
+      "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+      "url": "/ban-suc#fate-11"
+    },
+    "aether": {
+      "id": "aether",
+      "name": "Aether",
+      "fate_id": "2",
+      "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+      "url": "/ban-suc#fate-2"
+    },
+    "lanh-chua": {
+      "id": "lanh-chua",
+      "name": "Lãnh Chúa",
+      "fate_id": "5",
+      "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+      "url": "/ban-suc#fate-5"
+    },
+    "titan": {
+      "id": "titan",
+      "name": "Titan",
+      "fate_id": "3",
+      "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+      "url": "/ban-suc#fate-3"
+    },
+    "quang-nien": {
+      "id": "quang-nien",
+      "name": "Quang Niên",
+      "fate_id": "8",
+      "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+      "url": "/ban-suc#fate-8"
+    },
+    "than-thu": {
+      "id": "than-thu",
+      "alias": [
+        "thien-thu"
+      ],
+      "name": "Thần Thư",
+      "fate_id": "7",
+      "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+      "url": "/ban-suc#fate-7"
+    },
+    "vuong-toa": {
+      "id": "vuong-toa",
+      "alias": [
+        "vuong-toạ"
+      ],
+      "name": "Vương Toạ",
+      "fate_id": "9",
+      "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+      "url": "/ban-suc#fate-9"
+    },
+    "tinh-than": {
+      "id": "tinh-than",
+      "name": "Tinh Thần",
+      "fate_id": "6",
+      "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+      "url": "/ban-suc#fate-6"
+    },
+    "khoi-nguyen": {
+      "id": "khoi-nguyen",
+      "name": "Khởi Nguyên",
+      "fate_id": "10",
+      "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+      "url": "/ban-suc#fate-10"
+    },
+    "huy-diet": {
+      "id": "huy-diet",
+      "alias": [
+        "huy-biet"
+      ],
+      "name": "Huỷ Diệt",
+      "fate_id": "4",
+      "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+      "url": "/ban-suc#fate-4"
+    }
+  },
+  "heroes": {
+    "81700": {
+      "group_name": "Tenka",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Kiếm Chung Yên truy kích ST thực bằng 50% HP tối đa bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Kiếm Chung Yên",
+        "description": "Kĩ năng trước chiến đấu: Yatogami Tenka phóng ra sức mạnh Tinh Linh, vĩnh viễn tăng 230% HP tối đa bản thân và 79% Giảm Thương toàn thể, tăng 500% Trúng Đích, Né Tránh và Bạo Kích; và Truy Kích ST thực bằng 50% HP tối đa bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Kiếm Chung Yên truy kích ST thực bằng 50% HP tối đa bản thân"
+      },
+      "hero_id": "81700"
+    },
+    "43600": {
+      "group_name": "Vegeta",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "43600"
+    },
+    "83300": {
+      "group_name": "Vegeta",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "83300"
+    },
+    "83400": {
+      "group_name": "Vegeta",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "83400"
+    },
+    "1": {
+      "group_name": "Goku",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư x4",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": "nếu chơi Gogeta",
+          "custom_text": "Thần Thư x4 (nếu chơi Gogeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": "khi không đi cùng Vegeta",
+          "custom_text": "Quang Niên (khi không đi cùng Vegeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "1"
+    },
+    "42500": {
+      "group_name": "Goku",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư x4",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": "nếu chơi Gogeta",
+          "custom_text": "Thần Thư x4 (nếu chơi Gogeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": "khi không đi cùng Vegeta",
+          "custom_text": "Quang Niên (khi không đi cùng Vegeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "42500"
+    },
+    "81100": {
+      "group_name": "Goku",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư x4",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": "nếu chơi Gogeta",
+          "custom_text": "Thần Thư x4 (nếu chơi Gogeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": "khi không đi cùng Vegeta",
+          "custom_text": "Quang Niên (khi không đi cùng Vegeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "81100"
+    },
+    "81200": {
+      "group_name": "Goku",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư x4",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": "nếu chơi Gogeta",
+          "custom_text": "Thần Thư x4 (nếu chơi Gogeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": "khi không đi cùng Vegeta",
+          "custom_text": "Quang Niên (khi không đi cùng Vegeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "81200"
+    },
+    "425000": {
+      "group_name": "Goku",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư x4",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": "nếu chơi Gogeta",
+          "custom_text": "Thần Thư x4 (nếu chơi Gogeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": "khi không đi cùng Vegeta",
+          "custom_text": "Quang Niên (khi không đi cùng Vegeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "425000"
+    },
+    "39600": {
+      "group_name": "Goku",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư x4",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": "nếu chơi Gogeta",
+          "custom_text": "Thần Thư x4 (nếu chơi Gogeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": "khi không đi cùng Vegeta",
+          "custom_text": "Quang Niên (khi không đi cùng Vegeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "39600"
+    },
+    "69200": {
+      "group_name": "Goku",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư x4",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": "nếu chơi Gogeta",
+          "custom_text": "Thần Thư x4 (nếu chơi Gogeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": "khi không đi cùng Vegeta",
+          "custom_text": "Quang Niên (khi không đi cùng Vegeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "69200"
+    },
+    "69500": {
+      "group_name": "Goku",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư x4",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": "nếu chơi Gogeta",
+          "custom_text": "Thần Thư x4 (nếu chơi Gogeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "quang-nien",
+          "name": "Quang Niên",
+          "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+          "url": "/ban-suc#fate-8",
+          "condition": "khi không đi cùng Vegeta",
+          "custom_text": "Quang Niên (khi không đi cùng Vegeta)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "69500"
+    },
+    "32900": {
+      "group_name": "Zoro",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "32900"
+    },
+    "43700": {
+      "group_name": "Zoro",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "43700"
+    },
+    "83500": {
+      "group_name": "Zoro",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "83500"
+    },
+    "83600": {
+      "group_name": "Zoro",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "83600"
+    },
+    "67500": {
+      "group_name": "Zoro",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "67500"
+    },
+    "43000": {
+      "group_name": "Newgate",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Kỹ năng: Moby Dick / Một địch một ngàn",
+        "description": "Chỉ có cơ chế hồi phục 50% HP bản thân khi chết (tự hồi máu), không có sát thương/hiệu ứng phụ thuộc lượng HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "43000"
+    },
+    "82100": {
+      "group_name": "Newgate",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Kỹ năng: Moby Dick / Một địch một ngàn",
+        "description": "Chỉ có cơ chế hồi phục 50% HP bản thân khi chết (tự hồi máu), không có sát thương/hiệu ứng phụ thuộc lượng HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "82100"
+    },
+    "82200": {
+      "group_name": "Newgate",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Kỹ năng: Moby Dick / Một địch một ngàn",
+        "description": "Chỉ có cơ chế hồi phục 50% HP bản thân khi chết (tự hồi máu), không có sát thương/hiệu ứng phụ thuộc lượng HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "82200"
+    },
+    "44200": {
+      "group_name": "Vegetto",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cực - Kamekameha & CS7 truy kích 10-50% HP max bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Cực - Kamekameha & Chuyển Sinh 7: Hồn·CT - Vegetto",
+        "description": "Kỹ năng Cực - Kamekameha gây thêm ST truy kích bằng 10%-40% HP max bản thân. Chuyển Sinh 7 gây Truy Kích cho kẻ địch khác với ST bằng 50% HP max bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cực - Kamekameha & CS7 truy kích 10-50% HP max bản thân"
+      },
+      "hero_id": "44200"
+    },
+    "84500": {
+      "group_name": "Vegetto",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cực - Kamekameha & CS7 truy kích 10-50% HP max bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Cực - Kamekameha & Chuyển Sinh 7: Hồn·CT - Vegetto",
+        "description": "Kỹ năng Cực - Kamekameha gây thêm ST truy kích bằng 10%-40% HP max bản thân. Chuyển Sinh 7 gây Truy Kích cho kẻ địch khác với ST bằng 50% HP max bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cực - Kamekameha & CS7 truy kích 10-50% HP max bản thân"
+      },
+      "hero_id": "84500"
+    },
+    "442000": {
+      "group_name": "Vegetto",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cực - Kamekameha & CS7 truy kích 10-50% HP max bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Cực - Kamekameha & Chuyển Sinh 7: Hồn·CT - Vegetto",
+        "description": "Kỹ năng Cực - Kamekameha gây thêm ST truy kích bằng 10%-40% HP max bản thân. Chuyển Sinh 7 gây Truy Kích cho kẻ địch khác với ST bằng 50% HP max bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cực - Kamekameha & CS7 truy kích 10-50% HP max bản thân"
+      },
+      "hero_id": "442000"
+    },
+    "84600": {
+      "group_name": "Vegetto",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cực - Kamekameha & CS7 truy kích 10-50% HP max bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Cực - Kamekameha & Chuyển Sinh 7: Hồn·CT - Vegetto",
+        "description": "Kỹ năng Cực - Kamekameha gây thêm ST truy kích bằng 10%-40% HP max bản thân. Chuyển Sinh 7 gây Truy Kích cho kẻ địch khác với ST bằng 50% HP max bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cực - Kamekameha & CS7 truy kích 10-50% HP max bản thân"
+      },
+      "hero_id": "84600"
+    },
+    "41700": {
+      "group_name": "Shalltear",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngọn Thương Thanh Tẩy gây ST thực bằng 50% lượng HP tối đa của bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Ngọn Thương Thanh Tẩy",
+        "description": "Kĩ năng tiền chiến: Tăng vĩnh viễn 100% giới hạn HP của bản thân và giảm 79% thương tổn tổng thể, gây ST thực bằng 50% lượng HP tối đa của bản thân cho tất cả kẻ địch.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngọn Thương Thanh Tẩy gây ST thực bằng 50% lượng HP tối đa của bản thân"
+      },
+      "hero_id": "41700"
+    },
+    "79800": {
+      "group_name": "Shalltear",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngọn Thương Thanh Tẩy gây ST thực bằng 50% lượng HP tối đa của bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Ngọn Thương Thanh Tẩy",
+        "description": "Kĩ năng tiền chiến: Tăng vĩnh viễn 100% giới hạn HP của bản thân và giảm 79% thương tổn tổng thể, gây ST thực bằng 50% lượng HP tối đa của bản thân cho tất cả kẻ địch.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngọn Thương Thanh Tẩy gây ST thực bằng 50% lượng HP tối đa của bản thân"
+      },
+      "hero_id": "79800"
+    },
+    "42100": {
+      "group_name": "Tanjiro",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "42100"
+    },
+    "80300": {
+      "group_name": "Tanjiro",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "80300"
+    },
+    "80400": {
+      "group_name": "Tanjiro",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "80400"
+    },
+    "42300": {
+      "group_name": "Gojo",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Bản Đồ Vô Hạn / Hư Thức Tử",
+        "description": "Cơ chế theo Tốc Độ và Ma Công, không có kỹ năng tính sát thương dựa trên HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "42300"
+    },
+    "80700": {
+      "group_name": "Gojo",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Bản Đồ Vô Hạn / Hư Thức Tử",
+        "description": "Cơ chế theo Tốc Độ và Ma Công, không có kỹ năng tính sát thương dựa trên HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "80700"
+    },
+    "80800": {
+      "group_name": "Gojo",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Bản Đồ Vô Hạn / Hư Thức Tử",
+        "description": "Cơ chế theo Tốc Độ và Ma Công, không có kỹ năng tính sát thương dựa trên HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "80800"
+    },
+    "42900": {
+      "group_name": "Rimuru",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Hiền Giả Phân Tích / Sức Mạnh Ma Vương",
+        "description": "Kỹ năng hồi sinh 100% HP khi tử vong, sát thương tính theo Ma Công và Công Thuộc Tính, không tính sát thương theo lượng HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "42900"
+    },
+    "81900": {
+      "group_name": "Rimuru",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Hiền Giả Phân Tích / Sức Mạnh Ma Vương",
+        "description": "Kỹ năng hồi sinh 100% HP khi tử vong, sát thương tính theo Ma Công và Công Thuộc Tính, không tính sát thương theo lượng HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "81900"
+    },
+    "82000": {
+      "group_name": "Rimuru",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Hiền Giả Phân Tích / Sức Mạnh Ma Vương",
+        "description": "Kỹ năng hồi sinh 100% HP khi tử vong, sát thương tính theo Ma Công và Công Thuộc Tính, không tính sát thương theo lượng HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "82000"
+    },
+    "41900": {
+      "group_name": "Kikyo",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "tinh-than",
+          "name": "Tinh Thần",
+          "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+          "url": "/ban-suc#fate-6",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "41900"
+    },
+    "80000": {
+      "group_name": "Kikyo",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "tinh-than",
+          "name": "Tinh Thần",
+          "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+          "url": "/ban-suc#fate-6",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": null,
+      "hero_id": "80000"
+    },
+    "43100": {
+      "group_name": "Nagato",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngoại Đạo Ma Tượng truy kích ST thực bằng 50% HP max bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng Siêu Tiến Hóa 2: Ngoại đạo ma tượng - Genryuu Kyuu Fuujin",
+        "description": "Vĩnh viễn tăng 210% HP max, 79% Giảm Thương chỉnh thể, gây ra effect% ST thực ma pháp và 1800% ST nguyên tố Thổ, Truy Kích với ST thực bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngoại Đạo Ma Tượng truy kích ST thực bằng 50% HP max bản thân"
+      },
+      "hero_id": "43100"
+    },
+    "82300": {
+      "group_name": "Nagato",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngoại Đạo Ma Tượng truy kích ST thực bằng 50% HP max bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng Siêu Tiến Hóa 2: Ngoại đạo ma tượng - Genryuu Kyuu Fuujin",
+        "description": "Vĩnh viễn tăng 210% HP max, 79% Giảm Thương chỉnh thể, gây ra effect% ST thực ma pháp và 1800% ST nguyên tố Thổ, Truy Kích với ST thực bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngoại Đạo Ma Tượng truy kích ST thực bằng 50% HP max bản thân"
+      },
+      "hero_id": "82300"
+    },
+    "82400": {
+      "group_name": "Nagato",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "titan",
+          "name": "Titan",
+          "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+          "url": "/ban-suc#fate-3",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngoại Đạo Ma Tượng truy kích ST thực bằng 50% HP max bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng Siêu Tiến Hóa 2: Ngoại đạo ma tượng - Genryuu Kyuu Fuujin",
+        "description": "Vĩnh viễn tăng 210% HP max, 79% Giảm Thương chỉnh thể, gây ra effect% ST thực ma pháp và 1800% ST nguyên tố Thổ, Truy Kích với ST thực bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ngoại Đạo Ma Tượng truy kích ST thực bằng 50% HP max bản thân"
+      },
+      "hero_id": "82400"
+    },
+    "43400": {
+      "group_name": "Shadow",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "I Am Atomic",
+        "description": "Sát thương tính theo Công Ma Pháp và Công Thuộc Tính Địa, không có tỷ lệ theo HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "43400"
+    },
+    "82900": {
+      "group_name": "Shadow",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "I Am Atomic",
+        "description": "Sát thương tính theo Công Ma Pháp và Công Thuộc Tính Địa, không có tỷ lệ theo HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "82900"
+    },
+    "83000": {
+      "group_name": "Shadow",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "I Am Atomic",
+        "description": "Sát thương tính theo Công Ma Pháp và Công Thuộc Tính Địa, không có tỷ lệ theo HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "83000"
+    },
+    "43200": {
+      "group_name": "Trunks",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Galick Canon truy kích ST thực bằng 50% HP max của bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Galick Canon / Hủy Diệt Ma Phong Ba",
+        "description": "Kĩ năng trước chiến đấu: Vĩnh viễn tăng 220% HP max, 79% Giảm Thương chỉnh thể. Truy Kích với ST thực bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Galick Canon truy kích ST thực bằng 50% HP max của bản thân"
+      },
+      "hero_id": "43200"
+    },
+    "82500": {
+      "group_name": "Trunks",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Galick Canon truy kích ST thực bằng 50% HP max của bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Galick Canon / Hủy Diệt Ma Phong Ba",
+        "description": "Kĩ năng trước chiến đấu: Vĩnh viễn tăng 220% HP max, 79% Giảm Thương chỉnh thể. Truy Kích với ST thực bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Galick Canon truy kích ST thực bằng 50% HP max của bản thân"
+      },
+      "hero_id": "82500"
+    },
+    "82600": {
+      "group_name": "Trunks",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Galick Canon truy kích ST thực bằng 50% HP max của bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Galick Canon / Hủy Diệt Ma Phong Ba",
+        "description": "Kĩ năng trước chiến đấu: Vĩnh viễn tăng 220% HP max, 79% Giảm Thương chỉnh thể. Truy Kích với ST thực bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Galick Canon truy kích ST thực bằng 50% HP max của bản thân"
+      },
+      "hero_id": "82600"
+    },
+    "42000": {
+      "group_name": "Broli",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": "Hướng thủ",
+          "custom_text": "Vương Toạ (Hướng thủ)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Titan / Quang Niên",
+          "condition": "Hướng công",
+          "custom_text": "Titan / Quang Niên (Hướng công)",
+          "sub_items": [
+            {
+              "id": "titan",
+              "name": "Titan",
+              "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+              "url": "/ban-suc#fate-3"
+            },
+            {
+              "id": "quang-nien",
+              "name": "Quang Niên",
+              "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+              "url": "/ban-suc#fate-8"
+            }
+          ]
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Gigantic Roar / Cuồng Bạo",
+        "description": "Cơ chế cuồng nộ và khiên phòng thủ, không chuyển đổi HP bản thân thành sát thương trực tiếp.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "42000"
+    },
+    "80100": {
+      "group_name": "Broli",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": "Hướng thủ",
+          "custom_text": "Vương Toạ (Hướng thủ)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Titan / Quang Niên",
+          "condition": "Hướng công",
+          "custom_text": "Titan / Quang Niên (Hướng công)",
+          "sub_items": [
+            {
+              "id": "titan",
+              "name": "Titan",
+              "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+              "url": "/ban-suc#fate-3"
+            },
+            {
+              "id": "quang-nien",
+              "name": "Quang Niên",
+              "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+              "url": "/ban-suc#fate-8"
+            }
+          ]
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Gigantic Roar / Cuồng Bạo",
+        "description": "Cơ chế cuồng nộ và khiên phòng thủ, không chuyển đổi HP bản thân thành sát thương trực tiếp.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "80100"
+    },
+    "80200": {
+      "group_name": "Broli",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": "Hướng thủ",
+          "custom_text": "Vương Toạ (Hướng thủ)",
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Titan / Quang Niên",
+          "condition": "Hướng công",
+          "custom_text": "Titan / Quang Niên (Hướng công)",
+          "sub_items": [
+            {
+              "id": "titan",
+              "name": "Titan",
+              "icon": "/assets/iphonehd/icon/dianhaushi02_3_4.png",
+              "url": "/ban-suc#fate-3"
+            },
+            {
+              "id": "quang-nien",
+              "name": "Quang Niên",
+              "icon": "/assets/iphonehd/icon/dianhaushi07_3_4.png",
+              "url": "/ban-suc#fate-8"
+            }
+          ]
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Gigantic Roar / Cuồng Bạo",
+        "description": "Cơ chế cuồng nộ và khiên phòng thủ, không chuyển đổi HP bản thân thành sát thương trực tiếp.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "80200"
+    },
+    "43500": {
+      "group_name": "Elaina",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Lãnh Chúa / Vương Toạ",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "lanh-chua",
+              "name": "Lãnh Chúa",
+              "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+              "url": "/ban-suc#fate-5"
+            },
+            {
+              "id": "vuong-toa",
+              "name": "Vương Toạ",
+              "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+              "url": "/ban-suc#fate-9"
+            }
+          ]
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Bão Tố Ma Thuật",
+        "description": "Sát thương tính theo Ma Công và Công Thuộc Tính Phong/Thủy, không có tỷ lệ theo HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "43500"
+    },
+    "83100": {
+      "group_name": "Elaina",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Lãnh Chúa / Vương Toạ",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "lanh-chua",
+              "name": "Lãnh Chúa",
+              "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+              "url": "/ban-suc#fate-5"
+            },
+            {
+              "id": "vuong-toa",
+              "name": "Vương Toạ",
+              "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+              "url": "/ban-suc#fate-9"
+            }
+          ]
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Bão Tố Ma Thuật",
+        "description": "Sát thương tính theo Ma Công và Công Thuộc Tính Phong/Thủy, không có tỷ lệ theo HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "83100"
+    },
+    "83200": {
+      "group_name": "Elaina",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Lãnh Chúa / Vương Toạ",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "lanh-chua",
+              "name": "Lãnh Chúa",
+              "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+              "url": "/ban-suc#fate-5"
+            },
+            {
+              "id": "vuong-toa",
+              "name": "Vương Toạ",
+              "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+              "url": "/ban-suc#fate-9"
+            }
+          ]
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Bão Tố Ma Thuật",
+        "description": "Sát thương tính theo Ma Công và Công Thuộc Tính Phong/Thủy, không có tỷ lệ theo HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "83200"
+    },
+    "43300": {
+      "group_name": "Frieren",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ma pháp tán ma truy kích ST thực bằng 50% HP của bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Ma pháp tán ma / Bạo phá trái tim",
+        "description": "Kỹ năng tiền chiến: Vĩnh viễn tăng 220% HP tối đa của bản thân, giảm thương chỉnh thể 79%. Truy kích với ST thực bằng 50% HP của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ma pháp tán ma truy kích ST thực bằng 50% HP của bản thân"
+      },
+      "hero_id": "43300"
+    },
+    "82700": {
+      "group_name": "Frieren",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ma pháp tán ma truy kích ST thực bằng 50% HP của bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Ma pháp tán ma / Bạo phá trái tim",
+        "description": "Kỹ năng tiền chiến: Vĩnh viễn tăng 220% HP tối đa của bản thân, giảm thương chỉnh thể 79%. Truy kích với ST thực bằng 50% HP của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ma pháp tán ma truy kích ST thực bằng 50% HP của bản thân"
+      },
+      "hero_id": "82700"
+    },
+    "82800": {
+      "group_name": "Frieren",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ma pháp tán ma truy kích ST thực bằng 50% HP của bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Ma pháp tán ma / Bạo phá trái tim",
+        "description": "Kỹ năng tiền chiến: Vĩnh viễn tăng 220% HP tối đa của bản thân, giảm thương chỉnh thể 79%. Truy kích với ST thực bằng 50% HP của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Ma pháp tán ma truy kích ST thực bằng 50% HP của bản thân"
+      },
+      "hero_id": "82800"
+    },
+    "42600": {
+      "group_name": "Gohan",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Kamekameha gây ST bằng 30% HP tối đa bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Kamekameha / Bạo Phát Nộ Khí",
+        "description": "Kỹ năng trước khi chiến đấu: Tăng 200% HP bản thân / 79% giảm thương. Gây ra ST bằng 30% HP tối đa của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Kamekameha gây ST bằng 30% HP tối đa bản thân"
+      },
+      "hero_id": "42600"
+    },
+    "81400": {
+      "group_name": "Gohan",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Kamekameha gây ST bằng 30% HP tối đa bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Kamekameha / Bạo Phát Nộ Khí",
+        "description": "Kỹ năng trước khi chiến đấu: Tăng 200% HP bản thân / 79% giảm thương. Gây ra ST bằng 30% HP tối đa của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Kamekameha gây ST bằng 30% HP tối đa bản thân"
+      },
+      "hero_id": "81400"
+    },
+    "81500": {
+      "group_name": "Gohan",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Kamekameha gây ST bằng 30% HP tối đa bản thân"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Kamekameha / Bạo Phát Nộ Khí",
+        "description": "Kỹ năng trước khi chiến đấu: Tăng 200% HP bản thân / 79% giảm thương. Gây ra ST bằng 30% HP tối đa của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Kamekameha gây ST bằng 30% HP tối đa bản thân"
+      },
+      "hero_id": "81500"
+    },
+    "41800": {
+      "group_name": "Piccolo",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "tinh-than",
+          "name": "Tinh Thần",
+          "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+          "url": "/ban-suc#fate-6",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Ma Quán Quang Sát Pháo",
+        "description": "Cơ chế hỗ trợ và khống chế, không có sát thương theo tỷ lệ HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "41800"
+    },
+    "79900": {
+      "group_name": "Piccolo",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "tinh-than",
+          "name": "Tinh Thần",
+          "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+          "url": "/ban-suc#fate-6",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Ma Quán Quang Sát Pháo",
+        "description": "Cơ chế hỗ trợ và khống chế, không có sát thương theo tỷ lệ HP bản thân.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "79900"
+    },
+    "42200": {
+      "group_name": "Maple",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Thần Giáp Hộ Mệnh",
+        "description": "Tập trung thuần túy vào Phòng Ngự cực hạn và miễn nhiễm sát thương, không có kỹ năng chuyển HP thành công.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "42200"
+    },
+    "80500": {
+      "group_name": "Maple",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Thần Giáp Hộ Mệnh",
+        "description": "Tập trung thuần túy vào Phòng Ngự cực hạn và miễn nhiễm sát thương, không có kỹ năng chuyển HP thành công.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "80500"
+    },
+    "80600": {
+      "group_name": "Maple",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "is_slash": true,
+          "label": "Tinh Thần / Khởi Nguyên",
+          "condition": null,
+          "custom_text": null,
+          "sub_items": [
+            {
+              "id": "tinh-than",
+              "name": "Tinh Thần",
+              "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+              "url": "/ban-suc#fate-6"
+            },
+            {
+              "id": "khoi-nguyen",
+              "name": "Khởi Nguyên",
+              "icon": "/assets/iphonehd/icon/dianhaushi09_3_4.png",
+              "url": "/ban-suc#fate-10"
+            }
+          ]
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": "Thần Giáp Hộ Mệnh",
+        "description": "Tập trung thuần túy vào Phòng Ngự cực hạn và miễn nhiễm sát thương, không có kỹ năng chuyển HP thành công.",
+        "status": "verified_no_scaling",
+        "added_than_thu": false
+      },
+      "hero_id": "80600"
+    },
+    "42800": {
+      "group_name": "Inori",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "tinh-than",
+          "name": "Tinh Thần",
+          "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+          "url": "/ban-suc#fate-6",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư (nếu kích hoạt cơ chế ST theo 30% HP bản thân từ skin Hắc Vũ Chi Dạ)"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Hư Không (Skin Hắc Vũ Chi Dạ)",
+        "description": "Kĩ năng tử vong Hư Không: Nếu sử dụng skin 'Hắc Vũ Chi Dạ' thì sẽ được nhận thêm 1 tầng 'Hòa vào màn đêm', gây ra thêm ST bằng 30% HP tối đa của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư (nếu kích hoạt cơ chế ST theo 30% HP bản thân từ skin Hắc Vũ Chi Dạ)"
+      },
+      "hero_id": "42800"
+    },
+    "81800": {
+      "group_name": "Inori",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "tinh-than",
+          "name": "Tinh Thần",
+          "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+          "url": "/ban-suc#fate-6",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư (nếu kích hoạt cơ chế ST theo 30% HP bản thân từ skin Hắc Vũ Chi Dạ)"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Hư Không (Skin Hắc Vũ Chi Dạ)",
+        "description": "Kĩ năng tử vong Hư Không: Nếu sử dụng skin 'Hắc Vũ Chi Dạ' thì sẽ được nhận thêm 1 tầng 'Hòa vào màn đêm', gây ra thêm ST bằng 30% HP tối đa của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư (nếu kích hoạt cơ chế ST theo 30% HP bản thân từ skin Hắc Vũ Chi Dạ)"
+      },
+      "hero_id": "81800"
+    },
+    "428000": {
+      "group_name": "Inori",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "tinh-than",
+          "name": "Tinh Thần",
+          "icon": "/assets/iphonehd/icon/dianhaushi05_3_4.png",
+          "url": "/ban-suc#fate-6",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư (nếu kích hoạt cơ chế ST theo 30% HP bản thân từ skin Hắc Vũ Chi Dạ)"
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Hư Không (Skin Hắc Vũ Chi Dạ)",
+        "description": "Kĩ năng tử vong Hư Không: Nếu sử dụng skin 'Hắc Vũ Chi Dạ' thì sẽ được nhận thêm 1 tầng 'Hòa vào màn đêm', gây ra thêm ST bằng 30% HP tối đa của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư (nếu kích hoạt cơ chế ST theo 30% HP bản thân từ skin Hắc Vũ Chi Dạ)"
+      },
+      "hero_id": "428000"
+    },
+    "81300": {
+      "group_name": "Luffy Nika",
+      "is_unlisted": false,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "con-lac",
+          "name": "Con Lắc",
+          "icon": "/assets/iphonehd/icon/dianhaushi10_3_4.png",
+          "url": "/ban-suc#fate-11",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "aether",
+          "name": "Aether",
+          "icon": "/assets/iphonehd/icon/dianhaushi01_3_4.png",
+          "url": "/ban-suc#fate-2",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "lanh-chua",
+          "name": "Lãnh Chúa",
+          "icon": "/assets/iphonehd/icon/dianhaushi04_3_4.png",
+          "url": "/ban-suc#fate-5",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "vuong-toa",
+          "name": "Vương Toạ",
+          "icon": "/assets/iphonehd/icon/dianhaushi08_3_4.png",
+          "url": "/ban-suc#fate-9",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        },
+        {
+          "id": "huy-diet",
+          "name": "Huỷ Diệt",
+          "icon": "/assets/iphonehd/icon/dianhaushi03_3_4.png",
+          "url": "/ban-suc#fate-4",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": false,
+          "min_rebirth_stage": 0,
+          "hp_note": null
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Tự Do!!!!!!",
+        "description": "Kỹ năng trước khi chiến đấu: Tăng 210% HP bản thân / 79% giảm thương. Gây ra ST bằng 40% HP tối đa của bản thân.",
+        "status": "verified_already_in_list",
+        "added_than_thu": false
+      },
+      "hero_id": "81300"
+    },
+    "84000": {
+      "group_name": "Sasuke",
+      "is_unlisted": true,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 4,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế CS4 Lục Đạo Sasuke gây ST truy kích bằng 50% HP max bản thân (Mở từ Chuyển Sinh 4). Các ban sức khác đang cập nhật."
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "min_rebirth_stage": 4,
+        "skill_or_stage": "CS4 Lục Đạo Sasuke (Kỹ năng: Địa Bộc Thiên Tinh / Thần Ngự)",
+        "description": "Kỹ năng Chuyển Sinh 4: Nếu Sức Mạnh Sấm Sét > 5 gây ra ST truy kích bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế CS4 Lục Đạo Sasuke gây ST truy kích bằng 50% HP max bản thân (Mở từ Chuyển Sinh 4). Các ban sức khác đang cập nhật."
+      },
+      "hero_id": "84000"
+    },
+    "43900": {
+      "group_name": "Sasuke",
+      "is_unlisted": true,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 1,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế CS1 Chú Nguyền Sasuke gây ST truy kích bằng 50% HP max bản thân (Mở từ Chuyển Sinh 1). Các ban sức khác đang cập nhật."
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "min_rebirth_stage": 1,
+        "skill_or_stage": "CS1 Chú Nguyền Sasuke",
+        "description": "Kỹ năng Chuyển Sinh 1: Gây ra thêm ST truy kích bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế CS1 Chú Nguyền Sasuke gây ST truy kích bằng 50% HP max bản thân (Mở từ Chuyển Sinh 1). Các ban sức khác đang cập nhật."
+      },
+      "hero_id": "43900"
+    },
+    "83900": {
+      "group_name": "Sasuke",
+      "is_unlisted": true,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 1,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế CS1 Chú Nguyền Sasuke gây ST truy kích bằng 50% HP max bản thân (Mở từ Chuyển Sinh 1). Các ban sức khác đang cập nhật."
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "min_rebirth_stage": 1,
+        "skill_or_stage": "CS1 Chú Nguyền Sasuke",
+        "description": "Kỹ năng Chuyển Sinh 1: Gây ra thêm ST truy kích bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế CS1 Chú Nguyền Sasuke gây ST truy kích bằng 50% HP max bản thân (Mở từ Chuyển Sinh 1). Các ban sức khác đang cập nhật."
+      },
+      "hero_id": "83900"
+    },
+    "44100": {
+      "group_name": "Shamrock",
+      "is_unlisted": true,
+      "status": "pending_update",
+      "recommendations": [],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": null,
+        "description": "Chưa có danh sách thủ công và không có cơ chế phụ thuộc HP bản thân.",
+        "status": "pending_update"
+      },
+      "hero_id": "44100"
+    },
+    "84300": {
+      "group_name": "Shamrock",
+      "is_unlisted": true,
+      "status": "pending_update",
+      "recommendations": [],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": null,
+        "description": "Chưa có danh sách thủ công và không có cơ chế phụ thuộc HP bản thân.",
+        "status": "pending_update"
+      },
+      "hero_id": "84300"
+    },
+    "84400": {
+      "group_name": "Shamrock",
+      "is_unlisted": true,
+      "status": "pending_update",
+      "recommendations": [],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": null,
+        "description": "Chưa có danh sách thủ công và không có cơ chế phụ thuộc HP bản thân.",
+        "status": "pending_update"
+      },
+      "hero_id": "84400"
+    },
+    "44000": {
+      "group_name": "Meliodas",
+      "is_unlisted": true,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cắt Kim Loại / Ma Thần Bộc Phát gây ST truy kích bằng 50% HP max của bản thân. Các ban sức khác đang cập nhật."
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Cắt Kim Loại / Ma Thần Bộc Phát",
+        "description": "Kĩ năng trước lượt đấu: Dùng 1 tầng 'Sức Mạnh Ma Thần' của bản thân gây ra ST truy kích bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cắt Kim Loại / Ma Thần Bộc Phát gây ST truy kích bằng 50% HP max của bản thân. Các ban sức khác đang cập nhật."
+      },
+      "hero_id": "44000"
+    },
+    "84100": {
+      "group_name": "Meliodas",
+      "is_unlisted": true,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cắt Kim Loại / Ma Thần Bộc Phát gây ST truy kích bằng 50% HP max của bản thân. Các ban sức khác đang cập nhật."
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Cắt Kim Loại / Ma Thần Bộc Phát",
+        "description": "Kĩ năng trước lượt đấu: Dùng 1 tầng 'Sức Mạnh Ma Thần' của bản thân gây ra ST truy kích bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cắt Kim Loại / Ma Thần Bộc Phát gây ST truy kích bằng 50% HP max của bản thân. Các ban sức khác đang cập nhật."
+      },
+      "hero_id": "84100"
+    },
+    "84200": {
+      "group_name": "Meliodas",
+      "is_unlisted": true,
+      "status": "ready",
+      "recommendations": [
+        {
+          "id": "than-thu",
+          "name": "Thần Thư",
+          "icon": "/assets/iphonehd/icon/dianhaushi06_3_4.png",
+          "url": "/ban-suc#fate-7",
+          "condition": null,
+          "custom_text": null,
+          "is_hp_addition": true,
+          "min_rebirth_stage": 0,
+          "hp_note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cắt Kim Loại / Ma Thần Bộc Phát gây ST truy kích bằng 50% HP max của bản thân. Các ban sức khác đang cập nhật."
+        }
+      ],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": true,
+        "skill_or_stage": "Kỹ năng: Cắt Kim Loại / Ma Thần Bộc Phát",
+        "description": "Kĩ năng trước lượt đấu: Dùng 1 tầng 'Sức Mạnh Ma Thần' của bản thân gây ra ST truy kích bằng 50% HP max của bản thân.",
+        "status": "verified",
+        "added_than_thu": true,
+        "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Cắt Kim Loại / Ma Thần Bộc Phát gây ST truy kích bằng 50% HP max của bản thân. Các ban sức khác đang cập nhật."
+      },
+      "hero_id": "84200"
+    },
+    "83800": {
+      "group_name": "Kanae",
+      "is_unlisted": true,
+      "status": "pending_update",
+      "recommendations": [],
+      "hp_scaling_evidence": {
+        "has_hp_mechanic": false,
+        "skill_or_stage": null,
+        "description": "Chưa có danh sách thủ công. Cơ chế kỹ năng và CS tập trung vào Trúng Độc và né tránh, không có cơ chế sát thương theo lượng HP bản thân.",
+        "status": "pending_update"
+      },
+      "hero_id": "83800"
+    }
+  }
+}

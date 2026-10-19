@@ -117,16 +117,56 @@ export default function BanSucView({ data }: BanSucViewProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {gemSets.map((set, idx) => {
                 const lines = set.text.split("\n");
-                const titleLine = lines[0] || `Hệ Ban Sức #${set.id}`;
+                let titleLine = lines[0] || `Hệ Ban Sức #${set.id}`;
                 const effectLines = lines.slice(1);
+
+                // Authentic icon mapping by fate ID
+                const iconMap: Record<string, string> = {
+                  "2": "/assets/iphonehd/icon/dianhaushi01_3_4.png", // Aether
+                  "3": "/assets/iphonehd/icon/dianhaushi02_3_4.png", // Titan
+                  "4": "/assets/iphonehd/icon/dianhaushi03_3_4.png", // Hủy Diệt
+                  "5": "/assets/iphonehd/icon/dianhaushi04_3_4.png", // Lãnh Chúa
+                  "6": "/assets/iphonehd/icon/dianhaushi05_3_4.png", // Tinh Thần
+                  "7": "/assets/iphonehd/icon/dianhaushi06_3_4.png", // Thần Thư (Thiên Thư)
+                  "8": "/assets/iphonehd/icon/dianhaushi07_3_4.png", // Quang Niên
+                  "9": "/assets/iphonehd/icon/dianhaushi08_3_4.png", // Vương Toạ
+                  "10": "/assets/iphonehd/icon/dianhaushi09_3_4.png", // Khởi Nguyên
+                  "11": "/assets/iphonehd/icon/dianhaushi10_3_4.png", // Con Lắc
+                };
+
+                const icon = iconMap[String(set.id)];
+
+                // Unify Thần Thư / Thiên Thư
+                const isThanThu = String(set.id) === "7" || titleLine.toLowerCase().includes("thần thư") || titleLine.toLowerCase().includes("thiên thư");
 
                 return (
                   <div
                     key={set.id || idx}
-                    className="rounded-2xl border border-slate-800 bg-slate-900/40 p-6 backdrop-blur hover:border-slate-700 transition-colors"
+                    id={`fate-${set.id}`}
+                    className="scroll-mt-24 rounded-2xl border border-slate-800 bg-slate-900/40 p-6 backdrop-blur hover:border-sky-500/50 transition-all duration-300 shadow-lg"
                   >
                     <div className="flex items-center justify-between mb-3 border-b border-slate-800 pb-3">
-                      <h3 className="font-bold text-sky-400 text-base">{titleLine}</h3>
+                      <div className="flex items-center gap-3">
+                        {icon && (
+                          <div className="h-9 w-9 rounded-xl bg-slate-950/80 border border-slate-700/80 p-1 flex items-center justify-center shadow">
+                            <img
+                              src={icon}
+                              alt={titleLine}
+                              className="h-full w-full object-contain filter drop-shadow"
+                            />
+                          </div>
+                        )}
+                        <div>
+                          <h3 className="font-extrabold text-sky-400 text-base flex items-center gap-2">
+                            <span>{titleLine}</span>
+                            {isThanThu && (
+                              <span className="text-[10px] text-amber-300 font-normal font-sans bg-amber-950/70 border border-amber-500/40 px-2 py-0.5 rounded-full">
+                                Tên khác: Thiên Thư
+                              </span>
+                            )}
+                          </h3>
+                        </div>
+                      </div>
                       <span className="rounded-full border border-slate-700 bg-slate-800 px-2.5 py-0.5 text-xs text-slate-400 font-mono">
                         Mã: {set.id}
                       </span>

@@ -2,7 +2,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 
 interface ImageWithFallbackProps {
   src: string | null | undefined;
@@ -21,9 +20,9 @@ export default function ImageWithFallback({
   fallbackText = "Chưa tìm thấy ảnh",
   fallbackIcon = "🖼️",
 }: ImageWithFallbackProps) {
-  const [hasError, setHasError] = useState(false);
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
 
-  if (!src || hasError) {
+  if (!src || failedSrc === src) {
     return (
       <div
         className={`flex flex-col items-center justify-center bg-gray-900/80 border border-gray-800 text-gray-500 text-xs p-2 text-center rounded-lg select-none ${className}`}
@@ -46,7 +45,7 @@ export default function ImageWithFallback({
       className={`object-cover rounded-lg ${className}`}
       style={style}
       loading="lazy"
-      onError={() => setHasError(true)}
+      onError={() => setFailedSrc(src)}
     />
   );
 }

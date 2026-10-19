@@ -29,27 +29,27 @@ export function getQualityConfig(quality: number | null | undefined): QualityCon
   switch (q) {
     case 5:
       return {
-        name: "Phẩm 5 (Cam/Đỏ)",
+        name: "Phẩm 5 (Đỏ)",
+        badgeClass: "bg-red-500/15 text-red-400 border-red-500/30",
+        textClass: "text-red-400",
+        borderClass: "border-red-500/40",
+        bgGlow: "rgba(239, 68, 68, 0.15)",
+      };
+    case 4:
+      return {
+        name: "Phẩm 4 (Cam)",
         badgeClass: "bg-amber-500/15 text-amber-400 border-amber-500/30",
         textClass: "text-amber-400",
         borderClass: "border-amber-500/40",
         bgGlow: "rgba(245, 158, 11, 0.15)",
       };
-    case 4:
+    case 3:
       return {
-        name: "Phẩm 4 (Tím)",
+        name: "Phẩm 3 (Tím)",
         badgeClass: "bg-purple-500/15 text-purple-400 border-purple-500/30",
         textClass: "text-purple-400",
         borderClass: "border-purple-500/40",
         bgGlow: "rgba(168, 85, 247, 0.15)",
-      };
-    case 3:
-      return {
-        name: "Phẩm 3 (Lam đậm)",
-        badgeClass: "bg-indigo-500/15 text-indigo-400 border-indigo-500/30",
-        textClass: "text-indigo-400",
-        borderClass: "border-indigo-500/40",
-        bgGlow: "rgba(99, 102, 241, 0.15)",
       };
     case 2:
       return {
@@ -62,7 +62,7 @@ export function getQualityConfig(quality: number | null | undefined): QualityCon
     case 1:
     default:
       return {
-        name: "Phẩm 1 (Lục/Thường)",
+        name: "Phẩm 1 (Lục)",
         badgeClass: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
         textClass: "text-emerald-400",
         borderClass: "border-emerald-500/40",

@@ -40,7 +40,7 @@ export default async function HeroDetailPage({ params }: PageProps) {
         ]}
       />
 
-      <HeroInteractiveView hero={hero} />
+      <HeroInteractiveView key={hero.id} hero={hero} />
     </div>
   );
 }

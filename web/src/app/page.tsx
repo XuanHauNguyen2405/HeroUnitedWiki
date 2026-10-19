@@ -195,7 +195,12 @@ export default function HomePage() {
       <section className="space-y-6 pt-4">
         <div>
           <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-            <span>⭐</span> Thực Thể Mẫu Đối Chiếu In-Game Đã Xác Minh
+            <img
+              src="/assets/card/public_equip_star.png"
+              alt="Sao"
+              className="w-5 h-5 object-contain filter drop-shadow"
+            />
+            <span>Thực Thể Mẫu Đối Chiếu In-Game Đã Xác Minh</span>
           </h2>
           <p className="text-xs sm:text-sm text-gray-400 mt-1">
             Hình ảnh thật trích xuất từ APK kết hợp 100% trường dữ liệu nguồn
@@ -224,11 +229,16 @@ export default function HomePage() {
                       {sasuke.name}
                     </h3>
                     <div className="flex items-center gap-2 mt-1">
-                      <span className="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                        Phẩm 4 (Tím)
+                      <span className="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                        Phẩm 4 (Cam)
                       </span>
-                      <span className="text-xs text-amber-400 font-medium">
-                        ⭐ 0 / 20 Sao
+                      <span className="text-xs text-amber-400 font-medium flex items-center gap-1">
+                        <img
+                          src="/assets/card/public_equip_star.png"
+                          alt="Sao"
+                          className="w-3.5 h-3.5 object-contain filter drop-shadow"
+                        />
+                        <span>0 / 20 Sao</span>
                       </span>
                     </div>
                   </div>

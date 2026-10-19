@@ -8,14 +8,28 @@ import ImageWithFallback from "@/components/ImageWithFallback";
 import { stripVietnameseAccents } from "@/lib/utils";
 import suitsCatalog from "@/data/suits_catalog.json";
 
+const ZODIAC_SUIT_MAP: Record<string, string[]> = {
+  hoi: ["652", "653", "654", "655"],
+  chuot: ["471", "472", "473", "474"],
+  rong: ["485", "486", "487", "488"],
+  ti: ["1370", "1371", "1372", "1373"],
+  ngua: ["1630", "1650", "1670", "1690"],
+};
+
 export default function SuitsPage() {
   const [search, setSearch] = useState("");
+  const [zodiacFilter, setZodiacFilter] = useState<string | null>(null);
   const [onlyCompleteImages, setOnlyCompleteImages] = useState(false);
   const [page, setPage] = useState(1);
   const pageSize = 20;
 
   const filteredSuits = useMemo(() => {
     let list = suitsCatalog as any[];
+
+    if (zodiacFilter && ZODIAC_SUIT_MAP[zodiacFilter]) {
+      const allowedIds = ZODIAC_SUIT_MAP[zodiacFilter];
+      list = list.filter((s) => allowedIds.includes(String(s.id)));
+    }
 
     if (search.trim()) {
       const cleanSearch = stripVietnameseAccents(search);
@@ -37,11 +51,11 @@ export default function SuitsPage() {
     }
 
     return list;
-  }, [search, onlyCompleteImages]);
+  }, [search, zodiacFilter, onlyCompleteImages]);
 
   useEffect(() => {
     setPage(1);
-  }, [search, onlyCompleteImages]);
+  }, [search, zodiacFilter, onlyCompleteImages]);
 
   const totalPages = Math.ceil(filteredSuits.length / pageSize) || 1;
   const paginatedSuits = filteredSuits.slice(
@@ -109,17 +123,24 @@ export default function SuitsPage() {
           <span>🌟</span> 5 Bộ Con Giáp Hot:
         </span>
         {[
-          { label: "🐭 Chuột (Kiếp Tiên)", query: "Kiếp Tiên" },
-          { label: "🐍 Tị (Hung Thú)", query: "Hung Thú" },
-          { label: "🐷 Hợi (Thương Thần)", query: "Thương Thần" },
-          { label: "🐉 Rồng (Tứ Cực)", query: "Tứ Cực" },
-          { label: "🐴 Ngựa (Thiên Mã)", query: "Thiên Mã" },
+          { label: "🐷 Set Hợi", id: "hoi" },
+          { label: "🐭 Set Chuột", id: "chuot" },
+          { label: "🐉 Set Rồng", id: "rong" },
+          { label: "🐍 Set Tị", id: "ti" },
+          { label: "🐴 Set Ngựa", id: "ngua" },
         ].map((item) => (
           <button
-            key={item.query}
-            onClick={() => setSearch(item.query)}
+            key={item.id}
+            onClick={() => {
+              if (zodiacFilter === item.id) {
+                setZodiacFilter(null);
+              } else {
+                setZodiacFilter(item.id);
+                setSearch("");
+              }
+            }}
             className={`text-xs px-3 py-1.5 rounded-lg border transition-all ${
-              search === item.query
+              zodiacFilter === item.id
                 ? "bg-amber-500 text-black border-amber-400 font-bold shadow-md shadow-amber-500/20"
                 : "bg-gray-900/80 text-gray-300 border-gray-700 hover:border-amber-400/60 hover:text-white"
             }`}
@@ -127,9 +148,12 @@ export default function SuitsPage() {
             {item.label}
           </button>
         ))}
-        {search && (
+        {(search || zodiacFilter) && (
           <button
-            onClick={() => setSearch("")}
+            onClick={() => {
+              setSearch("");
+              setZodiacFilter(null);
+            }}
             className="text-xs px-2.5 py-1 text-gray-400 hover:text-rose-400 ml-auto"
           >
             Bỏ lọc ✕

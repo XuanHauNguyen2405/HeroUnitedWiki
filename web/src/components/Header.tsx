@@ -12,6 +12,7 @@ export default function Header() {
 
   const navLinks = [
     { href: "/heroes", label: "Tướng", icon: "👤" },
+    { href: "/cards", label: "Thẻ Tướng", icon: "🎴" },
     { href: "/skills", label: "Kỹ Năng", icon: "⚡" },
     { href: "/suits", label: "Bộ Trang Bị", icon: "🛡️" },
     { href: "/equipment", label: "Trang Bị", icon: "⚔️" },

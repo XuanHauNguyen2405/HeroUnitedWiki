@@ -129,9 +129,9 @@ export default function SkillsPage() {
               className="w-full bg-gray-950 border border-gray-800 rounded-lg p-2 text-gray-200 focus:outline-none focus:border-amber-500"
             >
               <option value="all">Tất cả phẩm chất</option>
-              <option value="5">Phẩm 5 (Cam/Đỏ)</option>
-              <option value="4">Phẩm 4 (Tím)</option>
-              <option value="3">Phẩm 3 (Lam đậm)</option>
+              <option value="5">Phẩm 5 (Đỏ)</option>
+              <option value="4">Phẩm 4 (Cam)</option>
+              <option value="3">Phẩm 3 (Tím)</option>
               <option value="2">Phẩm 2 (Lam)</option>
               <option value="1">Phẩm 1 (Lục)</option>
             </select>

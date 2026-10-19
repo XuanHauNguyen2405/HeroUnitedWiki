@@ -151,9 +151,9 @@ export default function HeroesPage() {
               className="w-full bg-gray-950 border border-gray-800 rounded-lg p-2 text-gray-200 focus:outline-none focus:border-indigo-500"
             >
               <option value="all">Tất cả phẩm chất</option>
-              <option value="5">Phẩm 5 (Cam/Đỏ)</option>
-              <option value="4">Phẩm 4 (Tím)</option>
-              <option value="3">Phẩm 3 (Lam đậm)</option>
+              <option value="5">Phẩm 5 (Đỏ)</option>
+              <option value="4">Phẩm 4 (Cam)</option>
+              <option value="3">Phẩm 3 (Tím)</option>
               <option value="2">Phẩm 2 (Lam)</option>
               <option value="1">Phẩm 1 (Lục)</option>
             </select>
@@ -271,8 +271,13 @@ export default function HeroesPage() {
                       <h3 className="font-bold text-white text-sm truncate group-hover:text-indigo-400 transition-colors">
                         {hero.name}
                       </h3>
-                      <div className="text-[11px] text-amber-400 font-medium">
-                        ⭐ {hero.star} / {hero.star_max} Sao
+                      <div className="text-[11px] text-amber-400 font-medium flex items-center gap-1">
+                        <img
+                          src="/assets/card/public_equip_star.png"
+                          alt="Sao"
+                          className="w-3.5 h-3.5 object-contain filter drop-shadow"
+                        />
+                        <span>{hero.star} / {hero.star_max} Sao</span>
                       </div>
                     </div>
                   </div>

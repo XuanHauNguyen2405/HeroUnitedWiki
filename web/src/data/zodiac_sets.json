@@ -1,512 +1,69 @@
 [
   {
-    "id": "chuot",
-    "name": "Bộ Năm Chuột (Tý)",
-    "animal": "Chuột (Tý)",
-    "icon": "🐭",
-    "theme": "Kiếp Tiên",
-    "nature": "Thiên hướng Bạo Kích Cực Hạn, Sát Thương Đột Phá & Công Kích Toàn Diện",
-    "description": "Bộ trang bị thần thoại giới hạn Tết Năm Chuột, tăng đột biến 270.000 Công, 315.000 HP cùng 90.000 Thủ, xé toạc mọi hàng phòng thủ.",
-    "best_heroes": [
-      {
-        "name": "Shadow",
-        "reason": "Tối đa hóa bạo kích và sát thương ma pháp xuyên giáp"
-      },
-      {
-        "name": "Songoku / Kakarot",
-        "reason": "Tăng vọt công vật lý và bùng nổ sát thương diện rộng"
-      },
-      {
-        "name": "CuồnBroli",
-        "reason": "Khuếch đại sát thương vật lý và càn quét đội hình"
-      },
-      {
-        "name": "Kurosaki Ichigo",
-        "reason": "Tăng cường sức mạnh chém trảm hồn và dứt điểm mục tiêu"
-      }
-    ],
-    "elements": [
-      {
-        "element": "Thổ (Địa)",
-        "box_id": "92236",
-        "suit_id": "471"
-      },
-      {
-        "element": "Thủy (Nước)",
-        "box_id": "92237",
-        "suit_id": "473"
-      },
-      {
-        "element": "Hỏa (Lửa)",
-        "box_id": "92238",
-        "suit_id": "472"
-      },
-      {
-        "element": "Phong (Gió)",
-        "box_id": "92239",
-        "suit_id": "474"
-      }
-    ],
-    "variants": [
-      {
-        "element": "Thổ (Địa)",
-        "box_id": "92236",
-        "suit_id": "471",
-        "suit_name": "劫仙の地",
-        "parts": [
-          {
-            "id": "58005",
-            "name": "Kiếp Tiên.Địa.Kiếm Trảm Yêu",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/58005.png"
-          },
-          {
-            "id": "68005",
-            "name": "Kiếp Tiên.Địa.Ngạo Long Giáp",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/68005.png"
-          },
-          {
-            "id": "78005",
-            "name": "Kiếp Tiên.Địa.Trấn Ma Thạch",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/78005.png"
-          },
-          {
-            "id": "88005",
-            "name": "Kiếp Tiên.Địa.Giày Ngạo Long",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/88005.png"
-          }
-        ],
-        "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
-        }
-      },
-      {
-        "element": "Thủy (Nước)",
-        "box_id": "92237",
-        "suit_id": "473",
-        "suit_name": "劫仙の水",
-        "parts": [
-          {
-            "id": "58205",
-            "name": "Kiếp Tiên.Thủy.Kiếm Trảm Yêu",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/58205.png"
-          },
-          {
-            "id": "68205",
-            "name": "Kiếp Tiên.Thủy.Ngạo Long Giáp",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/68205.png"
-          },
-          {
-            "id": "78205",
-            "name": "Kiếp Tiên.Thủy.Trấn Ma Thạch",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/78205.png"
-          },
-          {
-            "id": "88205",
-            "name": "Kiếp Tiên.Thủy.Giày Ngạo Long",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/88205.png"
-          }
-        ],
-        "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
-        }
-      },
-      {
-        "element": "Hỏa (Lửa)",
-        "box_id": "92238",
-        "suit_id": "472",
-        "suit_name": "劫仙の火",
-        "parts": [
-          {
-            "id": "58105",
-            "name": "Kiếp Tiên.Hỏa.Kiếm Trảm Yêu",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/58105.png"
-          },
-          {
-            "id": "68105",
-            "name": "Kiếp Tiên.Hỏa.Ngạo Long Giáp",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/68105.png"
-          },
-          {
-            "id": "78105",
-            "name": "Kiếp Tiên.Hỏa.Trấn Ma Thạch",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/78105.png"
-          },
-          {
-            "id": "88105",
-            "name": "Kiếp Tiên.Hỏa.Giày Ngạo Long",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/88105.png"
-          }
-        ],
-        "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
-        }
-      },
-      {
-        "element": "Phong (Gió)",
-        "box_id": "92239",
-        "suit_id": "474",
-        "suit_name": "劫仙の风",
-        "parts": [
-          {
-            "id": "58305",
-            "name": "Kiếp Tiên.Phong.Kiếm Trảm Yêu",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/58305.png"
-          },
-          {
-            "id": "68305",
-            "name": "Kiếp Tiên.Phong.Ngạo Long Giáp",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/68305.png"
-          },
-          {
-            "id": "78305",
-            "name": "Kiếp Tiên.Phong.Trấn Ma Thạch",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/78305.png"
-          },
-          {
-            "id": "88305",
-            "name": "Kiếp Tiên.Phong.Giày Ngạo Long",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/88305.png"
-          }
-        ],
-        "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
-        }
-      }
-    ]
-  },
-  {
-    "id": "ti",
-    "name": "Bộ Năm Tị (Rắn)",
-    "animal": "Tị (Rắn)",
-    "icon": "🐍",
-    "theme": "Hung Thú Cổ Đại",
-    "nature": "Thiên hướng Khống Chế, Xuyên Giáp Ma Đạo & Bào Mòn Sinh Lực",
-    "description": "Bộ trang bị Hung Thú Thượng Cổ (Tương Dao, Chúc Âm, Cửu Anh, Đằng Vũ), tăng 270.000 Công thuộc tính, 90.000 Kháng và 315.000 HP, khắc chế cứng các tanker.",
-    "best_heroes": [
-      {
-        "name": "Nagato",
-        "reason": "Cường hóa Ngoại Đạo Ma Tượng và sát thương diện rộng Luân Hồi Nhãn"
-      },
-      {
-        "name": "Lục Đạo Sasuke",
-        "reason": "Tối ưu hóa hỏa lôi sát thương và hiệu ứng khống chế Chidori"
-      },
-      {
-        "name": "Shalltear",
-        "reason": "Hút máu cực lớn và gia tăng sát thương ma thuật hắc ám"
-      },
-      {
-        "name": "CT - Aizen",
-        "reason": "Áp chế tinh thần và gia tăng sức mạnh thuật thức"
-      }
-    ],
-    "elements": [
-      {
-        "element": "Thổ (Địa)",
-        "box_id": "9101513",
-        "suit_id": "1370"
-      },
-      {
-        "element": "Thủy (Nước)",
-        "box_id": "9101514",
-        "suit_id": "1372"
-      },
-      {
-        "element": "Hỏa (Lửa)",
-        "box_id": "9101515",
-        "suit_id": "1371"
-      },
-      {
-        "element": "Phong (Gió)",
-        "box_id": "9101516",
-        "suit_id": "1373"
-      }
-    ],
-    "variants": [
-      {
-        "element": "Thổ (Địa)",
-        "box_id": "9101513",
-        "suit_id": "1370",
-        "suit_name": "凶兽の地",
-        "parts": [
-          {
-            "id": "109405",
-            "name": "Hung Thú - Địa - Tương Dao Kiếm",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/109405.png"
-          },
-          {
-            "id": "110405",
-            "name": "Hung Thú - Địa - Chúc Âm Giáp",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/110405.png"
-          },
-          {
-            "id": "111405",
-            "name": "Hung Thú - Địa - Cửu Anh Nhẫn",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/111405.png"
-          },
-          {
-            "id": "112405",
-            "name": "Hung Thú - Địa - Đằng Vũ Ủng",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/112405.png"
-          }
-        ],
-        "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
-        }
-      },
-      {
-        "element": "Thủy (Nước)",
-        "box_id": "9101514",
-        "suit_id": "1372",
-        "suit_name": "凶兽の水",
-        "parts": [
-          {
-            "id": "109605",
-            "name": "Hung Thú - Thủy - Tương Dao Kiếm",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/109605.png"
-          },
-          {
-            "id": "110605",
-            "name": "Hung Thú - Thủy - Chúc Âm Giáp",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/110605.png"
-          },
-          {
-            "id": "111605",
-            "name": "Hung Thú - Thủy - Cửu Anh Nhẫn",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/111605.png"
-          },
-          {
-            "id": "112605",
-            "name": "Hung Thú - Thủy - Đằng Vũ Ủng",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/112605.png"
-          }
-        ],
-        "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
-        }
-      },
-      {
-        "element": "Hỏa (Lửa)",
-        "box_id": "9101515",
-        "suit_id": "1371",
-        "suit_name": "凶兽の火",
-        "parts": [
-          {
-            "id": "109505",
-            "name": "Hung Thú - Hỏa - Tương Dao Kiếm",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/109505.png"
-          },
-          {
-            "id": "110505",
-            "name": "Hung Thú - Hỏa - Chúc Âm Giáp",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/110505.png"
-          },
-          {
-            "id": "111505",
-            "name": "Hung Thú - Hỏa - Cửu Anh Nhẫn",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/111505.png"
-          },
-          {
-            "id": "112505",
-            "name": "Hung Thú - Hỏa - Đằng Vũ Ủng",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/112505.png"
-          }
-        ],
-        "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
-        }
-      },
-      {
-        "element": "Phong (Gió)",
-        "box_id": "9101516",
-        "suit_id": "1373",
-        "suit_name": "凶兽の风",
-        "parts": [
-          {
-            "id": "109705",
-            "name": "Hung Thú - Phong - Tương Dao Kiếm",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/109705.png"
-          },
-          {
-            "id": "110705",
-            "name": "Hung Thú - Phong - Chúc Âm Giáp",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/110705.png"
-          },
-          {
-            "id": "111705",
-            "name": "Hung Thú - Phong - Cửu Anh Nhẫn",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/111705.png"
-          },
-          {
-            "id": "112705",
-            "name": "Hung Thú - Phong - Đằng Vũ Ủng",
-            "sort": null,
-            "slot_name": "Giày",
-            "quality": 7,
-            "icon": "/assets/iphonehd/icon/112705.png"
-          }
-        ],
-        "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
-        }
-      }
-    ]
-  },
-  {
     "id": "hoi",
-    "name": "Bộ Năm Hợi (Heo)",
-    "animal": "Hợi (Heo)",
+    "name": "Bộ Năm Hợi",
+    "animal": "Hợi",
     "icon": "🐗",
-    "theme": "Thương Thần (Thương Khung)",
+    "theme": "Công Thủ Toàn Diện & HP Tối Thượng",
     "nature": "Thiên hướng Công Thủ Toàn Diện, Sinh Tồn Bền Bỉ & Cường Hóa Trực Tiếp HP",
-    "description": "Bộ trang bị thần thánh hoàng đạo Năm Hợi (Thiên Vấn, Giáp Thần Võ, Phiên Thiên Ấn, Giày Ảo Ảnh), tăng 225.000 Công, 60.000 Thủ và 210.000 HP.",
+    "description": "Bộ trang bị thần thánh hoàng đạo Năm Hợi (Thiên Vấn, Giáp Thần Võ, Phiên Thiên Ấn, Giày Ảo Ảnh), cân bằng toàn diện công thủ và lượng máu dồi dào.",
+    "special_attributes": {
+      "title": "Chỉ Số Đặc Biệt Trước & Sau Khi Lên Cầu Vồng (Bộ Hợi)",
+      "normal_highlights": [
+        "⚔️ Vũ khí (Thiên Vấn): Tăng +50% Tấn công toàn thuộc tính khi vào chiến đấu",
+        "🛡️ Áo giáp (Giáp Thần Võ): Tăng +150% Phòng ngự toàn thuộc tính khi vào chiến đấu",
+        "🎯 Trang sức (Phiên Thiên Ấn): Tăng +220% Chính xác bản thân khi vào chiến đấu",
+        "💨 Giày (Giày Ảo Ảnh): Tăng +220% Né tránh bản thân khi vào chiến đấu"
+      ],
+      "rainbow_highlights": [
+        "⚔️ Vũ khí Cầu Vồng: Tăng +100% Tấn công toàn thuộc tính (Gấp 2 lần)",
+        "🛡️ Áo giáp Cầu Vồng: Tăng +300% Phòng ngự toàn thuộc tính (Gấp 2 lần)",
+        "🎯 Trang sức Cầu Vồng: Tăng +450% Chính xác bản thân (Gấp hơn 2 lần)",
+        "💨 Giày Cầu Vồng: Tăng +450% Né tránh bản thân (Gấp hơn 2 lần)"
+      ]
+    },
     "best_heroes": [
       {
         "name": "Bikini - Frieren",
-        "reason": "Cân bằng sinh tồn tuyệt đối trong giao tranh kéo dài và buff ma pháp liên tục"
+        "reason": "Cân bằng sinh tồn tuyệt đối trong giao tranh kéo dài và buff ma pháp liên tục."
       },
       {
         "name": "Maple",
-        "reason": "Biến Maple thành pháo đài bất tử không thể bị xuyên thủng"
+        "reason": "Biến Maple thành pháo đài bất tử không thể bị xuyên thủng với lượng HP và thủ khổng lồ."
       },
       {
         "name": "Jiraiya",
-        "reason": "Cung cấp lượng máu khổng lồ và chống chịu cho Tiên Nhân thuật"
+        "reason": "Cung cấp lượng máu dồi dào và chống chịu cho Tiên Nhân thuật."
       },
       {
         "name": "Athena",
-        "reason": "Gia tăng độ trâu bò và cường hóa hiệu ứng hỗ trợ đồng đội"
+        "reason": "Gia tăng độ trâu bò và cường hóa hiệu ứng hỗ trợ đồng đội."
       }
     ],
     "elements": [
       {
         "element": "Thổ (Địa)",
         "box_id": "91076",
-        "suit_id": "652"
+        "suit_id": "652",
+        "rainbow_suit_id": "752"
       },
       {
         "element": "Thủy (Nước)",
         "box_id": "91077",
-        "suit_id": "654"
+        "suit_id": "654",
+        "rainbow_suit_id": "754"
       },
       {
         "element": "Hỏa (Lửa)",
         "box_id": "91078",
-        "suit_id": "653"
+        "suit_id": "653",
+        "rainbow_suit_id": "753"
       },
       {
         "element": "Phong (Gió)",
         "box_id": "91079",
-        "suit_id": "655"
+        "suit_id": "655",
+        "rainbow_suit_id": "755"
       }
     ],
     "variants": [
@@ -514,230 +71,1035 @@
         "element": "Thổ (Địa)",
         "box_id": "91076",
         "suit_id": "652",
-        "suit_name": "苍の地",
+        "rainbow_suit_id": "752",
+        "suit_name": "Bộ Năm Hợi (Thổ (Địa))",
+        "rainbow_suit_name": "Bộ Năm Hợi (Thổ (Địa)) - Cầu Vồng",
         "parts": [
           {
             "id": "56105",
-            "name": "Thương Địa.Thiên Vấn",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thiên Vấn",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/56105.png"
+            "icon": "/assets/iphonehd/icon/e_21attrJian_di.png",
+            "special_effect": "Tăng +50% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 50
           },
           {
             "id": "66105",
-            "name": "Thương Địa.Giáp Thần Võ",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Giáp Thần Võ",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/66105.png"
+            "icon": "/assets/iphonehd/icon/e_21attrJia_di.png",
+            "special_effect": "Tăng +150% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 150
           },
           {
             "id": "76105",
-            "name": "Thương Địa.Phiên Thiên Ấn",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Phiên Thiên Ấn",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/76105.png"
+            "icon": "/assets/iphonehd/icon/e_21attrTou_di.png",
+            "special_effect": "Tăng +220% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 220
           },
           {
             "id": "86105",
-            "name": "Thương Địa.Giày Ảo Ảnh",
-            "sort": null,
+            "name": "Giày Ảo Ảnh",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/86105.png"
+            "icon": "/assets/iphonehd/icon/e_21attrXie_di.png",
+            "special_effect": "Tăng +220% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 220
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "56106",
+            "name": "Thiên Vấn",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrJian_di.png",
+            "special_effect": "Tăng +100% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 100
+          },
+          {
+            "id": "66106",
+            "name": "Giáp Thần Võ",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrJia_di.png",
+            "special_effect": "Tăng +300% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 300
+          },
+          {
+            "id": "76106",
+            "name": "Phiên Thiên Ấn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrTou_di.png",
+            "special_effect": "Tăng +450% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 450
+          },
+          {
+            "id": "86106",
+            "name": "Giày Ảo Ảnh",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrXie_di.png",
+            "special_effect": "Tăng +450% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 450
           }
         ],
         "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+60,000 HP, +45,000 Phòng Ngự / Kháng",
+          "three_piece": "+60,000 HP, +45,000 Kháng Thuộc Tính",
+          "four_piece": "+225,000 Công, +60,000 Thủ, +210,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+150,000 HP, +112,500 Phòng Ngự / Kháng",
+          "three_piece": "+150,000 HP, +112,500 Kháng Toàn Thuộc Tính",
+          "four_piece": "+562,500 Công, +150,000 Thủ, +450,000 HP Tối Đa",
+          "stats": {
+            "hp": 450000,
+            "patk": 562500,
+            "matk": 562500,
+            "def": 150000,
+            "speed": 150000,
+            "ele_atk": 500000
+          }
         }
       },
       {
         "element": "Thủy (Nước)",
         "box_id": "91077",
         "suit_id": "654",
-        "suit_name": "苍の水",
+        "rainbow_suit_id": "754",
+        "suit_name": "Bộ Năm Hợi (Thủy (Nước))",
+        "rainbow_suit_name": "Bộ Năm Hợi (Thủy (Nước)) - Cầu Vồng",
         "parts": [
           {
             "id": "56305",
             "name": "Thương Thủy.Thiên Vấn",
-            "sort": null,
-            "slot_name": "Giày",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/56305.png"
+            "icon": "/assets/iphonehd/icon/e_21attrJian_shui.png",
+            "special_effect": "Tăng +50% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 50
           },
           {
             "id": "66305",
             "name": "Thương Thủy.Giáp Thần Võ",
-            "sort": null,
-            "slot_name": "Giày",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/66305.png"
+            "icon": "/assets/iphonehd/icon/e_21attrJia_shui.png",
+            "special_effect": "Tăng +150% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 150
           },
           {
             "id": "76305",
             "name": "Thương Thủy.Phiên Thiên Ấn",
-            "sort": null,
-            "slot_name": "Giày",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/76305.png"
+            "icon": "/assets/iphonehd/icon/e_21attrTou_shui.png",
+            "special_effect": "Tăng +220% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 220
           },
           {
             "id": "86305",
             "name": "Thương Thủy.Giày Ảo Ảnh",
-            "sort": null,
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/86305.png"
+            "icon": "/assets/iphonehd/icon/e_21attrXie_shui.png",
+            "special_effect": "Tăng +220% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 220
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "56306",
+            "name": "Khung Thủy.Thiên Vấn",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrJian_shui.png",
+            "special_effect": "Tăng +100% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 100
+          },
+          {
+            "id": "66306",
+            "name": "Khung Thủy.Giáp Thần Võ",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrJia_shui.png",
+            "special_effect": "Tăng +300% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 300
+          },
+          {
+            "id": "76306",
+            "name": "Khung Thủy.Phiên Thiên Ấn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrTou_shui.png",
+            "special_effect": "Tăng +450% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 450
+          },
+          {
+            "id": "86306",
+            "name": "Khung Thủy.Giày Ảo Ảnh",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrXie_shui.png",
+            "special_effect": "Tăng +450% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 450
           }
         ],
         "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+60,000 HP, +45,000 Phòng Ngự / Kháng",
+          "three_piece": "+60,000 HP, +45,000 Kháng Thuộc Tính",
+          "four_piece": "+225,000 Công, +60,000 Thủ, +210,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+150,000 HP, +112,500 Phòng Ngự / Kháng",
+          "three_piece": "+150,000 HP, +112,500 Kháng Toàn Thuộc Tính",
+          "four_piece": "+562,500 Công, +150,000 Thủ, +450,000 HP Tối Đa",
+          "stats": {
+            "hp": 450000,
+            "patk": 562500,
+            "matk": 562500,
+            "def": 150000,
+            "speed": 150000,
+            "ele_atk": 500000
+          }
         }
       },
       {
         "element": "Hỏa (Lửa)",
         "box_id": "91078",
         "suit_id": "653",
-        "suit_name": "苍の火",
+        "rainbow_suit_id": "753",
+        "suit_name": "Bộ Năm Hợi (Hỏa (Lửa))",
+        "rainbow_suit_name": "Bộ Năm Hợi (Hỏa (Lửa)) - Cầu Vồng",
         "parts": [
           {
             "id": "56205",
             "name": "Thương Hỏa.Thiên Vấn",
-            "sort": null,
-            "slot_name": "Giày",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/56205.png"
+            "icon": "/assets/iphonehd/icon/e_21attrJian_huo.png",
+            "special_effect": "Tăng +50% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 50
           },
           {
             "id": "66205",
             "name": "Thương Hỏa.Giáp Thần Võ",
-            "sort": null,
-            "slot_name": "Giày",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/66205.png"
+            "icon": "/assets/iphonehd/icon/e_21attrJia_huo.png",
+            "special_effect": "Tăng +150% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 150
           },
           {
             "id": "76205",
             "name": "Thương Hỏa.Phiên Thiên Ấn",
-            "sort": null,
-            "slot_name": "Giày",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/76205.png"
+            "icon": "/assets/iphonehd/icon/e_21attrTou_huo.png",
+            "special_effect": "Tăng +220% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 220
           },
           {
             "id": "86205",
             "name": "Thương Hỏa.Giày Ảo Ảnh",
-            "sort": null,
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/86205.png"
+            "icon": "/assets/iphonehd/icon/e_21attrXie_huo.png",
+            "special_effect": "Tăng +220% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 220
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "56206",
+            "name": "Khung Hỏa.Thiên Vấn",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrJian_huo.png",
+            "special_effect": "Tăng +100% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 100
+          },
+          {
+            "id": "66206",
+            "name": "Khung Hỏa.Giáp Thần Võ",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrJia_huo.png",
+            "special_effect": "Tăng +300% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 300
+          },
+          {
+            "id": "76206",
+            "name": "Khung Hỏa.Phiên Thiên Ấn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrTou_huo.png",
+            "special_effect": "Tăng +450% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 450
+          },
+          {
+            "id": "86206",
+            "name": "Khung Hỏa.Giày Ảo Ảnh",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrXie_huo.png",
+            "special_effect": "Tăng +450% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 450
           }
         ],
         "bonuses": {
-          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
-          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
-          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+60,000 HP, +45,000 Phòng Ngự / Kháng",
+          "three_piece": "+60,000 HP, +45,000 Kháng Thuộc Tính",
+          "four_piece": "+225,000 Công, +60,000 Thủ, +210,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+150,000 HP, +112,500 Phòng Ngự / Kháng",
+          "three_piece": "+150,000 HP, +112,500 Kháng Toàn Thuộc Tính",
+          "four_piece": "+562,500 Công, +150,000 Thủ, +450,000 HP Tối Đa",
+          "stats": {
+            "hp": 450000,
+            "patk": 562500,
+            "matk": 562500,
+            "def": 150000,
+            "speed": 150000,
+            "ele_atk": 500000
+          }
         }
       },
       {
         "element": "Phong (Gió)",
         "box_id": "91079",
         "suit_id": "655",
-        "suit_name": "苍の风",
+        "rainbow_suit_id": "755",
+        "suit_name": "Bộ Năm Hợi (Phong (Gió))",
+        "rainbow_suit_name": "Bộ Năm Hợi (Phong (Gió)) - Cầu Vồng",
         "parts": [
           {
             "id": "56405",
-            "name": "Thương Phong.Thiên Vấn",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thương Thiên Vấn",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/56405.png"
+            "icon": "/assets/iphonehd/icon/e_21attrJian_feng.png",
+            "special_effect": "Tăng +50% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 50
           },
           {
             "id": "66405",
-            "name": "Thương Phong.Giáp Thần Võ",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thương Giáp Thần Võ",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/66405.png"
+            "icon": "/assets/iphonehd/icon/e_21attrJia_feng.png",
+            "special_effect": "Tăng +150% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 150
           },
           {
             "id": "76405",
-            "name": "Thương Phong.Phiên Thiên Ấn",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thương Phiên Thiên Ấn",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/76405.png"
+            "icon": "/assets/iphonehd/icon/e_21attrTou_feng.png",
+            "special_effect": "Tăng +220% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 220
           },
           {
             "id": "86405",
-            "name": "Thương Phong.Giày Ảo Ảnh",
-            "sort": null,
+            "name": "Thương Giày Ảo Ảnh",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/86405.png"
+            "icon": "/assets/iphonehd/icon/e_21attrXie_feng.png",
+            "special_effect": "Tăng +220% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 220
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "56406",
+            "name": "Khung Thiên Vấn",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrJian_feng.png",
+            "special_effect": "Tăng +100% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 100
+          },
+          {
+            "id": "66406",
+            "name": "Khung Giáp Thần Võ",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrJia_feng.png",
+            "special_effect": "Tăng +300% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 300
+          },
+          {
+            "id": "76406",
+            "name": "Khung Phiên Thiên Ấn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrTou_feng.png",
+            "special_effect": "Tăng +450% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 450
+          },
+          {
+            "id": "86406",
+            "name": "Khung Giày Ảo Ảnh",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_21attrXie_feng.png",
+            "special_effect": "Tăng +450% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 450
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+60,000 HP, +45,000 Phòng Ngự / Kháng",
+          "three_piece": "+60,000 HP, +45,000 Kháng Thuộc Tính",
+          "four_piece": "+225,000 Công, +60,000 Thủ, +210,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+150,000 HP, +112,500 Phòng Ngự / Kháng",
+          "three_piece": "+150,000 HP, +112,500 Kháng Toàn Thuộc Tính",
+          "four_piece": "+562,500 Công, +150,000 Thủ, +450,000 HP Tối Đa",
+          "stats": {
+            "hp": 450000,
+            "patk": 562500,
+            "matk": 562500,
+            "def": 150000,
+            "speed": 150000,
+            "ele_atk": 500000
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "chuot",
+    "name": "Bộ Năm Chuột",
+    "animal": "Chuột",
+    "icon": "🐭",
+    "theme": "Bạo Kích Cực Hạn & Đột Kích",
+    "nature": "Thiên hướng Bạo Kích Cực Hạn, Sát Thương Đột Phá & Đột Kích Chí Mạng",
+    "description": "Bộ trang bị thần thoại giới hạn Năm Chuột (Kiếm Trảm Yêu, Ngạo Long Giáp, Trấn Ma Thạch, Giày Ngạo Long), tăng mạnh Công, HP cùng Thủ, xé toạc mọi hàng phòng ngự đối phương.",
+    "special_attributes": {
+      "title": "Chỉ Số Đặc Biệt Trước & Sau Khi Lên Cầu Vồng (Bộ Chuột)",
+      "normal_highlights": [
+        "⚔️ Vũ khí (Kiếm Trảm Yêu): Tăng +60% Tấn công toàn thuộc tính khi vào chiến đấu",
+        "🛡️ Áo giáp (Ngạo Long Giáp): Tăng +180% Phòng ngự toàn thuộc tính khi vào chiến đấu",
+        "🎯 Trang sức (Trấn Ma Thạch): Tăng +264% Chính xác bản thân khi vào chiến đấu",
+        "💨 Giày (Giày Ngạo Long): Tăng +264% Né tránh bản thân khi vào chiến đấu"
+      ],
+      "rainbow_highlights": [
+        "⚔️ Vũ khí Cầu Vồng: Tăng +120% Tấn công toàn thuộc tính (Gấp 2 lần)",
+        "🛡️ Áo giáp Cầu Vồng: Tăng +360% Phòng ngự toàn thuộc tính (Gấp 2 lần)",
+        "🎯 Trang sức Cầu Vồng: Tăng +540% Chính xác bản thân (Gấp hơn 2 lần)",
+        "💨 Giày Cầu Vồng: Tăng +540% Né tránh bản thân (Gấp hơn 2 lần)"
+      ]
+    },
+    "best_heroes": [
+      {
+        "name": "Songoku / Kakarot",
+        "reason": "Tăng vọt công vật lý và bùng nổ sát thương diện rộng."
+      },
+      {
+        "name": "CuồnBroli",
+        "reason": "Khuếch đại sát thương vật lý và càn quét toàn bộ đội hình địch."
+      },
+      {
+        "name": "Kurosaki Ichigo",
+        "reason": "Tăng cường sức mạnh chém trảm hồn và dứt điểm mục tiêu chớp nhoáng."
+      },
+      {
+        "name": "Saitama",
+        "reason": "Tối đa hóa sát thương bộc phát vật lý đơn mục tiêu một đòn đoạt mạng."
+      }
+    ],
+    "elements": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "92236",
+        "suit_id": "471",
+        "rainbow_suit_id": "571"
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "92237",
+        "suit_id": "473",
+        "rainbow_suit_id": "573"
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "92238",
+        "suit_id": "472",
+        "rainbow_suit_id": "572"
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "92239",
+        "suit_id": "474",
+        "rainbow_suit_id": "574"
+      }
+    ],
+    "variants": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "92236",
+        "suit_id": "471",
+        "rainbow_suit_id": "571",
+        "suit_name": "Bộ Năm Chuột (Thổ (Địa))",
+        "rainbow_suit_name": "Bộ Năm Chuột (Thổ (Địa)) - Cầu Vồng",
+        "parts": [
+          {
+            "id": "58005",
+            "name": "Kiếm Trảm Yêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrJian_di.png",
+            "special_effect": "Tăng +60% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 60
+          },
+          {
+            "id": "68005",
+            "name": "Ngạo Long Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrJia_di.png",
+            "special_effect": "Tăng +180% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 180
+          },
+          {
+            "id": "78005",
+            "name": "Trấn Ma Thạch",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrTou_di.png",
+            "special_effect": "Tăng +264% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 264
+          },
+          {
+            "id": "88005",
+            "name": "Giày Ngạo Long",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrXie_di.png",
+            "special_effect": "Tăng +264% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 264
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "58006",
+            "name": "Kiếm Trảm Yêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrJian_di.png",
+            "special_effect": "Tăng +120% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 120
+          },
+          {
+            "id": "68006",
+            "name": "Ngạo Long Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrJia_di.png",
+            "special_effect": "Tăng +360% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 360
+          },
+          {
+            "id": "78006",
+            "name": "Trấn Ma Thạch",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrTou_di.png",
+            "special_effect": "Tăng +540% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 540
+          },
+          {
+            "id": "88006",
+            "name": "Giày Ngạo Long",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrXie_di.png",
+            "special_effect": "Tăng +540% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 540
+          }
+        ],
+        "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
+        }
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "92237",
+        "suit_id": "473",
+        "rainbow_suit_id": "573",
+        "suit_name": "Bộ Năm Chuột (Thủy (Nước))",
+        "rainbow_suit_name": "Bộ Năm Chuột (Thủy (Nước)) - Cầu Vồng",
+        "parts": [
+          {
+            "id": "58205",
+            "name": "Kiếm Trảm Yêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrJian_shui.png",
+            "special_effect": "Tăng +60% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 60
+          },
+          {
+            "id": "68205",
+            "name": "Ngạo Long Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrJia_shui.png",
+            "special_effect": "Tăng +180% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 180
+          },
+          {
+            "id": "78205",
+            "name": "Trấn Ma Thạch",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrTou_shui.png",
+            "special_effect": "Tăng +264% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 264
+          },
+          {
+            "id": "88205",
+            "name": "Giày Ngạo Long",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrXie_shui.png",
+            "special_effect": "Tăng +264% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 264
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "58206",
+            "name": "Kiếm Trảm Yêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrJian_shui.png",
+            "special_effect": "Tăng +120% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 120
+          },
+          {
+            "id": "68206",
+            "name": "Ngạo Long Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrJia_shui.png",
+            "special_effect": "Tăng +360% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 360
+          },
+          {
+            "id": "78206",
+            "name": "Trấn Ma Thạch",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrTou_shui.png",
+            "special_effect": "Tăng +540% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 540
+          },
+          {
+            "id": "88206",
+            "name": "Giày Ngạo Long",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrXie_shui.png",
+            "special_effect": "Tăng +540% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 540
+          }
+        ],
+        "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
+        }
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "92238",
+        "suit_id": "472",
+        "rainbow_suit_id": "572",
+        "suit_name": "Bộ Năm Chuột (Hỏa (Lửa))",
+        "rainbow_suit_name": "Bộ Năm Chuột (Hỏa (Lửa)) - Cầu Vồng",
+        "parts": [
+          {
+            "id": "58105",
+            "name": "Kiếm Trảm Yêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrJian_huo.png",
+            "special_effect": "Tăng +60% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 60
+          },
+          {
+            "id": "68105",
+            "name": "Ngạo Long Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrJia_huo.png",
+            "special_effect": "Tăng +180% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 180
+          },
+          {
+            "id": "78105",
+            "name": "Trấn Ma Thạch",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrTou_huo.png",
+            "special_effect": "Tăng +264% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 264
+          },
+          {
+            "id": "88105",
+            "name": "Giày Ngạo Long",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrXie_huo.png",
+            "special_effect": "Tăng +264% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 264
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "58106",
+            "name": "Kiếm Trảm Yêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrJian_huo.png",
+            "special_effect": "Tăng +120% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 120
+          },
+          {
+            "id": "68106",
+            "name": "Ngạo Long Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrJia_huo.png",
+            "special_effect": "Tăng +360% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 360
+          },
+          {
+            "id": "78106",
+            "name": "Trấn Ma Thạch",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrTou_huo.png",
+            "special_effect": "Tăng +540% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 540
+          },
+          {
+            "id": "88106",
+            "name": "Giày Ngạo Long",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrXie_huo.png",
+            "special_effect": "Tăng +540% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 540
+          }
+        ],
+        "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
+        }
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "92239",
+        "suit_id": "474",
+        "rainbow_suit_id": "574",
+        "suit_name": "Bộ Năm Chuột (Phong (Gió))",
+        "rainbow_suit_name": "Bộ Năm Chuột (Phong (Gió)) - Cầu Vồng",
+        "parts": [
+          {
+            "id": "58305",
+            "name": "Kiếm Trảm Yêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrJian_feng.png",
+            "special_effect": "Tăng +60% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 60
+          },
+          {
+            "id": "68305",
+            "name": "Ngạo Long Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrJia_feng.png",
+            "special_effect": "Tăng +180% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 180
+          },
+          {
+            "id": "78305",
+            "name": "Trấn Ma Thạch",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrTou_feng.png",
+            "special_effect": "Tăng +264% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 264
+          },
+          {
+            "id": "88305",
+            "name": "Giày Ngạo Long",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_22attrXie_feng.png",
+            "special_effect": "Tăng +264% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 264
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "58306",
+            "name": "Kiếm Trảm Yêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrJian_feng.png",
+            "special_effect": "Tăng +120% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 120
+          },
+          {
+            "id": "68306",
+            "name": "Ngạo Long Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrJia_feng.png",
+            "special_effect": "Tăng +360% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 360
+          },
+          {
+            "id": "78306",
+            "name": "Trấn Ma Thạch",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrTou_feng.png",
+            "special_effect": "Tăng +540% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 540
+          },
+          {
+            "id": "88306",
+            "name": "Giày Ngạo Long",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_22attrXie_feng.png",
+            "special_effect": "Tăng +540% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 540
+          }
+        ],
+        "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       }
     ]
   },
   {
     "id": "rong",
-    "name": "Bộ Năm Rồng (Thìn)",
-    "animal": "Rồng (Thìn)",
+    "name": "Bộ Năm Rồng",
+    "animal": "Rồng",
     "icon": "🐉",
-    "theme": "Tứ Cực Long Thần",
+    "theme": "Bá Đạo Uy Lực & Áp Chế",
     "nature": "Thiên hướng Bá Đạo Uy Lực, Áp Chế Tuyệt Đối & Sát Thương Tối Thượng",
-    "description": "Bộ trang bị Long Thần Cổ Giới giới hạn Năm Rồng, tăng 270.000 Công, 90.000 Thủ và 315.000 HP, là trang bị uy lực tối cao trong game.",
+    "description": "Bộ trang bị Long Thần Cổ Giới giới hạn Năm Rồng (Long Thần Cổ Kiếm, Cổ Giáp, Cổ Khôi, Cổ Hài), tăng mạnh Công, Thủ và HP, uy lực áp đảo toàn chiến trường.",
+    "special_attributes": {
+      "title": "Chỉ Số Đặc Biệt Trước & Sau Khi Lên Cầu Vồng (Bộ Rồng)",
+      "normal_highlights": [
+        "⚔️ Vũ khí (Cổ Kiếm): Tăng +70% Tấn công toàn thuộc tính khi vào chiến đấu",
+        "🛡️ Áo giáp (Cổ Giáp): Tăng +210% Phòng ngự toàn thuộc tính khi vào chiến đấu",
+        "🎯 Trang sức (Cổ Khôi): Tăng +308% Chính xác bản thân (Cực hạn áp chế)",
+        "💨 Giày (Cổ Hài): Tăng +308% Né tránh bản thân (Cực hạn)"
+      ],
+      "rainbow_highlights": [
+        "⚔️ Vũ khí Cầu Vồng: Tăng +140% Tấn công toàn thuộc tính (Gấp 2 lần)",
+        "🛡️ Áo giáp Cầu Vồng: Tăng +420% Phòng ngự toàn thuộc tính (Gấp 2 lần)",
+        "🎯 Trang sức Cầu Vồng: Tăng +630% Chính xác bản thân (Gấp hơn 2 lần)",
+        "💨 Giày Cầu Vồng: Tăng +630% Né tránh bản thân (Gấp hơn 2 lần)"
+      ]
+    },
     "best_heroes": [
       {
         "name": "Vegetto / Gogeta",
-        "reason": "Khai mở toàn bộ tiềm năng hợp thể vô địch với lượng công tối thượng"
+        "reason": "Khai mở toàn bộ tiềm năng hợp thể vô địch với lượng công kích tối thượng."
       },
       {
         "name": "Songohan Kong",
-        "reason": "Cường hóa đòn đấm bộc phát cuồng nộ và quét sạch hàng sau địch"
+        "reason": "Cường hóa đòn đấm bộc phát cuồng nộ và quét sạch hàng sau địch."
       },
       {
         "name": "Rimuru",
-        "reason": "Tăng cường năng lượng ma vương bạo phát và áp chế toàn bản đồ"
+        "reason": "Tăng cường năng lượng ma vương bạo phát và áp chế toàn bản đồ."
       },
       {
         "name": "CT - Vegeta",
-        "reason": "Cường hóa niềm kiêu hãnh Hoàng Tử Saiyan với công kích bùng nổ"
+        "reason": "Cường hóa niềm kiêu hãnh Hoàng Tử Saiyan với công kích bùng nổ."
       }
     ],
     "elements": [
       {
         "element": "Thổ (Địa)",
         "box_id": "9101007",
-        "suit_id": "485"
+        "suit_id": "485",
+        "rainbow_suit_id": "585"
       },
       {
         "element": "Thủy (Nước)",
         "box_id": "9101008",
-        "suit_id": "487"
+        "suit_id": "487",
+        "rainbow_suit_id": "587"
       },
       {
         "element": "Hỏa (Lửa)",
         "box_id": "9101009",
-        "suit_id": "486"
+        "suit_id": "486",
+        "rainbow_suit_id": "586"
       },
       {
         "element": "Phong (Gió)",
         "box_id": "9101010",
-        "suit_id": "488"
+        "suit_id": "488",
+        "rainbow_suit_id": "588"
       }
     ],
     "variants": [
@@ -745,230 +1107,1039 @@
         "element": "Thổ (Địa)",
         "box_id": "9101007",
         "suit_id": "485",
-        "suit_name": "四极の地",
+        "rainbow_suit_id": "585",
+        "suit_name": "Bộ Năm Rồng (Thổ (Địa))",
+        "rainbow_suit_name": "Bộ Năm Rồng (Thổ (Địa)) - Cầu Vồng",
         "parts": [
           {
             "id": "59405",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/59405.png"
+            "icon": "/assets/iphonehd/icon/e_24attrJian_di.png",
+            "special_effect": "Tăng +70% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 70
           },
           {
             "id": "69405",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/69405.png"
+            "icon": "/assets/iphonehd/icon/e_24attrJia_di.png",
+            "special_effect": "Tăng +210% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 210
           },
           {
             "id": "79405",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Khôi",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/79405.png"
+            "icon": "/assets/iphonehd/icon/e_24attrTou_di.png",
+            "special_effect": "Tăng +308% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 308
           },
           {
             "id": "89405",
-            "name": "#N/A",
-            "sort": null,
+            "name": "Long Thần Cổ Hài",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/89405.png"
+            "icon": "/assets/iphonehd/icon/e_24attrXie_di.png",
+            "special_effect": "Tăng +308% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 308
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "59406",
+            "name": "Long Thần Cổ Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrJian_di.png",
+            "special_effect": "Tăng +140% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 140
+          },
+          {
+            "id": "69406",
+            "name": "Long Thần Cổ Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrJia_di.png",
+            "special_effect": "Tăng +420% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 420
+          },
+          {
+            "id": "79406",
+            "name": "Long Thần Cổ Khôi",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrTou_di.png",
+            "special_effect": "Tăng +630% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 630
+          },
+          {
+            "id": "89406",
+            "name": "Long Thần Cổ Hài",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrXie_di.png",
+            "special_effect": "Tăng +630% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 630
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       },
       {
         "element": "Thủy (Nước)",
         "box_id": "9101008",
         "suit_id": "487",
-        "suit_name": "四极の水",
+        "rainbow_suit_id": "587",
+        "suit_name": "Bộ Năm Rồng (Thủy (Nước))",
+        "rainbow_suit_name": "Bộ Năm Rồng (Thủy (Nước)) - Cầu Vồng",
         "parts": [
           {
             "id": "59605",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/59605.png"
+            "icon": "/assets/iphonehd/icon/e_24attrJian_shui.png",
+            "special_effect": "Tăng +70% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 70
           },
           {
             "id": "69605",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/69605.png"
+            "icon": "/assets/iphonehd/icon/e_24attrJia_shui.png",
+            "special_effect": "Tăng +210% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 210
           },
           {
             "id": "79605",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Khôi",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/79605.png"
+            "icon": "/assets/iphonehd/icon/e_24attrTou_shui.png",
+            "special_effect": "Tăng +308% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 308
           },
           {
             "id": "89605",
-            "name": "#N/A",
-            "sort": null,
+            "name": "Long Thần Cổ Hài",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/89605.png"
+            "icon": "/assets/iphonehd/icon/e_24attrXie_shui.png",
+            "special_effect": "Tăng +308% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 308
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "59606",
+            "name": "Long Thần Cổ Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrJian_shui.png",
+            "special_effect": "Tăng +140% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 140
+          },
+          {
+            "id": "69606",
+            "name": "Long Thần Cổ Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrJia_shui.png",
+            "special_effect": "Tăng +420% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 420
+          },
+          {
+            "id": "79606",
+            "name": "Long Thần Cổ Khôi",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrTou_shui.png",
+            "special_effect": "Tăng +630% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 630
+          },
+          {
+            "id": "89606",
+            "name": "Long Thần Cổ Hài",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrXie_shui.png",
+            "special_effect": "Tăng +630% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 630
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       },
       {
         "element": "Hỏa (Lửa)",
         "box_id": "9101009",
         "suit_id": "486",
-        "suit_name": "四极の火",
+        "rainbow_suit_id": "586",
+        "suit_name": "Bộ Năm Rồng (Hỏa (Lửa))",
+        "rainbow_suit_name": "Bộ Năm Rồng (Hỏa (Lửa)) - Cầu Vồng",
         "parts": [
           {
             "id": "59505",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/59505.png"
+            "icon": "/assets/iphonehd/icon/e_24attrJian_huo.png",
+            "special_effect": "Tăng +70% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 70
           },
           {
             "id": "69505",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/69505.png"
+            "icon": "/assets/iphonehd/icon/e_24attrJia_huo.png",
+            "special_effect": "Tăng +210% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 210
           },
           {
             "id": "79505",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Khôi",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/79505.png"
+            "icon": "/assets/iphonehd/icon/e_24attrTou_huo.png",
+            "special_effect": "Tăng +308% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 308
           },
           {
             "id": "89505",
-            "name": "#N/A",
-            "sort": null,
+            "name": "Long Thần Cổ Hài",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/89505.png"
+            "icon": "/assets/iphonehd/icon/e_24attrXie_huo.png",
+            "special_effect": "Tăng +308% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 308
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "59506",
+            "name": "Long Thần Cổ Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrJian_huo.png",
+            "special_effect": "Tăng +140% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 140
+          },
+          {
+            "id": "69506",
+            "name": "Long Thần Cổ Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrJia_huo.png",
+            "special_effect": "Tăng +420% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 420
+          },
+          {
+            "id": "79506",
+            "name": "Long Thần Cổ Khôi",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrTou_huo.png",
+            "special_effect": "Tăng +630% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 630
+          },
+          {
+            "id": "89506",
+            "name": "Long Thần Cổ Hài",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrXie_huo.png",
+            "special_effect": "Tăng +630% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 630
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       },
       {
         "element": "Phong (Gió)",
         "box_id": "9101010",
         "suit_id": "488",
-        "suit_name": "四极の风",
+        "rainbow_suit_id": "588",
+        "suit_name": "Bộ Năm Rồng (Phong (Gió))",
+        "rainbow_suit_name": "Bộ Năm Rồng (Phong (Gió)) - Cầu Vồng",
         "parts": [
           {
             "id": "59705",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/59705.png"
+            "icon": "/assets/iphonehd/icon/e_24attrJian_feng.png",
+            "special_effect": "Tăng +70% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 70
           },
           {
             "id": "69705",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/69705.png"
+            "icon": "/assets/iphonehd/icon/e_24attrJia_feng.png",
+            "special_effect": "Tăng +210% phòng ngự toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 210
           },
           {
             "id": "79705",
-            "name": "#N/A",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Long Thần Cổ Khôi",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/79705.png"
+            "icon": "/assets/iphonehd/icon/e_24attrTou_feng.png",
+            "special_effect": "Tăng +308% chính xác bản thân khi vào chiến đấu",
+            "effect_value": 308
           },
           {
             "id": "89705",
-            "name": "#N/A",
-            "sort": null,
+            "name": "Long Thần Cổ Hài",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/89705.png"
+            "icon": "/assets/iphonehd/icon/e_24attrXie_feng.png",
+            "special_effect": "Tăng +308% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 308
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "59706",
+            "name": "Long Thần Cổ Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrJian_feng.png",
+            "special_effect": "Tăng +140% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 140
+          },
+          {
+            "id": "69706",
+            "name": "Long Thần Cổ Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrJia_feng.png",
+            "special_effect": "Tăng +420% phòng ngự toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 420
+          },
+          {
+            "id": "79706",
+            "name": "Long Thần Cổ Khôi",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrTou_feng.png",
+            "special_effect": "Tăng +630% chính xác bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 630
+          },
+          {
+            "id": "89706",
+            "name": "Long Thần Cổ Hài",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_24attrXie_feng.png",
+            "special_effect": "Tăng +630% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 630
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ti",
+    "name": "Bộ Năm Tị",
+    "animal": "Tị",
+    "icon": "🐍",
+    "theme": "Tối Cường Sát Thương Nguyên Tố",
+    "nature": "Thiên hướng Tối Cường Sát Thương Nguyên Tố, Xuyên Giáp Ma Đạo & Bào Mòn Sinh Lực",
+    "description": "Bộ trang bị Thượng Cổ Năm Tị (Tương Dao Kiếm, Chúc Âm Giáp, Cửu Anh Nhẫn, Đằng Vũ Ủng). Bộ Tị là mạnh nhất đối với các tướng tăng sát thương theo mỗi điểm sát thương nguyên tố.",
+    "special_attributes": {
+      "title": "Chỉ Số Đặc Biệt Trước & Sau Khi Lên Cầu Vồng (Bộ Tị)",
+      "normal_highlights": [
+        "⚔️ Vũ khí (Tương Dao Kiếm): Tăng +80% Tấn công toàn thuộc tính khi vào chiến đấu (Cao nhất mốc thường)",
+        "🛡️ Áo giáp (Chúc Âm Giáp): Tăng tấn công bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số x5)",
+        "⚡ Trang sức (Cửu Anh Nhẫn): Tăng +50% Tốc độ khi vào chiến đấu",
+        "💨 Giày (Đằng Vũ Ủng): Tăng +50% Né tránh bản thân khi vào chiến đấu"
+      ],
+      "rainbow_highlights": [
+        "⚔️ Vũ khí Cầu Vồng: Tăng +160% Tấn công toàn thuộc tính (Gấp 2 lần, cực hạn)",
+        "🛡️ Áo giáp Cầu Vồng: Tăng tấn công bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số x10)",
+        "⚡ Trang sức Cầu Vồng: Tăng +100% Tốc độ khi vào chiến đấu (Gấp 2 lần)",
+        "💨 Giày Cầu Vồng: Tăng +100% Né tránh bản thân (Gấp 2 lần)"
+      ]
+    },
+    "best_heroes": [
+      {
+        "name": "Nagato",
+        "reason": "Bộ Năm Tị cực kỳ hợp với Nagato vì tăng lượng lớn tấn công thuộc tính Địa/Hỏa/Thủy, bổ trợ hoàn hảo cho 3 phong cách chơi Chuyển Sinh."
+      },
+      {
+        "name": "Sasuke (Lục Đạo / CT)",
+        "reason": "Sử dụng chuẩn xác Bộ Năm Tị (chứ không dùng bộ Chuột) vì toàn bộ chiêu thức Lôi Độn (Chidori) và Hỏa Độn (Amaterasu) tăng vọt uy lực theo sát thương nguyên tố."
+      },
+      {
+        "name": "Phù Thủy Elaina",
+        "reason": "Sử dụng chuẩn xác Bộ Năm Tị (chứ không dùng bộ Chuột hay Ngựa) vì ma pháp gió lốc và bão tuyết khuếch đại tối đa theo sát thương thuộc tính Phong."
+      },
+      {
+        "name": "Shalltear",
+        "reason": "Gia tăng sát thương ma thuật hắc ám nguyên tố và hút máu cực đại."
+      },
+      {
+        "name": "CT - Aizen",
+        "reason": "Áp chế tinh thần và gia tăng bạo kích thuật thức nguyên tố."
+      }
+    ],
+    "elements": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "9101513",
+        "suit_id": "1370",
+        "rainbow_suit_id": "1380"
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "9101514",
+        "suit_id": "1372",
+        "rainbow_suit_id": "1382"
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "9101515",
+        "suit_id": "1371",
+        "rainbow_suit_id": "1381"
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "9101516",
+        "suit_id": "1373",
+        "rainbow_suit_id": "1383"
+      }
+    ],
+    "variants": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "9101513",
+        "suit_id": "1370",
+        "rainbow_suit_id": "1380",
+        "suit_name": "Bộ Năm Tị (Thổ (Địa))",
+        "rainbow_suit_name": "Bộ Năm Tị (Thổ (Địa)) - Cầu Vồng",
+        "parts": [
+          {
+            "id": "109405",
+            "name": "Tương Dao Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrJian_di.png",
+            "special_effect": "Tăng +80% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 80
+          },
+          {
+            "id": "110405",
+            "name": "Chúc Âm Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrJia_di.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + tốc độ cơ sở",
+            "effect_value": 5
+          },
+          {
+            "id": "111405",
+            "name": "Cửu Anh Nhẫn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrTou_di.png",
+            "special_effect": "Tăng +50% tốc độ khi vào chiến đấu",
+            "effect_value": 50
+          },
+          {
+            "id": "112405",
+            "name": "Đằng Vũ Ủng",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrXie_di.png",
+            "special_effect": "Tăng +50% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 50
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "109406",
+            "name": "Tương Dao Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrJian_di.png",
+            "special_effect": "Tăng +160% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 160
+          },
+          {
+            "id": "110406",
+            "name": "Chúc Âm Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrJia_di.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số gấp đôi)",
+            "effect_value": 10
+          },
+          {
+            "id": "111406",
+            "name": "Cửu Anh Nhẫn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrTou_di.png",
+            "special_effect": "Tăng +100% tốc độ khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 100
+          },
+          {
+            "id": "112406",
+            "name": "Đằng Vũ Ủng",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrXie_di.png",
+            "special_effect": "Tăng +100% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 100
+          }
+        ],
+        "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
+        }
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "9101514",
+        "suit_id": "1372",
+        "rainbow_suit_id": "1382",
+        "suit_name": "Bộ Năm Tị (Thủy (Nước))",
+        "rainbow_suit_name": "Bộ Năm Tị (Thủy (Nước)) - Cầu Vồng",
+        "parts": [
+          {
+            "id": "109605",
+            "name": "Tương Dao Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrJian_shui.png",
+            "special_effect": "Tăng +80% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 80
+          },
+          {
+            "id": "110605",
+            "name": "Chúc Âm Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrJia_shui.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + tốc độ cơ sở",
+            "effect_value": 5
+          },
+          {
+            "id": "111605",
+            "name": "Cửu Anh Nhẫn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrTou_shui.png",
+            "special_effect": "Tăng +50% tốc độ khi vào chiến đấu",
+            "effect_value": 50
+          },
+          {
+            "id": "112605",
+            "name": "Đằng Vũ Ủng",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrXie_shui.png",
+            "special_effect": "Tăng +50% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 50
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "109606",
+            "name": "Tương Dao Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrJian_shui.png",
+            "special_effect": "Tăng +160% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 160
+          },
+          {
+            "id": "110606",
+            "name": "Chúc Âm Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrJia_shui.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số gấp đôi)",
+            "effect_value": 10
+          },
+          {
+            "id": "111606",
+            "name": "Cửu Anh Nhẫn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrTou_shui.png",
+            "special_effect": "Tăng +100% tốc độ khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 100
+          },
+          {
+            "id": "112606",
+            "name": "Đằng Vũ Ủng",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrXie_shui.png",
+            "special_effect": "Tăng +100% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 100
+          }
+        ],
+        "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
+        }
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "9101515",
+        "suit_id": "1371",
+        "rainbow_suit_id": "1381",
+        "suit_name": "Bộ Năm Tị (Hỏa (Lửa))",
+        "rainbow_suit_name": "Bộ Năm Tị (Hỏa (Lửa)) - Cầu Vồng",
+        "parts": [
+          {
+            "id": "109505",
+            "name": "Tương Dao Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrJian_huo.png",
+            "special_effect": "Tăng +80% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 80
+          },
+          {
+            "id": "110505",
+            "name": "Chúc Âm Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrJia_huo.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + tốc độ cơ sở",
+            "effect_value": 5
+          },
+          {
+            "id": "111505",
+            "name": "Cửu Anh Nhẫn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrTou_huo.png",
+            "special_effect": "Tăng +50% tốc độ khi vào chiến đấu",
+            "effect_value": 50
+          },
+          {
+            "id": "112505",
+            "name": "Đằng Vũ Ủng",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrXie_huo.png",
+            "special_effect": "Tăng +50% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 50
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "109506",
+            "name": "Tương Dao Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrJian_huo.png",
+            "special_effect": "Tăng +160% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 160
+          },
+          {
+            "id": "110506",
+            "name": "Chúc Âm Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrJia_huo.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số gấp đôi)",
+            "effect_value": 10
+          },
+          {
+            "id": "111506",
+            "name": "Cửu Anh Nhẫn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrTou_huo.png",
+            "special_effect": "Tăng +100% tốc độ khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 100
+          },
+          {
+            "id": "112506",
+            "name": "Đằng Vũ Ủng",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrXie_huo.png",
+            "special_effect": "Tăng +100% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 100
+          }
+        ],
+        "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
+        }
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "9101516",
+        "suit_id": "1373",
+        "rainbow_suit_id": "1383",
+        "suit_name": "Bộ Năm Tị (Phong (Gió))",
+        "rainbow_suit_name": "Bộ Năm Tị (Phong (Gió)) - Cầu Vồng",
+        "parts": [
+          {
+            "id": "109705",
+            "name": "Tương Dao Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrJian_feng.png",
+            "special_effect": "Tăng +80% tấn công toàn thuộc tính khi vào chiến đấu",
+            "effect_value": 80
+          },
+          {
+            "id": "110705",
+            "name": "Chúc Âm Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrJia_feng.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + tốc độ cơ sở",
+            "effect_value": 5
+          },
+          {
+            "id": "111705",
+            "name": "Cửu Anh Nhẫn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrTou_feng.png",
+            "special_effect": "Tăng +50% tốc độ khi vào chiến đấu",
+            "effect_value": 50
+          },
+          {
+            "id": "112705",
+            "name": "Đằng Vũ Ủng",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/e_25attrXie_feng.png",
+            "special_effect": "Tăng +50% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 50
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "109706",
+            "name": "Tương Dao Kiếm",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrJian_feng.png",
+            "special_effect": "Tăng +160% tấn công toàn thuộc tính khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 160
+          },
+          {
+            "id": "110706",
+            "name": "Chúc Âm Giáp",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrJia_feng.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số gấp đôi)",
+            "effect_value": 10
+          },
+          {
+            "id": "111706",
+            "name": "Cửu Anh Nhẫn",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrTou_feng.png",
+            "special_effect": "Tăng +100% tốc độ khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 100
+          },
+          {
+            "id": "112706",
+            "name": "Đằng Vũ Ủng",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_25attrXie_feng.png",
+            "special_effect": "Tăng +100% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 100
+          }
+        ],
+        "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       }
     ]
   },
   {
     "id": "ngua",
-    "name": "Bộ Năm Ngựa (Ngọ)",
-    "animal": "Ngựa (Ngọ)",
+    "name": "Bộ Năm Ngựa",
+    "animal": "Ngựa",
     "icon": "🐎",
-    "theme": "Chiến Thần Thiên Mã",
-    "nature": "Thiên hướng Tốc Độ Siêu Tốc, Xuất Kích Tiên Phong & Liên Kích Vũ Bão",
-    "description": "Bộ trang bị Thiên Mã Chiến Thần (Chiến Phủ Anh Chiêu, Giáp Lộc Thục, Thắt Lưng Tường Vân, Giày Thiên Mã), tăng 270.000 Công, 90.000 Thủ, 315.000 HP và tốc độ xuất chiêu áp đảo.",
+    "theme": "Tối Cường Tốc Độ & Chính Xác",
+    "nature": "Thiên hướng Tốc Độ Siêu Tốc, Tăng Chính Xác Tuyệt Đối & Xuất Kích Tiên Phong",
+    "description": "Bộ trang bị Thiên Mã Chiến Thần (Chiến Phủ Anh Chiêu, Chiến Giáp Lộc Thục, Thắt Lưng Tường Vân, Giày Chiến Thiên Mã). Phù hợp với TẤT CẢ các tướng (trừ những tướng cần sức mạnh tăng theo sát thương thuộc tính), đem lại tốc độ tiên phong vượt trội và độ chính xác tuyệt đối bách phát bách trúng.",
+    "special_attributes": {
+      "title": "Chỉ Số Đặc Biệt Trước & Sau Khi Lên Cầu Vồng (Bộ Ngựa)",
+      "normal_highlights": [
+        "🎯 Vũ khí (Anh Chiêu): Tăng +100% Chính xác bản thân khi vào chiến đấu (Bách phát bách trúng)",
+        "🛡️ Áo giáp (Lộc Thục): Tăng tấn công bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số x8)",
+        "⚡ Trang sức (Tường Vân): Tăng +60% Tốc độ khi vào chiến đấu",
+        "💨 Giày (Thiên Mã): Tăng +50% Né tránh bản thân khi vào chiến đấu"
+      ],
+      "rainbow_highlights": [
+        "🎯 Vũ khí Cầu Vồng: Tăng +200% Chính xác bản thân (Bách phát bách trúng tuyệt đối không thể né)",
+        "🛡️ Áo giáp Cầu Vồng: Tăng tấn công bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số x15)",
+        "⚡ Trang sức Cầu Vồng: Tăng +120% Tốc độ khi vào chiến đấu (Gấp 2 lần)",
+        "💨 Giày Cầu Vồng: Tăng +100% Né tránh bản thân (Gấp 2 lần)"
+      ]
+    },
     "best_heroes": [
       {
-        "name": "Phù Thủy Elaina",
-        "reason": "Tăng tốc xuất chiêu tối thượng, khống chế và tung đòn kết liễu đầu tiên"
+        "name": "Toàn bộ tướng thuần sát thương / vật lý",
+        "reason": "Set Ngựa phù hợp với tất cả các tướng (trừ những tướng cần sức mạnh tăng theo sát thương thuộc tính), đem lại tốc độ tiên phong và độ chính xác bách phát bách trúng."
+      },
+      {
+        "name": "Shadow (Cid Kageno)",
+        "reason": "Shadow cực kỳ phù hợp với Set Ngựa vì giúp tăng vượt trội chỉ số Chính Xác (+100% -> +200%), né tránh và tốc độ, đảm bảo chiêu thức kết liễu I AM ATOMIC luôn trúng đích tuyệt đối!"
       },
       {
         "name": "Yatogami Tenka",
-        "reason": "Tận dụng tốc độ thần sầu để áp sát trảm kích trước khi địch kịp ra chiêu"
+        "reason": "Tận dụng tốc độ thần sầu để áp sát trảm kích trước khi địch kịp phản xạ."
       },
       {
         "name": "Võ Thánh Quan Vũ",
-        "reason": "Cộng hưởng trực tiếp hình tượng Xích Thố Thiên Mã, chém rách phòng ngự"
-      },
-      {
-        "name": "Kiếm Hy Vọng (Trunks)",
-        "reason": "Xuất kiếm chớp nhoáng tạo đột biến lật ngược thế trận"
+        "reason": "Tăng cường độ chính xác và tốc độ trảm kích mãnh liệt."
       }
     ],
     "elements": [
       {
         "element": "Địa (Thổ)",
         "box_id": "9102121",
-        "suit_id": "1630"
+        "suit_id": "1630",
+        "rainbow_suit_id": "1640"
       },
       {
         "element": "Thủy (Nước)",
         "box_id": "9102122",
-        "suit_id": "1670"
+        "suit_id": "1670",
+        "rainbow_suit_id": "1680"
       },
       {
         "element": "Hỏa (Lửa)",
         "box_id": "9102123",
-        "suit_id": "1650"
+        "suit_id": "1650",
+        "rainbow_suit_id": "1660"
       },
       {
         "element": "Phong (Gió)",
         "box_id": "9102124",
-        "suit_id": "1690"
+        "suit_id": "1690",
+        "rainbow_suit_id": "1700"
       }
     ],
     "variants": [
@@ -976,180 +2147,448 @@
         "element": "Địa (Thổ)",
         "box_id": "9102121",
         "suit_id": "1630",
-        "suit_name": "凶兽の地",
+        "rainbow_suit_id": "1640",
+        "suit_name": "Bộ Năm Ngựa (Địa (Thổ))",
+        "rainbow_suit_name": "Bộ Năm Ngựa (Địa (Thổ)) - Cầu Vồng",
         "parts": [
           {
             "id": "119405",
-            "name": "Hung Thú - Địa: Chiến Phủ Anh Chiêu",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Chiến Phủ Anh Chiêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/119405.png"
+            "icon": "/assets/iphonehd/icon/e_26attrJian_di.png",
+            "special_effect": "Tăng +100% chính xác bản thân khi vào chiến đấu (Bách phát bách trúng)",
+            "effect_value": 100
           },
           {
             "id": "120405",
-            "name": "Hung Thú - Địa: Chiến Giáp Lộc Thục",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Chiến Giáp Lộc Thục",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/120405.png"
+            "icon": "/assets/iphonehd/icon/e_26attrJia_di.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + tốc độ cơ sở",
+            "effect_value": 8
           },
           {
             "id": "121405",
-            "name": "Hung Thú - Địa: Thắt Lưng Tường Vân",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thắt Lưng Tường Vân",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/121405.png"
+            "icon": "/assets/iphonehd/icon/e_26attrTou_di.png",
+            "special_effect": "Tăng +60% tốc độ khi vào chiến đấu",
+            "effect_value": 60
           },
           {
             "id": "122405",
-            "name": "Hung Thú - Địa: Giày Chiến Thiên Mã",
-            "sort": null,
+            "name": "Giày Chiến Thiên Mã",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/122405.png"
+            "icon": "/assets/iphonehd/icon/e_26attrXie_di.png",
+            "special_effect": "Tăng +50% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 50
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "119406",
+            "name": "Chiến Phủ Anh Chiêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrJian_di.png",
+            "special_effect": "Tăng +200% chính xác bản thân khi vào chiến đấu (Bách phát bách trúng tuyệt đối)",
+            "effect_value": 200
+          },
+          {
+            "id": "120406",
+            "name": "Chiến Giáp Lộc Thục",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrJia_di.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số gấp đôi)",
+            "effect_value": 15
+          },
+          {
+            "id": "121406",
+            "name": "Thắt Lưng Tường Vân",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrTou_di.png",
+            "special_effect": "Tăng +120% tốc độ khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 120
+          },
+          {
+            "id": "122406",
+            "name": "Giày Chiến Thiên Mã",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrXie_di.png",
+            "special_effect": "Tăng +100% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 100
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       },
       {
         "element": "Thủy (Nước)",
         "box_id": "9102122",
         "suit_id": "1670",
-        "suit_name": "凶兽の水",
+        "rainbow_suit_id": "1680",
+        "suit_name": "Bộ Năm Ngựa (Thủy (Nước))",
+        "rainbow_suit_name": "Bộ Năm Ngựa (Thủy (Nước)) - Cầu Vồng",
         "parts": [
           {
             "id": "119605",
-            "name": "Hung Thú - Thuỷ: Chiến Phủ Anh Chiêu",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thuỷ: Chiến Phủ Anh Chiêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/119605.png"
+            "icon": "/assets/iphonehd/icon/e_26attrJian_shui.png",
+            "special_effect": "Tăng +100% chính xác bản thân khi vào chiến đấu (Bách phát bách trúng)",
+            "effect_value": 100
           },
           {
             "id": "120605",
-            "name": "Hung Thú - Thuỷ: Chiến Giáp Lộc Thục",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thuỷ: Chiến Giáp Lộc Thục",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/120605.png"
+            "icon": "/assets/iphonehd/icon/e_26attrJia_shui.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + tốc độ cơ sở",
+            "effect_value": 8
           },
           {
             "id": "121605",
-            "name": "Hung Thú - Thuỷ: Thắt Lưng Tường Vân",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thuỷ: Thắt Lưng Tường Vân",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/121605.png"
+            "icon": "/assets/iphonehd/icon/e_26attrTou_shui.png",
+            "special_effect": "Tăng +60% tốc độ khi vào chiến đấu",
+            "effect_value": 60
           },
           {
             "id": "122605",
-            "name": "Hung Thú - Thuỷ: Giày Chiến Thiên Mã",
-            "sort": null,
+            "name": "Thuỷ: Giày Chiến Thiên Mã",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/122605.png"
+            "icon": "/assets/iphonehd/icon/e_26attrXie_shui.png",
+            "special_effect": "Tăng +50% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 50
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "119606",
+            "name": "Chiến Phủ Anh Chiêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrJian_shui.png",
+            "special_effect": "Tăng +200% chính xác bản thân khi vào chiến đấu (Bách phát bách trúng tuyệt đối)",
+            "effect_value": 200
+          },
+          {
+            "id": "120606",
+            "name": "Chiến Giáp Lộc Thục",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrJia_shui.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số gấp đôi)",
+            "effect_value": 15
+          },
+          {
+            "id": "121606",
+            "name": "Thuỷ: Thắt Lưng Tường Vân",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrTou_shui.png",
+            "special_effect": "Tăng +120% tốc độ khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 120
+          },
+          {
+            "id": "122606",
+            "name": "Giày Chiến Thiên Mã",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrXie_shui.png",
+            "special_effect": "Tăng +100% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 100
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       },
       {
         "element": "Hỏa (Lửa)",
         "box_id": "9102123",
         "suit_id": "1650",
-        "suit_name": "凶兽の火",
+        "rainbow_suit_id": "1660",
+        "suit_name": "Bộ Năm Ngựa (Hỏa (Lửa))",
+        "rainbow_suit_name": "Bộ Năm Ngựa (Hỏa (Lửa)) - Cầu Vồng",
         "parts": [
           {
             "id": "119505",
-            "name": "Hung Thú - Hỏa: Chiến Phủ Anh Chiêu",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Chiến Phủ Anh Chiêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/119505.png"
+            "icon": "/assets/iphonehd/icon/e_26attrJian_huo.png",
+            "special_effect": "Tăng +100% chính xác bản thân khi vào chiến đấu (Bách phát bách trúng)",
+            "effect_value": 100
           },
           {
             "id": "120505",
-            "name": "Hung Thú - Hỏa: Chiến Giáp Lộc Thục",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Chiến Giáp Lộc Thục",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/120505.png"
+            "icon": "/assets/iphonehd/icon/e_26attrJia_huo.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + tốc độ cơ sở",
+            "effect_value": 8
           },
           {
             "id": "121505",
-            "name": "Hung Thú - Hoả: Thắt Lưng Tường Vân",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Hoả: Thắt Lưng Tường Vân",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/121505.png"
+            "icon": "/assets/iphonehd/icon/e_26attrTou_huo.png",
+            "special_effect": "Tăng +60% tốc độ khi vào chiến đấu",
+            "effect_value": 60
           },
           {
             "id": "122505",
-            "name": "Hung Thú - Hoả: Giày Chiến Thiên Mã",
-            "sort": null,
+            "name": "Hoả: Giày Chiến Thiên Mã",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/122505.png"
+            "icon": "/assets/iphonehd/icon/e_26attrXie_huo.png",
+            "special_effect": "Tăng +50% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 50
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "119506",
+            "name": "Chiến Phủ Anh Chiêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrJian_huo.png",
+            "special_effect": "Tăng +200% chính xác bản thân khi vào chiến đấu (Bách phát bách trúng tuyệt đối)",
+            "effect_value": 200
+          },
+          {
+            "id": "120506",
+            "name": "Hoả: Chiến Giáp Lộc Thục",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrJia_huo.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số gấp đôi)",
+            "effect_value": 15
+          },
+          {
+            "id": "121506",
+            "name": "Hoả: Thắt Lưng Tường Vân",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrTou_huo.png",
+            "special_effect": "Tăng +120% tốc độ khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 120
+          },
+          {
+            "id": "122506",
+            "name": "Hoả: Giày Chiến Thiên Mã",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrXie_huo.png",
+            "special_effect": "Tăng +100% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 100
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       },
       {
         "element": "Phong (Gió)",
         "box_id": "9102124",
         "suit_id": "1690",
-        "suit_name": "凶兽の风",
+        "rainbow_suit_id": "1700",
+        "suit_name": "Bộ Năm Ngựa (Phong (Gió))",
+        "rainbow_suit_name": "Bộ Năm Ngựa (Phong (Gió)) - Cầu Vồng",
         "parts": [
           {
             "id": "119705",
-            "name": "Hung Thú - Phong: Chiến Phủ Anh Chiêu",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Chiến Phủ Anh Chiêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/119705.png"
+            "icon": "/assets/iphonehd/icon/e_26attrJian_feng.png",
+            "special_effect": "Tăng +100% chính xác bản thân khi vào chiến đấu (Bách phát bách trúng)",
+            "effect_value": 100
           },
           {
             "id": "120705",
-            "name": "Hung Thú - Phong: Chiến Giáp Lộc Thục",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Chiến Giáp Lộc Thục",
+            "sort": 3,
+            "slot_name": "Áo giáp",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/120705.png"
+            "icon": "/assets/iphonehd/icon/e_26attrJia_feng.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + tốc độ cơ sở",
+            "effect_value": 8
           },
           {
             "id": "121705",
-            "name": "Hung Thú - Phong: Thắt Lưng Tường Vân",
-            "sort": null,
-            "slot_name": "Giày",
+            "name": "Thắt Lưng Tường Vân",
+            "sort": 2,
+            "slot_name": "Trang sức",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/121705.png"
+            "icon": "/assets/iphonehd/icon/e_26attrTou_feng.png",
+            "special_effect": "Tăng +60% tốc độ khi vào chiến đấu",
+            "effect_value": 60
           },
           {
             "id": "122705",
-            "name": "Hung Thú - Phong: Giày Chiến Thiên Mã",
-            "sort": null,
+            "name": "Giày Chiến Thiên Mã",
+            "sort": 4,
             "slot_name": "Giày",
             "quality": 7,
-            "icon": "/assets/iphonehd/icon/122705.png"
+            "icon": "/assets/iphonehd/icon/e_26attrXie_feng.png",
+            "special_effect": "Tăng +50% né tránh bản thân khi vào chiến đấu",
+            "effect_value": 50
+          }
+        ],
+        "rainbow_parts": [
+          {
+            "id": "119706",
+            "name": "Chiến Phủ Anh Chiêu",
+            "sort": 1,
+            "slot_name": "Vũ khí",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrJian_feng.png",
+            "special_effect": "Tăng +200% chính xác bản thân khi vào chiến đấu (Bách phát bách trúng tuyệt đối)",
+            "effect_value": 200
+          },
+          {
+            "id": "120706",
+            "name": "Chiến Giáp Lộc Thục",
+            "sort": 3,
+            "slot_name": "Áo giáp",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrJia_feng.png",
+            "special_effect": "Tăng tấn công toàn thuộc tính bằng 10 lần tốc độ hiện tại + cơ sở (Hệ số gấp đôi)",
+            "effect_value": 15
+          },
+          {
+            "id": "121706",
+            "name": "Thắt Lưng Tường Vân",
+            "sort": 2,
+            "slot_name": "Trang sức",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrTou_feng.png",
+            "special_effect": "Tăng +120% tốc độ khi vào chiến đấu (Gấp 2 lần)",
+            "effect_value": 120
+          },
+          {
+            "id": "122706",
+            "name": "Giày Chiến Thiên Mã",
+            "sort": 4,
+            "slot_name": "Giày",
+            "quality": 8,
+            "icon": "/assets/iphonehd/icon/e_26attrXie_feng.png",
+            "special_effect": "Tăng +100% né tránh bản thân khi vào chiến đấu (Gấp hơn 2 lần)",
+            "effect_value": 100
           }
         ],
         "bonuses": {
+          "title": "Mốc Thường (Phẩm 7)",
           "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
           "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
           "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        },
+        "rainbow_bonuses": {
+          "title": "Mốc Cầu Vồng (Phẩm 8)",
+          "two_piece": "+225,000 HP, +135,000 Phòng Ngự / Kháng",
+          "three_piece": "+225,000 HP, +135,000 Kháng Toàn Thuộc Tính",
+          "four_piece": "+675,000 Công, +225,000 Thủ, +675,000 HP Tối Đa",
+          "stats": {
+            "hp": 675000,
+            "patk": 675000,
+            "matk": 675000,
+            "def": 225000,
+            "speed": 200000,
+            "ele_atk": 675000
+          }
         }
       }
     ]

@@ -105,6 +105,12 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         box_config = json.load(f)
     with open("config/suit.config", "r", encoding="utf-8") as f:
         suits_raw_config = json.load(f)
+    with open("config/super_evolution.config", "r", encoding="utf-8") as f:
+        super_evolution_config = json.load(f)
+    with open("config/super_evo_team.config", "r", encoding="utf-8") as f:
+        super_evo_team_config = json.load(f)
+    with open("config/character_detail.config", "r", encoding="utf-8") as f:
+        character_detail_config = json.load(f)
 
     # 1. Generate character_strengthen.json (+1 to +60 evolution)
     strengthen_table = {}
@@ -131,11 +137,73 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
     cb_by_char_id = {str(v.get("character_id")): v for v in character_break_new.values() if v.get("character_id")}
     cb_by_name = {v.get("name").lower().strip(): v for v in character_break_new.values() if v.get("name")}
 
+    # Index breakthrough.config by character_id
+    bt_by_cid = {}
+    for k, v in breakthrough_config.items():
+        cid = str(v.get("character_id", ""))
+        bt_by_cid.setdefault(cid, []).append((int(k), str(k), v))
+    for cid in bt_by_cid:
+        bt_by_cid[cid].sort(key=lambda x: x[0])
+
     # Group heroes by character_id for family lineage
     heroes_by_char_id = {}
     for hid, h in heroes.items():
         cid = str(h.get("character_id") or "")
         heroes_by_char_id.setdefault(cid, []).append((hid, h))
+
+    # Build avatar mapping for hero cards (Type 5)
+    char_to_avatar = {}
+    for hid_k, h_val in heroes.items():
+        av = web_asset_url(h_val.get("assets", {}).get("image", {}).get("path"))
+        cid_k = str(h_val.get("character_id") or "")
+        if av and cid_k and cid_k not in char_to_avatar:
+            char_to_avatar[cid_k] = av
+        if av and str(hid_k) not in char_to_avatar:
+            char_to_avatar[str(hid_k)] = av
+
+    # Exact known icons for items (Type 6 and special materials)
+    known_item_icons = {
+        "900000": "/assets/iphonehd/icon/i_b_0_0.png",           # Đá Chuyển Sinh
+        "930000": "/assets/iphonehd/icon/i_c_gaojizhuansheng.png", # Đá Chuyển Sinh Cao Cấp
+        "940002": "/assets/iphonehd/icon/i_c_yuanpozhihsi.png",  # Đá Nguyên Phách
+        "940004": "/assets/iphonehd/icon/i_c_yuanpozhikui.png",  # Mũ Nguyên Phách
+        "940006": "/assets/iphonehd/icon/i_c_lingpozhijia.png",  # Giáp Chuyển Thế / Giáp Linh Phách
+        "940007": "/assets/iphonehd/icon/i_c_lingpozhishi.png",  # Đá Chuyển Thế / Đá Linh Phách
+        "940008": "/assets/iphonehd/icon/i_c_lingpozhijian.png", # Kiếm Chuyển Thế
+        "940009": "/assets/iphonehd/icon/i_c_lingpozhikui.png",  # Mũ Chuyển Thế
+        "940010": "/assets/iphonehd/icon/i_c_54.png",            # Linh hồn Chuyển Thế
+        "910002": "/assets/iphonehd/icon/i_b_yuanli_2.png",      # Đá Nguyên Lực
+        "910003": "/assets/iphonehd/icon/i_b_yuanli_3.png",      # Kiếm Nguyên Lực
+        "920001": "/assets/iphonehd/icon/i_b_shenli_1.png",      # Giáp Thần Lực
+        "920002": "/assets/iphonehd/icon/i_b_shenli_2.png",      # Đá Thần Lực
+        "920003": "/assets/iphonehd/icon/i_b_shenli_3.png",      # Kiếm Thần Lực
+        "920004": "/assets/iphonehd/icon/i_b_shenli_4.png",      # Mũ Thần Lực
+        "900002": "/assets/iphonehd/icon/i_b_lingli_2.png",      # Đá Linh Lực
+        "900003": "/assets/iphonehd/icon/i_b_lingli_3.png",      # Kiếm Linh Lực
+        "930004": "/assets/iphonehd/icon/i_c_lingpozhikui.png",  # Mũ Linh Phách
+        "950001": "/assets/iphonehd/icon/jin.png",               # Kim Ngũ Hành
+        "950002": "/assets/iphonehd/icon/tu.png",                # Mộc Ngũ Hành (fallback tu)
+        "950003": "/assets/iphonehd/icon/shui.png",              # Thủy Ngũ Hành
+        "950004": "/assets/iphonehd/icon/huo.png",               # Hỏa Ngũ Hành
+        "950005": "/assets/iphonehd/icon/tu.png",                # Thổ Ngũ Hành
+        "950006": "/assets/iphonehd/icon/wenzhang.png",          # Linh Tiềm Năng
+        "950007": "/assets/iphonehd/icon/hun.png",               # Hồn Tiềm Năng
+        "9102366": "/assets/iphonehd/icon/erhuan.png",           # Bông Tai Potara
+        "3100": "/assets/iphonehd/icon/zhuanshi_juanzhou.png",   # Sách Chuyển Thế
+        "3101": "/assets/iphonehd/icon/zhuanshi_shitou.png",     # Chuyển Thế Đơn
+        "31011": "/assets/iphonehd/icon/zhuanshi_shitou.png",    # Mảnh Chuyển Thế Đơn
+        "532": "/assets/iphonehd/icon/yuansujinghua.png",        # Tinh hoa nguyên tố
+        "533": "/assets/iphonehd/icon/dinengliangshi.png",       # Đá năng lượng Đất
+        "534": "/assets/iphonehd/icon/shuinengliangshi.png",     # Đá năng lượng Nước
+        "535": "/assets/iphonehd/icon/huonengliangshi.png",      # Đá năng lượng Lửa
+        "536": "/assets/iphonehd/icon/fengnengliangshi.png",     # Đá năng lượng Gió
+        "500": "/assets/iphonehd/icon/icon_crystal1.png",        # 100 Năng tinh
+        "501": "/assets/iphonehd/icon/icon_crystal2.png",        # 300 Năng tinh
+        "502": "/assets/iphonehd/icon/icon_crystal3.png",        # 500 Năng tinh
+        "900": "/assets/iphonehd/icon/i_b_yuanli_2.png",         # Ấn Kí Saiyan
+        "2100": "/assets/iphonehd/icon/e_f_shoes11.png",         # Linh kiện Đăng Vân Lữ
+        "4500": "/assets/iphonehd/icon/item_addcard.png",        # Túi Anh Hồn +5
+    }
 
     # Badges mapping and synergy helper
     badges_raw = ban_suc.get("badges", {})
@@ -299,6 +367,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         base_member = sorted_family[0] if sorted_family else (hid, h)
         base_id, base_h = base_member
         base_hero_name = base_h.get("name") or f"Tướng #{base_id}"
+        base_hero_avatar = web_asset_url(base_h.get("assets", {}).get("image", {}).get("path")) or avatar
 
         family_forms = []
         for var_id, var_h in sorted_family:
@@ -306,7 +375,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             var_bt_count = len(var_h.get("breakthrough", {}).get("breakthrough_ids", []))
             is_base = var_bt_count == 0
             
-            label = "Dạng Thường" if is_base else ("Chuyển Thế 1" if ("ct -" in var_name.lower() or "ct-" in var_name.lower()) else "Chuyển Thế Đỉnh Phong")
+            label = "Dạng Thường" if is_base else ("Chuyển Thế 1" if ("ct -" in var_name.lower() or "ct-" in var_name.lower()) else "Dạng Chuyển Thế")
             family_forms.append({
                 "id": var_id,
                 "name": var_name,
@@ -328,6 +397,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "sex": h.get("sex", 0),
             "level_max": h.get("level_max", 0),
             "avatar": avatar,
+            "full_image": f"/assets/heroes/full_{hid}.png" if os.path.exists(f"web/public/assets/heroes/full_{hid}.png") else None,
             "is_only": h.get("is_only", 0),
             "rebirth": h.get("rebirth", 0),
             "hp": h.get("base_stats", {}).get("hp", 0),
@@ -357,12 +427,37 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                     m_id = str(m[1]) if len(m) > 1 else "unknown"
                     m_qty = m[2] if len(m) > 2 else 1
                     m_name = item_names.get(m_id) or hero_names.get(m_id) or f"Vật phẩm #{m_id}"
+                    
+                    m_icon = None
+                    if m_cat == 5:
+                        m_icon = char_to_avatar.get(m_id) or avatar
+                    else:
+                        m_icon = known_item_icons.get(m_id)
+                        if not m_icon and m_id in items:
+                            raw_p = items[m_id].get("assets", {}).get("icon", {}).get("path")
+                            if raw_p:
+                                m_icon = "/" + raw_p.replace("public/", "").replace("\\", "/")
+                    if not m_icon:
+                        if "chuyển sinh" in m_name.lower(): m_icon = "/assets/iphonehd/icon/i_b_0_0.png"
+                        elif "linh phách" in m_name.lower() or "nguyên phách" in m_name.lower(): m_icon = "/assets/iphonehd/icon/i_c_lingpozhishi.png"
+                        elif "giáp" in m_name.lower(): m_icon = "/assets/iphonehd/icon/i_c_lingpozhijia.png"
+                        elif "mũ" in m_name.lower(): m_icon = "/assets/iphonehd/icon/i_c_lingpozhikui.png"
+                        elif "kiếm" in m_name.lower(): m_icon = "/assets/iphonehd/icon/i_c_lingpozhijian.png"
+                        else: m_icon = "/assets/iphonehd/icon/i_b_0_0.png"
+
                     mats.append({
                         "id": m_id,
                         "name": m_name,
                         "count": m_qty,
-                        "is_hero_card": m_cat == 5
+                        "is_hero_card": m_cat == 5,
+                        "icon": m_icon
                     })
+                
+                # Rule 2: Chuyển sinh 1 chỉ cần có 2 nguyên liệu. Chuyển sinh 2 cần 4 nguyên liệu.
+                if i == 1:
+                    mats = mats[:2]
+                elif i == 2:
+                    mats = mats[:4]
                 
                 cond_text = f"Yêu cầu hoàn thành Chuyển {i-1}." if i > 1 else "Yêu cầu thẻ tướng đạt Phẩm 4 hoặc Phẩm 5 trở lên."
                 if i >= 6:
@@ -441,11 +536,105 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                 "effects": effects
             })
 
-        # Super Evolution
+        def parse_abilitys(abilitys_list):
+            res = {"hp": 0, "patk": 0, "matk": 0, "def": 0, "speed": 0, "ele_atk": 0, "ele_def": 0}
+            for ab in abilitys_list:
+                aid, aval = ab[0], ab[1]
+                if aid == 1: res["patk"] = aval
+                elif aid == 2: res["matk"] = aval
+                elif aid == 3: res["def"] = aval
+                elif aid == 4: res["speed"] = aval
+                elif aid == 5: res["hp"] = aval
+                elif aid in [301, 302, 303, 304]: res["ele_atk"] = aval
+                elif aid in [201, 202, 203, 204]: res["ele_def"] = aval
+            return res
+
+        # 1. Breakthrough System (20 cấp Đột Phá từ config/breakthrough.config)
         bt_data = h.get("breakthrough", {})
         bt_ids = bt_data.get("breakthrough_ids", [])
-        has_super_evo = len(bt_ids) > 0
-        
+        if not bt_ids:
+            bt_ids = base_h.get("breakthrough", {}).get("breakthrough_ids", [])
+        if not bt_ids:
+            for f_hid, fam_h in sorted_family:
+                if fam_h.get("breakthrough", {}).get("breakthrough_ids"):
+                    bt_ids = fam_h["breakthrough"]["breakthrough_ids"]
+                    break
+        if not bt_ids:
+            cid = str(h.get("character_id", ""))
+            if cid in bt_by_cid:
+                bt_ids = [item[1] for item in bt_by_cid[cid]]
+            elif hid in bt_by_cid:
+                bt_ids = [item[1] for item in bt_by_cid[hid]]
+            elif base_id in bt_by_cid:
+                bt_ids = [item[1] for item in bt_by_cid[base_id]]
+
+        breakthrough_stages = []
+        for idx, sid in enumerate(bt_ids):
+            entry = breakthrough_config.get(str(sid), {})
+            step_num = idx + 1
+            mats = []
+            for m in entry.get("need_material", []):
+                m_cat, m_id, m_qty = m[0], str(m[1]), m[2]
+                if m_cat == 6:
+                    item_obj = items_config.get(m_id, {})
+                    m_name = item_obj.get("name", f"Vật phẩm {m_id}")
+                    m_icon = "/assets/iphonehd/icon/zhuanshi_shitou.png" if m_id == "3101" else (
+                        "/assets/iphonehd/icon/yuansujinghua.png" if m_id == "532" else (
+                            "/assets/iphonehd/icon/dinengliangshi.png" if m_id == "533" else (
+                                "/assets/iphonehd/icon/shuinengliangshi.png" if m_id == "534" else (
+                                    "/assets/iphonehd/icon/huonengliangshi.png" if m_id == "535" else (
+                                        "/assets/iphonehd/icon/fengnengliangshi.png" if m_id == "536" else "/assets/iphonehd/icon/zhuanshi_shitou.png"
+                                    )
+                                )
+                            )
+                        )
+                    )
+                    mats.append({
+                        "id": m_id,
+                        "name": m_name,
+                        "count": m_qty,
+                        "is_hero_card": False,
+                        "icon": m_icon
+                    })
+                elif m_cat == 5:
+                    card_hero = heroes.get(m_id, {})
+                    card_name = card_hero.get("name", base_hero_name or hero_name)
+                    card_avatar = web_asset_url(card_hero.get("assets", {}).get("image", {}).get("path")) or base_hero_avatar
+                    mats.append({
+                        "id": m_id,
+                        "name": f"Thẻ Tướng {card_name}",
+                        "count": m_qty,
+                        "is_hero_card": True,
+                        "icon": card_avatar
+                    })
+
+            need_gold = entry.get("need_money", 0)
+            if need_gold > 0:
+                mats.append({
+                    "id": "gold",
+                    "name": "Vàng",
+                    "count": need_gold,
+                    "is_currency": True,
+                    "icon": "/assets/iphonehd/icon/icon_maze_gold.png"
+                })
+
+            step_stats = parse_abilitys(entry.get("abilitys", []))
+            breakthrough_stages.append({
+                "step": step_num,
+                "step_name": f"Đột Phá Cấp {step_num}",
+                "need_money": need_gold,
+                "materials": mats,
+                "stats": step_stats
+            })
+
+        breakthrough_system = {
+            "has_breakthrough": len(breakthrough_stages) > 0,
+            "max_step": len(breakthrough_stages),
+            "stages": breakthrough_stages
+        }
+
+        # 2. Super Evolution (9 mốc: Cam -> Đỏ -> Vàng mở khóa 2 Kỹ Năng Siêu Tiến Hóa)
+        has_super_evo = bool(cb_data) or len(breakthrough_stages) > 0
         evo_skill_1 = None
         evo_skill_2 = None
         if cb_data:
@@ -465,21 +654,9 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         if not evo_skill_2 and len(hero_skills) >= 7:
             evo_skill_2 = hero_skills[6].get("name")
 
-        def parse_abilitys(abilitys_list):
-            res = {"hp": 0, "patk": 0, "matk": 0, "def": 0, "speed": 0}
-            for ab in abilitys_list:
-                aid, aval = ab[0], ab[1]
-                if aid == 1: res["patk"] = aval
-                elif aid == 2: res["matk"] = aval
-                elif aid == 3: res["def"] = aval
-                elif aid == 4: res["speed"] = aval
-                elif aid == 5: res["hp"] = aval
-            return res
-
         max_bt_stats = {"hp": 0, "patk": 0, "matk": 0, "def": 0, "speed": 0}
-        if bt_ids:
-            step_max = breakthrough_config.get(str(bt_ids[-1]), {})
-            max_bt_stats = parse_abilitys(step_max.get("abilitys", []))
+        if breakthrough_stages:
+            max_bt_stats = breakthrough_stages[-1]["stats"]
         else:
             base = h.get("base_stats", {})
             max_bt_stats = {
@@ -490,36 +667,54 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                 "speed": int(base.get("speed", 0) * 0.75)
             }
 
-        # 9 sub-stages with exact material requirements
+        # 9 sub-stages: Cam, Cam+, Cam++, Đỏ, Đỏ+, Đỏ++, Vàng, Vàng+, Vàng++
         evo_stage_configs = [
-            {"id": "cam", "name": "Cam", "tier": "orange", "ratio": 0.15, "unlocks_skill": 0, "req_type": "odd", "step": 1},
-            {"id": "cam_plus", "name": "Cam+", "tier": "orange", "ratio": 0.25, "unlocks_skill": 0, "req_type": "even", "step": 2},
-            {"id": "cam_plus2", "name": "Cam++", "tier": "orange", "ratio": 0.35, "unlocks_skill": 0, "req_type": "odd", "step": 3},
-            {"id": "do", "name": "Đỏ", "tier": "red", "ratio": 0.50, "unlocks_skill": 1, "req_type": "even", "step": 4},
-            {"id": "do_plus", "name": "Đỏ+", "tier": "red", "ratio": 0.60, "unlocks_skill": 1, "req_type": "odd", "step": 5},
-            {"id": "do_plus2", "name": "Đỏ++", "tier": "red", "ratio": 0.70, "unlocks_skill": 1, "req_type": "even", "step": 6},
-            {"id": "vang", "name": "Vàng", "tier": "gold", "ratio": 0.85, "unlocks_skill": 2, "req_type": "odd", "step": 7},
-            {"id": "vang_plus", "name": "Vàng+", "tier": "gold", "ratio": 0.92, "unlocks_skill": 2, "req_type": "even", "step": 8},
-            {"id": "vang_plus2", "name": "Vàng++", "tier": "gold", "ratio": 1.00, "unlocks_skill": 2, "req_type": "odd", "step": 9},
+            {"id": "cam", "name": "Cam", "tier": "orange", "ratio": 0.15, "unlocks_skill": 0},
+            {"id": "cam_plus", "name": "Cam+", "tier": "orange", "ratio": 0.25, "unlocks_skill": 0},
+            {"id": "cam_plus2", "name": "Cam++", "tier": "orange", "ratio": 0.35, "unlocks_skill": 0},
+            {"id": "do", "name": "Đỏ", "tier": "red", "ratio": 0.50, "unlocks_skill": 1},
+            {"id": "do_plus", "name": "Đỏ+", "tier": "red", "ratio": 0.60, "unlocks_skill": 1},
+            {"id": "do_plus2", "name": "Đỏ++", "tier": "red", "ratio": 0.70, "unlocks_skill": 1},
+            {"id": "vang", "name": "Vàng", "tier": "gold", "ratio": 0.85, "unlocks_skill": 2},
+            {"id": "vang_plus", "name": "Vàng+", "tier": "gold", "ratio": 0.92, "unlocks_skill": 2},
+            {"id": "vang_plus2", "name": "Vàng++", "tier": "gold", "ratio": 1.00, "unlocks_skill": 2},
         ]
 
+        # Look up matching super evolution entry
+        cand_keys = [str(hid), f"{cid}00", str(cid), str(base_id), f"{base_id}00"]
+        se_entry = next((super_evolution_config[k] for k in cand_keys if k and k in super_evolution_config), {})
+
         super_evo_stages = []
-        for sc in evo_stage_configs:
+        for idx, sc in enumerate(evo_stage_configs):
             r = sc["ratio"]
-            s_idx = sc["step"]
-            
-            # Required materials per stage
-            mats_required = []
-            if sc["req_type"] == "odd":
-                mats_required.append({"name": "Chuyển Thế Đơn (ID: 3101)", "count": 20, "is_hero_card": False})
-                mats_required.append({"name": "Tinh hoa nguyên tố (ID: 532)", "count": s_idx * 10 + 10, "is_hero_card": False})
-                mats_required.append({"name": "Đá năng lượng theo hệ", "count": s_idx * 10 + 10, "is_hero_card": False})
-                mats_required.append({"name": "Vàng", "count": s_idx * 10000 + 10000, "is_currency": True})
-            else:
-                mats_required.append({"name": f"Thẻ Tướng Bản Thể Gốc [{base_hero_name}]", "count": 1, "is_hero_card": True, "card_id": base_id})
-                mats_required.append({"name": "Tinh hoa nguyên tố (ID: 532)", "count": s_idx * 10 + 10, "is_hero_card": False})
-                mats_required.append({"name": "Đá năng lượng theo hệ", "count": s_idx * 10 + 10, "is_hero_card": False})
-                mats_required.append({"name": "Vàng", "count": s_idx * 10000 + 10000, "is_currency": True})
+            # Extract exact materials for this stage (from super_evolution.config & super_evo_team.config)
+            stage_mats = []
+            if idx > 0 and se_entry:
+                need_slots = se_entry.get(f"level_{idx}_need", [])
+                for nid in need_slots:
+                    team_entry = super_evo_team_config.get(str(nid), {})
+                    c_need = team_entry.get("card_need")
+                    if c_need == -1:
+                        stage_mats.append({
+                            "id": "-1",
+                            "name": "Thẻ Phôi Cam Bất Kỳ",
+                            "count": 1,
+                            "icon": base_hero_avatar or avatar or "/assets/iphonehd/icon/item_addcard.png",
+                            "is_wildcard": True,
+                            "quality": 5
+                        })
+                    else:
+                        c_char = character_detail_config.get(str(c_need), {})
+                        c_name = c_char.get("name") or hero_names.get(str(c_need)) or f"Thẻ Tướng #{c_need}"
+                        c_img = c_char.get("img") or f"{c_need}.png"
+                        stage_mats.append({
+                            "id": str(c_need),
+                            "name": c_name,
+                            "count": 1,
+                            "icon": f"/assets/iphonehd/icon/{c_img}",
+                            "is_wildcard": False,
+                            "quality": c_char.get("quality", 5)
+                        })
 
             super_evo_stages.append({
                 "id": sc["id"],
@@ -527,13 +722,13 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                 "tier": sc["tier"],
                 "unlocks_skill": sc["unlocks_skill"],
                 "skill_name": evo_skill_2 if sc["unlocks_skill"] == 2 else (evo_skill_1 if sc["unlocks_skill"] == 1 else None),
-                "materials": mats_required,
+                "materials": stage_mats,
                 "stats": {
-                    "hp": int(max_bt_stats["hp"] * r),
-                    "patk": int(max_bt_stats["patk"] * r),
-                    "matk": int(max_bt_stats["matk"] * r),
-                    "def": int(max_bt_stats["def"] * r),
-                    "speed": int(max_bt_stats["speed"] * r),
+                    "hp": int(max_bt_stats.get("hp", 0) * r),
+                    "patk": int(max_bt_stats.get("patk", 0) * r),
+                    "matk": int(max_bt_stats.get("matk", 0) * r),
+                    "def": int(max_bt_stats.get("def", 0) * r),
+                    "speed": int(max_bt_stats.get("speed", 0) * r),
                 }
             })
 
@@ -542,7 +737,6 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "is_base_form": len(bt_ids) == 0,
             "base_hero_id": base_id,
             "base_hero_name": base_hero_name,
-            "materials_note": "Tướng ở Dạng Thường (trước chuyển thế) chưa mở khóa tính năng Siêu Tiến Hóa (Đúc Hồn). Tướng sau chuyển thế: Mốc lẻ dùng Chuyển Thế Đơn + Tinh Hoa + Đá Năng Lượng; Mốc chẵn dùng Thẻ Bản Thể Gốc + Tinh Hoa + Đá Năng Lượng." if len(bt_ids) > 0 else "Tướng trước chuyển thế chưa mở khóa Siêu Tiến Hóa. Cần chuyển thế thành các dạng nâng cấp (như CT, Đỉnh Phong) để mở khóa.",
             "stages": super_evo_stages,
             "evo_skill_1": evo_skill_1 or "Kỹ năng Siêu Tiến Hóa 1",
             "evo_skill_2": evo_skill_2 or "Kỹ năng Siêu Tiến Hóa 2",
@@ -592,15 +786,57 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                     "synergy_desc": syn["effect"]
                 })
 
+        # 3 Elemental Builds / Playstyles for Nagato (Requirement 6)
+        elemental_builds = None
+        if str(cid) == "431" or "nagato" in h_name_lower or "pain" in h_name_lower:
+            elemental_builds = [
+                {
+                    "id": "tho",
+                    "name": "Phong Cách Địa (Thổ Độn - Đỉnh Phong & Tuyệt Diệt)",
+                    "element": "Thổ (Địa)",
+                    "icon": "⛰️",
+                    "tag": "Khuyên Dùng: Đánh Boss Titan (Dame Cao Nhất)",
+                    "description": "Nagato nên sử dụng thuộc tính Địa vì đánh Boss Titan dame sẽ cao hơn vượt trội! Kích hoạt tại Chuyển Sinh 4 (Tăng 5 lần công Địa, mỗi 1M công Địa nhân đôi ST kĩ năng) và Chuyển Sinh 7 (Diệt 1 đơn vị địch; mỗi 350.000 điểm công Địa cơ bản sẽ xóa bỏ 1 lần hồi sinh của mục tiêu, tối đa xóa 4 lần).",
+                    "recommended_set_id": "ti",
+                    "recommended_element_key": "tho",
+                    "recommended_set_name": "Bộ Năm Tị (Nguyên Tố Thổ/Địa)"
+                },
+                {
+                    "id": "hoa",
+                    "name": "Phong Cách Hỏa (Hỏa Độn - Truy Kích Bộc Phát)",
+                    "element": "Hỏa (Lửa)",
+                    "icon": "🔥",
+                    "tag": "Kích Hoạt CS1 (Truy Kích 1M Công)",
+                    "description": "Kích hoạt tại Chuyển Sinh 1 (Tăng 5 lần công Hỏa, chuyển hóa toàn bộ công khác sang Hỏa; Sau khi chuyển đổi, mỗi 1,000,000 điểm công Hỏa truy kích thêm 1 lần mục tiêu bị kĩ năng gây ra ST thuộc tính).",
+                    "recommended_set_id": "ti",
+                    "recommended_element_key": "hoa",
+                    "recommended_set_name": "Bộ Năm Tị (Nguyên Tố Hỏa)"
+                },
+                {
+                    "id": "thuy",
+                    "name": "Phong Cách Thủy (Thủy Độn - Hộ Giá & Bất Tử)",
+                    "element": "Thủy (Nước)",
+                    "icon": "💧",
+                    "tag": "Kích Hoạt CS2 (Thần Ngự & Hộ Giá)",
+                    "description": "Kích hoạt tại Chuyển Sinh 2 (Tăng 5 lần công Thủy, chuyển hóa toàn bộ công khác sang Thủy; Nhận Thần Ngự và sau khi chuyển đổi, mỗi 3,000,000 điểm công Thủy nhận thêm 1 tầng 'Hộ Giá' bảo hộ toàn diện).",
+                    "recommended_set_id": "ti",
+                    "recommended_element_key": "thuy",
+                    "recommended_set_name": "Bộ Năm Tị (Nguyên Tố Thủy)"
+                }
+            ]
+
         detail_entry = {
             **h,
             "avatar": avatar,
+            "full_image": f"/assets/heroes/full_{hid}.png" if os.path.exists(f"web/public/assets/heroes/full_{hid}.png") else None,
             "skills_detailed": hero_skills,
             "chuyen_sinh": chuyen_sinh,
             "van_menh": van_menh,
             "super_evo": super_evo,
+            "breakthrough_system": breakthrough_system,
             "badges": hero_badges,
-            "family_forms": family_forms
+            "family_forms": family_forms,
+            "elemental_builds": elemental_builds
         }
         heroes_detail[hid] = detail_entry
 
@@ -611,6 +847,13 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
     print(f"  Generated heroes_catalog.json ({len(heroes_catalog)} records) and heroes_detail.json.")
 
     # 4. Build Suits & Equipment Catalog
+    def clean_equip_name(raw_name: str) -> str:
+        if not raw_name:
+            return ""
+        name = re.sub(r'^(Trường Sinh|Khung Thần|Khung Địa|Kiếp Tiên|Thương Thần|Hung Thú|Tiên Linh|Tứ Cực|Hóa Long Thần)[\.\-\:\s]+(Địa|Hỏa|Thủy|Phong|Lôi|Thuỷ)?[\.\-\:\s]*', '', raw_name, flags=re.IGNORECASE)
+        name = re.sub(r'^(Địa|Hỏa|Thủy|Phong|Lôi|Thuỷ)[\.\-\:\s]+', '', name, flags=re.IGNORECASE)
+        return name.strip()
+
     print("\n[5/5] Preparing Suits, Equipment, Skills, and Editorial Data...")
     suits_catalog = []
     suits_detail = {}
@@ -620,9 +863,10 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         for pid in s.get("parts", []):
             eq = equipment.get(pid, {})
             eq_img = web_asset_url(eq.get("assets", {}).get("image", {}).get("path"))
+            raw_eq_name = eq.get("name") or f"Trang bị #{pid}"
             parts_detailed.append({
                 "id": pid,
-                "name": eq.get("name") or f"Trang bị #{pid}",
+                "name": clean_equip_name(raw_eq_name) or raw_eq_name,
                 "slot": eq.get("slot"),
                 "slot_name": eq.get("slot_name", "Chưa rõ"),
                 "quality": eq.get("quality", 1),
@@ -635,7 +879,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             
         s_entry = {
             "id": sid,
-            "name": s.get("name") or "Chưa có dữ liệu",
+            "name": clean_equip_name(s.get("name") or "Chưa có dữ liệu") or s.get("name"),
             "parts_count": len(s.get("parts", [])),
             "parts": parts_detailed,
             "bonuses": s.get("bonuses", {}),
@@ -654,15 +898,16 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
     equipment_detail = {}
     for eid, eq in equipment.items():
         eq_img = web_asset_url(eq.get("assets", {}).get("image", {}).get("path"))
+        raw_eq_name = eq.get("name") or f"Trang bị #{eid}"
         eq_entry = {
             "id": eid,
-            "name": eq.get("name") or f"Trang bị #{eid}",
+            "name": clean_equip_name(raw_eq_name) or raw_eq_name,
             "slot": eq.get("slot"),
             "slot_name": eq.get("slot_name"),
             "quality": eq.get("quality"),
             "equip_id": eq.get("equip_id"),
             "suit_id": eq.get("suit_id"),
-            "suit_name": eq.get("suit_name"),
+            "suit_name": clean_equip_name(eq.get("suit_name") or "") or eq.get("suit_name"),
             "icon": eq_img,
             "primary_stat": eq.get("primary_stat"),
             "secondary_stat": eq.get("secondary_stat"),
@@ -670,7 +915,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "cd": eq.get("cd")
         }
         equipment_catalog.append(eq_entry)
-        equipment_detail[eid] = {**eq, "icon": eq_img}
+        equipment_detail[eid] = {**eq, "name": eq_entry["name"], "icon": eq_img}
 
     with open(os.path.join(web_data_dir, "equipment_catalog.json"), "w", encoding="utf-8") as f:
         json.dump(equipment_catalog, f, ensure_ascii=False)

@@ -32,6 +32,7 @@ export interface HeroSummary {
   star_max: number;
   level_max: number;
   avatar: string | null;
+  full_image?: string | null;
   is_only: number;
   rebirth: number;
   hp: number;
@@ -136,6 +137,15 @@ export function getSkillById(id: string): any | null {
 // 5. Ban Sức
 export function getBanSucData(): any {
   return readJsonFile<any>("ban_suc.json", {});
+}
+
+export function getBanSucRecommendations(): any {
+  return readJsonFile<any>("ban_suc_recommendations.json", { heroes: {}, ban_suc_definitions: {} });
+}
+
+export function getHeroBanSucRecommendation(heroId: string): any | null {
+  const data = getBanSucRecommendations();
+  return data?.heroes?.[heroId] || null;
 }
 
 // 6. Editorial
