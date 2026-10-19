@@ -1,0 +1,1157 @@
+[
+  {
+    "id": "chuot",
+    "name": "Bộ Năm Chuột (Tý)",
+    "animal": "Chuột (Tý)",
+    "icon": "🐭",
+    "theme": "Kiếp Tiên",
+    "nature": "Thiên hướng Bạo Kích Cực Hạn, Sát Thương Đột Phá & Công Kích Toàn Diện",
+    "description": "Bộ trang bị thần thoại giới hạn Tết Năm Chuột, tăng đột biến 270.000 Công, 315.000 HP cùng 90.000 Thủ, xé toạc mọi hàng phòng thủ.",
+    "best_heroes": [
+      {
+        "name": "Shadow",
+        "reason": "Tối đa hóa bạo kích và sát thương ma pháp xuyên giáp"
+      },
+      {
+        "name": "Songoku / Kakarot",
+        "reason": "Tăng vọt công vật lý và bùng nổ sát thương diện rộng"
+      },
+      {
+        "name": "CuồnBroli",
+        "reason": "Khuếch đại sát thương vật lý và càn quét đội hình"
+      },
+      {
+        "name": "Kurosaki Ichigo",
+        "reason": "Tăng cường sức mạnh chém trảm hồn và dứt điểm mục tiêu"
+      }
+    ],
+    "elements": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "92236",
+        "suit_id": "471"
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "92237",
+        "suit_id": "473"
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "92238",
+        "suit_id": "472"
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "92239",
+        "suit_id": "474"
+      }
+    ],
+    "variants": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "92236",
+        "suit_id": "471",
+        "suit_name": "劫仙の地",
+        "parts": [
+          {
+            "id": "58005",
+            "name": "Kiếp Tiên.Địa.Kiếm Trảm Yêu",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/58005.png"
+          },
+          {
+            "id": "68005",
+            "name": "Kiếp Tiên.Địa.Ngạo Long Giáp",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/68005.png"
+          },
+          {
+            "id": "78005",
+            "name": "Kiếp Tiên.Địa.Trấn Ma Thạch",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/78005.png"
+          },
+          {
+            "id": "88005",
+            "name": "Kiếp Tiên.Địa.Giày Ngạo Long",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/88005.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "92237",
+        "suit_id": "473",
+        "suit_name": "劫仙の水",
+        "parts": [
+          {
+            "id": "58205",
+            "name": "Kiếp Tiên.Thủy.Kiếm Trảm Yêu",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/58205.png"
+          },
+          {
+            "id": "68205",
+            "name": "Kiếp Tiên.Thủy.Ngạo Long Giáp",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/68205.png"
+          },
+          {
+            "id": "78205",
+            "name": "Kiếp Tiên.Thủy.Trấn Ma Thạch",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/78205.png"
+          },
+          {
+            "id": "88205",
+            "name": "Kiếp Tiên.Thủy.Giày Ngạo Long",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/88205.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "92238",
+        "suit_id": "472",
+        "suit_name": "劫仙の火",
+        "parts": [
+          {
+            "id": "58105",
+            "name": "Kiếp Tiên.Hỏa.Kiếm Trảm Yêu",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/58105.png"
+          },
+          {
+            "id": "68105",
+            "name": "Kiếp Tiên.Hỏa.Ngạo Long Giáp",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/68105.png"
+          },
+          {
+            "id": "78105",
+            "name": "Kiếp Tiên.Hỏa.Trấn Ma Thạch",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/78105.png"
+          },
+          {
+            "id": "88105",
+            "name": "Kiếp Tiên.Hỏa.Giày Ngạo Long",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/88105.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "92239",
+        "suit_id": "474",
+        "suit_name": "劫仙の风",
+        "parts": [
+          {
+            "id": "58305",
+            "name": "Kiếp Tiên.Phong.Kiếm Trảm Yêu",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/58305.png"
+          },
+          {
+            "id": "68305",
+            "name": "Kiếp Tiên.Phong.Ngạo Long Giáp",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/68305.png"
+          },
+          {
+            "id": "78305",
+            "name": "Kiếp Tiên.Phong.Trấn Ma Thạch",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/78305.png"
+          },
+          {
+            "id": "88305",
+            "name": "Kiếp Tiên.Phong.Giày Ngạo Long",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/88305.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ti",
+    "name": "Bộ Năm Tị (Rắn)",
+    "animal": "Tị (Rắn)",
+    "icon": "🐍",
+    "theme": "Hung Thú Cổ Đại",
+    "nature": "Thiên hướng Khống Chế, Xuyên Giáp Ma Đạo & Bào Mòn Sinh Lực",
+    "description": "Bộ trang bị Hung Thú Thượng Cổ (Tương Dao, Chúc Âm, Cửu Anh, Đằng Vũ), tăng 270.000 Công thuộc tính, 90.000 Kháng và 315.000 HP, khắc chế cứng các tanker.",
+    "best_heroes": [
+      {
+        "name": "Nagato",
+        "reason": "Cường hóa Ngoại Đạo Ma Tượng và sát thương diện rộng Luân Hồi Nhãn"
+      },
+      {
+        "name": "Lục Đạo Sasuke",
+        "reason": "Tối ưu hóa hỏa lôi sát thương và hiệu ứng khống chế Chidori"
+      },
+      {
+        "name": "Shalltear",
+        "reason": "Hút máu cực lớn và gia tăng sát thương ma thuật hắc ám"
+      },
+      {
+        "name": "CT - Aizen",
+        "reason": "Áp chế tinh thần và gia tăng sức mạnh thuật thức"
+      }
+    ],
+    "elements": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "9101513",
+        "suit_id": "1370"
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "9101514",
+        "suit_id": "1372"
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "9101515",
+        "suit_id": "1371"
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "9101516",
+        "suit_id": "1373"
+      }
+    ],
+    "variants": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "9101513",
+        "suit_id": "1370",
+        "suit_name": "凶兽の地",
+        "parts": [
+          {
+            "id": "109405",
+            "name": "Hung Thú - Địa - Tương Dao Kiếm",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/109405.png"
+          },
+          {
+            "id": "110405",
+            "name": "Hung Thú - Địa - Chúc Âm Giáp",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/110405.png"
+          },
+          {
+            "id": "111405",
+            "name": "Hung Thú - Địa - Cửu Anh Nhẫn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/111405.png"
+          },
+          {
+            "id": "112405",
+            "name": "Hung Thú - Địa - Đằng Vũ Ủng",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/112405.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "9101514",
+        "suit_id": "1372",
+        "suit_name": "凶兽の水",
+        "parts": [
+          {
+            "id": "109605",
+            "name": "Hung Thú - Thủy - Tương Dao Kiếm",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/109605.png"
+          },
+          {
+            "id": "110605",
+            "name": "Hung Thú - Thủy - Chúc Âm Giáp",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/110605.png"
+          },
+          {
+            "id": "111605",
+            "name": "Hung Thú - Thủy - Cửu Anh Nhẫn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/111605.png"
+          },
+          {
+            "id": "112605",
+            "name": "Hung Thú - Thủy - Đằng Vũ Ủng",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/112605.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "9101515",
+        "suit_id": "1371",
+        "suit_name": "凶兽の火",
+        "parts": [
+          {
+            "id": "109505",
+            "name": "Hung Thú - Hỏa - Tương Dao Kiếm",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/109505.png"
+          },
+          {
+            "id": "110505",
+            "name": "Hung Thú - Hỏa - Chúc Âm Giáp",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/110505.png"
+          },
+          {
+            "id": "111505",
+            "name": "Hung Thú - Hỏa - Cửu Anh Nhẫn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/111505.png"
+          },
+          {
+            "id": "112505",
+            "name": "Hung Thú - Hỏa - Đằng Vũ Ủng",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/112505.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "9101516",
+        "suit_id": "1373",
+        "suit_name": "凶兽の风",
+        "parts": [
+          {
+            "id": "109705",
+            "name": "Hung Thú - Phong - Tương Dao Kiếm",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/109705.png"
+          },
+          {
+            "id": "110705",
+            "name": "Hung Thú - Phong - Chúc Âm Giáp",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/110705.png"
+          },
+          {
+            "id": "111705",
+            "name": "Hung Thú - Phong - Cửu Anh Nhẫn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/111705.png"
+          },
+          {
+            "id": "112705",
+            "name": "Hung Thú - Phong - Đằng Vũ Ủng",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/112705.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "hoi",
+    "name": "Bộ Năm Hợi (Heo)",
+    "animal": "Hợi (Heo)",
+    "icon": "🐗",
+    "theme": "Thương Thần (Thương Khung)",
+    "nature": "Thiên hướng Công Thủ Toàn Diện, Sinh Tồn Bền Bỉ & Cường Hóa Trực Tiếp HP",
+    "description": "Bộ trang bị thần thánh hoàng đạo Năm Hợi (Thiên Vấn, Giáp Thần Võ, Phiên Thiên Ấn, Giày Ảo Ảnh), tăng 225.000 Công, 60.000 Thủ và 210.000 HP.",
+    "best_heroes": [
+      {
+        "name": "Bikini - Frieren",
+        "reason": "Cân bằng sinh tồn tuyệt đối trong giao tranh kéo dài và buff ma pháp liên tục"
+      },
+      {
+        "name": "Maple",
+        "reason": "Biến Maple thành pháo đài bất tử không thể bị xuyên thủng"
+      },
+      {
+        "name": "Jiraiya",
+        "reason": "Cung cấp lượng máu khổng lồ và chống chịu cho Tiên Nhân thuật"
+      },
+      {
+        "name": "Athena",
+        "reason": "Gia tăng độ trâu bò và cường hóa hiệu ứng hỗ trợ đồng đội"
+      }
+    ],
+    "elements": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "91076",
+        "suit_id": "652"
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "91077",
+        "suit_id": "654"
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "91078",
+        "suit_id": "653"
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "91079",
+        "suit_id": "655"
+      }
+    ],
+    "variants": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "91076",
+        "suit_id": "652",
+        "suit_name": "苍の地",
+        "parts": [
+          {
+            "id": "56105",
+            "name": "Thương Địa.Thiên Vấn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/56105.png"
+          },
+          {
+            "id": "66105",
+            "name": "Thương Địa.Giáp Thần Võ",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/66105.png"
+          },
+          {
+            "id": "76105",
+            "name": "Thương Địa.Phiên Thiên Ấn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/76105.png"
+          },
+          {
+            "id": "86105",
+            "name": "Thương Địa.Giày Ảo Ảnh",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/86105.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "91077",
+        "suit_id": "654",
+        "suit_name": "苍の水",
+        "parts": [
+          {
+            "id": "56305",
+            "name": "Thương Thủy.Thiên Vấn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/56305.png"
+          },
+          {
+            "id": "66305",
+            "name": "Thương Thủy.Giáp Thần Võ",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/66305.png"
+          },
+          {
+            "id": "76305",
+            "name": "Thương Thủy.Phiên Thiên Ấn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/76305.png"
+          },
+          {
+            "id": "86305",
+            "name": "Thương Thủy.Giày Ảo Ảnh",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/86305.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "91078",
+        "suit_id": "653",
+        "suit_name": "苍の火",
+        "parts": [
+          {
+            "id": "56205",
+            "name": "Thương Hỏa.Thiên Vấn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/56205.png"
+          },
+          {
+            "id": "66205",
+            "name": "Thương Hỏa.Giáp Thần Võ",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/66205.png"
+          },
+          {
+            "id": "76205",
+            "name": "Thương Hỏa.Phiên Thiên Ấn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/76205.png"
+          },
+          {
+            "id": "86205",
+            "name": "Thương Hỏa.Giày Ảo Ảnh",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/86205.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "91079",
+        "suit_id": "655",
+        "suit_name": "苍の风",
+        "parts": [
+          {
+            "id": "56405",
+            "name": "Thương Phong.Thiên Vấn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/56405.png"
+          },
+          {
+            "id": "66405",
+            "name": "Thương Phong.Giáp Thần Võ",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/66405.png"
+          },
+          {
+            "id": "76405",
+            "name": "Thương Phong.Phiên Thiên Ấn",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/76405.png"
+          },
+          {
+            "id": "86405",
+            "name": "Thương Phong.Giày Ảo Ảnh",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/86405.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "rong",
+    "name": "Bộ Năm Rồng (Thìn)",
+    "animal": "Rồng (Thìn)",
+    "icon": "🐉",
+    "theme": "Tứ Cực Long Thần",
+    "nature": "Thiên hướng Bá Đạo Uy Lực, Áp Chế Tuyệt Đối & Sát Thương Tối Thượng",
+    "description": "Bộ trang bị Long Thần Cổ Giới giới hạn Năm Rồng, tăng 270.000 Công, 90.000 Thủ và 315.000 HP, là trang bị uy lực tối cao trong game.",
+    "best_heroes": [
+      {
+        "name": "Vegetto / Gogeta",
+        "reason": "Khai mở toàn bộ tiềm năng hợp thể vô địch với lượng công tối thượng"
+      },
+      {
+        "name": "Songohan Kong",
+        "reason": "Cường hóa đòn đấm bộc phát cuồng nộ và quét sạch hàng sau địch"
+      },
+      {
+        "name": "Rimuru",
+        "reason": "Tăng cường năng lượng ma vương bạo phát và áp chế toàn bản đồ"
+      },
+      {
+        "name": "CT - Vegeta",
+        "reason": "Cường hóa niềm kiêu hãnh Hoàng Tử Saiyan với công kích bùng nổ"
+      }
+    ],
+    "elements": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "9101007",
+        "suit_id": "485"
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "9101008",
+        "suit_id": "487"
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "9101009",
+        "suit_id": "486"
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "9101010",
+        "suit_id": "488"
+      }
+    ],
+    "variants": [
+      {
+        "element": "Thổ (Địa)",
+        "box_id": "9101007",
+        "suit_id": "485",
+        "suit_name": "四极の地",
+        "parts": [
+          {
+            "id": "59405",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/59405.png"
+          },
+          {
+            "id": "69405",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/69405.png"
+          },
+          {
+            "id": "79405",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/79405.png"
+          },
+          {
+            "id": "89405",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/89405.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "9101008",
+        "suit_id": "487",
+        "suit_name": "四极の水",
+        "parts": [
+          {
+            "id": "59605",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/59605.png"
+          },
+          {
+            "id": "69605",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/69605.png"
+          },
+          {
+            "id": "79605",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/79605.png"
+          },
+          {
+            "id": "89605",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/89605.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "9101009",
+        "suit_id": "486",
+        "suit_name": "四极の火",
+        "parts": [
+          {
+            "id": "59505",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/59505.png"
+          },
+          {
+            "id": "69505",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/69505.png"
+          },
+          {
+            "id": "79505",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/79505.png"
+          },
+          {
+            "id": "89505",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/89505.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "9101010",
+        "suit_id": "488",
+        "suit_name": "四极の风",
+        "parts": [
+          {
+            "id": "59705",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/59705.png"
+          },
+          {
+            "id": "69705",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/69705.png"
+          },
+          {
+            "id": "79705",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/79705.png"
+          },
+          {
+            "id": "89705",
+            "name": "#N/A",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/89705.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ngua",
+    "name": "Bộ Năm Ngựa (Ngọ)",
+    "animal": "Ngựa (Ngọ)",
+    "icon": "🐎",
+    "theme": "Chiến Thần Thiên Mã",
+    "nature": "Thiên hướng Tốc Độ Siêu Tốc, Xuất Kích Tiên Phong & Liên Kích Vũ Bão",
+    "description": "Bộ trang bị Thiên Mã Chiến Thần (Chiến Phủ Anh Chiêu, Giáp Lộc Thục, Thắt Lưng Tường Vân, Giày Thiên Mã), tăng 270.000 Công, 90.000 Thủ, 315.000 HP và tốc độ xuất chiêu áp đảo.",
+    "best_heroes": [
+      {
+        "name": "Phù Thủy Elaina",
+        "reason": "Tăng tốc xuất chiêu tối thượng, khống chế và tung đòn kết liễu đầu tiên"
+      },
+      {
+        "name": "Yatogami Tenka",
+        "reason": "Tận dụng tốc độ thần sầu để áp sát trảm kích trước khi địch kịp ra chiêu"
+      },
+      {
+        "name": "Võ Thánh Quan Vũ",
+        "reason": "Cộng hưởng trực tiếp hình tượng Xích Thố Thiên Mã, chém rách phòng ngự"
+      },
+      {
+        "name": "Kiếm Hy Vọng (Trunks)",
+        "reason": "Xuất kiếm chớp nhoáng tạo đột biến lật ngược thế trận"
+      }
+    ],
+    "elements": [
+      {
+        "element": "Địa (Thổ)",
+        "box_id": "9102121",
+        "suit_id": "1630"
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "9102122",
+        "suit_id": "1670"
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "9102123",
+        "suit_id": "1650"
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "9102124",
+        "suit_id": "1690"
+      }
+    ],
+    "variants": [
+      {
+        "element": "Địa (Thổ)",
+        "box_id": "9102121",
+        "suit_id": "1630",
+        "suit_name": "凶兽の地",
+        "parts": [
+          {
+            "id": "119405",
+            "name": "Hung Thú - Địa: Chiến Phủ Anh Chiêu",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/119405.png"
+          },
+          {
+            "id": "120405",
+            "name": "Hung Thú - Địa: Chiến Giáp Lộc Thục",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/120405.png"
+          },
+          {
+            "id": "121405",
+            "name": "Hung Thú - Địa: Thắt Lưng Tường Vân",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/121405.png"
+          },
+          {
+            "id": "122405",
+            "name": "Hung Thú - Địa: Giày Chiến Thiên Mã",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/122405.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Thủy (Nước)",
+        "box_id": "9102122",
+        "suit_id": "1670",
+        "suit_name": "凶兽の水",
+        "parts": [
+          {
+            "id": "119605",
+            "name": "Hung Thú - Thuỷ: Chiến Phủ Anh Chiêu",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/119605.png"
+          },
+          {
+            "id": "120605",
+            "name": "Hung Thú - Thuỷ: Chiến Giáp Lộc Thục",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/120605.png"
+          },
+          {
+            "id": "121605",
+            "name": "Hung Thú - Thuỷ: Thắt Lưng Tường Vân",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/121605.png"
+          },
+          {
+            "id": "122605",
+            "name": "Hung Thú - Thuỷ: Giày Chiến Thiên Mã",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/122605.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Hỏa (Lửa)",
+        "box_id": "9102123",
+        "suit_id": "1650",
+        "suit_name": "凶兽の火",
+        "parts": [
+          {
+            "id": "119505",
+            "name": "Hung Thú - Hỏa: Chiến Phủ Anh Chiêu",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/119505.png"
+          },
+          {
+            "id": "120505",
+            "name": "Hung Thú - Hỏa: Chiến Giáp Lộc Thục",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/120505.png"
+          },
+          {
+            "id": "121505",
+            "name": "Hung Thú - Hoả: Thắt Lưng Tường Vân",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/121505.png"
+          },
+          {
+            "id": "122505",
+            "name": "Hung Thú - Hoả: Giày Chiến Thiên Mã",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/122505.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      },
+      {
+        "element": "Phong (Gió)",
+        "box_id": "9102124",
+        "suit_id": "1690",
+        "suit_name": "凶兽の风",
+        "parts": [
+          {
+            "id": "119705",
+            "name": "Hung Thú - Phong: Chiến Phủ Anh Chiêu",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/119705.png"
+          },
+          {
+            "id": "120705",
+            "name": "Hung Thú - Phong: Chiến Giáp Lộc Thục",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/120705.png"
+          },
+          {
+            "id": "121705",
+            "name": "Hung Thú - Phong: Thắt Lưng Tường Vân",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/121705.png"
+          },
+          {
+            "id": "122705",
+            "name": "Hung Thú - Phong: Giày Chiến Thiên Mã",
+            "sort": null,
+            "slot_name": "Giày",
+            "quality": 7,
+            "icon": "/assets/iphonehd/icon/122705.png"
+          }
+        ],
+        "bonuses": {
+          "two_piece": "+90,000 HP, +54,000 Phòng Ngự / Kháng",
+          "three_piece": "+90,000 HP, +54,000 Kháng Thuộc Tính",
+          "four_piece": "+270,000 Công, +90,000 Thủ, +315,000 HP Tối Đa"
+        }
+      }
+    ]
+  }
+]

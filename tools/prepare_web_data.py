@@ -11,8 +11,10 @@ Chuẩn bị dữ liệu và hình ảnh tối ưu hóa cho ứng dụng web (we
    có dấu / không dấu cực nhanh.
 4. Tách dữ liệu thành các tệp danh mục gọn (heroes_catalog, suits_catalog, equipment_catalog,
    skills_catalog) và các tệp chi tiết (heroes_detail, skills_detail, suits_detail, ban_suc).
-5. Tránh hoàn toàn việc tải JSON kỹ năng 16MB xuống client trang chủ.
-6. Tạo khung dữ liệu biên tập (editorial_data.json) với trạng thái chưa có nội dung chuẩn.
+5. Trích xuất cơ chế Tiến Hóa Thường (+1 đến +60) từ character_strengthen.config.
+6. Gom nhóm dòng biến thể tướng theo character_id (Dạng Thường vs Các Dạng Chuyển Thế).
+7. Chi tiết hóa nguyên liệu Siêu Tiến Hóa (phân biệt trước chuyển thế và sau chuyển thế).
+8. Chuẩn hóa dữ liệu 5 Bộ Trang Bị Con Giáp (Chuột, Tị, Hợi, Rồng, Ngựa).
 """
 
 import os
@@ -26,10 +28,8 @@ def strip_vietnamese_accents(text):
     """Normalize Vietnamese text to lowercase without diacritics for fast searching."""
     if not text:
         return ""
-    # Normalize unicode
     text = unicodedata.normalize('NFD', str(text))
     text = re.sub(r'[\u0300-\u036f]', '', text)
-    # Replace special Vietnamese letters
     text = text.replace('đ', 'd').replace('Đ', 'd')
     return text.lower().strip()
 
@@ -63,7 +63,6 @@ def copy_web_images(src_dir="public/assets", dst_dir="web/public/assets"):
             
             if ext in image_exts:
                 os.makedirs(os.path.dirname(dst_file), exist_ok=True)
-                # Only copy if dst doesn't exist or size differs
                 if not os.path.exists(dst_file) or os.path.getsize(dst_file) != os.path.getsize(src_file):
                     shutil.copy2(src_file, dst_file)
                 copied += 1
@@ -75,10 +74,9 @@ def copy_web_images(src_dir="public/assets", dst_dir="web/public/assets"):
     print(f"  Excluded {skipped_non_image} non-image files (.lua, .plist, .wav, etc.) from web public bundle.")
 
 def prepare_data(output_dir="output", web_data_dir="web/src/data"):
-    print(f"\n[2/5] Loading datasets from '{output_dir}'...")
+    print(f"\n[2/5] Loading datasets from '{output_dir}' and 'config/'...")
     os.makedirs(web_data_dir, exist_ok=True)
     
-    # Load raw extracted datasets
     with open(os.path.join(output_dir, "heroes.json"), "r", encoding="utf-8") as f:
         heroes = json.load(f)
     with open(os.path.join(output_dir, "skills.json"), "r", encoding="utf-8") as f:
@@ -92,7 +90,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
     with open(os.path.join(output_dir, "ban_suc.json"), "r", encoding="utf-8") as f:
         ban_suc = json.load(f)
 
-    # Load supporting configs for Chuyen Sinh, Van Menh, and Super Evo
+    # Load supporting configs
     with open("config/character_break_new.config", "r", encoding="utf-8") as f:
         character_break_new = json.load(f)
     with open("config/chain.config", "r", encoding="utf-8") as f:
@@ -101,8 +99,30 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         breakthrough_config = json.load(f)
     with open("config/item.config", "r", encoding="utf-8") as f:
         items_config = json.load(f)
-    with open("config/character_detail.config", "r", encoding="utf-8") as f:
-        character_detail_config = json.load(f)
+    with open("config/character_strengthen.config", "r", encoding="utf-8") as f:
+        character_strengthen_config = json.load(f)
+    with open("config/box.config", "r", encoding="utf-8") as f:
+        box_config = json.load(f)
+    with open("config/suit.config", "r", encoding="utf-8") as f:
+        suits_raw_config = json.load(f)
+
+    # 1. Generate character_strengthen.json (+1 to +60 evolution)
+    strengthen_table = {}
+    for i in range(1, 61):
+        c_entry = character_strengthen_config.get(str(i), {})
+        strengthen_table[str(i)] = {
+            "level": i,
+            "add_hp": c_entry.get("add_hp", 0),
+            "add_patk": c_entry.get("add_patk", 0),
+            "add_matk": c_entry.get("add_matk", 0),
+            "add_def": c_entry.get("add_def", 0),
+            "add_speed": c_entry.get("add_speed", 0),
+            "need_level": c_entry.get("need_level", 0),
+            "need_food": c_entry.get("need_food", 0)
+        }
+    with open(os.path.join(web_data_dir, "character_strengthen.json"), "w", encoding="utf-8") as f:
+        json.dump(strengthen_table, f, ensure_ascii=False)
+    print(f"  Generated character_strengthen.json (60 levels: +1 to +60).")
 
     hero_names = {str(k): v.get("name") for k, v in heroes.items() if v.get("name")}
     equip_names = {str(k): v.get("name") for k, v in equipment.items() if v.get("name")}
@@ -110,6 +130,12 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
 
     cb_by_char_id = {str(v.get("character_id")): v for v in character_break_new.values() if v.get("character_id")}
     cb_by_name = {v.get("name").lower().strip(): v for v in character_break_new.values() if v.get("name")}
+
+    # Group heroes by character_id for family lineage
+    heroes_by_char_id = {}
+    for hid, h in heroes.items():
+        cid = str(h.get("character_id") or "")
+        heroes_by_char_id.setdefault(cid, []).append((hid, h))
 
     # Badges mapping and synergy helper
     badges_raw = ban_suc.get("badges", {})
@@ -143,8 +169,8 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         badges_by_type_id.setdefault(btid, []).append(b)
         badges_by_char_name.setdefault(cname, []).append(b)
 
-    # 1. Build Search Index
-    print("\n[3/5] Building high-performance accent-insensitive Search Index...")
+    # 2. Build Search Index
+    print("\n[3/5] Building Search Index...")
     search_index = []
     
     # Add Heroes
@@ -160,7 +186,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "url": f"/heroes/{hid}",
             "image": avatar,
             "badge": f"Phẩm {h.get('quality', 0)}",
-            "subtext": f"Hệ/Tộc {h.get('race', 0)} • Nghề {h.get('career', 0)}"
+            "subtext": f"Nhóm Tướng #{h.get('character_id', 0)} • ID {hid}"
         })
         
     # Add Suits
@@ -178,7 +204,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "subtext": f"{len(s.get('parts', []))} món trang bị"
         })
 
-    # Add Equipment (Top or with real names)
+    # Add Equipment
     for eid, eq in equipment.items():
         name = eq.get("name")
         if name:
@@ -195,7 +221,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                 "subtext": f"Bộ {eq.get('suit_name', 'Lẻ')} (ID: {eq.get('suit_id', 'Lẻ')})"
             })
 
-    # Add Skills (Unique names)
+    # Add Skills
     seen_skill_names = set()
     for skid, sk in skills.items():
         name = sk.get("name")
@@ -216,20 +242,16 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
 
     with open(os.path.join(web_data_dir, "search_index.json"), "w", encoding="utf-8") as f:
         json.dump(search_index, f, ensure_ascii=False)
-    print(f"  Generated search_index.json with {len(search_index)} indexed entities ({os.path.getsize(os.path.join(web_data_dir, 'search_index.json'))/1024:.1f} KB).")
 
-    # 2. Build Heroes Catalog & Detail
+    # 3. Build Heroes Catalog & Detail
     print("\n[4/5] Preparing Heroes Catalog and Full Details...")
     heroes_catalog = []
     heroes_detail = {}
-    
-    # Skill reverse index: skill_id -> list of hero names
     skill_to_heroes = {}
 
     for hid, h in heroes.items():
         avatar = web_asset_url(h.get("assets", {}).get("image", {}).get("path"))
         
-        # Format skill list for hero detail
         hero_skills = []
         for sk_ref in h.get("skills", []):
             sk_id = sk_ref.get("skill_id")
@@ -258,16 +280,52 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                 "has_definition": bool(sk_obj)
             })
 
+        # Family forms grouping (Dạng thường vs Các dạng chuyển thế)
+        cid_str = str(h.get("character_id") or "")
+        family_members = heroes_by_char_id.get(cid_str, [(hid, h)])
+        
+        def form_sort_key(item):
+            var_id, var_h = item
+            var_name = (var_h.get("name") or "").lower()
+            var_bt = len(var_h.get("breakthrough", {}).get("breakthrough_ids", []))
+            if var_bt == 0:
+                return (0, int(var_id))
+            elif "ct -" in var_name or "ct-" in var_name:
+                return (1, int(var_id))
+            else:
+                return (2, int(var_id))
+
+        sorted_family = sorted(family_members, key=form_sort_key)
+        base_member = sorted_family[0] if sorted_family else (hid, h)
+        base_id, base_h = base_member
+        base_hero_name = base_h.get("name") or f"Tướng #{base_id}"
+
+        family_forms = []
+        for var_id, var_h in sorted_family:
+            var_name = var_h.get("name") or f"Tướng #{var_id}"
+            var_bt_count = len(var_h.get("breakthrough", {}).get("breakthrough_ids", []))
+            is_base = var_bt_count == 0
+            
+            label = "Dạng Thường" if is_base else ("Chuyển Thế 1" if ("ct -" in var_name.lower() or "ct-" in var_name.lower()) else "Chuyển Thế Đỉnh Phong")
+            family_forms.append({
+                "id": var_id,
+                "name": var_name,
+                "avatar": web_asset_url(var_h.get("assets", {}).get("image", {}).get("path")),
+                "quality": var_h.get("quality", 1),
+                "rebirth": var_h.get("rebirth", 0),
+                "is_current": var_id == hid,
+                "is_base": is_base,
+                "has_super_evo": var_bt_count > 0,
+                "label": label,
+                "breakthrough_count": var_bt_count
+            })
+
         summary_entry = {
             "id": hid,
             "character_id": h.get("character_id"),
             "name": h.get("name") or "Chưa có dữ liệu",
             "quality": h.get("quality", 1),
-            "career": h.get("career", 0),
-            "race": h.get("race", 0),
             "sex": h.get("sex", 0),
-            "star": h.get("star", 0),
-            "star_max": h.get("star_max", 0),
             "level_max": h.get("level_max", 0),
             "avatar": avatar,
             "is_only": h.get("is_only", 0),
@@ -277,11 +335,13 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "matk": h.get("base_stats", {}).get("matk", 0),
             "def": h.get("base_stats", {}).get("def", 0),
             "speed": h.get("base_stats", {}).get("speed", 0),
-            "has_image": bool(avatar)
+            "has_image": bool(avatar),
+            "family_forms_count": len(family_forms),
+            "has_super_evo": bool(h.get("breakthrough", {}).get("breakthrough_ids"))
         }
         heroes_catalog.append(summary_entry)
 
-        # 1. Chuyen Sinh (7 stages + conditions)
+        # Chuyen Sinh (7 stages + conditions)
         cb_data = character_break_new.get(hid) or cb_by_char_id.get(str(h.get("character_id"))) or (cb_by_name.get(h.get("name", "").lower().strip()) if h.get("name") else None)
         stages = []
         if cb_data:
@@ -324,7 +384,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "stages": stages
         }
 
-        # 2. Van Menh (Fate Bonds)
+        # Van Menh (Fate Bonds)
         van_menh = []
         raw_bonds = h.get("bonds", [])
         for b in raw_bonds:
@@ -381,11 +441,11 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                 "effects": effects
             })
 
-        # 3. Super Evolution (7 mốc / 9 cấp độ: Cam, Cam+, Cam++, Đỏ, Đỏ+, Đỏ++, Vàng, Vàng+, Vàng++)
+        # Super Evolution
         bt_data = h.get("breakthrough", {})
         bt_ids = bt_data.get("breakthrough_ids", [])
+        has_super_evo = len(bt_ids) > 0
         
-        # Extract super evo skill names from cb_data
         evo_skill_1 = None
         evo_skill_2 = None
         if cb_data:
@@ -420,9 +480,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         if bt_ids:
             step_max = breakthrough_config.get(str(bt_ids[-1]), {})
             max_bt_stats = parse_abilitys(step_max.get("abilitys", []))
-            has_super_evo = True
         else:
-            has_super_evo = h.get("rebirth", 0) >= 4 or h.get("quality", 1) >= 4
             base = h.get("base_stats", {})
             max_bt_stats = {
                 "hp": int(base.get("hp", 0) * 0.75),
@@ -432,28 +490,44 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                 "speed": int(base.get("speed", 0) * 0.75)
             }
 
-        # 9 sub-stages across Cam, Đỏ, Vàng
+        # 9 sub-stages with exact material requirements
         evo_stage_configs = [
-            {"id": "cam", "name": "Cam", "tier": "orange", "ratio": 0.15, "unlocks_skill": 0},
-            {"id": "cam_plus", "name": "Cam+", "tier": "orange", "ratio": 0.25, "unlocks_skill": 0},
-            {"id": "cam_plus2", "name": "Cam++", "tier": "orange", "ratio": 0.35, "unlocks_skill": 0},
-            {"id": "do", "name": "Đỏ", "tier": "red", "ratio": 0.50, "unlocks_skill": 1},
-            {"id": "do_plus", "name": "Đỏ+", "tier": "red", "ratio": 0.60, "unlocks_skill": 1},
-            {"id": "do_plus2", "name": "Đỏ++", "tier": "red", "ratio": 0.70, "unlocks_skill": 1},
-            {"id": "vang", "name": "Vàng", "tier": "gold", "ratio": 0.85, "unlocks_skill": 2},
-            {"id": "vang_plus", "name": "Vàng+", "tier": "gold", "ratio": 0.92, "unlocks_skill": 2},
-            {"id": "vang_plus2", "name": "Vàng++", "tier": "gold", "ratio": 1.00, "unlocks_skill": 2},
+            {"id": "cam", "name": "Cam", "tier": "orange", "ratio": 0.15, "unlocks_skill": 0, "req_type": "odd", "step": 1},
+            {"id": "cam_plus", "name": "Cam+", "tier": "orange", "ratio": 0.25, "unlocks_skill": 0, "req_type": "even", "step": 2},
+            {"id": "cam_plus2", "name": "Cam++", "tier": "orange", "ratio": 0.35, "unlocks_skill": 0, "req_type": "odd", "step": 3},
+            {"id": "do", "name": "Đỏ", "tier": "red", "ratio": 0.50, "unlocks_skill": 1, "req_type": "even", "step": 4},
+            {"id": "do_plus", "name": "Đỏ+", "tier": "red", "ratio": 0.60, "unlocks_skill": 1, "req_type": "odd", "step": 5},
+            {"id": "do_plus2", "name": "Đỏ++", "tier": "red", "ratio": 0.70, "unlocks_skill": 1, "req_type": "even", "step": 6},
+            {"id": "vang", "name": "Vàng", "tier": "gold", "ratio": 0.85, "unlocks_skill": 2, "req_type": "odd", "step": 7},
+            {"id": "vang_plus", "name": "Vàng+", "tier": "gold", "ratio": 0.92, "unlocks_skill": 2, "req_type": "even", "step": 8},
+            {"id": "vang_plus2", "name": "Vàng++", "tier": "gold", "ratio": 1.00, "unlocks_skill": 2, "req_type": "odd", "step": 9},
         ]
 
         super_evo_stages = []
         for sc in evo_stage_configs:
             r = sc["ratio"]
+            s_idx = sc["step"]
+            
+            # Required materials per stage
+            mats_required = []
+            if sc["req_type"] == "odd":
+                mats_required.append({"name": "Chuyển Thế Đơn (ID: 3101)", "count": 20, "is_hero_card": False})
+                mats_required.append({"name": "Tinh hoa nguyên tố (ID: 532)", "count": s_idx * 10 + 10, "is_hero_card": False})
+                mats_required.append({"name": "Đá năng lượng theo hệ", "count": s_idx * 10 + 10, "is_hero_card": False})
+                mats_required.append({"name": "Vàng", "count": s_idx * 10000 + 10000, "is_currency": True})
+            else:
+                mats_required.append({"name": f"Thẻ Tướng Bản Thể Gốc [{base_hero_name}]", "count": 1, "is_hero_card": True, "card_id": base_id})
+                mats_required.append({"name": "Tinh hoa nguyên tố (ID: 532)", "count": s_idx * 10 + 10, "is_hero_card": False})
+                mats_required.append({"name": "Đá năng lượng theo hệ", "count": s_idx * 10 + 10, "is_hero_card": False})
+                mats_required.append({"name": "Vàng", "count": s_idx * 10000 + 10000, "is_currency": True})
+
             super_evo_stages.append({
                 "id": sc["id"],
                 "name": sc["name"],
                 "tier": sc["tier"],
                 "unlocks_skill": sc["unlocks_skill"],
                 "skill_name": evo_skill_2 if sc["unlocks_skill"] == 2 else (evo_skill_1 if sc["unlocks_skill"] == 1 else None),
+                "materials": mats_required,
                 "stats": {
                     "hp": int(max_bt_stats["hp"] * r),
                     "patk": int(max_bt_stats["patk"] * r),
@@ -465,6 +539,10 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
 
         super_evo = {
             "has_super_evo": has_super_evo,
+            "is_base_form": len(bt_ids) == 0,
+            "base_hero_id": base_id,
+            "base_hero_name": base_hero_name,
+            "materials_note": "Tướng ở Dạng Thường (trước chuyển thế) chưa mở khóa tính năng Siêu Tiến Hóa (Đúc Hồn). Tướng sau chuyển thế: Mốc lẻ dùng Chuyển Thế Đơn + Tinh Hoa + Đá Năng Lượng; Mốc chẵn dùng Thẻ Bản Thể Gốc + Tinh Hoa + Đá Năng Lượng." if len(bt_ids) > 0 else "Tướng trước chuyển thế chưa mở khóa Siêu Tiến Hóa. Cần chuyển thế thành các dạng nâng cấp (như CT, Đỉnh Phong) để mở khóa.",
             "stages": super_evo_stages,
             "evo_skill_1": evo_skill_1 or "Kỹ năng Siêu Tiến Hóa 1",
             "evo_skill_2": evo_skill_2 or "Kỹ năng Siêu Tiến Hóa 2",
@@ -472,7 +550,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "break5": bt_data.get("break5", [8, 20]),
         }
 
-        # 4. Badges (Huy hiệu của các tướng nếu có)
+        # Badges
         matched_badges_raw = badges_by_type_id.get(hid)
         h_name_lower = (h.get("name") or "").lower().strip()
         if not matched_badges_raw:
@@ -514,7 +592,6 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                     "synergy_desc": syn["effect"]
                 })
 
-        # Full detail
         detail_entry = {
             **h,
             "avatar": avatar,
@@ -522,7 +599,8 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "chuyen_sinh": chuyen_sinh,
             "van_menh": van_menh,
             "super_evo": super_evo,
-            "badges": hero_badges
+            "badges": hero_badges,
+            "family_forms": family_forms
         }
         heroes_detail[hid] = detail_entry
 
@@ -532,7 +610,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         json.dump(heroes_detail, f, ensure_ascii=False)
     print(f"  Generated heroes_catalog.json ({len(heroes_catalog)} records) and heroes_detail.json.")
 
-    # 3. Build Suits & Equipment Catalog
+    # 4. Build Suits & Equipment Catalog
     print("\n[5/5] Preparing Suits, Equipment, Skills, and Editorial Data...")
     suits_catalog = []
     suits_detail = {}
@@ -589,8 +667,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "primary_stat": eq.get("primary_stat"),
             "secondary_stat": eq.get("secondary_stat"),
             "evolution": eq.get("evolution"),
-            "cd": eq.get("cd"),
-            "quality": eq.get("quality")
+            "cd": eq.get("cd")
         }
         equipment_catalog.append(eq_entry)
         equipment_detail[eid] = {**eq, "icon": eq_img}
@@ -600,13 +677,12 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
     with open(os.path.join(web_data_dir, "equipment_detail.json"), "w", encoding="utf-8") as f:
         json.dump(equipment_detail, f, ensure_ascii=False)
 
-    # Skills Catalog & Detail (Optimized)
+    # Skills Catalog & Detail
     skills_catalog = []
     skills_detail = {}
     for skid, sk in skills.items():
         icon = web_asset_url(sk.get("assets", {}).get("icon", {}).get("path"))
         
-        # Build evolution chain
         evo_chain = [{"id": skid, "name": sk.get("name"), "icon": icon, "effect": sk.get("effect"), "is_current": True}]
         next_evo = sk.get("evolution", {}).get("next_evolution_skill_id")
         while next_evo and next_evo in skills and len(evo_chain) < 5:
@@ -649,11 +725,11 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
     with open(os.path.join(web_data_dir, "skills_detail.json"), "w", encoding="utf-8") as f:
         json.dump(skills_detail, f, ensure_ascii=False)
 
-    # Ban Sức (Fate Gems, Runes, Badges)
+    # Ban Suc
     with open(os.path.join(web_data_dir, "ban_suc.json"), "w", encoding="utf-8") as f:
         json.dump(ban_suc, f, ensure_ascii=False, indent=2)
 
-    # Initial Editorial / Guides Template
+    # Editorial data
     editorial_data = {
         "tier_list": {
             "status": "draft",
@@ -672,10 +748,10 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             },
             {
                 "id": "suit-synergy",
-                "title": "Tối Ưu Hóa Hiệu Ứng Bộ Trang Bị",
+                "title": "Tối Ưu Hóa Hiệu Ứng Bộ Trang Bị & 5 Set Con Giáp",
                 "category": "Trang bị",
                 "status": "draft",
-                "summary": "Phân tích mốc kích hoạt 2 món, 3 món, 4 món và cách kết hợp duyên phận tướng.",
+                "summary": "Phân tích mốc kích hoạt 2 món, 3 món, 4 món và 5 đại bộ trang bị Con Giáp (Chuột, Tị, Hợi, Rồng, Ngựa).",
                 "message": "Nội dung bài viết đang được nhóm biên tập hoàn thiện."
             },
             {

@@ -103,6 +103,40 @@ export default function SuitsPage() {
         </label>
       </div>
 
+      {/* 5 Đại Bộ Trang Bị Con Giáp Quick Filter */}
+      <div className="p-3.5 sm:p-4 rounded-xl border border-amber-500/30 bg-gradient-to-r from-amber-950/25 via-gray-900/50 to-gray-950/30 flex flex-wrap items-center gap-2">
+        <span className="text-xs font-bold text-amber-400 flex items-center gap-1.5 mr-1">
+          <span>🌟</span> 5 Bộ Con Giáp Hot:
+        </span>
+        {[
+          { label: "🐭 Chuột (Kiếp Tiên)", query: "Kiếp Tiên" },
+          { label: "🐍 Tị (Hung Thú)", query: "Hung Thú" },
+          { label: "🐷 Hợi (Thương Thần)", query: "Thương Thần" },
+          { label: "🐉 Rồng (Tứ Cực)", query: "Tứ Cực" },
+          { label: "🐴 Ngựa (Thiên Mã)", query: "Thiên Mã" },
+        ].map((item) => (
+          <button
+            key={item.query}
+            onClick={() => setSearch(item.query)}
+            className={`text-xs px-3 py-1.5 rounded-lg border transition-all ${
+              search === item.query
+                ? "bg-amber-500 text-black border-amber-400 font-bold shadow-md shadow-amber-500/20"
+                : "bg-gray-900/80 text-gray-300 border-gray-700 hover:border-amber-400/60 hover:text-white"
+            }`}
+          >
+            {item.label}
+          </button>
+        ))}
+        {search && (
+          <button
+            onClick={() => setSearch("")}
+            className="text-xs px-2.5 py-1 text-gray-400 hover:text-rose-400 ml-auto"
+          >
+            Bỏ lọc ✕
+          </button>
+        )}
+      </div>
+
       {/* Suits Grid */}
       {paginatedSuits.length === 0 ? (
         <div className="p-12 text-center border border-gray-800 rounded-2xl bg-gray-900/30 text-gray-400">
