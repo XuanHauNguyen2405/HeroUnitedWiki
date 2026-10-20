@@ -5,6 +5,7 @@ import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import HeroCard from "@/components/HeroCard";
+import HeroStandingArt from "@/components/HeroStandingArt";
 import HeroBanSucCard from "@/components/HeroBanSucCard";
 import { getSuperEvoStages, getBreakthroughStages, isSuperEvoUpgrade } from "@/lib/hero-progression";
 import { formatNumber, getQualityConfig } from "@/lib/utils";
@@ -176,6 +177,8 @@ interface HeroInteractiveViewProps {
     sex: number;
     level_max: number;
     avatar: string | null;
+    standing_image?: string | null;
+    card_image?: string | null;
     full_image?: string | null;
     animation?: string | null;
     is_world?: boolean;
@@ -903,38 +906,32 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
         />
 
         <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-8">
-          {/* Authentic Game Hero Card Container */}
-          <div className="relative flex-shrink-0 flex flex-col items-center">
-            <HeroCard
+          {/* Authentic In-Game Standing Art (Toàn Thân - Images 1, 3, 5) */}
+          <div className="relative flex-shrink-0 flex flex-col items-center justify-end">
+            <HeroStandingArt
               hero={{
                 id: hero.id,
                 name: hero.name,
                 avatar: hero.avatar,
+                standing_image: hero.standing_image,
                 full_image: hero.full_image,
                 animation: hero.animation || null,
                 is_world: hero.is_world,
                 quality: hero.quality,
-                occupation: hero.occupation_type ?? 0,
+                occupation_type: hero.occupation_type ?? 0,
               }}
-              superQualityStage={frameStage}
-              rebirthStage={selectedChuyenStage}
-              enhancementLevel={strengthenLevel}
-              breakthroughLevel={selectedBreakthroughStep}
-              showElementBadge={breakthroughStages.length > 0}
-              level={level}
-              maxLevel={255}
-              size="md"
-              reserveArtworkSpace
+              size="lg"
+              showAura={hero.is_world}
             />
 
             {/* EXP Bar preview */}
-            <div className="mt-3 w-36 sm:w-44 text-center">
-              <div className="flex justify-between text-[10px] text-slate-400 mb-1">
-                <span>EXP</span>
-                <span className="font-mono text-slate-300">0 / 147,420</span>
+            <div className="mt-3 w-44 sm:w-56 text-center">
+              <div className="flex justify-between text-[10px] text-slate-400 mb-1 font-mono">
+                <span className="text-emerald-400 font-bold">EXP</span>
+                <span className="text-slate-300">0 / 1,474,420</span>
               </div>
-              <div className="h-1.5 w-full rounded-full bg-slate-800 overflow-hidden">
-                <div className="h-full w-1/3 bg-emerald-500 rounded-full" />
+              <div className="h-1.5 w-full rounded-full bg-slate-800/80 border border-slate-700/50 overflow-hidden">
+                <div className="h-full w-1/3 bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full" />
               </div>
             </div>
           </div>
@@ -1678,6 +1675,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                 id: hero.id,
                 name: hero.name,
                 avatar: hero.avatar,
+                card_image: hero.card_image,
                 full_image: hero.full_image,
                 animation: hero.animation || null,
                 is_world: hero.is_world,

@@ -1455,9 +1455,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_1_1.png"
         }
       },
       "_source": {
@@ -1721,9 +1723,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_1_1.png"
         }
       },
       "_source": {
@@ -1987,9 +1991,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_1_1.png"
         }
       },
       "_source": {
@@ -2253,9 +2259,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_1_1.png"
         }
       },
       "_source": {
@@ -2519,9 +2527,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_1_1.png"
         }
       },
       "_source": {
@@ -2785,9 +2795,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_1_1.png"
         }
       },
       "_source": {
@@ -3051,9 +3063,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_1_1.png"
         }
       },
       "_source": {
@@ -3317,9 +3331,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_1_1.png"
         }
       },
       "_source": {
@@ -3583,9 +3599,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_1_1.png"
         }
       },
       "_source": {
@@ -3849,9 +3867,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_1_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_1_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_1_1.png"
         }
       },
       "_source": {
@@ -3907,9 +3927,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_1_2.png"
         }
       },
       "_source": {
@@ -3965,9 +3987,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_1_2.png"
         }
       },
       "_source": {
@@ -4023,9 +4047,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_1_2.png"
         }
       },
       "_source": {
@@ -4081,9 +4107,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_1_2.png"
         }
       },
       "_source": {
@@ -4139,9 +4167,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_1_2.png"
         }
       },
       "_source": {
@@ -4197,9 +4227,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_1_2.png"
         }
       },
       "_source": {
@@ -4255,9 +4287,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_1_2.png"
         }
       },
       "_source": {
@@ -4313,9 +4347,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_1_2.png"
         }
       },
       "_source": {
@@ -4371,9 +4407,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_1_2.png"
         }
       },
       "_source": {
@@ -4429,9 +4467,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_1_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_1_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_1_2.png"
         }
       },
       "_source": {
@@ -4491,9 +4531,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_1_3.png"
         }
       },
       "_source": {
@@ -4553,9 +4595,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_1_3.png"
         }
       },
       "_source": {
@@ -4615,9 +4659,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_1_3.png"
         }
       },
       "_source": {
@@ -4677,9 +4723,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_1_3.png"
         }
       },
       "_source": {
@@ -4739,9 +4787,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_1_3.png"
         }
       },
       "_source": {
@@ -4801,9 +4851,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_1_3.png"
         }
       },
       "_source": {
@@ -4863,9 +4915,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_1_3.png"
         }
       },
       "_source": {
@@ -4925,9 +4979,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_1_3.png"
         }
       },
       "_source": {
@@ -4987,9 +5043,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_1_3.png"
         }
       },
       "_source": {
@@ -5049,9 +5107,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_1_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_1_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_1_3.png"
         }
       },
       "_source": {
@@ -5103,9 +5163,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_1_4.png"
         }
       },
       "_source": {
@@ -5157,9 +5219,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_1_4.png"
         }
       },
       "_source": {
@@ -5211,9 +5275,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_1_4.png"
         }
       },
       "_source": {
@@ -5265,9 +5331,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_1_4.png"
         }
       },
       "_source": {
@@ -5319,9 +5387,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_1_4.png"
         }
       },
       "_source": {
@@ -5373,9 +5443,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_1_4.png"
         }
       },
       "_source": {
@@ -5427,9 +5499,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_1_4.png"
         }
       },
       "_source": {
@@ -5481,9 +5555,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_1_4.png"
         }
       },
       "_source": {
@@ -5535,9 +5611,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_1_4.png"
         }
       },
       "_source": {
@@ -5589,9 +5667,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_1_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_1_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_1_4.png"
         }
       },
       "_source": {
@@ -5647,9 +5727,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_2_1.png"
         }
       },
       "_source": {
@@ -5705,9 +5787,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_2_1.png"
         }
       },
       "_source": {
@@ -5763,9 +5847,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_2_1.png"
         }
       },
       "_source": {
@@ -5821,9 +5907,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_2_1.png"
         }
       },
       "_source": {
@@ -5879,9 +5967,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_2_1.png"
         }
       },
       "_source": {
@@ -5937,9 +6027,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_2_1.png"
         }
       },
       "_source": {
@@ -5995,9 +6087,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_2_1.png"
         }
       },
       "_source": {
@@ -6053,9 +6147,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_2_1.png"
         }
       },
       "_source": {
@@ -6111,9 +6207,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_2_1.png"
         }
       },
       "_source": {
@@ -6169,9 +6267,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_2_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_2_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_2_1.png"
         }
       },
       "_source": {
@@ -6227,9 +6327,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_2_2.png"
         }
       },
       "_source": {
@@ -6285,9 +6387,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_2_2.png"
         }
       },
       "_source": {
@@ -6343,9 +6447,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_2_2.png"
         }
       },
       "_source": {
@@ -6401,9 +6507,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_2_2.png"
         }
       },
       "_source": {
@@ -6459,9 +6567,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_2_2.png"
         }
       },
       "_source": {
@@ -6517,9 +6627,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_2_2.png"
         }
       },
       "_source": {
@@ -6575,9 +6687,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_2_2.png"
         }
       },
       "_source": {
@@ -6633,9 +6747,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_2_2.png"
         }
       },
       "_source": {
@@ -6691,9 +6807,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_2_2.png"
         }
       },
       "_source": {
@@ -6749,9 +6867,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_2_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_2_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_2_2.png"
         }
       },
       "_source": {
@@ -6811,9 +6931,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_2_3.png"
         }
       },
       "_source": {
@@ -6873,9 +6995,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_2_3.png"
         }
       },
       "_source": {
@@ -6935,9 +7059,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_2_3.png"
         }
       },
       "_source": {
@@ -6997,9 +7123,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_2_3.png"
         }
       },
       "_source": {
@@ -7059,9 +7187,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_2_3.png"
         }
       },
       "_source": {
@@ -7121,9 +7251,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_2_3.png"
         }
       },
       "_source": {
@@ -7183,9 +7315,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_2_3.png"
         }
       },
       "_source": {
@@ -7245,9 +7379,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_2_3.png"
         }
       },
       "_source": {
@@ -7307,9 +7443,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_2_3.png"
         }
       },
       "_source": {
@@ -7369,9 +7507,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_2_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_2_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_2_3.png"
         }
       },
       "_source": {
@@ -7423,9 +7563,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_2_4.png"
         }
       },
       "_source": {
@@ -7477,9 +7619,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_2_4.png"
         }
       },
       "_source": {
@@ -7531,9 +7675,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_2_4.png"
         }
       },
       "_source": {
@@ -7585,9 +7731,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_2_4.png"
         }
       },
       "_source": {
@@ -7639,9 +7787,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_2_4.png"
         }
       },
       "_source": {
@@ -7693,9 +7843,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_2_4.png"
         }
       },
       "_source": {
@@ -7747,9 +7899,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_2_4.png"
         }
       },
       "_source": {
@@ -7801,9 +7955,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_2_4.png"
         }
       },
       "_source": {
@@ -7855,9 +8011,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_2_4.png"
         }
       },
       "_source": {
@@ -7909,9 +8067,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_2_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_2_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_2_4.png"
         }
       },
       "_source": {
@@ -7963,9 +8123,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_3_1.png"
         }
       },
       "_source": {
@@ -8017,9 +8179,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_3_1.png"
         }
       },
       "_source": {
@@ -8071,9 +8235,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_3_1.png"
         }
       },
       "_source": {
@@ -8125,9 +8291,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_3_1.png"
         }
       },
       "_source": {
@@ -8179,9 +8347,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_3_1.png"
         }
       },
       "_source": {
@@ -8233,9 +8403,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_3_1.png"
         }
       },
       "_source": {
@@ -8287,9 +8459,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_3_1.png"
         }
       },
       "_source": {
@@ -8341,9 +8515,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_3_1.png"
         }
       },
       "_source": {
@@ -8395,9 +8571,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_3_1.png"
         }
       },
       "_source": {
@@ -8449,9 +8627,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_3_1",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_3_1.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_3_1.png"
         }
       },
       "_source": {
@@ -8507,9 +8687,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_3_2.png"
         }
       },
       "_source": {
@@ -8565,9 +8747,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_3_2.png"
         }
       },
       "_source": {
@@ -8623,9 +8807,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_3_2.png"
         }
       },
       "_source": {
@@ -8681,9 +8867,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_3_2.png"
         }
       },
       "_source": {
@@ -8739,9 +8927,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_3_2.png"
         }
       },
       "_source": {
@@ -8797,9 +8987,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_3_2.png"
         }
       },
       "_source": {
@@ -8855,9 +9047,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_3_2.png"
         }
       },
       "_source": {
@@ -8913,9 +9107,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_3_2.png"
         }
       },
       "_source": {
@@ -8971,9 +9167,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_3_2.png"
         }
       },
       "_source": {
@@ -9029,9 +9227,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_3_2",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_3_2.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_3_2.png"
         }
       },
       "_source": {
@@ -9079,9 +9279,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_3_3.png"
         }
       },
       "_source": {
@@ -9129,9 +9331,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_3_3.png"
         }
       },
       "_source": {
@@ -9179,9 +9383,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_3_3.png"
         }
       },
       "_source": {
@@ -9229,9 +9435,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_3_3.png"
         }
       },
       "_source": {
@@ -9279,9 +9487,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_3_3.png"
         }
       },
       "_source": {
@@ -9329,9 +9539,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_3_3.png"
         }
       },
       "_source": {
@@ -9379,9 +9591,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_3_3.png"
         }
       },
       "_source": {
@@ -9429,9 +9643,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_3_3.png"
         }
       },
       "_source": {
@@ -9479,9 +9695,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_3_3.png"
         }
       },
       "_source": {
@@ -9529,9 +9747,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_3_3",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_3_3.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_3_3.png"
         }
       },
       "_source": {
@@ -9571,9 +9791,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi01_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi01_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi01_3_4.png"
         }
       },
       "_source": {
@@ -9613,9 +9835,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi02_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi02_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi02_3_4.png"
         }
       },
       "_source": {
@@ -9655,9 +9879,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi03_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi03_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi03_3_4.png"
         }
       },
       "_source": {
@@ -9697,9 +9923,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi04_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi04_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi04_3_4.png"
         }
       },
       "_source": {
@@ -9739,9 +9967,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi05_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi05_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi05_3_4.png"
         }
       },
       "_source": {
@@ -9781,9 +10011,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi06_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi06_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi06_3_4.png"
         }
       },
       "_source": {
@@ -9823,9 +10055,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi07_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi07_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi07_3_4.png"
         }
       },
       "_source": {
@@ -9865,9 +10099,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi08_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi08_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi08_3_4.png"
         }
       },
       "_source": {
@@ -9907,9 +10143,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi09_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi09_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi09_3_4.png"
         }
       },
       "_source": {
@@ -9949,9 +10187,11 @@
       "assets": {
         "icon": {
           "ref": "dianhaushi10_3_4",
-          "status": "not_found",
-          "candidates": [],
-          "path": null
+          "status": "found",
+          "candidates": [
+            "public/assets/iphonehd/icon/dianhaushi10_3_4.png"
+          ],
+          "path": "public/assets/iphonehd/icon/dianhaushi10_3_4.png"
         }
       },
       "_source": {

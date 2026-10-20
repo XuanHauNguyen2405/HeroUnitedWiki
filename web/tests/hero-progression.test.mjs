@@ -12,16 +12,18 @@ const { getSuperEvoStages, getBreakthroughStages, isSuperEvoUpgrade } = await im
 );
 const heroes = JSON.parse(readFileSync(new URL('../src/data/heroes_detail.json', import.meta.url), 'utf8'));
 
-test('base Sasuke ignores copied progression tables belonging to other forms', () => {
-  assert.equal(heroes['43900'].super_evo.has_super_evo, true); // The reported contradiction.
-  assert.ok(heroes['43900'].super_evo.stages.length > 0);
-  assert.deepEqual(getSuperEvoStages(heroes['43900']), []);
+test('base Sasuke has its own super evolution stages and no breakthrough stages', () => {
+  assert.equal(heroes['43900'].super_evo.has_super_evo, true);
+  assert.equal(getSuperEvoStages(heroes['43900']).length, 9);
+  assert.equal(heroes['43900'].breakthrough_system.has_breakthrough, false);
   assert.deepEqual(getBreakthroughStages(heroes['43900']), []);
 });
 
-test('transferred Sasuke forms retain their progression tables', () => {
+test('transferred Sasuke forms retain both super evolution and breakthrough tables', () => {
   for (const id of ['83900', '84000']) {
+    assert.equal(heroes[id].super_evo.has_super_evo, true);
     assert.equal(getSuperEvoStages(heroes[id]).length, 9);
+    assert.equal(heroes[id].breakthrough_system.has_breakthrough, true);
     assert.equal(getBreakthroughStages(heroes[id]).length, 20);
   }
 });
@@ -29,14 +31,15 @@ test('transferred Sasuke forms retain their progression tables', () => {
 test('all 721 hero forms respect their own explicit capability flags', () => {
   assert.equal(Object.keys(heroes).length, 721);
   for (const hero of Object.values(heroes)) {
-    const form = hero.family_forms?.find(item => item.id === hero.id);
-    if (form?.has_super_evo === false || !hero.super_evo?.has_super_evo) {
+    if (!hero.super_evo?.has_super_evo) {
       assert.equal(getSuperEvoStages(hero).length, 0, hero.id);
     } else {
       assert.deepEqual(getSuperEvoStages(hero), hero.super_evo.stages, hero.id);
     }
-    if (form?.breakthrough_count === 0 || !hero.breakthrough_system?.has_breakthrough) {
+    if (!hero.breakthrough_system?.has_breakthrough) {
       assert.equal(getBreakthroughStages(hero).length, 0, hero.id);
+    } else {
+      assert.deepEqual(getBreakthroughStages(hero), hero.breakthrough_system.stages, hero.id);
     }
   }
 });

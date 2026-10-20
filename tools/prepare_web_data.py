@@ -355,13 +355,17 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         def form_sort_key(item):
             var_id, var_h = item
             var_name = (var_h.get("name") or "").lower()
-            var_bt = len(var_h.get("breakthrough", {}).get("breakthrough_ids", []))
-            if var_bt == 0:
-                return (0, int(var_id))
-            elif "ct -" in var_name or "ct-" in var_name:
+            var_cd_info = character_detail_config.get(str(var_id), {})
+            is_world_val = var_cd_info.get("is_world") or var_h.get("is_world")
+            is_skin_val = var_cd_info.get("is_skin") or var_h.get("evolution", {}).get("is_skin")
+            
+            # Base forms first, then transferred/CT, then skins
+            if is_skin_val:
+                return (3, int(var_id))
+            elif is_world_val or "ct -" in var_name or "ct-" in var_name:
                 return (1, int(var_id))
             else:
-                return (2, int(var_id))
+                return (0, int(var_id))
 
         sorted_family = sorted(family_members, key=form_sort_key)
         base_member = sorted_family[0] if sorted_family else (hid, h)
@@ -372,22 +376,51 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         family_forms = []
         for var_id, var_h in sorted_family:
             var_name = var_h.get("name") or f"Tướng #{var_id}"
-            var_bt_count = len(var_h.get("breakthrough", {}).get("breakthrough_ids", []))
-            is_base = var_bt_count == 0
+            var_cd_info = character_detail_config.get(str(var_id), {})
             
-            label = "Dạng Thường" if is_base else ("Chuyển Thế 1" if ("ct -" in var_name.lower() or "ct-" in var_name.lower()) else "Dạng Chuyển Thế")
+            # Ground truth: check super_evolution.config
+            var_se_id = str(var_cd_info.get("super_evo") or var_h.get("evolution", {}).get("super_evo") or 0)
+            var_has_se = (var_se_id != "0") and (var_se_id in super_evolution_config)
+            
+            # Ground truth: check breakthrough.config
+            var_bt_ids = var_cd_info.get("breakthrough_ids") or var_h.get("breakthrough", {}).get("breakthrough_ids", [])
+            valid_bt_ids = [bid for bid in var_bt_ids if str(bid) in breakthrough_config]
+            var_has_bt = len(valid_bt_ids) > 0 or str(var_id) in bt_by_cid
+            var_bt_count = 20 if var_has_bt else 0
+            
+            var_is_skin = bool(var_cd_info.get("is_skin") or var_h.get("evolution", {}).get("is_skin"))
+            var_is_world = bool(var_cd_info.get("is_world") or var_h.get("is_world") or "ct -" in var_name.lower() or "ct-" in var_name.lower())
+            is_base = (str(var_id) == str(base_id))
+            
+            if var_is_skin:
+                label = "Trang Phục"
+            elif var_is_world:
+                label = "Chuyển Thế"
+            elif is_base:
+                label = "Dạng Thường"
+            else:
+                label = "Dạng Biến Thể"
+                
             family_forms.append({
-                "id": var_id,
+                "id": str(var_id),
                 "name": var_name,
                 "avatar": web_asset_url(var_h.get("assets", {}).get("image", {}).get("path")),
                 "quality": var_h.get("quality", 1),
                 "rebirth": var_h.get("rebirth", 0),
-                "is_current": var_id == hid,
+                "is_current": str(var_id) == str(hid),
                 "is_base": is_base,
-                "has_super_evo": var_bt_count > 0,
+                "has_super_evo": var_has_se,
+                "has_breakthrough": var_has_bt,
                 "label": label,
                 "breakthrough_count": var_bt_count
             })
+
+        # Check current hero's ground truth flags
+        cur_se_id = str(character_detail_config.get(str(hid), {}).get("super_evo") or h.get("evolution", {}).get("super_evo") or 0)
+        cur_has_se = (cur_se_id != "0") and (cur_se_id in super_evolution_config)
+        cur_bt_ids = character_detail_config.get(str(hid), {}).get("breakthrough_ids") or h.get("breakthrough", {}).get("breakthrough_ids", [])
+        cur_valid_bt_ids = [bid for bid in cur_bt_ids if str(bid) in breakthrough_config]
+        cur_has_bt = len(cur_valid_bt_ids) > 0 or str(hid) in bt_by_cid
 
         summary_entry = {
             "id": hid,
@@ -407,7 +440,8 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             "speed": h.get("base_stats", {}).get("speed", 0),
             "has_image": bool(avatar),
             "family_forms_count": len(family_forms),
-            "has_super_evo": bool(h.get("breakthrough", {}).get("breakthrough_ids"))
+            "has_super_evo": cur_has_se,
+            "has_breakthrough": cur_has_bt
         }
         heroes_catalog.append(summary_entry)
 
@@ -550,23 +584,14 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             return res
 
         # 1. Breakthrough System (20 cấp Đột Phá từ config/breakthrough.config)
-        bt_data = h.get("breakthrough", {})
-        bt_ids = bt_data.get("breakthrough_ids", [])
-        if not bt_ids:
-            bt_ids = base_h.get("breakthrough", {}).get("breakthrough_ids", [])
-        if not bt_ids:
-            for f_hid, fam_h in sorted_family:
-                if fam_h.get("breakthrough", {}).get("breakthrough_ids"):
-                    bt_ids = fam_h["breakthrough"]["breakthrough_ids"]
-                    break
-        if not bt_ids:
-            cid = str(h.get("character_id", ""))
-            if cid in bt_by_cid:
-                bt_ids = [item[1] for item in bt_by_cid[cid]]
-            elif hid in bt_by_cid:
-                bt_ids = [item[1] for item in bt_by_cid[hid]]
-            elif base_id in bt_by_cid:
-                bt_ids = [item[1] for item in bt_by_cid[base_id]]
+        # Ground truth: only for heroes that actually possess breakthrough (no cross-family inheritance)
+        bt_ids = []
+        cur_bt_ids = character_detail_config.get(str(hid), {}).get("breakthrough_ids") or h.get("breakthrough", {}).get("breakthrough_ids", [])
+        valid_bt_ids = [bid for bid in cur_bt_ids if str(bid) in breakthrough_config]
+        if valid_bt_ids:
+            bt_ids = [str(bid) for bid in valid_bt_ids]
+        elif str(hid) in bt_by_cid:
+            bt_ids = [item[1] for item in bt_by_cid[str(hid)]]
 
         breakthrough_stages = []
         for idx, sid in enumerate(bt_ids):
@@ -598,8 +623,8 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                     })
                 elif m_cat == 5:
                     card_hero = heroes.get(m_id, {})
-                    card_name = card_hero.get("name", base_hero_name or hero_name)
-                    card_avatar = web_asset_url(card_hero.get("assets", {}).get("image", {}).get("path")) or base_hero_avatar
+                    card_name = card_hero.get("name") or hero_names.get(str(m_id)) or h.get("name") or f"Tướng #{m_id}"
+                    card_avatar = web_asset_url(card_hero.get("assets", {}).get("image", {}).get("path")) or avatar
                     mats.append({
                         "id": m_id,
                         "name": f"Thẻ Tướng {card_name}",
@@ -634,7 +659,11 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         }
 
         # 2. Super Evolution (9 mốc: Cam -> Đỏ -> Vàng mở khóa 2 Kỹ Năng Siêu Tiến Hóa)
-        has_super_evo = bool(cb_data) or len(breakthrough_stages) > 0
+        # Ground truth: check super_evolution.config using exact super_evo field
+        se_id = str(character_detail_config.get(str(hid), {}).get("super_evo") or h.get("evolution", {}).get("super_evo") or 0)
+        se_entry = super_evolution_config.get(se_id) if (se_id != "0" and se_id in super_evolution_config) else None
+        has_super_evo = bool(se_entry)
+
         evo_skill_1 = None
         evo_skill_2 = None
         if cb_data:
@@ -654,94 +683,87 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         if not evo_skill_2 and len(hero_skills) >= 7:
             evo_skill_2 = hero_skills[6].get("name")
 
-        max_bt_stats = {"hp": 0, "patk": 0, "matk": 0, "def": 0, "speed": 0}
-        if breakthrough_stages:
-            max_bt_stats = breakthrough_stages[-1]["stats"]
-        else:
-            base = h.get("base_stats", {})
-            max_bt_stats = {
-                "hp": int(base.get("hp", 0) * 0.75),
-                "patk": int(base.get("patk", 0) * 0.75),
-                "matk": int(base.get("matk", 0) * 0.75),
-                "def": int(base.get("def", 0) * 0.75),
-                "speed": int(base.get("speed", 0) * 0.75)
-            }
-
         # 9 sub-stages: Cam, Cam+, Cam++, Đỏ, Đỏ+, Đỏ++, Vàng, Vàng+, Vàng++
         evo_stage_configs = [
-            {"id": "cam", "name": "Cam", "tier": "orange", "ratio": 0.15, "unlocks_skill": 0},
-            {"id": "cam_plus", "name": "Cam+", "tier": "orange", "ratio": 0.25, "unlocks_skill": 0},
-            {"id": "cam_plus2", "name": "Cam++", "tier": "orange", "ratio": 0.35, "unlocks_skill": 0},
-            {"id": "do", "name": "Đỏ", "tier": "red", "ratio": 0.50, "unlocks_skill": 1},
-            {"id": "do_plus", "name": "Đỏ+", "tier": "red", "ratio": 0.60, "unlocks_skill": 1},
-            {"id": "do_plus2", "name": "Đỏ++", "tier": "red", "ratio": 0.70, "unlocks_skill": 1},
-            {"id": "vang", "name": "Vàng", "tier": "gold", "ratio": 0.85, "unlocks_skill": 2},
-            {"id": "vang_plus", "name": "Vàng+", "tier": "gold", "ratio": 0.92, "unlocks_skill": 2},
-            {"id": "vang_plus2", "name": "Vàng++", "tier": "gold", "ratio": 1.00, "unlocks_skill": 2},
+            {"id": "cam", "name": "Cam", "tier": "orange", "unlocks_skill": 0, "frame": "card_q_bgOrange.png"},
+            {"id": "cam_plus", "name": "Cam+", "tier": "orange", "unlocks_skill": 0, "frame": "card_q_bgOrange1.png"},
+            {"id": "cam_plus2", "name": "Cam++", "tier": "orange", "unlocks_skill": 0, "frame": "card_q_bgOrange2.png"},
+            {"id": "do", "name": "Đỏ", "tier": "red", "unlocks_skill": 1, "frame": "card_q_bgRed.png"},
+            {"id": "do_plus", "name": "Đỏ+", "tier": "red", "unlocks_skill": 1, "frame": "card_q_bgRed1.png"},
+            {"id": "do_plus2", "name": "Đỏ++", "tier": "red", "unlocks_skill": 1, "frame": "card_q_bgRed2.png"},
+            {"id": "vang", "name": "Vàng", "tier": "gold", "unlocks_skill": 2, "frame": "card_q_bgYellow.png"},
+            {"id": "vang_plus", "name": "Vàng+", "tier": "gold", "unlocks_skill": 2, "frame": "card_q_bgGolden1.png"},
+            {"id": "vang_plus2", "name": "Vàng++", "tier": "gold", "unlocks_skill": 2, "frame": "card_q_bgGolden2.png"},
         ]
 
-        # Look up matching super evolution entry
-        cand_keys = [str(hid), f"{cid}00", str(cid), str(base_id), f"{base_id}00"]
-        se_entry = next((super_evolution_config[k] for k in cand_keys if k and k in super_evolution_config), {})
-
         super_evo_stages = []
-        for idx, sc in enumerate(evo_stage_configs):
-            r = sc["ratio"]
-            # Extract exact materials for this stage (from super_evolution.config & super_evo_team.config)
-            stage_mats = []
-            if idx > 0 and se_entry:
-                need_slots = se_entry.get(f"level_{idx}_need", [])
-                for nid in need_slots:
-                    team_entry = super_evo_team_config.get(str(nid), {})
-                    c_need = team_entry.get("card_need")
-                    if c_need == -1:
-                        stage_mats.append({
-                            "id": "-1",
-                            "name": "Thẻ Phôi Cam Bất Kỳ",
-                            "count": 1,
-                            "icon": base_hero_avatar or avatar or "/assets/iphonehd/icon/item_addcard.png",
-                            "is_wildcard": True,
-                            "quality": 5
-                        })
-                    else:
-                        c_char = character_detail_config.get(str(c_need), {})
-                        c_name = c_char.get("name") or hero_names.get(str(c_need)) or f"Thẻ Tướng #{c_need}"
-                        c_img = c_char.get("img") or f"{c_need}.png"
-                        stage_mats.append({
-                            "id": str(c_need),
-                            "name": c_name,
-                            "count": 1,
-                            "icon": f"/assets/iphonehd/icon/{c_img}",
-                            "is_wildcard": False,
-                            "quality": c_char.get("quality", 5)
-                        })
+        if has_super_evo and se_entry:
+            attr_map = {1: 'patk', 2: 'matk', 3: 'def', 4: 'speed', 5: 'hp'}
+            cum_stats = {'patk': 0.0, 'matk': 0.0, 'def': 0.0, 'speed': 0.0, 'hp': 0.0}
 
-            super_evo_stages.append({
-                "id": sc["id"],
-                "name": sc["name"],
-                "tier": sc["tier"],
-                "unlocks_skill": sc["unlocks_skill"],
-                "skill_name": evo_skill_2 if sc["unlocks_skill"] == 2 else (evo_skill_1 if sc["unlocks_skill"] == 1 else None),
-                "materials": stage_mats,
-                "stats": {
-                    "hp": int(max_bt_stats.get("hp", 0) * r),
-                    "patk": int(max_bt_stats.get("patk", 0) * r),
-                    "matk": int(max_bt_stats.get("matk", 0) * r),
-                    "def": int(max_bt_stats.get("def", 0) * r),
-                    "speed": int(max_bt_stats.get("speed", 0) * r),
-                }
-            })
+            for idx, sc in enumerate(evo_stage_configs):
+                stage_mats = []
+                if idx > 0:
+                    # Accumulate stat additions from level_{idx}_add
+                    add_list = se_entry.get(f"level_{idx}_add", [])
+                    for item in add_list:
+                        atype, val = item[0], item[1]
+                        if atype in attr_map:
+                            cum_stats[attr_map[atype]] += float(val)
+
+                    # Extract materials and ability adds from level_{idx}_need
+                    need_slots = se_entry.get(f"level_{idx}_need", [])
+                    for nid in need_slots:
+                        team_entry = super_evo_team_config.get(str(nid), {})
+                        for t_item in team_entry.get("ability_add", []):
+                            atype, val = t_item[0], t_item[1]
+                            if atype in attr_map:
+                                cum_stats[attr_map[atype]] += float(val)
+
+                        c_need = team_entry.get("card_need")
+                        if c_need == -1:
+                            stage_mats.append({
+                                "id": "-1",
+                                "name": "Thẻ Phôi Cam Bất Kỳ",
+                                "count": 1,
+                                "icon": avatar or "/assets/iphonehd/icon/item_addcard.png",
+                                "is_wildcard": True,
+                                "quality": 5
+                            })
+                        else:
+                            c_char = character_detail_config.get(str(c_need), {})
+                            c_name = c_char.get("name") or hero_names.get(str(c_need)) or f"Thẻ Tướng #{c_need}"
+                            c_img = c_char.get("img") or f"{c_need}.png"
+                            stage_mats.append({
+                                "id": str(c_need),
+                                "name": c_name,
+                                "count": 1,
+                                "icon": f"/assets/iphonehd/icon/{c_img}",
+                                "is_wildcard": False,
+                                "quality": c_char.get("quality", 5)
+                            })
+
+                super_evo_stages.append({
+                    "id": sc["id"],
+                    "name": sc["name"],
+                    "tier": sc["tier"],
+                    "frame": sc["frame"],
+                    "unlocks_skill": sc["unlocks_skill"],
+                    "skill_name": evo_skill_2 if sc["unlocks_skill"] == 2 else (evo_skill_1 if sc["unlocks_skill"] == 1 else None),
+                    "materials": stage_mats,
+                    "stats": {k: int(round(v)) for k, v in cum_stats.items()}
+                })
 
         super_evo = {
             "has_super_evo": has_super_evo,
-            "is_base_form": len(bt_ids) == 0,
+            "is_base_form": (str(hid) == str(base_id)),
             "base_hero_id": base_id,
             "base_hero_name": base_hero_name,
             "stages": super_evo_stages,
             "evo_skill_1": evo_skill_1 or "Kỹ năng Siêu Tiến Hóa 1",
             "evo_skill_2": evo_skill_2 or "Kỹ năng Siêu Tiến Hóa 2",
-            "break4": bt_data.get("break4", [7, 20]),
-            "break5": bt_data.get("break5", [8, 20]),
+            "break4": [7, 20],
+            "break5": [8, 20],
         }
 
         # Badges

@@ -1,0 +1,12 @@
+{
+  "total_heroes": 721,
+  "categories": {
+    "A": 686,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "E": 35
+  },
+  "extracted_fullbody_count": 686,
+  "missing_assets_count": 35
+}

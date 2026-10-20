@@ -8,11 +8,27 @@ import HeroCard, { HeroCardData } from "@/components/HeroCard";
 
 // Sample heroes for validation against reference screenshots
 const SAMPLE_HEROES: Record<string, HeroCardData & { defaultBre: number; defaultSuper: number; defaultStep: number; defaultElem: number }> = {
+  sasuke: {
+    id: 43900,
+    name: "Chú Nguyền Sasuke",
+    animation: "xzuozhu",
+    card_image: "/assets/heroes/card_43900.png",
+    full_image: "/assets/heroes/standing_43900.png",
+    avatar: "/assets/iphonehd/icon/icon_xzuozhu.png",
+    is_world: false,
+    quality: 4,
+    occupation: 2, // Đấu Sĩ
+    defaultBre: 2, // Đấu Sĩ·Chú Nguyền Sasuke
+    defaultSuper: 0, // Gốc
+    defaultStep: 60, // +60
+    defaultElem: 20,
+  },
   nagato: {
     id: 82400,
     name: "Nagato",
     animation: "peien2",
-    full_image: "/assets/heroes/full_82400.png",
+    card_image: "/assets/heroes/card_82400.png",
+    full_image: "/assets/heroes/standing_82400.png",
     avatar: "/assets/heroes/portraits/image_peien2.png",
     is_world: true, // Dạng Chuyển Thế (Hồn·Nagato)
     quality: 4,
@@ -22,24 +38,26 @@ const SAMPLE_HEROES: Record<string, HeroCardData & { defaultBre: number; default
     defaultStep: 60, // +60
     defaultElem: 20, // Đột phá 20
   },
-  frieren: {
-    id: 88888,
-    name: "Bikini - Frieren",
-    animation: "fulilian2",
-    full_image: null,
-    avatar: "/assets/heroes/portraits/image_fulilian2.png",
-    is_world: false, // Dạng thường (khớp media_1792367361990)
+  zoro: {
+    id: 43700,
+    name: "Thợ Săn - Zoro",
+    animation: "xsjsuolong",
+    card_image: "/assets/heroes/card_43700.png",
+    full_image: "/assets/heroes/standing_43700.png",
+    avatar: "/assets/iphonehd/icon/icon_xsjsuolong.png",
+    is_world: false,
     quality: 4,
-    occupation: 1, // Ma Công
-    defaultBre: 3, // Anh Hùng·Bikini - Frieren
-    defaultSuper: 3, // Đỏ (khớp ảnh)
-    defaultStep: 53, // +53
-    defaultElem: 15,
+    occupation: 0, // Vật Công
+    defaultBre: 4, // Thần Thoại·Thợ Săn - Zoro
+    defaultSuper: 0,
+    defaultStep: 60,
+    defaultElem: 20,
   },
   kakarot: {
     id: 81200,
     name: "Kakarot",
     animation: "XWukong2",
+    card_image: "/assets/heroes/full_81200.png",
     full_image: "/assets/heroes/full_81200.png",
     avatar: "/assets/heroes/portraits/image_XWukong2.png",
     is_world: true, // Chuyển thế
@@ -50,24 +68,11 @@ const SAMPLE_HEROES: Record<string, HeroCardData & { defaultBre: number; default
     defaultStep: 60,
     defaultElem: 20,
   },
-  vegeta: {
-    id: 43600,
-    name: "Vegeta",
-    animation: "vegeta",
-    full_image: null,
-    avatar: "/assets/heroes/portraits/image_vegeta.png",
-    is_world: false,
-    quality: 4,
-    occupation: 0,
-    defaultBre: 5, // Thần·Vegeta
-    defaultSuper: 2, // Cam++
-    defaultStep: 45,
-    defaultElem: 18,
-  },
   ct_vegeta: {
     id: 83300,
     name: "CT - Vegeta",
-    animation: "vegeta",
+    animation: "beijita2",
+    card_image: "/assets/heroes/card_beijita2.png",
     full_image: null,
     avatar: "/assets/heroes/portraits/image_vegeta.png",
     is_world: true,
@@ -77,6 +82,35 @@ const SAMPLE_HEROES: Record<string, HeroCardData & { defaultBre: number; default
     defaultSuper: 8, // Vàng++ Cầu vồng
     defaultStep: 60,
     defaultElem: 20,
+  },
+  frieren: {
+    id: 88888,
+    name: "Bikini - Frieren",
+    animation: "fulilian2",
+    full_image: null,
+    avatar: "/assets/heroes/portraits/image_fulilian2.png",
+    is_world: false,
+    quality: 4,
+    occupation: 1,
+    defaultBre: 3,
+    defaultSuper: 3,
+    defaultStep: 53,
+    defaultElem: 15,
+  },
+  vegeta: {
+    id: 43600,
+    name: "Vegeta",
+    animation: "vegeta",
+    card_image: "/assets/heroes/card_beijita.png",
+    full_image: null,
+    avatar: "/assets/heroes/portraits/image_vegeta.png",
+    is_world: false,
+    quality: 4,
+    occupation: 0,
+    defaultBre: 5,
+    defaultSuper: 2,
+    defaultStep: 45,
+    defaultElem: 18,
   },
 };
 

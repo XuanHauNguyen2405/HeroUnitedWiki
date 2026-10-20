@@ -123,14 +123,60 @@ def simulate_action(actions, action_name='daiji'):
         frames.append(stage)
     return frames
 
-def render_anim(anim_name, anim_dir='apk_extracted/assets/iphonehd/anim'):
-    pvr_path = os.path.join(anim_dir, f"{anim_name}.pvr.ccz")
-    plist_path = os.path.join(anim_dir, f"{anim_name}.plist")
-    if not os.path.exists(plist_path):
-        plist_path = os.path.join("public/assets/iphonehd/anim", f"{anim_name}.plist")
-    sam_path = os.path.join(anim_dir, f"{anim_name}.swf.sam")
+def render_anim(anim_name, anim_dirs=None):
+    if anim_dirs is None:
+        anim_dirs = [
+            'output/apk_extracted/assets/iphonehd/anim',
+            'Resources/iphonehd/anim',
+            'public/assets/iphonehd/anim'
+        ]
 
-    if not (os.path.exists(pvr_path) and os.path.exists(plist_path) and os.path.exists(sam_path)):
+    plist_path = None
+    sam_path = None
+    found_dir = None
+
+    for ad in anim_dirs:
+        p_sam = os.path.join(ad, f"{anim_name}.swf.sam")
+        p_plist = os.path.join(ad, f"{anim_name}.plist")
+        if os.path.exists(p_sam) and os.path.exists(p_plist):
+            plist_path = p_plist
+            sam_path = p_sam
+            found_dir = ad
+            break
+
+    if not plist_path or not sam_path:
+        return None
+
+    # Load plist to find texture file name
+    with open(plist_path, 'rb') as f:
+        pl = plistlib.load(f)
+
+    meta = pl.get('metadata', {})
+    tex_name = meta.get('realTextureFileName') or meta.get('textureFileName') or f"{anim_name}.pvr.ccz"
+
+    # Search for texture in found_dir, or any anim_dir
+    pvr_path = os.path.join(found_dir, tex_name)
+    if not os.path.exists(pvr_path):
+        pvr_path = os.path.join(found_dir, f"{anim_name}-hd.pvr.ccz")
+    if not os.path.exists(pvr_path):
+        pvr_path = os.path.join(found_dir, f"{anim_name}.pvr.ccz")
+
+    if not os.path.exists(pvr_path):
+        for ad in anim_dirs:
+            candidate = os.path.join(ad, tex_name)
+            if os.path.exists(candidate):
+                pvr_path = candidate
+                break
+            candidate = os.path.join(ad, f"{anim_name}-hd.pvr.ccz")
+            if os.path.exists(candidate):
+                pvr_path = candidate
+                break
+            candidate = os.path.join(ad, f"{anim_name}.pvr.ccz")
+            if os.path.exists(candidate):
+                pvr_path = candidate
+                break
+
+    if not os.path.exists(pvr_path):
         return None
 
     # 1. Decompress PVR
@@ -154,10 +200,6 @@ def render_anim(anim_name, anim_dir='apk_extracted/assets/iphonehd/anim'):
     else:
         # RGBA8888
         atlas = Image.frombytes('RGBA', (pvr_w, pvr_h), decomp[52:52 + pvr_w * pvr_h * 4])
-
-    # 2. Slice frames in memory
-    with open(plist_path, 'rb') as f:
-        pl = plistlib.load(f)
 
     frames_mem = {}
     for name, f_info in pl['frames'].items():
@@ -256,17 +298,31 @@ def batch_process(output_dirs=['public/assets/heroes', 'web/public/assets/heroes
     for d in output_dirs:
         os.makedirs(d, exist_ok=True)
 
-    with open('output/heroes.json', 'r', encoding='utf-8') as f:
-        heroes = json.load(f)
+    heroes = {}
+    if os.path.exists('config/character_detail.config'):
+        with open('config/character_detail.config', 'r', encoding='utf-8') as f:
+            cd = json.load(f)
+            for hid, h in cd.items():
+                heroes[str(hid)] = {'animation': h.get('animation')}
+    if os.path.exists('output/heroes.json'):
+        with open('output/heroes.json', 'r', encoding='utf-8') as f:
+            for hid, h in json.load(f).items():
+                anim = h.get('assets', {}).get('animation', {}).get('ref')
+                if anim:
+                    heroes[str(hid)] = {'animation': anim}
 
-    img_dir = 'apk_extracted/assets/iphonehd/img'
+    img_dirs = [
+        'output/apk_extracted/assets/iphonehd/img',
+        'Resources/iphonehd/img',
+        'public/assets/iphonehd/img'
+    ]
     success = 0
     fallback = 0
     missing = 0
 
     print(f"Starting batch extraction for {len(heroes)} heroes...")
-    for hid, h in heroes.items():
-        anim_ref = h.get('assets', {}).get('animation', {}).get('ref')
+    for hid, h in sorted(heroes.items(), key=lambda x: int(x[0]) if x[0].isdigit() else 0):
+        anim_ref = h.get('animation')
         im = None
         if anim_ref:
             try:
@@ -276,13 +332,15 @@ def batch_process(output_dirs=['public/assets/heroes', 'web/public/assets/heroes
 
         if not im and anim_ref:
             # Fallback to image_{anim_ref}.png if anim cannot be rendered
-            fb_path = os.path.join(img_dir, f"image_{anim_ref}.png")
-            if os.path.exists(fb_path):
-                try:
-                    im = Image.open(fb_path).convert('RGBA')
-                    fallback += 1
-                except Exception:
-                    pass
+            for img_dir in img_dirs:
+                fb_path = os.path.join(img_dir, f"image_{anim_ref}.png")
+                if os.path.exists(fb_path):
+                    try:
+                        im = Image.open(fb_path).convert('RGBA')
+                        fallback += 1
+                        break
+                    except Exception:
+                        pass
 
         if im:
             success += 1

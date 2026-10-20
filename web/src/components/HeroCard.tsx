@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { getHeroArtworkLayout } from "@/lib/hero-artwork";
 
 export interface HeroCardData {
   id: number | string;
   name: string;
   avatar?: string | null;
+  card_image?: string | null;
+  standing_image?: string | null;
   full_image?: string | null;
   animation?: string | null;
   is_world?: boolean; // True for Chuyển Thế
@@ -29,7 +30,7 @@ export interface HeroCardProps {
   showStars?: boolean; // Arc of stars in top left
   size?: "sm" | "md" | "lg" | "xl"; // Size preset
   className?: string;
-  reserveArtworkSpace?: boolean; // Reserve the wings/pop-out envelope next to text.
+  reserveArtworkSpace?: boolean; // Reserve protruding envelope so cards in grids don't collide
   onClick?: () => void;
 }
 
@@ -65,9 +66,6 @@ export const BASE_QUALITY_FRAMES: Record<number, FrameInfo> = {
 };
 
 // Mathematical alignment for 228x318 dragon frames:
-// Inner visible card rectangle is located at (x: 21, y: 31, w: 183, h: 256) inside 228x318.
-// When scaled by 228/185 (123.24%) and 318/258 (123.26%), with top -12.02% and left -11.35%,
-// the inner visible frame matches the 185x258 card box 1:1, preventing Cam++, Đỏ++, Vàng++ from appearing smaller!
 export const DRAGON_FRAME_STYLE: React.CSSProperties = {
   position: "absolute",
   width: "123.24%",
@@ -111,34 +109,54 @@ export default function HeroCard({
   showStars = true,
   size = "md",
   className = "",
-  reserveArtworkSpace = false,
+  reserveArtworkSpace = true,
   onClick,
 }: HeroCardProps) {
   const [failedImageSrc, setFailedImageSrc] = useState<string | null>(null);
+
+  // Defensive fallback for undefined hero
+  const safeHero = hero || {
+    id: 0,
+    name: "Tướng",
+    quality: 4,
+  };
 
   // Determine frame texture based on verified Lua logic
   const frameInfo =
     superQualityStage > 0
       ? SUPER_EVO_FRAMES[superQualityStage] || SUPER_EVO_FRAMES[1]
-      : BASE_QUALITY_FRAMES[hero.quality ?? 4] || BASE_QUALITY_FRAMES[4];
+      : BASE_QUALITY_FRAMES[safeHero.quality ?? 4] || BASE_QUALITY_FRAMES[4];
 
   const frameSrc = `/assets/card/${frameInfo.frame}`;
 
   // Aura rule: Transferred form (is_world) has red fiery aura, normal does not
-  const hasAura = showAura !== undefined ? showAura : Boolean(hero.is_world);
+  const hasAura = showAura !== undefined ? showAura : Boolean(safeHero.is_world);
 
   // Full formatted name: [Prefix]·[Name] +[Enhancement]
   const prefix = REBIRTH_TITLES[rebirthStage] || "";
-  const nameWithPrefix = prefix ? `${prefix}·${hero.name}` : hero.name;
+  const nameWithPrefix = prefix ? `${prefix}·${safeHero.name}` : safeHero.name;
   const fullName = enhancementLevel > 0 ? `${nameWithPrefix}+${enhancementLevel}` : nameWithPrefix;
 
-  // Strictly distinguish Full-Body image from Avatar/Portrait
-  const fullBodyUrl = hero.full_image || null;
-  const avatarUrl = hero.avatar || "/assets/card/public_whiteCard.png";
-  const hasFullBody = Boolean(fullBodyUrl) && failedImageSrc !== fullBodyUrl;
+  // STRICT SEPARATION: Card Art vs Standing Art
+  // Priority: safeHero.card_image -> fallback to /assets/heroes/card_${id}.png -> full_image -> avatar
+  const cardArtUrl =
+    safeHero.card_image ||
+    `/assets/heroes/card_${safeHero.id}.png`;
+
+  const fallbackFullUrl = safeHero.full_image || `/assets/heroes/standing_${safeHero.id}.png`;
+  const avatarUrl = safeHero.avatar || "/assets/card/public_whiteCard.png";
+
+  const effectiveCardUrl =
+    failedImageSrc !== cardArtUrl
+      ? cardArtUrl
+      : failedImageSrc !== fallbackFullUrl
+      ? fallbackFullUrl
+      : null;
+
+  const hasCardArt = Boolean(effectiveCardUrl);
 
   // Occupation index
-  const occupation = hero.occupation !== undefined ? hero.occupation : 0;
+  const occupation = safeHero.occupation !== undefined ? safeHero.occupation : 0;
   const occIconSrc = `/assets/card/public_ocupation${occupation}.png`;
   const occBgSrc = superQualityStage > 0 ? "/assets/card/card_race_bg_2.png" : "/assets/card/card_race_bg.png";
 
@@ -147,9 +165,8 @@ export default function HeroCard({
     sm: {
       width: 160,
       height: 224,
-      frameWidth: 160,
-      frameHeight: 224,
       popoutTop: -36,
+      envelopeMarginX: 18,
       starSize: 14,
       badgeSize: 28,
       elemSize: 32,
@@ -159,9 +176,8 @@ export default function HeroCard({
     md: {
       width: 213,
       height: 298,
-      frameWidth: 213,
-      frameHeight: 298,
-      popoutTop: -48,
+      popoutTop: -50,
+      envelopeMarginX: 24,
       starSize: 18,
       badgeSize: 38,
       elemSize: 42,
@@ -171,9 +187,8 @@ export default function HeroCard({
     lg: {
       width: 256,
       height: 358,
-      frameWidth: 256,
-      frameHeight: 358,
-      popoutTop: -60,
+      popoutTop: -62,
+      envelopeMarginX: 30,
       starSize: 22,
       badgeSize: 46,
       elemSize: 50,
@@ -183,9 +198,8 @@ export default function HeroCard({
     xl: {
       width: 320,
       height: 448,
-      frameWidth: 320,
-      frameHeight: 448,
-      popoutTop: -75,
+      popoutTop: -78,
+      envelopeMarginX: 38,
       starSize: 26,
       badgeSize: 56,
       elemSize: 62,
@@ -194,14 +208,12 @@ export default function HeroCard({
     },
   }[size];
 
-  const artworkWidth = sizeConfig.width * 1.35;
-  const artworkHeight = sizeConfig.height * 0.78 - sizeConfig.popoutTop;
-  const artworkLayout = getHeroArtworkLayout(fullBodyUrl, artworkWidth, artworkHeight);
+  // Protrusion geometry matching in-game Card View (Images 2 & 4):
+  // Character sprite is scaled up, protruding past the top and side borders of the unmasked card frame.
+  const cardArtWidth = sizeConfig.width * 1.34;
+  const cardArtHeight = sizeConfig.height * 0.88;
 
   // Rebirth stars / moons calculation (Authentic Cocos2d Lua rule):
-  // bre == 0: none
-  // 1 <= bre <= 5: bre gold stars (public_equip_star.png)
-  // bre > 5: (bre - 5) crescent moons (public_moon_icon.png) - 0 stars!
   const isMoonTier = rebirthStage > 5;
   const starOrMoonCount = isMoonTier ? Math.min(rebirthStage - 5, 5) : Math.min(rebirthStage, 5);
   const starOrMoonIcon = isMoonTier ? "/assets/card/public_moon_icon.png" : "/assets/card/public_equip_star.png";
@@ -211,18 +223,25 @@ export default function HeroCard({
     <div
       onClick={onClick}
       className={`relative select-none flex flex-col items-center group ${onClick ? "cursor-pointer" : ""} ${className}`}
-      style={{ width: reserveArtworkSpace ? artworkWidth : sizeConfig.width, maxWidth: "100%" }}
+      style={{
+        width: reserveArtworkSpace ? sizeConfig.width + sizeConfig.envelopeMarginX * 2 : sizeConfig.width,
+        paddingLeft: reserveArtworkSpace ? sizeConfig.envelopeMarginX : 0,
+        paddingRight: reserveArtworkSpace ? sizeConfig.envelopeMarginX : 0,
+        maxWidth: "100%",
+      }}
+      data-component="HeroCard"
+      data-card-id={hero.id}
     >
       {/* 
         CARD OUTER WRAPPER:
-        Has extra top padding so the pop-out character head/weapon is NEVER clipped!
+        Has top margin so protruding character head, hair, weapons and wings never get clipped or overlap neighbors
       */}
       <div
         className="relative shrink-0 flex items-center justify-center"
         style={{
           width: sizeConfig.width,
           height: sizeConfig.height,
-          marginTop: Math.abs(sizeConfig.popoutTop) * 0.7,
+          marginTop: Math.abs(sizeConfig.popoutTop),
           marginBottom: frameInfo.isDragonFrame ? sizeConfig.height * 0.08 : 0,
         }}
       >
@@ -233,7 +252,7 @@ export default function HeroCard({
           <div
             className="absolute z-0 pointer-events-none animate-pulse transition-opacity duration-700"
             style={{
-              top: sizeConfig.popoutTop - 25,
+              top: sizeConfig.popoutTop - 20,
               width: sizeConfig.width * 1.5,
               height: sizeConfig.height * 1.3,
             }}
@@ -267,35 +286,27 @@ export default function HeroCard({
         </div>
 
         {/* ==================================================== */}
-        {/* LAYER 3: HERO CHARACTER (FULL BODY OR BALANCED FALLBACK) */}
+        {/* LAYER 3: HERO CHARACTER CARD ART (ZOOMED & PROTRUDING) */}
         {/* ==================================================== */}
-        {hasFullBody ? (
+        {hasCardArt ? (
           <div
-            className={`absolute z-20 pointer-events-none ${artworkLayout ? "overflow-hidden" : "flex items-end justify-center"}`}
+            className="absolute z-20 pointer-events-none flex items-end justify-center"
             style={{
               top: sizeConfig.popoutTop,
-              bottom: sizeConfig.height * 0.22, // Sits just above bottom plaque
-              width: artworkWidth,
+              bottom: sizeConfig.height * 0.20, // Sits comfortably behind bottom plaque
+              width: cardArtWidth,
+              left: (sizeConfig.width - cardArtWidth) / 2,
             }}
           >
             <img
-              src={fullBodyUrl!}
+              src={effectiveCardUrl!}
               alt={fullName}
-              onError={() => setFailedImageSrc(fullBodyUrl)}
-              data-hero-artwork={hero.id}
-              style={artworkLayout ? {
-                position: "absolute",
-                ...artworkLayout,
-                maxWidth: "none",
-                maxHeight: "none",
-              } : undefined}
-              className={artworkLayout
-                ? "object-contain"
-                : "max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.7)] transform transition-transform duration-300 group-hover:scale-105"}
+              onError={() => setFailedImageSrc(effectiveCardUrl)}
+              className="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.75)] transform transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         ) : (
-          /* Balanced Fallback Layout when hero has no full-body art yet */
+          /* Fallback when hero has no card art yet */
           <div
             className="absolute z-20 pointer-events-none flex flex-col items-center justify-center px-4"
             style={{
@@ -313,7 +324,7 @@ export default function HeroCard({
                 />
               </div>
               <span className="mt-2 text-[10px] text-slate-300 bg-slate-900/90 border border-slate-700/80 px-2 py-0.5 rounded-md font-sans font-medium select-none shadow whitespace-nowrap">
-                Chưa có ảnh toàn thân
+                Chưa có ảnh thẻ
               </span>
             </div>
           </div>
@@ -459,7 +470,7 @@ export default function HeroCard({
       {/* ==================================================== */}
       {/* LAYER 9: NAME BANNER (Below Card Frame)              */}
       {/* ==================================================== */}
-      <div className="mt-2.5 text-center px-1 max-w-full">
+      <div className="mt-2 text-center px-1 max-w-full">
         <h4
           className={`${sizeConfig.nameFont} font-black tracking-wide truncate ${
             superQualityStage >= 6 || hero.quality === 6

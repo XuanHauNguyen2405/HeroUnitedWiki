@@ -17,9 +17,8 @@ interface ProgressionHero<T> {
 }
 
 export function getSuperEvoStages<T>(hero: ProgressionHero<T>): T[] {
-  const form = hero.family_forms?.find((item) => String(item.id) === String(hero.id));
-  if (form?.has_super_evo === false || !hero.super_evo?.has_super_evo) return [];
-  return hero.super_evo.stages;
+  if (!hero.super_evo?.has_super_evo) return [];
+  return hero.super_evo.stages || [];
 }
 
 export function getBreakthroughStages<T>(hero: {
@@ -27,9 +26,8 @@ export function getBreakthroughStages<T>(hero: {
   family_forms?: FormProgression[];
   breakthrough_system?: { has_breakthrough: boolean; stages: T[] };
 }): T[] {
-  const form = hero.family_forms?.find((item) => String(item.id) === String(hero.id));
-  if (form?.breakthrough_count === 0 || !hero.breakthrough_system?.has_breakthrough) return [];
-  return hero.breakthrough_system.stages;
+  if (!hero.breakthrough_system?.has_breakthrough) return [];
+  return hero.breakthrough_system.stages || [];
 }
 
 export function isSuperEvoUpgrade(stage: { id: string } | undefined): boolean {
