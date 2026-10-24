@@ -1058,23 +1058,29 @@
   "32100": {
     "id": "32100",
     "name": "Sasuke (Susano)",
-    "animation": "",
+    "animation": "sasuke2",
     "standing": {
-      "image": "/assets/heroes/full_32100.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_32100.png",
+      "source_type": "anim_sequence",
+      "anim_file": "sasuke2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_32100.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_32100.png",
+      "image": "/assets/heroes/card_32100.png",
+      "source_type": "anim_card_crop",
+      "source_file": "sasuke2.swf.sam",
       "overflow": {
-        "top": -30,
+        "top": -40,
         "sides": -10
       },
-      "verified": false
+      "verified": true
     }
   },
   "43100": {
@@ -1388,23 +1394,29 @@
   "32900": {
     "id": "32900",
     "name": "Zoro",
-    "animation": "",
+    "animation": "suolong",
     "standing": {
-      "image": "/assets/heroes/full_32900.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_32900.png",
+      "source_type": "anim_sequence",
+      "anim_file": "suolong.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_32900.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_32900.png",
+      "image": "/assets/heroes/card_32900.png",
+      "source_type": "anim_card_crop",
+      "source_file": "suolong.swf.sam",
       "overflow": {
-        "top": -30,
+        "top": -40,
         "sides": -10
       },
-      "verified": false
+      "verified": true
     }
   },
   "37000": {
@@ -1784,23 +1796,29 @@
   "82100": {
     "id": "82100",
     "name": "CT - Râu Trắng",
-    "animation": "",
+    "animation": "baihuzi",
     "standing": {
-      "image": "/assets/heroes/full_82100.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_82100.png",
+      "source_type": "anim_sequence",
+      "anim_file": "baihuzi.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_82100.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_82100.png",
+      "image": "/assets/heroes/card_82100.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_baihuzi.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "35000": {
@@ -1872,23 +1890,29 @@
   "84000": {
     "id": "84000",
     "name": "Lục Đạo Sasuke",
-    "animation": "",
+    "animation": "xzuozhu2",
     "standing": {
-      "image": "/assets/heroes/full_84000.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_84000.png",
+      "source_type": "anim_sequence",
+      "anim_file": "xzuozhu2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_84000.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_84000.png",
+      "image": "/assets/heroes/card_84000.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_xzuozhu2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "200": {
@@ -2202,23 +2226,29 @@
   "425000": {
     "id": "425000",
     "name": "Songoku Siêu Xayda 3",
-    "animation": "",
+    "animation": "XWukong3",
     "standing": {
-      "image": "/assets/heroes/full_425000.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_425000.png",
+      "source_type": "anim_sequence",
+      "anim_file": "XWukong3.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_425000.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_425000.png",
+      "image": "/assets/heroes/card_425000.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_XWukong3.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "2300": {
@@ -2554,23 +2584,29 @@
   "82200": {
     "id": "82200",
     "name": "Edward Newgate",
-    "animation": "",
+    "animation": "baihuzi2",
     "standing": {
-      "image": "/assets/heroes/full_82200.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_82200.png",
+      "source_type": "anim_sequence",
+      "anim_file": "baihuzi2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_82200.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_82200.png",
+      "image": "/assets/heroes/card_82200.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_baihuzi2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "35100": {
@@ -3412,23 +3448,29 @@
   "43400": {
     "id": "43400",
     "name": "Cid Kageno",
-    "animation": "",
+    "animation": "anying",
     "standing": {
-      "image": "/assets/heroes/full_43400.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_43400.png",
+      "source_type": "anim_sequence",
+      "anim_file": "anying.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_43400.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_43400.png",
+      "image": "/assets/heroes/card_43400.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_anying.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "400": {
@@ -4072,36 +4114,28 @@
   "82400": {
     "id": "82400",
     "name": "Nagato",
-    "animation": "",
+    "animation": "peien2",
     "standing": {
       "image": "/assets/heroes/standing_82400.png",
       "source_type": "anim_sequence",
-      "anim_file": ".swf.sam",
+      "anim_file": "peien2.swf.sam",
       "action": "daiji",
-      "frame": 8,
+      "frame": 0,
       "scale": 2.0,
       "anchor": [
         0.5,
         0.0
       ],
-      "verified_against": "Image 1 (In-game Hero Detail Window)",
       "verified": true
     },
     "card": {
       "image": "/assets/heroes/card_82400.png",
       "source_type": "anim_card_crop",
-      "anim_file": ".swf.sam",
-      "action": "daiji",
-      "scale": 0.66,
-      "offset": [
-        0,
-        -33
-      ],
+      "source_file": "peien2.swf.sam",
       "overflow": {
-        "top": -48,
+        "top": -40,
         "sides": -10
       },
-      "verified_against": "Image 2 (In-game Card List with Protrusion)",
       "verified": true
     }
   },
@@ -4152,23 +4186,29 @@
   "43500": {
     "id": "43500",
     "name": "Elaina",
-    "animation": "",
+    "animation": "yileina",
     "standing": {
-      "image": "/assets/heroes/full_43500.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_43500.png",
+      "source_type": "anim_sequence",
+      "anim_file": "yileina.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_43500.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_43500.png",
+      "image": "/assets/heroes/card_43500.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_yileina.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "500": {
@@ -4922,23 +4962,29 @@
   "43600": {
     "id": "43600",
     "name": "Vegeta",
-    "animation": "",
+    "animation": "beijita",
     "standing": {
-      "image": "/assets/heroes/full_43600.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_43600.png",
+      "source_type": "anim_sequence",
+      "anim_file": "beijita.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_43600.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_43600.png",
+      "image": "/assets/heroes/card_43600.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_beijita.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "600": {
@@ -5692,11 +5738,11 @@
   "43700": {
     "id": "43700",
     "name": "Thợ Săn - Zoro",
-    "animation": "",
+    "animation": "xsjsuolong",
     "standing": {
       "image": "/assets/heroes/standing_43700.png",
       "source_type": "anim_sequence",
-      "anim_file": ".swf.sam",
+      "anim_file": "xsjsuolong.swf.sam",
       "action": "daiji",
       "frame": 0,
       "scale": 2.0,
@@ -5704,18 +5750,16 @@
         0.5,
         0.0
       ],
-      "verified_against": "Image 3 (In-game Hero Detail Window)",
       "verified": true
     },
     "card": {
       "image": "/assets/heroes/card_43700.png",
       "source_type": "card_img",
-      "source_file": "Resources/iphonehd/img/image_.png",
+      "source_file": "Resources/iphonehd/img/image_xsjsuolong.png",
       "overflow": {
-        "top": -35,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified_against": "In-game Card List (image_xsjsuolong.png)",
       "verified": true
     }
   },
@@ -5964,23 +6008,29 @@
   "442000": {
     "id": "442000",
     "name": "CT - vegetto",
-    "animation": "",
+    "animation": "vegettopf",
     "standing": {
-      "image": "/assets/heroes/full_442000.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_442000.png",
+      "source_type": "anim_sequence",
+      "anim_file": "vegettopf.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_442000.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_442000.png",
+      "image": "/assets/heroes/card_442000.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_vegettopf.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "33500": {
@@ -6470,45 +6520,57 @@
   "43800": {
     "id": "43800",
     "name": "Kochou Shinobu",
-    "animation": "",
+    "animation": "hudieren",
     "standing": {
-      "image": "/assets/heroes/full_43800.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_43800.png",
+      "source_type": "anim_sequence",
+      "anim_file": "hudieren.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_43800.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_43800.png",
+      "image": "/assets/heroes/card_43800.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_hudieren.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "84100": {
     "id": "84100",
     "name": "CT - Meliodas",
-    "animation": "",
+    "animation": "mlads",
     "standing": {
-      "image": "/assets/heroes/full_84100.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_84100.png",
+      "source_type": "anim_sequence",
+      "anim_file": "mlads.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_84100.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_84100.png",
+      "image": "/assets/heroes/card_84100.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_mlads.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "800": {
@@ -7284,11 +7346,11 @@
   "43900": {
     "id": "43900",
     "name": "Chú Nguyền Sasuke",
-    "animation": "",
+    "animation": "xzuozhu",
     "standing": {
       "image": "/assets/heroes/standing_43900.png",
       "source_type": "anim_sequence",
-      "anim_file": ".swf.sam",
+      "anim_file": "xzuozhu.swf.sam",
       "action": "daiji",
       "frame": 0,
       "scale": 2.0,
@@ -7296,18 +7358,16 @@
         0.5,
         0.0
       ],
-      "verified_against": "Image 5 (In-game Hero Detail Window)",
       "verified": true
     },
     "card": {
       "image": "/assets/heroes/card_43900.png",
       "source_type": "card_img",
-      "source_file": "Resources/iphonehd/img/image_.png",
+      "source_file": "Resources/iphonehd/img/image_xzuozhu.png",
       "overflow": {
-        "top": -40,
+        "top": -45,
         "sides": -15
       },
-      "verified_against": "Image 4 (In-game Card List with Protrusion)",
       "verified": true
     }
   },
@@ -7996,23 +8056,29 @@
   "82900": {
     "id": "82900",
     "name": "CT - Cid Kageno",
-    "animation": "",
+    "animation": "anying",
     "standing": {
-      "image": "/assets/heroes/full_82900.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_82900.png",
+      "source_type": "anim_sequence",
+      "anim_file": "anying.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_82900.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_82900.png",
+      "image": "/assets/heroes/card_82900.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_anying.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "35800": {
@@ -8062,23 +8128,29 @@
   "44000": {
     "id": "44000",
     "name": "Meliodas",
-    "animation": "",
+    "animation": "mlads",
     "standing": {
-      "image": "/assets/heroes/full_44000.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_44000.png",
+      "source_type": "anim_sequence",
+      "anim_file": "mlads.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_44000.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_44000.png",
+      "image": "/assets/heroes/card_44000.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_mlads.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "1000": {
@@ -8744,23 +8816,29 @@
   "83000": {
     "id": "83000",
     "name": "Shadow",
-    "animation": "",
+    "animation": "anying2",
     "standing": {
-      "image": "/assets/heroes/full_83000.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_83000.png",
+      "source_type": "anim_sequence",
+      "anim_file": "anying2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_83000.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_83000.png",
+      "image": "/assets/heroes/card_83000.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_anying2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "35900": {
@@ -9162,23 +9240,29 @@
   "84500": {
     "id": "84500",
     "name": "CT - vegetto",
-    "animation": "",
+    "animation": "vegetto",
     "standing": {
-      "image": "/assets/heroes/full_84500.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_84500.png",
+      "source_type": "anim_sequence",
+      "anim_file": "vegetto.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_84500.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_84500.png",
+      "image": "/assets/heroes/card_84500.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_vegetto.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "50300": {
@@ -9514,23 +9598,29 @@
   "83100": {
     "id": "83100",
     "name": "3.0",
-    "animation": "",
+    "animation": "yileina",
     "standing": {
-      "image": "/assets/heroes/full_83100.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_83100.png",
+      "source_type": "anim_sequence",
+      "anim_file": "yileina.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_83100.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_83100.png",
+      "image": "/assets/heroes/card_83100.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_yileina.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "36000": {
@@ -9580,23 +9670,29 @@
   "44200": {
     "id": "44200",
     "name": "Vegetto",
-    "animation": "",
+    "animation": "vegetto",
     "standing": {
-      "image": "/assets/heroes/full_44200.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_44200.png",
+      "source_type": "anim_sequence",
+      "anim_file": "vegetto.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_44200.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_44200.png",
+      "image": "/assets/heroes/card_44200.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_vegetto.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "1200": {
@@ -10262,23 +10358,29 @@
   "83200": {
     "id": "83200",
     "name": "Phù Thủy - Elaina",
-    "animation": "",
+    "animation": "yileina2",
     "standing": {
-      "image": "/assets/heroes/full_83200.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_83200.png",
+      "source_type": "anim_sequence",
+      "anim_file": "yileina2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_83200.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_83200.png",
+      "image": "/assets/heroes/card_83200.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_yileina2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "36100": {
@@ -11032,23 +11134,29 @@
   "83300": {
     "id": "83300",
     "name": "CT - Vegeta",
-    "animation": "",
+    "animation": "beijita2",
     "standing": {
-      "image": "/assets/heroes/full_83300.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_83300.png",
+      "source_type": "anim_sequence",
+      "anim_file": "beijita2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_83300.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_83300.png",
+      "image": "/assets/heroes/card_83300.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_beijita2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "36200": {
@@ -11120,23 +11228,29 @@
   "84200": {
     "id": "84200",
     "name": "Ma Thần Meliodas",
-    "animation": "",
+    "animation": "mlads2",
     "standing": {
-      "image": "/assets/heroes/full_84200.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_84200.png",
+      "source_type": "anim_sequence",
+      "anim_file": "mlads2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_84200.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_84200.png",
+      "image": "/assets/heroes/card_84200.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_mlads2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "1400": {
@@ -11802,23 +11916,29 @@
   "83400": {
     "id": "83400",
     "name": "圣の贝吉塔2",
-    "animation": "",
+    "animation": "beijita2",
     "standing": {
-      "image": "/assets/heroes/full_83400.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_83400.png",
+      "source_type": "anim_sequence",
+      "anim_file": "beijita2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_83400.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_83400.png",
+      "image": "/assets/heroes/card_83400.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_beijita2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "36300": {
@@ -12550,11 +12670,11 @@
   "83500": {
     "id": "83500",
     "name": "CT - Thợ Săn - Zoro",
-    "animation": "",
+    "animation": "xsjsuolong",
     "standing": {
       "image": "/assets/heroes/standing_83500.png",
       "source_type": "anim_sequence",
-      "anim_file": ".swf.sam",
+      "anim_file": "xsjsuolong.swf.sam",
       "action": "daiji",
       "frame": 0,
       "scale": 2.0,
@@ -12562,18 +12682,16 @@
         0.5,
         0.0
       ],
-      "verified_against": "Image 3 (In-game Hero Detail Window)",
       "verified": true
     },
     "card": {
       "image": "/assets/heroes/card_83500.png",
       "source_type": "card_img",
-      "source_file": "Resources/iphonehd/img/image_.png",
+      "source_file": "Resources/iphonehd/img/image_xsjsuolong.png",
       "overflow": {
-        "top": -35,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified_against": "In-game Card List (image_xsjsuolong.png)",
       "verified": true
     }
   },
@@ -12866,23 +12984,29 @@
   "2100": {
     "id": "2100",
     "name": "Xaxuke",
-    "animation": "",
+    "animation": "sasuke",
     "standing": {
-      "image": "/assets/heroes/full_2100.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_2100.png",
+      "source_type": "anim_sequence",
+      "anim_file": "sasuke.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_2100.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_2100.png",
+      "image": "/assets/heroes/card_2100.png",
+      "source_type": "anim_card_crop",
+      "source_file": "sasuke.swf.sam",
       "overflow": {
-        "top": -30,
+        "top": -40,
         "sides": -10
       },
-      "verified": false
+      "verified": true
     }
   },
   "34400": {
@@ -14054,23 +14178,29 @@
   "83700": {
     "id": "83700",
     "name": "CT - Kochou Shinobu",
-    "animation": "",
+    "animation": "hudieren",
     "standing": {
-      "image": "/assets/heroes/full_83700.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_83700.png",
+      "source_type": "anim_sequence",
+      "anim_file": "hudieren.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_83700.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_83700.png",
+      "image": "/assets/heroes/card_83700.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_hudieren.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "36600": {
@@ -14692,23 +14822,29 @@
   "83800": {
     "id": "83800",
     "name": "Kanae",
-    "animation": "",
+    "animation": "hudieren2",
     "standing": {
-      "image": "/assets/heroes/full_83800.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_83800.png",
+      "source_type": "anim_sequence",
+      "anim_file": "hudieren2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_83800.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_83800.png",
+      "image": "/assets/heroes/card_83800.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_hudieren2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "36700": {
@@ -14758,23 +14894,29 @@
   "83600": {
     "id": "83600",
     "name": "Quỷ Thần - Zoro",
-    "animation": "",
+    "animation": "xsjsuolong2",
     "standing": {
-      "image": "/assets/heroes/full_83600.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_83600.png",
+      "source_type": "anim_sequence",
+      "anim_file": "xsjsuolong2.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_83600.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_83600.png",
+      "image": "/assets/heroes/card_83600.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_xsjsuolong2.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   },
   "1900": {
@@ -15440,11 +15582,11 @@
   "83900": {
     "id": "83900",
     "name": "CT - Chú Nguyền Sasuke",
-    "animation": "",
+    "animation": "xzuozhu",
     "standing": {
       "image": "/assets/heroes/standing_83900.png",
       "source_type": "anim_sequence",
-      "anim_file": ".swf.sam",
+      "anim_file": "xzuozhu.swf.sam",
       "action": "daiji",
       "frame": 0,
       "scale": 2.0,
@@ -15452,18 +15594,16 @@
         0.5,
         0.0
       ],
-      "verified_against": "Image 5 (In-game Hero Detail Window)",
       "verified": true
     },
     "card": {
       "image": "/assets/heroes/card_83900.png",
       "source_type": "card_img",
-      "source_file": "Resources/iphonehd/img/image_.png",
+      "source_file": "Resources/iphonehd/img/image_xzuozhu.png",
       "overflow": {
-        "top": -40,
+        "top": -45,
         "sides": -15
       },
-      "verified_against": "Image 4 (In-game Card List with Protrusion)",
       "verified": true
     }
   },
@@ -15888,23 +16028,29 @@
   "43000": {
     "id": "43000",
     "name": "Râu Trắng",
-    "animation": "",
+    "animation": "baihuzi",
     "standing": {
-      "image": "/assets/heroes/full_43000.png",
-      "source_type": "static",
-      "anim_file": null,
+      "image": "/assets/heroes/standing_43000.png",
+      "source_type": "anim_sequence",
+      "anim_file": "baihuzi.swf.sam",
       "action": "daiji",
-      "verified": false
+      "frame": 0,
+      "scale": 2.0,
+      "anchor": [
+        0.5,
+        0.0
+      ],
+      "verified": true
     },
     "card": {
-      "image": "/assets/heroes/full_43000.png",
-      "source_type": "standing_art",
-      "source_file": "/assets/heroes/full_43000.png",
+      "image": "/assets/heroes/card_43000.png",
+      "source_type": "card_img",
+      "source_file": "Resources/iphonehd/img/image_baihuzi.png",
       "overflow": {
-        "top": -30,
-        "sides": -10
+        "top": -45,
+        "sides": -15
       },
-      "verified": false
+      "verified": true
     }
   }
 }

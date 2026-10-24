@@ -57,33 +57,50 @@ HeroUnitedWiki/
 
 ## 🚀 Hướng Dẫn Cài Đặt & Khởi Chạy
 
-### 1. Yêu cầu hệ thống
-- **Node.js** >= 18.x
-- **Python** >= 3.9
-- **npm** hoặc **yarn** / **pnpm**
+> [!TIP]
+> 📖 **Dành cho người mới bắt đầu dùng PowerShell & GitHub trên Windows:**  
+> Xem hướng dẫn chi tiết từng bước, lệnh sao chép và xử lý 11 lỗi thường gặp tại:  
+> 👉 [**Tài liệu Hướng dẫn sử dụng PowerShell & GitHub đầy đủ**](docs/HUONG_DAN_POWERSHELL_GITHUB.md)
 
-### 2. Cài đặt dependencies cho Web
-```bash
-cd web
-npm install
+### 1. Khởi động nhanh Website bằng PowerShell (Windows)
+Mở cửa sổ PowerShell và chạy 2 dòng lệnh sau:
+```powershell
+Set-Location -Path "C:\Users\Utente\Desktop\SAHHT_export\web"
+npm.cmd run dev
 ```
+Mở trình duyệt truy cập: **[http://localhost:3000](http://localhost:3000)** (dừng web bằng `Ctrl + C`).
 
-### 3. Chạy môi trường Development
-```bash
-npm run dev
+*(Lưu ý: Luôn dùng `npm.cmd` thay vì `npm` trên PowerShell để tránh lỗi bảo mật `npm.ps1` của Windows).*
+
+---
+
+### 2. Yêu cầu hệ thống
+- **Node.js** >= 18.x (khuyên dùng bản LTS)
+- **Python** >= 3.10
+- **Git** cho Windows
+
+### 3. Cài đặt thư viện (Chỉ cần chạy ở lần đầu tiên)
+```powershell
+cd "C:\Users\Utente\Desktop\SAHHT_export\web"
+npm.cmd ci
 ```
-Truy cập trình duyệt tại: [http://localhost:3000](http://localhost:3000)
+*(Nếu cài đặt mới hoặc cập nhật dependencies, dùng `npm.cmd install`).*
 
-### 4. Build phiên bản Production
-```bash
-npm run build
-npm run start
+### 4. Build và chạy phiên bản Production cục bộ
+```powershell
+cd "C:\Users\Utente\Desktop\SAHHT_export\web"
+npm.cmd run build
+npm.cmd run start
 ```
 
 ### 5. Cập nhật dữ liệu từ nguồn game
 Nếu có thay đổi trong `config/`:
-```bash
+```powershell
 python tools/prepare_web_data.py
+```
+Kiểm tra tính toàn vẹn dữ liệu:
+```powershell
+python tools/audit_validator.py
 ```
 
 ---

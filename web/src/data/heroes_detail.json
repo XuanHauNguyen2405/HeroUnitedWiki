@@ -35016,8 +35016,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_32100.png",
-    "card_image": "/assets/heroes/full_32100.png"
+    "standing_image": "/assets/heroes/standing_32100.png",
+    "card_image": "/assets/heroes/card_32100.png",
+    "animation": "sasuke2"
   },
   "43100": {
     "id": "43100",
@@ -49075,8 +49076,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_32900.png",
-    "card_image": "/assets/heroes/full_32900.png"
+    "standing_image": "/assets/heroes/standing_32900.png",
+    "card_image": "/assets/heroes/card_32900.png",
+    "animation": "suolong"
   },
   "37000": {
     "id": "37000",
@@ -68793,8 +68795,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_82100.png",
-    "card_image": "/assets/heroes/full_82100.png"
+    "standing_image": "/assets/heroes/standing_82100.png",
+    "card_image": "/assets/heroes/card_82100.png",
+    "animation": "baihuzi"
   },
   "35000": {
     "id": "35000",
@@ -75132,8 +75135,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_84000.png",
-    "card_image": "/assets/heroes/full_84000.png"
+    "standing_image": "/assets/heroes/standing_84000.png",
+    "card_image": "/assets/heroes/card_84000.png",
+    "animation": "xzuozhu2"
   },
   "200": {
     "id": "200",
@@ -92393,8 +92397,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_425000.png",
-    "card_image": "/assets/heroes/full_425000.png"
+    "standing_image": "/assets/heroes/standing_425000.png",
+    "card_image": "/assets/heroes/card_425000.png",
+    "animation": "XWukong3"
   },
   "2300": {
     "id": "2300",
@@ -109376,8 +109381,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_82200.png",
-    "card_image": "/assets/heroes/full_82200.png"
+    "standing_image": "/assets/heroes/standing_82200.png",
+    "card_image": "/assets/heroes/card_82200.png",
+    "animation": "baihuzi2"
   },
   "35100": {
     "id": "35100",
@@ -152629,8 +152635,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_43400.png",
-    "card_image": "/assets/heroes/full_43400.png"
+    "standing_image": "/assets/heroes/standing_43400.png",
+    "card_image": "/assets/heroes/card_43400.png",
+    "animation": "anying"
   },
   "400": {
     "id": "400",
@@ -181448,7 +181455,8 @@
       }
     ],
     "standing_image": "/assets/heroes/standing_82400.png",
-    "card_image": "/assets/heroes/card_82400.png"
+    "card_image": "/assets/heroes/card_82400.png",
+    "animation": "peien2"
   },
   "35300": {
     "id": "35300",
@@ -185822,8 +185830,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_43500.png",
-    "card_image": "/assets/heroes/full_43500.png"
+    "standing_image": "/assets/heroes/standing_43500.png",
+    "card_image": "/assets/heroes/card_43500.png",
+    "animation": "yileina"
   },
   "500": {
     "id": "500",
@@ -221876,8 +221885,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_43600.png",
-    "card_image": "/assets/heroes/full_43600.png"
+    "standing_image": "/assets/heroes/standing_43600.png",
+    "card_image": "/assets/heroes/card_43600.png",
+    "animation": "beijita"
   },
   "600": {
     "id": "600",
@@ -255161,7 +255171,8 @@
     ],
     "elemental_builds": null,
     "standing_image": "/assets/heroes/standing_43700.png",
-    "card_image": "/assets/heroes/card_43700.png"
+    "card_image": "/assets/heroes/card_43700.png",
+    "animation": "xsjsuolong"
   },
   "700": {
     "id": "700",
@@ -268708,8 +268719,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_442000.png",
-    "card_image": "/assets/heroes/full_442000.png"
+    "standing_image": "/assets/heroes/standing_442000.png",
+    "card_image": "/assets/heroes/card_442000.png",
+    "animation": "vegettopf"
   },
   "33500": {
     "id": "33500",
@@ -292889,8 +292901,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_43800.png",
-    "card_image": "/assets/heroes/full_43800.png"
+    "standing_image": "/assets/heroes/standing_43800.png",
+    "card_image": "/assets/heroes/card_43800.png",
+    "animation": "hudieren"
   },
   "84100": {
     "id": "84100",
@@ -295181,8 +295194,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_84100.png",
-    "card_image": "/assets/heroes/full_84100.png"
+    "standing_image": "/assets/heroes/standing_84100.png",
+    "card_image": "/assets/heroes/card_84100.png",
+    "animation": "mlads"
   },
   "800": {
     "id": "800",
@@ -330312,7 +330326,8 @@
     ],
     "elemental_builds": null,
     "standing_image": "/assets/heroes/standing_43900.png",
-    "card_image": "/assets/heroes/card_43900.png"
+    "card_image": "/assets/heroes/card_43900.png",
+    "animation": "xzuozhu"
   },
   "84800": {
     "id": "84800",
@@ -359162,8 +359177,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_82900.png",
-    "card_image": "/assets/heroes/full_82900.png"
+    "standing_image": "/assets/heroes/standing_82900.png",
+    "card_image": "/assets/heroes/card_82900.png",
+    "animation": "anying"
   },
   "35800": {
     "id": "35800",
@@ -363320,8 +363336,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_44000.png",
-    "card_image": "/assets/heroes/full_44000.png"
+    "standing_image": "/assets/heroes/standing_44000.png",
+    "card_image": "/assets/heroes/card_44000.png",
+    "animation": "mlads"
   },
   "1000": {
     "id": "1000",
@@ -391761,8 +391778,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_83000.png",
-    "card_image": "/assets/heroes/full_83000.png"
+    "standing_image": "/assets/heroes/standing_83000.png",
+    "card_image": "/assets/heroes/card_83000.png",
+    "animation": "anying2"
   },
   "35900": {
     "id": "35900",
@@ -415213,8 +415231,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_84500.png",
-    "card_image": "/assets/heroes/full_84500.png"
+    "standing_image": "/assets/heroes/standing_84500.png",
+    "card_image": "/assets/heroes/card_84500.png",
+    "animation": "vegetto"
   },
   "50300": {
     "id": "50300",
@@ -427839,8 +427858,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_83100.png",
-    "card_image": "/assets/heroes/full_83100.png"
+    "standing_image": "/assets/heroes/standing_83100.png",
+    "card_image": "/assets/heroes/card_83100.png",
+    "animation": "yileina"
   },
   "36000": {
     "id": "36000",
@@ -431962,8 +431982,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_44200.png",
-    "card_image": "/assets/heroes/full_44200.png"
+    "standing_image": "/assets/heroes/standing_44200.png",
+    "card_image": "/assets/heroes/card_44200.png",
+    "animation": "vegetto"
   },
   "1200": {
     "id": "1200",
@@ -460425,8 +460446,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_83200.png",
-    "card_image": "/assets/heroes/full_83200.png"
+    "standing_image": "/assets/heroes/standing_83200.png",
+    "card_image": "/assets/heroes/card_83200.png",
+    "animation": "yileina2"
   },
   "36100": {
     "id": "36100",
@@ -495403,8 +495425,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_83300.png",
-    "card_image": "/assets/heroes/full_83300.png"
+    "standing_image": "/assets/heroes/standing_83300.png",
+    "card_image": "/assets/heroes/card_83300.png",
+    "animation": "beijita2"
   },
   "36200": {
     "id": "36200",
@@ -501759,8 +501782,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_84200.png",
-    "card_image": "/assets/heroes/full_84200.png"
+    "standing_image": "/assets/heroes/standing_84200.png",
+    "card_image": "/assets/heroes/card_84200.png",
+    "animation": "mlads2"
   },
   "1400": {
     "id": "1400",
@@ -531371,8 +531395,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_83400.png",
-    "card_image": "/assets/heroes/full_83400.png"
+    "standing_image": "/assets/heroes/standing_83400.png",
+    "card_image": "/assets/heroes/card_83400.png",
+    "animation": "beijita2"
   },
   "36300": {
     "id": "36300",
@@ -564589,7 +564614,8 @@
     ],
     "elemental_builds": null,
     "standing_image": "/assets/heroes/standing_83500.png",
-    "card_image": "/assets/heroes/card_83500.png"
+    "card_image": "/assets/heroes/card_83500.png",
+    "animation": "xsjsuolong"
   },
   "36400": {
     "id": "36400",
@@ -579008,8 +579034,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_2100.png",
-    "card_image": "/assets/heroes/full_2100.png"
+    "standing_image": "/assets/heroes/standing_2100.png",
+    "card_image": "/assets/heroes/card_2100.png",
+    "animation": "sasuke"
   },
   "34400": {
     "id": "34400",
@@ -632268,8 +632295,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_83700.png",
-    "card_image": "/assets/heroes/full_83700.png"
+    "standing_image": "/assets/heroes/standing_83700.png",
+    "card_image": "/assets/heroes/card_83700.png",
+    "animation": "hudieren"
   },
   "36600": {
     "id": "36600",
@@ -665085,8 +665113,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_83800.png",
-    "card_image": "/assets/heroes/full_83800.png"
+    "standing_image": "/assets/heroes/standing_83800.png",
+    "card_image": "/assets/heroes/card_83800.png",
+    "animation": "hudieren2"
   },
   "36700": {
     "id": "36700",
@@ -670139,8 +670168,9 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_83600.png",
-    "card_image": "/assets/heroes/full_83600.png"
+    "standing_image": "/assets/heroes/standing_83600.png",
+    "card_image": "/assets/heroes/card_83600.png",
+    "animation": "xsjsuolong2"
   },
   "1900": {
     "id": "1900",
@@ -701870,7 +701900,8 @@
     ],
     "elemental_builds": null,
     "standing_image": "/assets/heroes/standing_83900.png",
-    "card_image": "/assets/heroes/card_83900.png"
+    "card_image": "/assets/heroes/card_83900.png",
+    "animation": "xzuozhu"
   },
   "36800": {
     "id": "36800",
@@ -723184,7 +723215,8 @@
       }
     ],
     "elemental_builds": null,
-    "standing_image": "/assets/heroes/full_43000.png",
-    "card_image": "/assets/heroes/full_43000.png"
+    "standing_image": "/assets/heroes/standing_43000.png",
+    "card_image": "/assets/heroes/card_43000.png",
+    "animation": "baihuzi"
   }
 }

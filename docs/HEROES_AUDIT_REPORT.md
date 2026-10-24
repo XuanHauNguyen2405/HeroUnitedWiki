@@ -49,6 +49,25 @@
 
 ## 4. CHI TIẾT CÁC BẢN THỂ TƯỚNG ĐẶC BIỆT ĐÃ SỬA LỖI
 
+### Nhóm Edward Newgate & Râu Trắng (Character ID 430)
+- **Edward Newgate (ID 82200)**:
+  - Phẩm chất gốc: Cam (Quality 4). Dạng biến thể Marineford chiến đấu tàn tạ, vết thương ngực, quấn khăn rằn bandana.
+  - Hoạt ảnh gốc: `baihuzi2.swf.sam` (Action: `daiji`, Frame: 0).
+  - Tệp thẻ bài chính thức: `output/apk_extracted/assets/iphonehd/img/image_baihuzi2.png` (280x202 px).
+  - **Lỗi trước khi sửa:**
+    - File trích xuất cũ `full_82200.png` bị lệch ma trận Y khiến lưỡi đại đao Murakumogiri đứt lìa khỏi cán đao, trôi sang trái hông.
+    - Cổ áo và áo choàng bị xé toang khỏi vai và ngực.
+    - Sprite khói bụi và đá nứt bị kéo giãn phình to khung hình lên 1107x864 px, khiến Newgate bị co nhỏ xíu ở giữa và chân bị khói che khuất.
+    - `heroes_detail.json` gán chung cả ảnh đứng và ảnh thẻ vào file lỗi `full_82200.png`.
+  - **Kết quả sau khi sửa:**
+    - Trích xuất chuẩn xác qua `tools/render_engine.py` -> `standing_82200.png` (492x403 px). Cán đao, lưỡi đao, chuôi kiếm ở ngực, cổ áo, epaulets áo choàng, và tư thế đứng quỳ khụy vững chãi với 2 bốt chạm sàn khớp 100% không đứt đoạn.
+    - Ảnh thẻ `card_82200.png` lấy trực tiếp từ `image_baihuzi2.png`, đầu và chuôi đao nhô trên viền thẻ, đáy bo tròn mờ tự nhiên.
+- **Râu Trắng (ID 43000 & 82100)**:
+  - Phẩm chất gốc: Cam (Quality 4). Dạng thuyền trưởng hải tặc thời hoàng kim: mũ thuyền trưởng bicorne với biểu tượng hải tặc, tóc vàng dài, áo xanh, áo choàng lớn, tay phải cầm đại đao vươn cao, tay trái mở rộng beckoning.
+  - Hoạt ảnh gốc: `baihuzi.swf.sam` (Action: `daiji`, Frame: 0).
+  - Tệp thẻ bài chính thức: `output/apk_extracted/assets/iphonehd/img/image_baihuzi.png` (280x202 px).
+  - Kết xuất chuẩn xác: `standing_43000.png`, `standing_82100.png` (338x368 px) và `card_43000.png`, `card_82100.png`. ID 82100 hiển thị kèm hào quang Chuyển Thế (`anim_zhuanshi.swf.sam`).
+
 ### Nhóm Sasuke (Character ID 439)
 - **Chú Nguyền Sasuke (ID 43900)**:
   - Phẩm chất gốc: Cam (Quality 4). `super_evo: 43900` (Hợp lệ, có đầy đủ 9 mốc Siêu Tiến Hóa Cam ➔ Vàng++).
