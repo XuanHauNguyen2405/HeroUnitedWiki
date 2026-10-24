@@ -909,6 +909,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
           {/* Authentic In-Game Standing Art (Toàn Thân - Images 1, 3, 5) */}
           <div className="relative flex-shrink-0 flex flex-col items-center justify-end">
             <HeroStandingArt
+              key={hero.id}
               hero={{
                 id: hero.id,
                 name: hero.name,
@@ -1492,7 +1493,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                         isSelected ? "text-amber-300 font-black" : "text-slate-300"
                       }`}
                     >
-                      Chuyển{st.stage}
+                      Chuyển {st.stage}
                     </span>
                   </button>
                 );
@@ -1985,10 +1986,26 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
               </div>
 
               {/* Current Step Badge */}
-              <div className="rounded-2xl border border-amber-500/40 bg-gradient-to-r from-amber-950/80 to-red-950/80 px-4 py-2 text-center shadow-lg shadow-amber-500/10 shrink-0">
-                <div className="text-[10px] text-amber-300 uppercase tracking-widest font-bold">Đang Xem Đột Phá</div>
-                <div className="text-xl sm:text-2xl font-black font-mono text-amber-400">
-                  Cấp {selectedBreakthroughStep} / 20
+              <div
+                className={`rounded-2xl border px-4 py-2 text-center shadow-lg shrink-0 ${
+                  hasBt
+                    ? "border-amber-500/40 bg-gradient-to-r from-amber-950/80 to-red-950/80 shadow-amber-500/10"
+                    : "border-slate-800 bg-slate-950/60"
+                }`}
+              >
+                <div
+                  className={`text-[10px] uppercase tracking-widest font-bold ${
+                    hasBt ? "text-amber-300" : "text-slate-500"
+                  }`}
+                >
+                  {hasBt ? "Đang Xem Đột Phá" : "Hệ Thống Đột Phá"}
+                </div>
+                <div
+                  className={`text-xl sm:text-2xl font-black font-mono ${
+                    hasBt ? "text-amber-400" : "text-sm sm:text-base font-bold text-slate-400 mt-1"
+                  }`}
+                >
+                  {hasBt ? `Cấp ${selectedBreakthroughStep} / 20` : "Không hỗ trợ"}
                 </div>
               </div>
             </div>

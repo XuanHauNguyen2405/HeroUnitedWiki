@@ -167,4 +167,39 @@ Dữ liệu chi tiết được xuất tự động tại: `docs/heroes_audit_ca
 - **Tướng Clone & Quái vật (35 entries):** `jiayezi` (Kayako & clone A/B/C), `zhenzi` (Sadako & clone A/B/C), `spider` (Spider clone A/B/C), `mai` (Thằng Hề / Đà Chủ / Cảnh Trưởng Thép / Ninja Rùa clone), `tyrant`, `boss`. Những tài nguyên này không có file puppet animation `.swf.sam` trong bộ cài APK (chỉ có avatar icon).
 - **Tướng chưa có file thẻ riêng `image_<anim>.png` (28 entries):** Ví dụ `xzuozhu2`, `xsjsuolong2`, `anying2`, `mlads2`, `yileina2`... Game gốc áp dụng cơ chế fade đáy tròn trên hoạt ảnh đứng, website đã tái hiện chính xác 100% bằng thuật toán Cosine Alpha Gradient.
 
+---
+
+## 7. KẾT QUẢ KIỂM CHỨNG TRÌNH DUYỆT THỰC TẾ (CHROME DEVTOOLS PROTOCOL)
+
+*Công cụ thực thi: `tools/browser_check.mjs` (Node.js built-in WebSocket CDP, không phụ thuộc thư viện ngoài).*
+
+### Các lỗi phát hiện qua hình ảnh & Đã khắc phục triệt để:
+1. **Triệt tiêu Layout Shift trên Khung Thẻ Rồng (Cam++, Đỏ++, Vàng++):**
+   - *Nguyên nhân:* Trước đây dùng `marginBottom: 8%` khi kích hoạt `isDragonFrame` khiến khung thẻ và tên thẻ bị nhảy vị trí.
+   - *Giải pháp:* Chuẩn hóa `DRAGON_FRAME_STYLE` với `left: 50%; top: 50%; transform: translate(-50%, -50%)`, mở rộng đối xứng từ tâm 123.24% x 123.26%, bỏ hoàn toàn `marginBottom`. Khung thẻ giữ nguyên vị trí 100% khi chuyển giữa 9 mốc phẩm chất.
+2. **Khắc phục lỗi mất Ban Sức Khuyến Nghị do điều kiện lọc:**
+   - *Nguyên nhân:* Logic cũ ẩn các ban sức có `min_rebirth_stage > currentRebirthStage`, dẫn tới khi ở mốc CS0 thì `activeRecommendations.length === 0` và thẻ báo "Đang cập nhật" sai lệch.
+   - *Giải pháp:* Luôn hiển thị đầy đủ các gợi ý trong cẩm nang; bổ sung badge `Yêu cầu CS{stage}` hoặc `Khả dụng (CS{stage})` để người chơi tra cứu thuận tiện mà không làm biến mất khuyến nghị.
+3. **Bổ sung Thần Thư cho nhóm tướng có chiêu thức phụ thuộc HP bản thân:**
+   - Đối chiếu trực tiếp trong `character_detail.config` và Lua:
+     - **Satoru Gojo** (`42300`, `80700`, `80800`): Kỹ năng tiền chiến *Thuật Thức Nghịch Chuyển [Hách]* tăng 200% HP và gây thêm sát thương thực bằng 50% HP tối đa bản thân; *Chú Thuật [Thương]* gây thêm 30% HP.
+     - **Maple** (`42200`, `80500`, `80600`): Kỹ năng tiền chiến *MG - Bạo Phát*, kỹ năng *Kẻ Thôn Phệ Bom* và mốc chuyển sinh CS5 *Thần·MG -Maple* gây thêm sát thương thực bằng 50% HP tối đa bản thân.
+     - **Broli** (`42000`, `80100`, `80200`): Kỹ năng tiền chiến *Giác Tỉnh* / *Cuồng - Giác Tỉnh* tăng 180%-220% HP và gây thêm sát thương thực bằng 50% HP tối đa bản thân; *Vực Sâu* gây thêm 50% HP.
+   - Đã cập nhật vào `tools/build_ban_suc_recommendations.py` và tái tạo `web/src/data/ban_suc_recommendations.json`.
+4. **Chuẩn hóa Huy Hiệu Đột Phá tại Section 5:**
+   - Với tướng không có hệ thống Đột Phá trong config (ví dụ Râu Trắng `43000`), badge header hiển thị rõ ràng `Không hỗ trợ` với style slate thay vì in `Cấp 1 / 20` hoặc `Cấp 0 / 20`.
+5. **Chuẩn hóa nhãn nút Chuyển Sinh:**
+   - Sửa `Chuyển{st.stage}` thành `Chuyển ${st.stage}` (thêm khoảng trắng tiếng Việt chuẩn xác).
+6. **Tự động đặt lại trạng thái tải ảnh đứng (`HeroStandingArt`):**
+   - Quản lý `failedSrc` so sánh với `standingSrc` và gắn `key={hero.id}` để remount sạch sẽ khi người dùng chuyển dạng biến thể.
+7. **Bổ sung favicon:**
+   - Tạo `web/public/favicon.ico` triệt tiêu lỗi HTTP 404 trong console log.
+
+### Số liệu kiểm chứng thực tế:
+- **Độ tràn ngang (`overflowX`):** `0px` trên cả Desktop (1440x900) và Mobile (390x844).
+- **Lỗi JavaScript Runtime / Exceptions:** `0`.
+- **Yêu cầu mạng thất bại (Network Failures):** `0`.
+- **Hình ảnh vỡ (Broken Images):** `0`.
+
+
 

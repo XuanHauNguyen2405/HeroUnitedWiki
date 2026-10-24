@@ -70,8 +70,9 @@ export const DRAGON_FRAME_STYLE: React.CSSProperties = {
   position: "absolute",
   width: "123.24%",
   height: "123.26%",
-  left: "-11.35%",
-  top: "-12.02%",
+  left: "50%",
+  top: "50%",
+  transform: "translate(-50%, -50%)",
   maxWidth: "none",
 };
 
@@ -242,7 +243,6 @@ export default function HeroCard({
           width: sizeConfig.width,
           height: sizeConfig.height,
           marginTop: Math.abs(sizeConfig.popoutTop),
-          marginBottom: frameInfo.isDragonFrame ? sizeConfig.height * 0.08 : 0,
         }}
       >
         {/* ==================================================== */}

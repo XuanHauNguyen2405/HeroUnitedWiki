@@ -53,19 +53,11 @@ export default function HeroBanSucCard({
   recommendationData,
   className = "",
 }: HeroBanSucCardProps) {
-  // Filter recommendations based on active rebirth stage
-  // (e.g. Thần Thư requiring CS4 only unlocks when user selects stage >= 4)
-  const activeRecommendations = (recommendationData?.recommendations || []).filter((item) => {
-    if (item.min_rebirth_stage !== undefined && item.min_rebirth_stage !== null && item.min_rebirth_stage > 0) {
-      return currentRebirthStage >= item.min_rebirth_stage;
-    }
-    return true;
-  });
-
+  const recommendations = recommendationData?.recommendations || [];
   const isPending =
     !recommendationData ||
     recommendationData.status === "pending_update" ||
-    activeRecommendations.length === 0;
+    recommendations.length === 0;
 
   return (
     <div
@@ -107,7 +99,11 @@ export default function HeroBanSucCard({
         <div className="space-y-2 max-w-full">
           {/* List of Recommendation Chips */}
           <div className="flex flex-wrap items-center gap-2 pt-0.5 max-w-full">
-            {activeRecommendations.map((item, idx) => {
+            {recommendations.map((item, idx) => {
+              const reqStage = item.min_rebirth_stage ?? 0;
+              const hasStageReq = reqStage > 0;
+              const isLocked = hasStageReq && currentRebirthStage < reqStage;
+
               // Slash choice (e.g. Tinh Thần / Khởi Nguyên, Lãnh Chúa / Vương Toạ, Titan / Quang Niên)
               if (item.is_slash && item.sub_items && item.sub_items.length > 0) {
                 const subItems = item.sub_items;
@@ -146,13 +142,17 @@ export default function HeroBanSucCard({
                 );
               }
 
-              // Standard Chip: Clean display with Icon, Name, Link & short user condition
+              // Standard Chip: Clean display with Icon, Name, Link & condition/stage badge
               return (
                 <Link
                   key={idx}
                   href={item.url || "/ban-suc"}
-                  className="group inline-flex items-center gap-1.5 rounded-xl border border-slate-700/80 bg-slate-900/90 px-3 py-1.5 text-xs font-semibold text-slate-200 hover:border-sky-400 hover:bg-slate-800 hover:text-white transition-all duration-200 shadow-sm"
-                  title={`Xem chi tiết Ban Sức ${item.name}`}
+                  className={`group inline-flex items-center gap-1.5 rounded-xl border px-3 py-1.5 text-xs font-semibold transition-all duration-200 shadow-sm ${
+                    isLocked
+                      ? "border-amber-500/40 bg-amber-950/20 text-slate-300 hover:border-amber-400 hover:text-white"
+                      : "border-slate-700/80 bg-slate-900/90 text-slate-200 hover:border-sky-400 hover:bg-slate-800 hover:text-white"
+                  }`}
+                  title={item.hp_note || `Xem chi tiết Ban Sức ${item.name}`}
                 >
                   {item.icon && (
                     <img
@@ -162,6 +162,18 @@ export default function HeroBanSucCard({
                     />
                   )}
                   <span>{item.name}</span>
+
+                  {hasStageReq && (
+                    <span
+                      className={`text-[9px] px-1.5 py-0.2 rounded font-mono font-bold tracking-tight ${
+                        isLocked
+                          ? "bg-amber-900/60 text-amber-300 border border-amber-500/30"
+                          : "bg-emerald-950/60 text-emerald-300 border border-emerald-500/30"
+                      }`}
+                    >
+                      {isLocked ? `Yêu cầu CS${reqStage}` : `Khả dụng (CS${reqStage})`}
+                    </span>
+                  )}
 
                   {/* Only display user-specified conditions (e.g. Goku Gogeta/Vegeta notes, Broli directions) */}
                   {item.condition && (

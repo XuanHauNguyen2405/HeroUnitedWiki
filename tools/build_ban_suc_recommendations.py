@@ -235,11 +235,12 @@ hero_configs = [
             {"id": "titan", "name": "Titan"}
         ],
         "hp_scaling_evidence": {
-            "has_hp_mechanic": False,
-            "skill_or_stage": "Bản Đồ Vô Hạn / Hư Thức Tử",
-            "description": "Cơ chế theo Tốc Độ và Ma Công, không có kỹ năng tính sát thương dựa trên HP bản thân.",
-            "status": "verified_no_scaling",
-            "added_than_thu": False
+            "has_hp_mechanic": True,
+            "skill_or_stage": "Kỹ năng tiền chiến: Thuật Thức Nghịch Chuyển [Hách] & Chú Thuật [Thương]",
+            "description": "Thuật Thức Nghịch Chuyển [Hách] vĩnh viễn tăng 200% HP/79% Giảm Thương bản thân và gây thêm ST thực bằng 50% HP tối đa bản thân. Kỹ năng Chú Thuật [Thương] gây thêm ST bằng 30% HP.",
+            "status": "verified",
+            "added_than_thu": True,
+            "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Thuật Thức Nghịch Chuyển [Hách] gây thêm ST thực bằng 50% HP tối đa bản thân"
         }
     },
     {
@@ -354,11 +355,12 @@ hero_configs = [
             {"id": "slash-titan-quang-nien", "is_slash": True, "slash_label": "Titan / Quang Niên", "condition": "Hướng công", "custom_text": "Titan / Quang Niên (Hướng công)", "items": [{"id": "titan", "name": "Titan"}, {"id": "quang-nien", "name": "Quang Niên"}]}
         ],
         "hp_scaling_evidence": {
-            "has_hp_mechanic": False,
-            "skill_or_stage": "Gigantic Roar / Cuồng Bạo",
-            "description": "Cơ chế cuồng nộ và khiên phòng thủ, không chuyển đổi HP bản thân thành sát thương trực tiếp.",
-            "status": "verified_no_scaling",
-            "added_than_thu": False
+            "has_hp_mechanic": True,
+            "skill_or_stage": "Kỹ năng: Giác Tỉnh, Cuồng - Giác Tỉnh & Vực Sâu",
+            "description": "Kỹ năng tiền chiến Giác Tỉnh tăng 180%-220% HP/79% Giảm Thương bản thân và gây thêm ST thực bằng 50% HP tối đa bản thân. Kỹ năng Vực Sâu gây thêm ST thực bằng 50% HP.",
+            "status": "verified",
+            "added_than_thu": True,
+            "note": "Bổ sung Thần Thư theo cơ chế kỹ năng Giác Tỉnh và Vực Sâu gây thêm ST thực bằng 50% HP tối đa bản thân"
         }
     },
     {
@@ -458,11 +460,12 @@ hero_configs = [
             {"id": "huy-diet", "name": "Huỷ Diệt"}
         ],
         "hp_scaling_evidence": {
-            "has_hp_mechanic": False,
-            "skill_or_stage": "Thần Giáp Hộ Mệnh",
-            "description": "Tập trung thuần túy vào Phòng Ngự cực hạn và miễn nhiễm sát thương, không có kỹ năng chuyển HP thành công.",
-            "status": "verified_no_scaling",
-            "added_than_thu": False
+            "has_hp_mechanic": True,
+            "skill_or_stage": "Kỹ năng: MG - Bạo Phát, Kẻ Thôn Phệ Bom & Chuyển Sinh CS5",
+            "description": "MG - Bạo Phát tăng 200% HP/79% Giảm Thương bản thân và gây thêm ST thực bằng 50% HP tối đa bản thân. Kẻ Thôn Phệ Bom và CS5 Thần·MG -Maple gây thêm ST thực bằng 50% HP.",
+            "status": "verified",
+            "added_than_thu": True,
+            "note": "Bổ sung Thần Thư theo cơ chế kỹ năng MG - Bạo Phát và CS5 gây thêm ST thực bằng 50% HP tối đa bản thân"
         }
     },
     {

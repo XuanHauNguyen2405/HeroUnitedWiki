@@ -36,13 +36,15 @@ export default function HeroStandingArt({
   size = "md",
   showAura,
 }: HeroStandingArtProps) {
-  const [imgFailed, setImgFailed] = useState(false);
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
 
   // Standing image fallback hierarchy
   const standingSrc =
     hero.standing_image ||
     hero.full_image ||
     `/assets/heroes/standing_${hero.id}.png`;
+
+  const imgFailed = failedSrc === standingSrc;
 
   const avatarUrl = hero.avatar || "/assets/card/public_whiteCard.png";
   const hasAura = showAura !== undefined ? showAura : Boolean(hero.is_world);
@@ -108,7 +110,7 @@ export default function HeroStandingArt({
           <img
             src={standingSrc}
             alt={hero.name}
-            onError={() => setImgFailed(true)}
+            onError={() => setFailedSrc(standingSrc)}
             className="relative z-10 max-h-full max-w-full object-contain filter drop-shadow-[0_12px_24px_rgba(0,0,0,0.85)] transform transition-transform duration-300 hover:scale-[1.02]"
           />
         ) : (
