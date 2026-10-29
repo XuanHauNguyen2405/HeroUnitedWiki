@@ -328,11 +328,21 @@ function HeroInteractiveViewContent({
 
   // Regular evolution (+1 to +60) - Default to 0 (no +3 default)
   const [strengthenLevel, setStrengthenLevel] = useState<number>(0);
-  const maxStrengthen = maxStrengthenAtLevel(level, supportsStrengthening, strengthenTable);
+  const maxStrengthen = 60;
   function setLevel(value: number) {
     const next = Math.min(levelLimit, Math.max(1, value));
     setLevelState(next);
     setStrengthenLevel(previous => Math.min(previous, maxStrengthenAtLevel(next, supportsStrengthening, strengthenTable)));
+  }
+  function handleStrengthenChange(value: number) {
+    const next = Math.min(60, Math.max(0, Number.isNaN(value) ? 0 : value));
+    setStrengthenLevel(next);
+    if (next > 0) {
+      const reqLv = strengthenTable[String(next)]?.need_level || 1;
+      if (level < reqLv) {
+        setLevelState(Math.min(levelLimit, reqLv));
+      }
+    }
   }
 
   // Super Evo state (9 stages: Cam, Cam+, Cam++, Đỏ, Đỏ+, Đỏ++, Vàng, Vàng+, Vàng++) - Default to "cam" (Base form)
@@ -1084,19 +1094,21 @@ function HeroInteractiveViewContent({
           <input
             type="range"
             min={0}
-            max={maxStrengthen}
+            max={60}
+            step={1}
             aria-label="Cấp tiến hoá"
             value={strengthenLevel}
-            onChange={(e) => setStrengthenLevel(parseInt(e.target.value, 10))}
+            onChange={(e) => handleStrengthenChange(parseInt(e.target.value, 10))}
             className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
           />
 
           <div className="flex flex-wrap items-center gap-2 pt-1">
             <span className="text-[11px] text-slate-500">Cấp chọn nhanh:</span>
-            {[0, 10, 20, 30, 40, 50, 60].filter(stVal => stVal <= maxStrengthen).map((stVal) => (
+            {[0, 10, 20, 30, 40, 50, 60].map((stVal) => (
               <button
                 key={stVal}
-                onClick={() => setStrengthenLevel(stVal)}
+                type="button"
+                onClick={() => handleStrengthenChange(stVal)}
                 className={`rounded-lg px-2.5 py-1 text-xs font-mono font-bold transition-all ${
                   strengthenLevel === stVal
                     ? "bg-amber-500 text-slate-950 shadow"
