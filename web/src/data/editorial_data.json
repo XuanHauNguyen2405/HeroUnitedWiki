@@ -1,10 +1,10 @@
 {
   "tier_list": {
+    "version": "2026.10",
     "status": "official",
     "title": "Bảng Xếp Hạng Tướng (Tier List)",
     "subtitle": "Bảng Xếp Hạng Thực Chiến Độc Quyền SAHHT WIKI",
     "last_updated": "2026-10-29",
-    "message": "Bảng xếp hạng được tổng hợp và đối chiếu thực chiến theo meta mới nhất, phân tách rõ ràng giữa Chủ Lực Sát Thương (Dealer) và Hỗ Trợ Đa Năng (Support + Hybrid).",
     "original_graphic": "/assets/tier-list/tier_combined_original.png",
     "stats": {
       "total_ranked_heroes": 46,
@@ -12,6 +12,44 @@
       "support_count": 27,
       "tiers_count": 6
     },
+    "tier_legend": [
+      {
+        "tier": "UBER",
+        "title": "UBER (Bá Chủ Tối Thượng)",
+        "color": "#ef4444",
+        "desc": "Sức mạnh cực hạn, đứng đầu toàn meta game."
+      },
+      {
+        "tier": "TIER 0",
+        "title": "Tier 0 (Siêu Cấp Meta)",
+        "color": "#f59e0b",
+        "desc": "Định hình lối chơi, ưu tiên hàng đầu mọi giải đấu."
+      },
+      {
+        "tier": "TIER 1",
+        "title": "Tier 1 (Chủ Lực Cạnh Tranh)",
+        "color": "#f97316",
+        "desc": "Rất mạnh, dễ kết hợp kích hoạt duyên phận đội hình."
+      },
+      {
+        "tier": "TIER 2",
+        "title": "Tier 2 (Đa Dụng / Khắc Chế)",
+        "color": "#eab308",
+        "desc": "Sở hữu cơ chế chiến thuật độc đáo, khắc chế tốt."
+      },
+      {
+        "tier": "TIER 3",
+        "title": "Tier 3 (Tầm Trung Ổn Định)",
+        "color": "#10b981",
+        "desc": "Dành cho đội hình khởi đầu hoặc tình huống phụ trợ."
+      },
+      {
+        "tier": "TIER 4",
+        "title": "Tier 4 (Tân Thủ / Chuyển Giao)",
+        "color": "#0ea5e9",
+        "desc": "Quân bài cơ bản chi phí thấp cho giai đoạn tân thủ."
+      }
+    ],
     "groups": [
       {
         "role": "DEALER",
@@ -52,7 +90,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_uber_ct_tenka@3x.png"
               }
             ]
           },
@@ -86,7 +125,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_0_ct_sasuke@3x.png"
               },
               {
                 "id": "84400",
@@ -109,7 +149,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_0_ct_shamrock@3x.png"
               },
               {
                 "id": "83400",
@@ -132,7 +173,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_0_vegeta_fusion@3x.png"
               }
             ]
           },
@@ -166,7 +208,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_1_ct_zoro@3x.png"
               },
               {
                 "id": "82200",
@@ -189,7 +232,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_1_ct_newgate@3x.png"
               },
               {
                 "id": "84500",
@@ -212,7 +256,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_1_vegetto@3x.png"
               },
               {
                 "id": "79800",
@@ -235,7 +280,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_1_ct_shalltear@3x.png"
               },
               {
                 "id": "80400",
@@ -258,7 +304,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_1_ct_tanjiro@3x.png"
               }
             ]
           },
@@ -292,7 +339,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_2_sasuke@3x.png"
               },
               {
                 "id": "44100",
@@ -315,7 +363,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_2_shanks@3x.png"
               },
               {
                 "id": "43700",
@@ -338,7 +387,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_2_zoro@3x.png"
               },
               {
                 "id": "80700",
@@ -361,7 +411,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_2_ct_gojo@3x.png"
               },
               {
                 "id": "42100",
@@ -384,7 +435,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_2_tanjiro@3x.png"
               }
             ]
           },
@@ -418,7 +470,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_3_tohka@3x.png"
               },
               {
                 "id": "43000",
@@ -441,7 +494,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_3_rau_trang@3x.png"
               },
               {
                 "id": "41400",
@@ -464,7 +518,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_3_kenpachi@3x.png"
               },
               {
                 "id": "81900",
@@ -487,7 +542,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_3_ct_rimuru@3x.png"
               },
               {
                 "id": "41900",
@@ -510,7 +566,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/dealer_tier_3_kikyo@3x.png"
               }
             ]
           }
@@ -537,7 +594,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_uber_ct_tenka@3x.png"
           },
           {
             "id": "84000",
@@ -560,7 +618,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_0_ct_sasuke@3x.png"
           },
           {
             "id": "84400",
@@ -583,7 +642,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_0_ct_shamrock@3x.png"
           },
           {
             "id": "83400",
@@ -606,7 +666,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_0_vegeta_fusion@3x.png"
           },
           {
             "id": "83600",
@@ -629,7 +690,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_1_ct_zoro@3x.png"
           },
           {
             "id": "82200",
@@ -652,7 +714,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_1_ct_newgate@3x.png"
           },
           {
             "id": "84500",
@@ -675,7 +738,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_1_vegetto@3x.png"
           },
           {
             "id": "79800",
@@ -698,7 +762,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_1_ct_shalltear@3x.png"
           },
           {
             "id": "80400",
@@ -721,7 +786,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_1_ct_tanjiro@3x.png"
           },
           {
             "id": "43900",
@@ -744,7 +810,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_2_sasuke@3x.png"
           },
           {
             "id": "44100",
@@ -767,7 +834,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_2_shanks@3x.png"
           },
           {
             "id": "43700",
@@ -790,7 +858,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_2_zoro@3x.png"
           },
           {
             "id": "80700",
@@ -813,7 +882,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_2_ct_gojo@3x.png"
           },
           {
             "id": "42100",
@@ -836,7 +906,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_2_tanjiro@3x.png"
           },
           {
             "id": "42700",
@@ -859,7 +930,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_3_tohka@3x.png"
           },
           {
             "id": "43000",
@@ -882,7 +954,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_3_rau_trang@3x.png"
           },
           {
             "id": "41400",
@@ -905,7 +978,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_3_kenpachi@3x.png"
           },
           {
             "id": "81900",
@@ -928,7 +1002,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_3_ct_rimuru@3x.png"
           },
           {
             "id": "41900",
@@ -951,9 +1026,11 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/dealer_tier_3_kikyo@3x.png"
           }
-        ]
+        ],
+        "infographic_image_4k": "/assets/tier-list/tier_dealer_full_4k.png"
       },
       {
         "role": "SUPPORT",
@@ -994,7 +1071,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_uber_ct_nagato@3x.png"
               },
               {
                 "id": "83000",
@@ -1017,7 +1095,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_uber_ct_shadow@3x.png"
               }
             ]
           },
@@ -1051,7 +1130,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_0_ct_trunks@3x.png"
               },
               {
                 "id": "80200",
@@ -1074,7 +1154,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_0_ct_broli@3x.png"
               },
               {
                 "id": "81200",
@@ -1097,7 +1178,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_0_ct_kakarot@3x.png"
               },
               {
                 "id": "83200",
@@ -1120,7 +1202,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_0_ct_elaina@3x.png"
               },
               {
                 "id": "82700",
@@ -1143,7 +1226,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_0_ct_frieren@3x.png"
               }
             ]
           },
@@ -1177,7 +1261,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_1_ct_gohan@3x.png"
               },
               {
                 "id": "41800",
@@ -1200,7 +1285,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_1_piccolo@3x.png"
               },
               {
                 "id": "84200",
@@ -1223,7 +1309,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_1_ct_meliodas@3x.png"
               },
               {
                 "id": "80600",
@@ -1246,7 +1333,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_1_mg_maple@3x.png"
               },
               {
                 "id": "41600",
@@ -1269,7 +1357,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_1_so_18@3x.png"
               }
             ]
           },
@@ -1303,7 +1392,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_2_ct_inori@3x.png"
               },
               {
                 "id": "425000",
@@ -1326,7 +1416,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_2_kakarot_ssj3@3x.png"
               },
               {
                 "id": "81300",
@@ -1349,7 +1440,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_2_ct_luffy_nika@3x.png"
               },
               {
                 "id": "83800",
@@ -1372,7 +1464,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_2_ct_kanae@3x.png"
               },
               {
                 "id": "43400",
@@ -1395,7 +1488,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_2_cid_kagenou@3x.png"
               }
             ]
           },
@@ -1429,7 +1523,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_3_pain@3x.png"
               },
               {
                 "id": "42000",
@@ -1452,7 +1547,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_3_broli@3x.png"
               },
               {
                 "id": "44000",
@@ -1475,7 +1571,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_3_meliodas@3x.png"
               },
               {
                 "id": "43300",
@@ -1498,7 +1595,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_3_frieren@3x.png"
               },
               {
                 "id": "43500",
@@ -1521,7 +1619,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_3_elaina@3x.png"
               }
             ]
           },
@@ -1555,7 +1654,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_4_trunks@3x.png"
               },
               {
                 "id": "42800",
@@ -1578,7 +1678,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_4_inori@3x.png"
               },
               {
                 "id": "42200",
@@ -1601,7 +1702,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_4_maple@3x.png"
               },
               {
                 "id": "43800",
@@ -1624,7 +1726,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_4_shinobu@3x.png"
               },
               {
                 "id": "41500",
@@ -1647,7 +1750,8 @@
                 "matk": 0,
                 "def": 0,
                 "speed": 0,
-                "is_world": true
+                "is_world": true,
+                "image_3x": "/assets/tier-list/support_tier_4_yachiru@3x.png"
               }
             ]
           }
@@ -1674,7 +1778,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_uber_ct_nagato@3x.png"
           },
           {
             "id": "83000",
@@ -1697,7 +1802,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_uber_ct_shadow@3x.png"
           },
           {
             "id": "82600",
@@ -1720,7 +1826,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_0_ct_trunks@3x.png"
           },
           {
             "id": "80200",
@@ -1743,7 +1850,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_0_ct_broli@3x.png"
           },
           {
             "id": "81200",
@@ -1766,7 +1874,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_0_ct_kakarot@3x.png"
           },
           {
             "id": "83200",
@@ -1789,7 +1898,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_0_ct_elaina@3x.png"
           },
           {
             "id": "82700",
@@ -1812,7 +1922,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_0_ct_frieren@3x.png"
           },
           {
             "id": "81500",
@@ -1835,7 +1946,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_1_ct_gohan@3x.png"
           },
           {
             "id": "41800",
@@ -1858,7 +1970,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_1_piccolo@3x.png"
           },
           {
             "id": "84200",
@@ -1881,7 +1994,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_1_ct_meliodas@3x.png"
           },
           {
             "id": "80600",
@@ -1904,7 +2018,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_1_mg_maple@3x.png"
           },
           {
             "id": "41600",
@@ -1927,7 +2042,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_1_so_18@3x.png"
           },
           {
             "id": "81800",
@@ -1950,7 +2066,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_2_ct_inori@3x.png"
           },
           {
             "id": "425000",
@@ -1973,7 +2090,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_2_kakarot_ssj3@3x.png"
           },
           {
             "id": "81300",
@@ -1996,7 +2114,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_2_ct_luffy_nika@3x.png"
           },
           {
             "id": "83800",
@@ -2019,7 +2138,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_2_ct_kanae@3x.png"
           },
           {
             "id": "43400",
@@ -2042,7 +2162,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_2_cid_kagenou@3x.png"
           },
           {
             "id": "43100",
@@ -2065,7 +2186,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_3_pain@3x.png"
           },
           {
             "id": "42000",
@@ -2088,7 +2210,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_3_broli@3x.png"
           },
           {
             "id": "44000",
@@ -2111,7 +2234,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_3_meliodas@3x.png"
           },
           {
             "id": "43300",
@@ -2134,7 +2258,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_3_frieren@3x.png"
           },
           {
             "id": "43500",
@@ -2157,7 +2282,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_3_elaina@3x.png"
           },
           {
             "id": "43200",
@@ -2180,7 +2306,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_4_trunks@3x.png"
           },
           {
             "id": "42800",
@@ -2203,7 +2330,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_4_inori@3x.png"
           },
           {
             "id": "42200",
@@ -2226,7 +2354,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_4_maple@3x.png"
           },
           {
             "id": "43800",
@@ -2249,7 +2378,8 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_4_shinobu@3x.png"
           },
           {
             "id": "41500",
@@ -2272,11 +2402,14 @@
             "matk": 0,
             "def": 0,
             "speed": 0,
-            "is_world": true
+            "is_world": true,
+            "image_3x": "/assets/tier-list/support_tier_4_yachiru@3x.png"
           }
-        ]
+        ],
+        "infographic_image_4k": "/assets/tier-list/tier_support_full_4k.png"
       }
-    ]
+    ],
+    "original_graphic_4k": "/assets/tier-list/tier_combined_original_4k.png"
   },
   "guides": [
     {

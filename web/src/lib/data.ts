@@ -175,6 +175,7 @@ export interface TierListHero {
   standing_image: string | null;
   image: string;
   image_2x: string;
+  image_3x?: string;
   url: string;
   notes: string;
   hp: number;
@@ -203,6 +204,7 @@ export interface TierListGroup {
   description: string;
   infographic_image: string;
   infographic_image_2x: string;
+  infographic_image_4k?: string;
   total_heroes: number;
   sections: TierListSection[];
   heroes: TierListHero[];
@@ -215,6 +217,7 @@ export interface TierListData {
   subtitle: string;
   last_updated: string;
   original_graphic: string;
+  original_graphic_4k?: string;
   stats: {
     total_ranked_heroes: number;
     dealer_count: number;
