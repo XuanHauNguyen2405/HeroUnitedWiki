@@ -358,7 +358,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
 
         # Family forms grouping (Dạng thường vs Các dạng chuyển thế)
         cid_str = str(h.get("character_id") or "")
-        family_members = heroes_by_char_id.get(cid_str, [(hid, h)])
+        family_members = [(m_id, m_h) for m_id, m_h in heroes_by_char_id.get(cid_str, [(hid, h)]) if str(m_id) != "84600"]
         
         def form_sort_key(item):
             var_id, var_h = item
