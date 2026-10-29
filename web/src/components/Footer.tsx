@@ -37,11 +37,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/skills" className="hover:text-white transition-colors">
-                  Tra Cứu Kỹ Năng (10.836)
-                </Link>
-              </li>
-              <li>
                 <Link href="/suits" className="hover:text-white transition-colors">
                   Bộ Trang Bị (729 Suits)
                 </Link>

@@ -13,11 +13,11 @@ export default function HomePage() {
 
   const statCounters = [
     { label: "Bản Thể Tướng", count: "721", icon: "👤", href: "/heroes" },
-    { label: "Kỹ Năng & Chiêu", count: "10.836", icon: "⚡", href: "/skills" },
     { label: "Bộ Trang Bị", count: "729", icon: "🛡️", href: "/suits" },
     { label: "Món Trang Bị", count: "4.366", icon: "⚔️", href: "/equipment" },
     { label: "Huy Hiệu Tướng", count: "112", icon: "🎖️", href: "/ban-suc" },
     { label: "Hệ Đá Ban Sức", count: "10", icon: "🔮", href: "/ban-suc" },
+    { label: "Xếp Hạng Meta", count: "46", icon: "🏆", href: "/tier-list" },
   ];
 
   const categoryCards = [
@@ -30,16 +30,6 @@ export default function HomePage() {
       gradient: "from-purple-900/40 via-purple-950/20 to-transparent",
       border: "hover:border-purple-500/50",
       accent: "text-purple-400",
-    },
-    {
-      title: "Kỹ Năng & Chiêu Thức",
-      count: "10.836 Chiêu Thức",
-      desc: "Xem mô tả gốc, CD, pre_cd, tỉ lệ kích hoạt, hiệu ứng sát thương và chuỗi tiến cấp 3 giai đoạn (Giai 1 ➔ Giai 2 ➔ Cực Hạn).",
-      icon: "⚡",
-      href: "/skills",
-      gradient: "from-amber-900/40 via-amber-950/20 to-transparent",
-      border: "hover:border-amber-500/50",
-      accent: "text-amber-400",
     },
     {
       title: "Bộ Trang Bị (Suits)",
@@ -80,6 +70,16 @@ export default function HomePage() {
       gradient: "from-amber-900/40 via-red-950/20 to-transparent",
       border: "hover:border-amber-500/50",
       accent: "text-amber-400",
+    },
+    {
+      title: "Cẩm Nang & Chiến Thuật",
+      count: "Hướng Dẫn Chuyên Sâu",
+      desc: "Cơ chế nâng cấp tướng, đột phá trang bị, kích hoạt duyên phận và kinh nghiệm xây dựng đội hình chuẩn.",
+      icon: "📖",
+      href: "/guides",
+      gradient: "from-cyan-900/40 via-sky-950/20 to-transparent",
+      border: "hover:border-cyan-500/50",
+      accent: "text-cyan-400",
     },
   ];
 

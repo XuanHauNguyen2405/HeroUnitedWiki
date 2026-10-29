@@ -118,14 +118,14 @@ export default function SearchBar({
   return (
     <div ref={containerRef} className={`relative w-full ${className}`}>
       <div
-        className={`relative flex items-center bg-gray-900/90 border border-gray-700/80 rounded-xl transition-all shadow-inner focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-500/30 ${
-          large ? "p-3.5 text-base" : "p-2 text-sm"
+        className={`relative flex items-center bg-slate-900/85 hover:bg-slate-900 border border-slate-700/70 hover:border-slate-600/80 rounded-xl transition-all shadow-inner focus-within:border-indigo-500 focus-within:bg-slate-900 focus-within:ring-2 focus-within:ring-indigo-500/25 ${
+          large ? "px-4 py-3.5 text-base" : "px-3 py-2 text-xs sm:text-sm"
         }`}
       >
-        <span className="text-gray-400 pl-2 pr-3 select-none">
+        <span className="text-slate-400 pr-2.5 select-none flex-shrink-0">
           {isLoading ? (
             <svg
-              className="animate-spin h-5 w-5 text-indigo-400"
+              className="animate-spin h-4 w-4 text-indigo-400"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -146,7 +146,7 @@ export default function SearchBar({
             </svg>
           ) : (
             <svg
-              className="h-5 w-5"
+              className={large ? "h-5 w-5" : "h-4 w-4"}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -174,10 +174,10 @@ export default function SearchBar({
           }}
           placeholder={placeholder}
           autoFocus={autoFocus}
-          className="w-full bg-transparent text-gray-100 placeholder-gray-500 focus:outline-none"
+          className="w-full min-w-0 bg-transparent text-gray-100 placeholder-slate-400 focus:outline-none truncate"
         />
 
-        {query && (
+        {query ? (
           <button
             type="button"
             onClick={() => {
@@ -185,15 +185,15 @@ export default function SearchBar({
               setResults([]);
               setIsOpen(false);
             }}
-            className="text-gray-400 hover:text-gray-200 px-2"
+            className="text-slate-400 hover:text-gray-200 pl-2 flex-shrink-0"
           >
             ✕
           </button>
+        ) : (
+          <kbd className="hidden sm:inline-flex items-center justify-center px-1.5 py-0.5 ml-2 text-[10px] font-mono text-slate-400 bg-slate-800/90 border border-slate-700/80 rounded-md select-none flex-shrink-0">
+            /
+          </kbd>
         )}
-
-        <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono text-gray-400 bg-gray-800 border border-gray-700 rounded select-none mr-1">
-          /
-        </kbd>
       </div>
 
       {/* Results Dropdown */}
