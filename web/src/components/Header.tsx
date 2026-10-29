@@ -23,7 +23,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 bg-[#070a12]/90 backdrop-blur-xl border-b border-slate-800/80 shadow-lg shadow-black/20 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-3 xl:gap-5">
-          
+
           {/* Logo & Brand */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 flex items-center justify-center font-black text-white text-base shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
@@ -55,11 +55,10 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-xl whitespace-nowrap transition-all ${
-                    isActive
+                  className={`flex items-center gap-1.5 px-3 py-2 rounded-xl whitespace-nowrap transition-all ${isActive
                       ? "bg-indigo-600/20 text-indigo-300 border border-indigo-500/40 font-semibold shadow-sm shadow-indigo-500/10"
                       : "text-gray-300 hover:text-white hover:bg-slate-800/60 border border-transparent"
-                  }`}
+                    }`}
                 >
                   <span className="text-sm">{item.icon}</span>
                   <span>{item.label}</span>
@@ -97,11 +96,10 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                  isActive
+                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${isActive
                     ? "bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 font-semibold"
                     : "text-gray-300 hover:text-white hover:bg-gray-900"
-                }`}
+                  }`}
               >
                 <span className="text-base">{item.icon}</span>
                 <span>{item.label}</span>

@@ -3,6 +3,7 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import HeroSection from "@/components/HeroSection";
 import ElementBadge from "@/components/ElementBadge";
@@ -210,6 +211,8 @@ interface HeroInteractiveViewProps {
     elemental_builds?: any[];
     story?: string;
   };
+  familyHeroes?: Record<string, HeroInteractiveViewProps["hero"]>;
+  showBreadcrumbs?: boolean;
 }
 
 const strengthenTable: Record<string, { level: number; add_hp: number; add_patk: number; add_matk: number; add_def: number; add_speed: number; need_level: number; need_food: number }> = strengthenTableRaw;
@@ -270,7 +273,52 @@ function getMaterialIcon(
   return fallbackIcon;
 }
 
-export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) {
+export default function HeroInteractiveView({
+  hero,
+  familyHeroes,
+  showBreadcrumbs = false,
+}: HeroInteractiveViewProps) {
+  const [activeHeroId, setActiveHeroId] = useState<string>(String(hero.id));
+  const activeHero = (familyHeroes && familyHeroes[activeHeroId]) || hero;
+
+  const handleSelectForm = (formId: string) => {
+    const nextId = String(formId);
+    if (nextId === String(activeHero.id)) return;
+    if (familyHeroes && familyHeroes[nextId]) {
+      setActiveHeroId(nextId);
+      if (typeof document !== "undefined") {
+        const target = familyHeroes[nextId];
+        document.title = `${target.name || `Tướng #${nextId}`} (ID: ${nextId}) - Siêu Anh Hùng Hội Tụ WIKI`;
+      }
+    }
+  };
+
+  return (
+    <>
+      {showBreadcrumbs && (
+        <Breadcrumbs
+          items={[
+            { label: "Danh Sách Tướng", href: "/heroes" },
+            { label: `${activeHero.name || `Tướng #${activeHero.id}`} (ID: ${activeHero.id})` },
+          ]}
+        />
+      )}
+      <HeroInteractiveViewContent
+        key={activeHero.id}
+        hero={activeHero}
+        onSelectForm={familyHeroes ? handleSelectForm : undefined}
+      />
+    </>
+  );
+}
+
+function HeroInteractiveViewContent({
+  hero,
+  onSelectForm,
+}: {
+  hero: HeroInteractiveViewProps["hero"];
+  onSelectForm?: (formId: string) => void;
+}) {
   // 1. Interactive States
   const levelLimit = hero.level_max > 0 ? hero.level_max : 255;
   const supportsStrengthening = hero.evolution?.is_evo === 1;
@@ -532,6 +580,14 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                 <Link
                   key={form.id}
                   href={`/heroes/${form.id}`}
+                  replace
+                  scroll={false}
+                  onClick={(e) => {
+                    if (onSelectForm) {
+                      e.preventDefault();
+                      onSelectForm(form.id);
+                    }
+                  }}
                   className={`group relative rounded-2xl border p-3 transition-all duration-200 flex items-center gap-3 ${
                     isCurrent
                       ? "border-sky-400 bg-sky-950/70 shadow-lg shadow-sky-500/20 ring-2 ring-sky-500/40"
@@ -622,7 +678,18 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                         </td>
                         <td className="p-2.5">
                           {f.id !== hero.id ? (
-                            <Link href={`/heroes/${f.id}`} className="text-sky-400 hover:underline font-semibold">
+                            <Link
+                              href={`/heroes/${f.id}`}
+                              replace
+                              scroll={false}
+                              onClick={(e) => {
+                                if (onSelectForm) {
+                                  e.preventDefault();
+                                  onSelectForm(f.id);
+                                }
+                              }}
+                              className="text-sky-400 hover:underline font-semibold"
+                            >
                               Xem dạng này →
                             </Link>
                           ) : (

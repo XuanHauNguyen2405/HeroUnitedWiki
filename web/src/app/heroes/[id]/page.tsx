@@ -31,16 +31,25 @@ export default async function HeroDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const familyHeroes: Record<string, any> = { [String(hero.id)]: hero };
+  for (const form of hero.family_forms || []) {
+    const formId = String(form.id || "");
+    if (formId && !familyHeroes[formId]) {
+      const formHero = getHeroById(formId);
+      if (formHero) {
+        familyHeroes[formId] = formHero;
+      }
+    }
+  }
+
   return (
     <div className="space-y-8 animate-fade-in">
-      <Breadcrumbs
-        items={[
-          { label: "Danh Sách Tướng", href: "/heroes" },
-          { label: `${hero.name || `Tướng #${id}`} (ID: ${id})` },
-        ]}
+      <HeroInteractiveView
+        key={hero.id}
+        hero={hero}
+        familyHeroes={familyHeroes}
+        showBreadcrumbs
       />
-
-      <HeroInteractiveView key={hero.id} hero={hero} />
     </div>
   );
 }
