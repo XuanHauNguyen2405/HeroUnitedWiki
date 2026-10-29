@@ -1,4 +1,4 @@
-﻿"""Engine-faithful renderer for *.swf.sam puppet animations.
+"""Engine-faithful renderer for *.swf.sam puppet animations.
 
 Formula reverse-engineered from lib/armeabi-v7a/libjinqu.so (APK, read-only):
   zcAnimSprite::setMatrix (0x165f38):
@@ -61,10 +61,15 @@ def load_atlas(d, pl_path, anim):
         atlas = Image.frombytes('RGBA', (W, H), dec[52:52 + W * H * 4])
     parts = {}
     for name, fi in pl['frames'].items():
-        fx, fy, fw, fh = _rect(fi['frame'])
-        sw, sh = _rect(fi['sourceSize'])
-        cx, cy, _, _ = _rect(fi['sourceColorRect'])
-        if fi.get('rotated'):
+        fx, fy, fw, fh = _rect(fi['frame'] if 'frame' in fi else fi['textureRect'])
+        sw, sh = _rect(fi['sourceSize'] if 'sourceSize' in fi else fi['spriteSourceSize'])
+        rot = fi.get('rotated', fi.get('textureRotated', False))
+        if 'sourceColorRect' in fi:
+            cx, cy, _, _ = _rect(fi['sourceColorRect'])
+        else:
+            ox, oy = _rect(fi.get('spriteOffset', '{0,0}'))
+            cx, cy = int((sw - fw) / 2 + ox), int((sh - fh) / 2 - oy)
+        if rot:
             img = atlas.crop((fx, fy, fx + fh, fy + fw)).transpose(Image.Transpose.ROTATE_90)
         else:
             img = atlas.crop((fx, fy, fx + fw, fy + fh))
