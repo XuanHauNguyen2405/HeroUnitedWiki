@@ -1,4 +1,5 @@
 // web/src/lib/utils.ts
+import { slots } from "./game-attributes";
 
 export function stripVietnameseAccents(str: string | null | undefined): string {
   if (!str) return "";
@@ -25,8 +26,21 @@ export interface QualityConfig {
 }
 
 export function getQualityConfig(quality: number | null | undefined): QualityConfig {
-  const q = quality || 1;
+  const q = quality;
+  if (q == null || q === 0 || q < 0 || q > 8) return {
+    name: q === 0 ? "Phẩm 0" : "Chưa xác minh phẩm chất",
+    badgeClass: "bg-slate-800 text-slate-300 border-slate-600", textClass: "text-slate-300",
+    borderClass: "border-slate-600", bgGlow: "transparent",
+  };
   switch (q) {
+    case 6:
+    case 7:
+    case 8:
+      return {
+        name: `Phẩm ${q} (${q === 6 ? "Vàng" : q === 7 ? "Màu" : "Cầu vồng"})`,
+        badgeClass: "bg-yellow-500/15 text-yellow-300 border-yellow-500/30",
+        textClass: "text-yellow-300", borderClass: "border-yellow-500/40", bgGlow: "rgba(250, 204, 21, 0.15)",
+      };
     case 5:
       return {
         name: "Phẩm 5 (Đỏ)",
@@ -72,16 +86,5 @@ export function getQualityConfig(quality: number | null | undefined): QualityCon
 }
 
 export function getSlotLabel(slot: number | null | undefined): string {
-  switch (slot) {
-    case 1:
-      return "Vũ khí";
-    case 2:
-      return "Trang sức";
-    case 3:
-      return "Giáp/Áo";
-    case 4:
-      return "Giày";
-    default:
-      return "Chưa xác minh";
-  }
+  return slot != null ? slots[String(slot)] ?? "Chưa xác minh" : "Chưa xác minh";
 }

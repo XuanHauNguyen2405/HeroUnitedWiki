@@ -1,0 +1,1240 @@
+{
+  "baseline": {
+    "errors": 60,
+    "warnings": 34,
+    "messages": [
+      {
+        "file": "web\\src\\app\\cards\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 204,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\cards\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 269,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\cards\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 299,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\cards\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 749,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\equipment\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 20,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\equipment\\page.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\app\\equipment\\page.tsx:55:5\n  53 |\n  54 |   useEffect(() => {\n> 55 |     setPage(1);\n     |     ^^^^^^^ Avoid calling setState() directly within an effect\n  56 |   }, [search, slotFilter, qualityFilter, suitFilter]);\n  57 |\n  58 |   const totalPages = Math.ceil(filteredEquipment.length / pageSize) || 1;",
+        "line": 55,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\equipment\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 161,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\guides\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 12,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\guides\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 23,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\heroes\\gallery\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 40,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\heroes\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 23,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\heroes\\page.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\app\\heroes\\page.tsx:85:5\n  83 |   // Reset page to 1 when filters change\n  84 |   useEffect(() => {\n> 85 |     setPage(1);\n     |     ^^^^^^^ Avoid calling setState() directly within an effect\n  86 |   }, [search, qualityFilter, careerFilter, raceFilter, onlyWithImage, sortBy]);\n  87 |\n  88 |   const totalPages = Math.ceil(filteredHeroes.length / pageSize) || 1;",
+        "line": 85,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\heroes\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 275,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 198,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 236,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 302,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 175,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 225,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 21,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 29,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\page.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\app\\skills\\page.tsx:55:5\n  53 |\n  54 |   useEffect(() => {\n> 55 |     setPage(1);\n     |     ^^^^^^^ Avoid calling setState() directly within an effect\n  56 |   }, [search, typeFilter, qualityFilter]);\n  57 |\n  58 |   const totalPages = Math.ceil(filteredSkills.length / pageSize) || 1;",
+        "line": 55,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 149,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 152,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 27,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 42,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\app\\suits\\page.tsx:57:5\n  55 |\n  56 |   useEffect(() => {\n> 57 |     setPage(1);\n     |     ^^^^^^^ Avoid calling setState() directly within an effect\n  58 |   }, [search, zodiacFilter, onlyCompleteImages]);\n  59 |\n  60 |   const totalPages = Math.ceil(filteredSuits.length / pageSize) || 1;",
+        "line": 57,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 116,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 171,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 205,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\tier-list\\page.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'tierData' is assigned a value but never used.",
+        "line": 13,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 10,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 11,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 13,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "prefer-const",
+        "message": "'titleLine' is never reassigned. Use 'const' instead.",
+        "line": 120,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 152,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroBanSucCard.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'heroId' is defined but never used.",
+        "line": 51,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroBanSucCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 123,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroBanSucCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 158,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'cardArtHeight' is assigned a value but never used.",
+        "line": 215,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 268,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 280,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 301,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 320,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 345,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 372,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 393,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 456,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 461,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 191,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 202,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 208,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 300,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'styleName' is assigned a value but never used.",
+        "line": 325,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'qConfig' is assigned a value but never used.",
+        "line": 576,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "react-hooks/exhaustive-deps",
+        "message": "React Hook useMemo has an unnecessary dependency: 'strengthenLevel'. Either exclude it or remove the dependency array.",
+        "line": 747,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 1356,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'starCount' is assigned a value but never used.",
+        "line": 1442,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'isGoldTier' is assigned a value but never used.",
+        "line": 1443,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 1462,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 1473,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 1481,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 1790,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 1791,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 2304,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 2420,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 2432,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 2485,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 2560,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 2985,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroStandingArt.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 78,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroStandingArt.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 110,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroStandingArt.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 120,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\SearchBar.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'Link' is defined but never used.",
+        "line": 5,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\SearchBar.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\components\\SearchBar.tsx:73:7\n  71 |   useEffect(() => {\n  72 |     if (!query.trim()) {\n> 73 |       setResults([]);\n     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect\n  74 |       setIsLoading(false);\n  75 |       return;\n  76 |     }",
+        "line": 73,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 50,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 51,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 68,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 69,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 70,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 72,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 96,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 97,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 98,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 106,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 107,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 132,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 133,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 138,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 139,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 142,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 143,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 146,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 152,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 153,
+        "severity": 2
+      }
+    ]
+  },
+  "current": {
+    "errors": 52,
+    "warnings": 29,
+    "messages": [
+      {
+        "file": "web\\src\\app\\equipment\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 24,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\equipment\\page.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\app\\equipment\\page.tsx:60:5\n  58 |\n  59 |   useEffect(() => {\n> 60 |     setPage(1);\n     |     ^^^^^^^ Avoid calling setState() directly within an effect\n  61 |   }, [elementFilter, search, slotFilter, qualityFilter, suitFilter]);\n  62 |\n  63 |   const totalPages = Math.ceil(filteredEquipment.length / pageSize) || 1;",
+        "line": 60,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\equipment\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 173,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\guides\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 12,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\guides\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 23,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\heroes\\gallery\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 40,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\heroes\\page.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'Link' is defined but never used.",
+        "line": 5,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\heroes\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 26,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\heroes\\page.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\app\\heroes\\page.tsx:89:5\n  87 |   // Reset page to 1 when filters change\n  88 |   useEffect(() => {\n> 89 |     setPage(1);\n     |     ^^^^^^^ Avoid calling setState() directly within an effect\n  90 |   }, [search, qualityFilter, careerFilter, raceFilter, elementFilter, onlyWithImage, sortBy]);\n  91 |\n  92 |   const totalPages = Math.ceil(filteredHeroes.length / pageSize) || 1;",
+        "line": 89,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 198,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\page.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 236,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\app\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 302,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 21,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 29,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\page.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\app\\skills\\page.tsx:55:5\n  53 |\n  54 |   useEffect(() => {\n> 55 |     setPage(1);\n     |     ^^^^^^^ Avoid calling setState() directly within an effect\n  56 |   }, [search, typeFilter, qualityFilter]);\n  57 |\n  58 |   const totalPages = Math.ceil(filteredSkills.length / pageSize) || 1;",
+        "line": 55,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 149,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 175,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\skills\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 225,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 31,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 47,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\app\\suits\\page.tsx:62:5\n  60 |\n  61 |   useEffect(() => {\n> 62 |     setPage(1);\n     |     ^^^^^^^ Avoid calling setState() directly within an effect\n  63 |   }, [elementFilter, search, zodiacFilter, onlyCompleteImages]);\n  64 |\n  65 |   const totalPages = Math.ceil(filteredSuits.length / pageSize) || 1;",
+        "line": 62,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 128,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 183,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 217,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\suits\\[id]\\page.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 97,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\app\\tier-list\\page.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'tierData' is assigned a value but never used.",
+        "line": 13,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 10,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 11,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 13,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "prefer-const",
+        "message": "'titleLine' is never reassigned. Use 'const' instead.",
+        "line": 120,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\BanSucView.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 152,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroBanSucCard.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'heroId' is defined but never used.",
+        "line": 51,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroBanSucCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 123,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroBanSucCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 158,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'cardArtHeight' is assigned a value but never used.",
+        "line": 218,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 271,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 283,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 304,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 323,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 348,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 375,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 396,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 459,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroCard.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 464,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 199,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 210,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 315,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'qConfig' is assigned a value but never used.",
+        "line": 343,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "react-hooks/exhaustive-deps",
+        "message": "React Hook useMemo has an unnecessary dependency: 'strengthenLevel'. Either exclude it or remove the dependency array.",
+        "line": 496,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'starCount' is assigned a value but never used.",
+        "line": 1133,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'isGoldTier' is assigned a value but never used.",
+        "line": 1134,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 1153,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 1164,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 1172,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 1483,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroInteractiveView.tsx",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 1484,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\components\\HeroStandingArt.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 78,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroStandingArt.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 110,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\HeroStandingArt.tsx",
+        "rule": "@next/next/no-img-element",
+        "message": "Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element",
+        "line": 120,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\SearchBar.tsx",
+        "rule": "@typescript-eslint/no-unused-vars",
+        "message": "'Link' is defined but never used.",
+        "line": 5,
+        "severity": 1
+      },
+      {
+        "file": "web\\src\\components\\SearchBar.tsx",
+        "rule": "react-hooks/set-state-in-effect",
+        "message": "Error: Calling setState synchronously within an effect can trigger cascading renders\n\nEffects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:\n* Update external systems with the latest state from React.\n* Subscribe for updates from some external system, calling setState in a callback function when external state changes.\n\nCalling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).\n\nC:\\Users\\Utente\\Desktop\\SAHHT_export\\web\\src\\components\\SearchBar.tsx:73:7\n  71 |   useEffect(() => {\n  72 |     if (!query.trim()) {\n> 73 |       setResults([]);\n     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect\n  74 |       setIsLoading(false);\n  75 |       return;\n  76 |     }",
+        "line": 73,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 50,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 51,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 74,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 75,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 76,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 78,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 103,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 104,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 105,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 113,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 114,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 139,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 140,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 145,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 146,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 149,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 150,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 153,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 159,
+        "severity": 2
+      },
+      {
+        "file": "web\\src\\lib\\data.ts",
+        "rule": "@typescript-eslint/no-explicit-any",
+        "message": "Unexpected any. Specify a different type.",
+        "line": 160,
+        "severity": 2
+      }
+    ]
+  },
+  "newErrors": []
+}

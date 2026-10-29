@@ -1,0 +1,15 @@
+{
+  "steps": 39,
+  "assertions": 23,
+  "widths": [
+    390,
+    1440
+  ],
+  "errors": [],
+  "max_overflow": 0,
+  "broken_images": 0,
+  "exceptions": 0,
+  "network_failures": 0,
+  "bad_http": 0,
+  "console": 0
+}

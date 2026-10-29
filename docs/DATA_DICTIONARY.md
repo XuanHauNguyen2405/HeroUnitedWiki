@@ -149,3 +149,12 @@
 
 - **Tệp nguồn:** `item.config` (3.707 bản ghi)
 - **Trường:** `id`, `name`, `quality`, `sort`, `stack`, `is_sell`, `is_use`, `daily_use`, `use_num`, `use_effect`, `description`, `assets`.
+
+## 8. Thuộc tính dùng chung trên website (25/10/2026)
+
+- `web/src/data/game_definitions.json`: ánh xạ ability lấy từ PUBLIC_ABILITY_TABLE của Lua; nguyên tố dùng ID chuẩn fire/water/wind/earth, không dùng career/race/occupation/sort làm hệ. Màu và emoji là quy ước hiển thị wiki.
+- `web/src/data/hero_combat_profiles.json`: từng record ID có công thức kỹ năng nguồn và điều kiện min_rebirth/min_super_evo; skill_unlocks đọc đúng super_evolution.config. Không có trường hệ bẩm sinh được xác nhận cho tướng.
+- Trang bị: element_id có thể null, element_status và element_source cho biết hệ được đối chiếu từ công nguyên tố bộ; combat_effect giữ description, effect, occupation_ids, activation, activation_level và nguồn. Điều kiện hiệu ứng không đồng nghĩa với cấm mang đồ khác hệ.
+- Đột phá: source_id/raw_abilities cho phép đối chiếu từng mốc; stats.attributes giữ công/phòng từng hệ, ele_atk/ele_def là tổng nhóm tương ứng. Không đảo 201–204 và 301–304.
+- Danh mục tướng hiện giữ career/race/occupation_type đầy đủ, gồm 0. Mốc chuyển sinh theo key dạng và high_break của nguồn; không kế thừa cây của dạng khác.
+- [Bảng mapping và giới hạn xác minh](ATTRIBUTE_MAPPING.md); [báo cáo và danh sách ảnh hưởng](EQUIPMENT_UX_AUDIT.md).

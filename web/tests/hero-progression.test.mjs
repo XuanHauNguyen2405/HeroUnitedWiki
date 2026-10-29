@@ -10,6 +10,7 @@ const { outputText } = ts.transpileModule(source, {
 const { getSuperEvoStages, getBreakthroughStages, isSuperEvoUpgrade } = await import(
   `data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`
 );
+const { maxStrengthenAtLevel } = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
 const heroes = JSON.parse(readFileSync(new URL('../src/data/heroes_detail.json', import.meta.url), 'utf8'));
 
 test('base Sasuke has its own super evolution stages and no breakthrough stages', () => {
@@ -58,4 +59,16 @@ test('missing family entries fall back to the exact detail record', () => {
   assert.deepEqual(getSuperEvoStages({ id: 'x', super_evo: { has_super_evo: true, stages } }), stages);
   assert.deepEqual(getSuperEvoStages({ id: 'x' }), []);
   assert.deepEqual(getSuperEvoStages({ id: 'x', super_evo: { has_super_evo: false, stages } }), []);
+});
+
+test('lowering hero level clamps evolution to milestones with verified level requirements', () => {
+  const table = JSON.parse(readFileSync(new URL('../src/data/character_strengthen.json', import.meta.url), 'utf8'));
+  assert.equal(maxStrengthenAtLevel(1, true, table), 0);
+  assert.equal(maxStrengthenAtLevel(255, false, table), 0);
+  assert.equal(maxStrengthenAtLevel(255, true, table), 60);
+  for (const level of [1, 10, 40, 50, 100, 150, 255]) {
+    const max = maxStrengthenAtLevel(level, true, table);
+    if (max > 0) assert(table[String(max)].need_level <= level);
+    if (max < 60) assert(table[String(max + 1)].need_level > level);
+  }
 });

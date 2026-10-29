@@ -2,6 +2,8 @@
 import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ElementBadge from "@/components/ElementBadge";
+import { EquipmentStatLine, SetBonuses } from "@/components/EquipmentDetails";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { getSuitById } from "@/lib/data";
@@ -76,64 +78,7 @@ export default async function SuitDetailPage({ params }: PageProps) {
       </div>
 
       {/* Set Activation Bonuses */}
-      <section className="p-6 rounded-2xl border border-gray-800 bg-gray-900/40 backdrop-blur-xl space-y-4">
-        <h2 className="text-lg font-bold text-white flex items-center gap-2">
-          <span>✨</span> Hiệu Ứng Kích Hoạt Mốc 2 / 3 / 4 Món
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="p-4 rounded-xl bg-gray-950/70 border border-amber-500/30 space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">
-                Mốc 2 Món
-              </span>
-              <span className="text-xs px-2 py-0.5 rounded bg-amber-500/10 text-amber-400">
-                Kích hoạt
-              </span>
-            </div>
-            <div className="text-xs font-mono text-gray-200 bg-gray-900/80 p-2.5 rounded-lg border border-gray-800">
-              {JSON.stringify(suit.bonuses?.suit_add2 || "Chưa có dữ liệu")}
-            </div>
-            <div className="text-[11px] text-gray-400">
-              Cộng chỉ số khi trang bị 2 món bất kỳ cùng bộ
-            </div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-gray-950/70 border border-blue-500/30 space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-blue-400 uppercase tracking-wider">
-                Mốc 3 Món
-              </span>
-              <span className="text-xs px-2 py-0.5 rounded bg-blue-500/10 text-blue-400">
-                Kích hoạt
-              </span>
-            </div>
-            <div className="text-xs font-mono text-gray-200 bg-gray-900/80 p-2.5 rounded-lg border border-gray-800">
-              {JSON.stringify(suit.bonuses?.suit_add3 || "Chưa có dữ liệu")}
-            </div>
-            <div className="text-[11px] text-gray-400">
-              Cộng chỉ số khi trang bị 3 món bất kỳ cùng bộ
-            </div>
-          </div>
-
-          <div className="p-4 rounded-xl bg-gray-950/70 border border-purple-500/30 space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-purple-400 uppercase tracking-wider">
-                Mốc 4 Món (Trọn Bộ)
-              </span>
-              <span className="text-xs px-2 py-0.5 rounded bg-purple-500/10 text-purple-400">
-                Tối đa
-              </span>
-            </div>
-            <div className="text-xs font-mono text-gray-200 bg-gray-900/80 p-2.5 rounded-lg border border-gray-800">
-              {JSON.stringify(suit.bonuses?.suit_add4 || "Chưa có dữ liệu")}
-            </div>
-            <div className="text-[11px] text-gray-400">
-              Kích hoạt toàn bộ sức mạnh ẩn khi trang bị đủ 4 vị trí
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="hero-section"><ElementBadge id={suit.element_id} /><SetBonuses bonuses={suit.bonuses} /></section>
 
       {/* 4 Equipment Parts in Detail */}
       <section className="p-6 rounded-2xl border border-gray-800 bg-gray-900/40 backdrop-blur-xl space-y-5">
@@ -191,12 +136,12 @@ export default async function SuitDetailPage({ params }: PageProps) {
                     </div>
                     {eq.primary_stat && (
                       <div>
-                        • <b>Chỉ số 1:</b> Ability {eq.primary_stat.ability_id} +{eq.primary_stat.value} (+{eq.primary_stat.level_add}/cấp)
+                        <EquipmentStatLine stat={eq.primary_stat} />
                       </div>
                     )}
                     {eq.secondary_stat && (
                       <div>
-                        • <b>Chỉ số 2:</b> Ability {eq.secondary_stat.ability_id} +{eq.secondary_stat.value} (+{eq.secondary_stat.level_add}/cấp)
+                        <EquipmentStatLine stat={eq.secondary_stat} />
                       </div>
                     )}
                     {eq.evolution?.next_evolution_equip_id && (

@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import HeroIdentityBadges from "./HeroIdentityBadges";
+import { combatProfiles } from "@/lib/equipment-advisor";
 
 export interface HeroCardData {
   id: number | string;
@@ -12,7 +14,7 @@ export interface HeroCardData {
   animation?: string | null;
   is_world?: boolean; // True for Chuyển Thế
   quality?: number; // Base quality 0..8
-  occupation?: number; // 0..5 (0: Vật công, 1: Ma công, 2: Thủ, 3: Phụ trợ, v.v.)
+  occupation?: number; // occupation.config[animation]; separate from career/race/element.
 }
 
 export interface HeroCardProps {
@@ -157,7 +159,8 @@ export default function HeroCard({
   const hasCardArt = Boolean(effectiveCardUrl);
 
   // Occupation index
-  const occupation = safeHero.occupation !== undefined ? safeHero.occupation : 0;
+  const profile = combatProfiles[String(safeHero.id)];
+  const occupation = profile ? profile.occupation_id ?? 5 : safeHero.occupation ?? 5;
   const occIconSrc = `/assets/card/public_ocupation${occupation}.png`;
   const occBgSrc = superQualityStage > 0 ? "/assets/card/card_race_bg_2.png" : "/assets/card/card_race_bg.png";
 
@@ -455,7 +458,7 @@ export default function HeroCard({
           >
             <img
               src={occBgSrc}
-              alt="Hệ"
+              alt="Nền biểu tượng nghề"
               className="w-full h-full object-contain filter drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]"
             />
             <img
@@ -483,6 +486,7 @@ export default function HeroCard({
         >
           {fullName}
         </h4>
+        <HeroIdentityBadges id={hero.id} compact />
         {hero.is_world ? (
           <div className="inline-block mt-0.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-red-950/80 text-red-300 border border-red-500/40 tracking-wider">
             Dạng Chuyển Thế

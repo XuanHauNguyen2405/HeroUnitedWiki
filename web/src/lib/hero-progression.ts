@@ -34,3 +34,8 @@ export function isSuperEvoUpgrade(stage: { id: string } | undefined): boolean {
   // Cam is the starting card quality, not an upgrade or an extra stat bonus.
   return Boolean(stage && stage.id !== "cam" && stage.id !== "none");
 }
+
+export function maxStrengthenAtLevel(level: number, supported: boolean, table: Record<string, { need_level: number }>): number {
+  if (!supported) return 0;
+  return Math.max(0, ...Object.entries(table).filter(([, stage]) => stage.need_level <= level).map(([id]) => Number(id)));
+}

@@ -4,13 +4,19 @@
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import ImageWithFallback from "@/components/ImageWithFallback";
+import HeroSection from "@/components/HeroSection";
+import ElementBadge from "@/components/ElementBadge";
+import HeroSkillCard from "@/components/HeroSkillCard";
 import HeroCard from "@/components/HeroCard";
 import HeroStandingArt from "@/components/HeroStandingArt";
 import HeroBanSucCard from "@/components/HeroBanSucCard";
-import { getSuperEvoStages, getBreakthroughStages, isSuperEvoUpgrade } from "@/lib/hero-progression";
+import { getSuperEvoStages, getBreakthroughStages, isSuperEvoUpgrade, maxStrengthenAtLevel } from "@/lib/hero-progression";
 import { formatNumber, getQualityConfig } from "@/lib/utils";
 import strengthenTableRaw from "@/data/character_strengthen.json";
-import zodiacSetsRaw from "@/data/zodiac_sets.json";
+import EquipmentAdvisor from "@/components/EquipmentAdvisor";
+import HeroIdentityBadges from "@/components/HeroIdentityBadges";
+import { combatProfiles, equipmentStats, emptySelection, recommendations, resolveVariant, type Selection } from "@/lib/equipment-advisor";
+import { elements, getElement } from "@/lib/game-attributes";
 import banSucRecommendationsRaw from "@/data/ban_suc_recommendations.json";
 
 const mapSuperEvoIdToStage = (id: string | null | undefined): number => {
@@ -142,6 +148,7 @@ interface BreakthroughStage {
     matk: number;
     def: number;
     speed: number;
+    attributes?: Record<string, number>;
     ele_atk?: number;
     ele_def?: number;
   };
@@ -176,6 +183,7 @@ interface HeroInteractiveViewProps {
     race?: number;
     sex: number;
     level_max: number;
+    evolution?: { is_evo?: number };
     avatar: string | null;
     standing_image?: string | null;
     card_image?: string | null;
@@ -205,7 +213,6 @@ interface HeroInteractiveViewProps {
 }
 
 const strengthenTable: Record<string, { level: number; add_hp: number; add_patk: number; add_matk: number; add_def: number; add_speed: number; need_level: number; need_food: number }> = strengthenTableRaw;
-const zodiacSetsList: any[] = zodiacSetsRaw;
 
 function getMaterialIcon(
   m: { id?: string; name?: string; icon?: string | null; is_hero_card?: boolean; is_currency?: boolean },
@@ -265,12 +272,20 @@ function getMaterialIcon(
 
 export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) {
   // 1. Interactive States
-  const [level, setLevel] = useState<number>(1);
+  const levelLimit = hero.level_max > 0 ? hero.level_max : 255;
+  const supportsStrengthening = hero.evolution?.is_evo === 1;
+  const [level, setLevelState] = useState<number>(1);
   const [selectedChuyenStage, setSelectedChuyenStage] = useState<number>(0); // 0 = Chưa chuyển, 1-7
   const [activeTabChuyen, setActiveTabChuyen] = useState<number>(1); // For viewing stage details 1-7
 
   // Regular evolution (+1 to +60) - Default to 0 (no +3 default)
   const [strengthenLevel, setStrengthenLevel] = useState<number>(0);
+  const maxStrengthen = maxStrengthenAtLevel(level, supportsStrengthening, strengthenTable);
+  function setLevel(value: number) {
+    const next = Math.min(levelLimit, Math.max(1, value));
+    setLevelState(next);
+    setStrengthenLevel(previous => Math.min(previous, maxStrengthenAtLevel(next, supportsStrengthening, strengthenTable)));
+  }
 
   // Super Evo state (9 stages: Cam, Cam+, Cam++, Đỏ, Đỏ+, Đỏ++, Vàng, Vàng+, Vàng++) - Default to "cam" (Base form)
   const superEvoStages = getSuperEvoStages(hero);
@@ -279,7 +294,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
 
   // Breakthrough system state (1 to 20 stages from breakthrough.config) - Default to stage 1
   const breakthroughStages = getBreakthroughStages(hero);
-  const defaultBreakthroughStep = breakthroughStages[0]?.step || 0;
+  const defaultBreakthroughStep = 0;
   const [selectedBreakthroughStep, setSelectedBreakthroughStep] = useState<number>(defaultBreakthroughStep);
 
   // Badge interactive state
@@ -289,265 +304,17 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
     heroBadges.length > 0 ? Math.min(heroBadges.length - 1, 7) : 0
   );
 
-  // Zodiac set simulation state - Default to 'none' and 'hoi' tab (Requirement 3: Swapped Hợi and Chuột)
-  const [activeZodiacId, setActiveZodiacId] = useState<string>("none"); // 'none' or 'hoi', 'chuot', 'rong', 'ti', 'ngua'
-  const [activeZodiacTab, setActiveZodiacTab] = useState<string>("hoi");
-  const [isZodiacRainbow, setIsZodiacRainbow] = useState<boolean>(true); // Mốc Cầu Vồng: massive stats boost
-  const [activeZodiacElement, setActiveZodiacElement] = useState<string>("auto");
+  const [equipmentSelection, setEquipmentSelection] = useState<Selection>(emptySelection);
+  const activeZodiacId = equipmentSelection.setId;
+  const isZodiacRainbow = equipmentSelection.rainbow;
+  const equippedVariant = resolveVariant(equipmentSelection);
+  const equippedElement = getElement(equippedVariant?.element_id);
 
   // User Guide: Ban Sức Khuyến Nghị for this hero
   const banSucRecommendation = useMemo(() => {
     return (banSucRecommendationsRaw as any)?.heroes?.[String(hero.id)] || null;
   }, [hero.id]);
 
-  // Nagato 3 Elemental Playstyles State (Requirement 6)
-  const [nagatoBuildStyle, setNagatoBuildStyle] = useState<string>("tho"); // 'tho', 'hoa', 'thuy'
-
-  // Analyze hero's skills for elemental scaling and recommended zodiac set & element
-  const zodiacRecommendation = useMemo(() => {
-    const skills = hero.skills_detailed || [];
-    const hName = (hero.name || "").toLowerCase();
-    const cId = String(hero.character_id || "");
-
-    const elemMap: Record<string, { label: string; icon: string; desc: string }> = {
-      hoa: { label: "Hỏa (Lửa)", icon: "🔥", desc: "Tối ưu hóa sát thương thuộc tính Hỏa thiêu đốt" },
-      thuy: { label: "Thủy (Nước)", icon: "💧", desc: "Tối ưu hóa sát thương thuộc tính Thủy và khống chế" },
-      phong: { label: "Phong (Gió)", icon: "🌪️", desc: "Tối ưu hóa sát thương thuộc tính Phong và tốc độ" },
-      tho: { label: "Thổ (Địa)", icon: "⛰️", desc: "Tối ưu hóa sát thương thuộc tính Thổ (Địa) và hộ thể" },
-    };
-
-    // Specific Rule: Nagato -> Khuyên dùng thuộc tính Địa vì đánh Boss Titan dame sẽ cao hơn (Requirement 2 & 6)
-    if (hName.includes("nagato") || hName.includes("pain") || cId === "431") {
-      const isHoa = nagatoBuildStyle === "hoa";
-      const isThuy = nagatoBuildStyle === "thuy";
-      const activeElem = isHoa ? elemMap.hoa : isThuy ? elemMap.thuy : elemMap.tho;
-      const activeElemKey = isHoa ? "hoa" : isThuy ? "thuy" : "tho";
-      const styleName = isHoa
-        ? "Phong Cách Hỏa (Hỏa Độn - CS1 Truy Kích Liên Hoàn)"
-        : isThuy
-        ? "Phong Cách Thủy (Thủy Độn - CS2 Thần Ngự & Hộ Giá Bất Tử)"
-        : "Phong Cách Địa (Thổ Độn - CS4 & CS7 Tối Ưu Dame Boss Titan & Trảm Hồi Sinh)";
-
-      return {
-        hasElemental: true,
-        recommendedSetId: "ti",
-        recommendedSetName: `Bộ Năm Tị (${activeElem.label})`,
-        recommendedPriorityList: [
-          { id: "ti", name: "Bộ Năm Tị", rank: "1 (Mạnh Nhất)", tag: `Tối Cường ST ${activeElem.label}`, isBest: true },
-          { id: "hoi", name: "Bộ Năm Hợi", rank: "2", tag: "Công Thủ Toàn Diện & Sinh Tồn", isBest: false },
-          { id: "chuot", name: "Bộ Năm Chuột", rank: "3", tag: "Bạo Kích Cực Hạn & Đột Kích", isBest: false },
-          { id: "rong", name: "Bộ Năm Rồng", rank: "4", tag: "Bá Đạo Uy Lực & Áp Chế", isBest: false },
-          { id: "ngua", name: "Bộ Năm Ngựa", rank: "5", tag: "Tối Cường Tốc Độ & Chính Xác", isBest: false },
-        ],
-        recommendedElement: activeElem,
-        recommendedElementKey: activeElemKey,
-        reason: `Nagato nên sử dụng thuộc tính Địa vì khi đánh Boss Titan, sát thương (dame) sẽ cao hơn vượt trội! ${
-          isHoa
-            ? "Đang chọn Phong Cách Hỏa (CS1: Tăng 5 lần công Hỏa, mỗi 1M công Hỏa truy kích 1 lần. Lưu ý: Đánh Boss Titan nên ưu tiên thuộc tính Địa để đạt dame tối đa!)."
-            : isThuy
-            ? "Đang chọn Phong Cách Thủy (CS2: Tăng 5 lần công Thủy; nhận Thần Ngự và hộ giá. Lưu ý: Đánh Boss Titan nên ưu tiên thuộc tính Địa để đạt dame tối đa!)."
-            : "Cơ chế Chuyển Sinh 4 tăng 5 lần công Địa, mỗi 1.000.000 điểm công Địa nhân đôi sát thương kỹ năng; kết hợp Chuyển Sinh 7 tiêu diệt 1 đơn vị và xóa bỏ hồi sinh giúp dồn lượng sát thương bộc phát khổng lồ lên Boss Titan. Vì vậy, Set Tị (Thuộc Tính Địa) là trang bị chuẩn xác và tối thượng cho Nagato."
-        } Đề xuất chuẩn xác là sử dụng Bộ Năm Tị biến thể ${activeElem.label}.`,
-        elementReason: isHoa
-          ? "Đang kích hoạt nguyên tố Hỏa cho cơ chế truy kích CS1."
-          : isThuy
-          ? "Đang kích hoạt nguyên tố Thủy cho cơ chế hộ giá CS2."
-          : "Nguyên tố Thổ (Địa) giúp Nagato đạt lượng dame khổng lồ cao nhất khi tham gia săn Boss Titan!",
-      };
-    }
-
-    // Specific Rule: Support Heroes (Songoku + all transferred forms, Piccolo, Adr18, Inori) -> Set Tị (Bộ Năm Tị)
-    const isSongoku =
-      hName.includes("songoku") ||
-      hName.includes("son goku") ||
-      hName.includes("goku") ||
-      hName.includes("kakarot") ||
-      cId === "425" ||
-      cId === "396" ||
-      cId === "999" ||
-      cId === "1" ||
-      cId === "141";
-    const isPiccolo = hName.includes("piccolo") || cId === "418";
-    const isAdr18 =
-      hName.includes("adr18") ||
-      hName.includes("adr 18") ||
-      hName.includes("số 18") ||
-      hName.includes("so 18") ||
-      hName.includes("poc") ||
-      hName.includes("android 18") ||
-      cId === "416";
-    const isInori = hName.includes("inori") || cId === "428";
-
-    if (isSongoku || isPiccolo || isAdr18 || isInori) {
-      const heroRoleDesc = isSongoku
-        ? "Songoku cùng tất cả các dạng chuyển thế đóng vai trò là tướng hỗ trợ quan trọng của đội hình (cung cấp Ki, tăng cường sức mạnh và tiếp ứng toàn đội)."
-        : isPiccolo
-        ? "Piccolo là tướng hỗ trợ phòng ngự và khống chế (Rào Chắn Ma Lực, Kết Giới Ma Thần bảo hộ đồng đội)."
-        : isAdr18
-        ? "Adr18 (Số 18) là tướng hỗ trợ xuất sắc với khả năng điều tiết và phục hồi nguồn năng lượng vô tận cho đội hình."
-        : "Inori là tướng hỗ trợ thuần túy với khả năng hồi phục sinh mệnh vô song (Bài Ca Trị Liệu, Tịnh Hóa Tâm Linh).";
-
-      const heroElem = isPiccolo ? elemMap.tho : isInori ? elemMap.thuy : elemMap.phong;
-      const heroElemKey = isPiccolo ? "tho" : isInori ? "thuy" : "phong";
-
-      return {
-        hasElemental: true,
-        recommendedSetId: "ti",
-        recommendedSetName: "Bộ Năm Tị",
-        recommendedPriorityList: [
-          { id: "ti", name: "Bộ Năm Tị", rank: "1 (Chuẩn Nhất)", tag: "Tối Cường Hỗ Trợ & Buff Đội Hình", isBest: true },
-          { id: "hoi", name: "Bộ Năm Hợi", rank: "2", tag: "Công Thủ Toàn Diện & Sinh Tồn", isBest: false },
-          { id: "chuot", name: "Bộ Năm Chuột", rank: "3", tag: "Bạo Kích Cực Hạn & Đột Kích", isBest: false },
-          { id: "rong", name: "Bộ Năm Rồng", rank: "4", tag: "Bá Đạo Uy Lực & Áp Chế", isBest: false },
-          { id: "ngua", name: "Bộ Năm Ngựa", rank: "5", tag: "Tối Cường Tốc Độ & Chính Xác", isBest: false },
-        ],
-        recommendedElement: heroElem,
-        recommendedElementKey: heroElemKey,
-        reason: `${heroRoleDesc} Là tướng hỗ trợ nên khuyên dùng Bộ Năm Tị (ưu tiên số 1) để tối ưu hóa năng lực hỗ trợ, khuếch đại sát thương thuộc tính và phát huy tối đa hiệu quả kĩ năng vận mệnh.`,
-        elementReason: isPiccolo
-          ? "Nguyên tố Thổ (Địa) gia tăng độ cứng cáp của khiên ma lực và năng lực chống chịu bền bỉ cho Piccolo!"
-          : isInori
-          ? "Nguyên tố Thủy (Nước) đồng bộ tuyệt đối với các bài ca thanh tẩy, trị liệu hồi phục sinh mệnh của Inori!"
-          : isAdr18
-          ? "Nguyên tố Phong (Gió) gia tăng tốc độ xuất chiêu và cơ chế xoay chuyển năng lượng vô tận của Adr18!"
-          : "Nguyên tố Phong (Gió) / Hỏa giúp gia tăng tốc độ, đồng bộ hoàn hảo với nguồn năng lượng Ki và các tuyệt kỹ Quy Phái Khí Công / Nguyên Khí Đạn của Songoku!",
-      };
-    }
-
-    // Specific Rule: Sasuke (Lục Đạo / CT / Thường) -> Sử dụng Bộ Năm Tị chứ KHÔNG dùng bộ Chuột!
-    if (hName.includes("sasuke") || cId === "84000" || cId === "8400" || cId === "401") {
-      return {
-        hasElemental: true,
-        recommendedSetId: "ti",
-        recommendedSetName: "Bộ Năm Tị",
-        recommendedPriorityList: [
-          { id: "ti", name: "Bộ Năm Tị", rank: "1 (Chuẩn Nhất)", tag: "Tối Cường ST Lôi & Hỏa", isBest: true },
-          { id: "hoi", name: "Bộ Năm Hợi", rank: "2", tag: "Công Thủ Toàn Diện & Sinh Tồn", isBest: false },
-          { id: "chuot", name: "Bộ Năm Chuột", rank: "3", tag: "Bạo Kích & Sát Thương Đột Phá", isBest: false },
-          { id: "rong", name: "Bộ Năm Rồng", rank: "4", tag: "Bá Đạo Uy Lực & Áp Chế", isBest: false },
-          { id: "ngua", name: "Bộ Năm Ngựa", rank: "5", tag: "Tối Cường Tốc Độ & Chính Xác", isBest: false },
-        ],
-        recommendedElement: elemMap.hoa,
-        recommendedElementKey: "hoa",
-        reason: "Sasuke sở hữu toàn bộ kỹ năng Lôi Độn (Chidori) và Hỏa Độn (Amaterasu) thuần nguyên tố, tăng vọt uy lực theo mỗi điểm sát thương nguyên tố. Khuyến nghị chuẩn xác là sử dụng Bộ Năm Tị (chứ không dùng bộ Chuột)!",
-        elementReason: "Nguyên tố Hỏa / Lôi khuếch đại tối đa uy lực thiêu đốt của Hỏa Độn và sát thương bộc phát Chidori cho Sasuke!",
-      };
-    }
-
-    // Specific Rule: Elaina -> Sử dụng Bộ Năm Tị chứ KHÔNG dùng bộ Chuột hay Ngựa!
-    if (hName.includes("elaina") || cId === "435" || cId === "85000") {
-      return {
-        hasElemental: true,
-        recommendedSetId: "ti",
-        recommendedSetName: "Bộ Năm Tị",
-        recommendedPriorityList: [
-          { id: "ti", name: "Bộ Năm Tị", rank: "1 (Chuẩn Nhất)", tag: "Tối Cường Sát Thương Ma Pháp", isBest: true },
-          { id: "hoi", name: "Bộ Năm Hợi", rank: "2", tag: "Công Thủ Toàn Diện & Sinh Tồn", isBest: false },
-          { id: "chuot", name: "Bộ Năm Chuột", rank: "3", tag: "Bạo Kích & Sát Thương Đột Phá", isBest: false },
-          { id: "rong", name: "Bộ Năm Rồng", rank: "4", tag: "Bá Đạo Uy Lực & Áp Chế", isBest: false },
-          { id: "ngua", name: "Bộ Năm Ngựa", rank: "5", tag: "Tối Cường Tốc Độ & Chính Xác", isBest: false },
-        ],
-        recommendedElement: elemMap.phong,
-        recommendedElementKey: "phong",
-        reason: "Phù Thủy Elaina sử dụng ma pháp bão tố nguyên tố Phong, tăng vọt uy lực sát thương ma đạo theo điểm sát thương thuộc tính. Khuyến nghị chuẩn xác là sử dụng Bộ Năm Tị (chứ không dùng bộ Chuột hay Ngựa)!",
-        elementReason: "Nguyên tố Phong (Gió) đồng bộ tối đa với toàn bộ ma pháp lốc xoáy và cuồng phong của Phù Thủy Elaina!",
-      };
-    }
-
-    // Specific Rule: Shadow -> Set Ngựa vì giúp tăng chính xác vượt trội
-    if (hName.includes("shadow") || hName.includes("cid kageno") || cId === "434") {
-      return {
-        hasElemental: false,
-        recommendedSetId: "ngua",
-        recommendedSetName: "Bộ Năm Ngựa",
-        recommendedPriorityList: [
-          { id: "ngua", name: "Bộ Năm Ngựa", rank: "1 (Chuẩn Nhất)", tag: "Tăng Chính Xác & Tốc Độ", isBest: true },
-          { id: "hoi", name: "Bộ Năm Hợi", rank: "2", tag: "Công Thủ Toàn Diện & Sinh Tồn", isBest: false },
-          { id: "chuot", name: "Bộ Năm Chuột", rank: "3", tag: "Bạo Kích Cực Hạn & Đột Kích", isBest: false },
-          { id: "rong", name: "Bộ Năm Rồng", rank: "4", tag: "Bá Đạo Uy Lực & Áp Chế", isBest: false },
-          { id: "ti", name: "Bộ Năm Tị", rank: "5", tag: "Tối Cường Sát Thương Nguyên Tố", isBest: false },
-        ],
-        recommendedElement: elemMap.phong,
-        recommendedElementKey: "phong",
-        reason: "Set Ngựa phù hợp với tất cả các tướng trừ những tướng cần sức mạnh tăng theo sát thương thuộc tính. Shadow không phụ thuộc sát thương nguyên tố nên Set Ngựa đem lại hiệu quả tối thượng với tốc độ tiên phong và gia tăng vượt bậc chỉ số Chính Xác (+100% -> +200% bách phát bách trúng tuyệt đối).",
-        elementReason: "Nguyên tố Phong (Gió) đồng bộ hoàn hảo với ma lực chém gió và tốc độ siêu thanh của Shadow!",
-      };
-    }
-
-    // Analyze hero skills, stories, and passives for elemental scaling mechanisms
-    const allSkillTexts = [
-      ...skills.map(s => `${s.name} ${s.description}`),
-      ...(hero.chuyen_sinh?.stages || []).map(cs => `${cs.title || ''} ${cs.story || ''}`)
-    ];
-
-    // Requirement 5: Tất cả các tướng trừ các tướng có cơ chế chiêu tăng hiệu quả từ sát thương thuộc tính thì ưu tiên set ngựa
-    const hasElementalScaling = allSkillTexts.some((desc) => {
-      return (
-        /(tăng|nhân đôi|bổ trợ|tỉ lệ|hiệu quả|truy kích).*(theo|dựa trên|mỗi điểm).*((sát thương|công).*(thuộc tính|nguyên tố)|(thuộc tính|nguyên tố))/i.test(desc) ||
-        /(mỗi|cứ).*\d+.*(công|sát thương).*(thuộc tính|nguyên tố|địa|hỏa|thủy|phong)/i.test(desc) ||
-        /(tăng|nhận).*\d+.*lần.*công.*(thuộc tính|nguyên tố|địa|hỏa|thủy|phong)/i.test(desc) ||
-        /(chuyển hóa|chuyển đổi).*toàn bộ.*sang.*(thuộc tính|nguyên tố|hỏa|thủy|địa|phong)/i.test(desc) ||
-        /mỗi điểm.*(thuộc tính|nguyên tố).*tăng/i.test(desc) ||
-        /sát thương.*tăng theo.*(thuộc tính|nguyên tố)/i.test(desc)
-      );
-    });
-
-    const elementScores = { hoa: 0, thuy: 0, phong: 0, tho: 0 };
-    allSkillTexts.forEach((desc) => {
-      if (/hỏa|lửa|fire|chidor|amaterasu|kì lân|thiêu/i.test(desc)) elementScores.hoa += 3;
-      if (/thủy|nước|water|hải long|băng|thủy độn/i.test(desc)) elementScores.thuy += 3;
-      if (/phong|gió|wind|rasenshuriken|atomic|bão|cuồng phong|lốc/i.test(desc)) elementScores.phong += 3;
-      if (/thổ|địa|đất|earth|gedo|bộc thiên|nham/i.test(desc)) elementScores.tho += 3;
-    });
-
-    let bestElemKey = "tho";
-    let maxCount = -1;
-    (Object.entries(elementScores) as [string, number][]).forEach(([elem, count]) => {
-      if (count > maxCount && count > 0) {
-        maxCount = count;
-        bestElemKey = elem;
-      }
-    });
-
-    if (hasElementalScaling) {
-      return {
-        hasElemental: true,
-        recommendedSetId: "ti", // Set Tị là mạnh nhất cho tướng có cơ chế tăng hiệu quả từ ST thuộc tính
-        recommendedSetName: "Bộ Năm Tị",
-        // Thứ tự ưu tiên cho tướng có sát thương nguyên tố: Tị (mạnh nhất) -> Hợi -> Chuột -> Rồng -> Ngựa
-        recommendedPriorityList: [
-          { id: "ti", name: "Bộ Năm Tị", rank: "1 (Mạnh Nhất)", tag: "Tối Cường Sát Thương Nguyên Tố", isBest: true },
-          { id: "hoi", name: "Bộ Năm Hợi", rank: "2", tag: "Công Thủ Toàn Diện & Sinh Tồn", isBest: false },
-          { id: "chuot", name: "Bộ Năm Chuột", rank: "3", tag: "Bạo Kích Cực Hạn & Đột Kích", isBest: false },
-          { id: "rong", name: "Bộ Năm Rồng", rank: "4", tag: "Bá Đạo Uy Lực & Áp Chế", isBest: false },
-          { id: "ngua", name: "Bộ Năm Ngựa", rank: "5", tag: "Tối Cường Tốc Độ & Chính Xác", isBest: false },
-        ],
-        recommendedElement: elemMap[bestElemKey] || elemMap.tho,
-        recommendedElementKey: bestElemKey,
-        reason: `Tướng sở hữu cơ chế kỹ năng tăng hiệu quả từ sát thương thuộc tính. Bắt buộc ưu tiên sử dụng Set Tị (mạnh nhất), tiếp theo sắp xếp theo thứ tự ưu tiên: Hợi → Chuột → Rồng → Ngựa.`,
-        elementReason: `Dựa trên kỹ năng và nguyên tố của tướng (${elemMap[bestElemKey]?.label || "Thổ (Địa)"}), khuyến nghị chọn chuẩn biến thể nguyên tố này để đồng bộ và khuếch đại tối đa sát thương!`,
-      };
-    } else {
-      return {
-        hasElemental: false,
-        recommendedSetId: "ngua", // Tất cả các tướng trừ các tướng có cơ chế chiêu tăng hiệu quả từ sát thương thuộc tính thì ưu tiên Set Ngựa
-        recommendedSetName: "Bộ Năm Ngựa",
-        recommendedPriorityList: [
-          { id: "ngua", name: "Bộ Năm Ngựa", rank: "1 (Chuẩn Nhất)", tag: "Tăng Chính Xác (+100%→+200%) & Tốc Độ", isBest: true },
-          { id: "hoi", name: "Bộ Năm Hợi", rank: "2", tag: "Công Thủ Toàn Diện & Sinh Tồn", isBest: false },
-          { id: "chuot", name: "Bộ Năm Chuột", rank: "3", tag: "Bạo Kích Cực Hạn & Đột Kích", isBest: false },
-          { id: "rong", name: "Bộ Năm Rồng", rank: "4", tag: "Bá Đạo Uy Lực & Áp Chế", isBest: false },
-          { id: "ti", name: "Bộ Năm Tị", rank: "5", tag: "Tối Cường Sát Thương Nguyên Tố", isBest: false },
-        ],
-        recommendedElement: elemMap.phong,
-        recommendedElementKey: "phong",
-        reason: "Tất cả các tướng trừ các tướng có cơ chế chiêu tăng hiệu quả từ sát thương thuộc tính thì ưu tiên Set Ngựa. Tướng này không có cơ chế tăng hiệu quả theo sát thương thuộc tính, nên Set Ngựa đem lại giá trị tối đa với tốc độ tiên phong (+60% -> +120%) và gia tăng vượt bậc chỉ số Chính Xác (+100% -> +200% bách phát bách trúng tuyệt đối).",
-        elementReason: "Với tướng thuần sát thương, nguyên tố Phong (Gió) hoặc Địa (Thổ) giúp tăng tốc độ phản xạ và chống chịu tối đa.",
-      };
-    }
-  }, [hero, nagatoBuildStyle]);
-
-  // Compare forms modal
   const [showCompareModal, setShowCompareModal] = useState<boolean>(false);
 
   // Vận mệnh activation map: { [vanMenhId]: boolean }
@@ -630,7 +397,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
     const currentBtStage = selectedBreakthroughStep > 0 && selectedBreakthroughStep <= btStages.length
       ? btStages[selectedBreakthroughStep - 1]
       : null;
-    const btStats = currentBtStage?.stats || { hp: 0, patk: 0, matk: 0, def: 0, speed: 0, ele_atk: 0, ele_def: 0 };
+    const btStats = currentBtStage?.stats || { attributes: {} as Record<string, number>, hp: 0, patk: 0, matk: 0, def: 0, speed: 0, ele_atk: 0, ele_def: 0 };
     const btHp = btStats.hp || 0;
     const btPatk = btStats.patk || 0;
     const btMatk = btStats.matk || 0;
@@ -655,35 +422,16 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
       });
     }
 
-    // 5. Zodiac Set Flat Stats (if simulated)
-    let zodiacHp = 0;
-    let zodiacPatk = 0;
-    let zodiacMatk = 0;
-    let zodiacDef = 0;
-    let zodiacSpeed = 0;
-    let zodiacEleDmg = 0;
-
-    if (activeZodiacId !== "none") {
-      const activeSet = zodiacSetsList.find((z) => z.id === activeZodiacId);
-      if (activeSet && activeSet.variants && activeSet.variants.length > 0) {
-        const v = activeSet.variants[0];
-        if (isZodiacRainbow && v.rainbow_bonuses?.stats) {
-          zodiacHp = v.rainbow_bonuses.stats.hp || 675000;
-          zodiacPatk = v.rainbow_bonuses.stats.patk || 675000;
-          zodiacMatk = v.rainbow_bonuses.stats.matk || 675000;
-          zodiacDef = v.rainbow_bonuses.stats.def || 225000;
-          zodiacSpeed = v.rainbow_bonuses.stats.speed || 200000;
-          zodiacEleDmg = v.rainbow_bonuses.stats.ele_atk || 675000;
-        } else {
-          zodiacHp = 315000;
-          zodiacPatk = 270000;
-          zodiacMatk = 270000;
-          zodiacDef = 90000;
-          zodiacSpeed = 50000;
-          zodiacEleDmg = 270000;
-        }
-      }
-    }
+    // One resolver supplies the exact selected variant to UI and calculations.
+    const gear = equipmentStats(equipmentSelection);
+    const zodiacHp = gear.hp ?? 0;
+    const zodiacPatk = gear.patk ?? 0;
+    const zodiacMatk = gear.matk ?? 0;
+    const zodiacDef = gear.def ?? 0;
+    const zodiacSpeed = gear.speed ?? 0;
+    const zodiacEleDmg = equippedElement ? gear[equippedElement.id] ?? 0 : 0;
+    const elementTotals = Object.fromEntries(Object.values(elements).map(element =>
+      [element.id, (gear[element.id] ?? 0) + (btStats.attributes?.[element.id] ?? 0)]));
 
     // 6. Chuyển sinh bonus percentages: each stage from 1 to 5 grants +30% HP (up to +150% at stage 5)
     let chuyenHpPct = 0;
@@ -727,6 +475,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
 
     return {
       combatPower,
+      elementTotals,
       total: { hp: totalHp, patk: totalPatk, matk: totalMatk, def: totalDef, speed: totalSpeed, elementalDamage: zodiacEleDmg + btEleDmg },
       breakdown: {
         lv: { hp: lvHp, patk: lvPatk, matk: lvMatk, def: lvDef, speed: lvSpeed },
@@ -744,15 +493,15 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
         },
       },
     };
-  }, [level, selectedChuyenStage, strengthenLevel, currentStrengthenData, currentEvoStage, hasSuperEvoUpgrade, selectedBreakthroughStep, badgeEquipped, activeBadge, activeZodiacId, isZodiacRainbow, activeVanMenh, hero]);
+  }, [level, selectedChuyenStage, strengthenLevel, currentStrengthenData, currentEvoStage, hasSuperEvoUpgrade, selectedBreakthroughStep, badgeEquipped, activeBadge, equipmentSelection, equippedElement, activeVanMenh, hero]);
 
   const familyForms = hero.family_forms || [];
 
   return (
-    <div className="space-y-8 animate-fade-in">
+    <div className="hero-detail space-y-8 animate-fade-in">
       {/* 0. DÒNG DẠNG BIẾN THỂ & CHUYỂN THẾ (FORMS & REBIRTH LINEAGE - REQUIREMENT 5) */}
       {familyForms.length > 1 && (
-        <section className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/40 via-slate-900 to-indigo-950/40 p-5 backdrop-blur-xl shadow-xl">
+        <HeroSection className="rounded-3xl border border-sky-500/30 bg-gradient-to-r from-sky-950/40 via-slate-900 to-indigo-950/40 p-5 backdrop-blur-xl shadow-xl">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-sky-900/30 pb-3 mb-4">
             <div>
               <div className="flex items-center gap-2">
@@ -887,11 +636,11 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
               </div>
             </div>
           )}
-        </section>
+        </HeroSection>
       )}
 
       {/* 1. HERO MAIN CARD & AURA DISPLAY (Star section removed per requirement 3) */}
-      <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-[#070a12] p-6 sm:p-8 shadow-2xl">
+      <div id="hero-overview" className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-950 to-[#070a12] p-6 sm:p-8 shadow-2xl">
         {/* Dynamic Super Evo Glow Background based on stage */}
         <div
           className={`absolute -right-16 -top-16 h-96 w-96 rounded-full blur-3xl opacity-30 transition-all duration-700 pointer-events-none ${
@@ -919,7 +668,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                 animation: hero.animation || null,
                 is_world: hero.is_world,
                 quality: hero.quality,
-                occupation_type: hero.occupation_type ?? 0,
+                occupation_type: hero.occupation_type,
               }}
               size="lg"
               showAura={hero.is_world}
@@ -950,7 +699,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                     : "border-slate-700 bg-slate-800/80 text-slate-300"
                 }`}
               >
-                {hero.is_world ? "Dạng Chuyển Thế" : "Dạng Tiêu Chuẩn"}
+                {familyForms.find(form => form.id === hero.id)?.label ?? "Dạng đang xem"}
               </span>
               {/* Super Evo Tag */}
               {hasSuperEvoUpgrade && currentEvoStage && (
@@ -984,6 +733,9 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
               </h1>
             </div>
 
+            <HeroIdentityBadges id={hero.id} career={hero.career} race={hero.race}
+              state={{ level, rebirth: selectedChuyenStage, superEvo: mapSuperEvoIdToStage(selectedSuperEvoId), breakthrough: selectedBreakthroughStep }} />
+
             {/* Combat Power & Identity Tags (STAR REMOVED) */}
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs pt-1">
               <span className="rounded-xl border border-red-500/40 bg-red-950/40 px-3.5 py-1 text-red-300 font-bold flex items-center gap-1.5 shadow-lg shadow-red-950/30">
@@ -1013,18 +765,27 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
         </div>
       </div>
 
+      <nav aria-label="Điều khiển tướng" className="flex flex-wrap gap-2">
+        <a className="hero-control" href="#level">Cấp độ</a>
+        {supportsStrengthening && <a className="hero-control" href="#evolution">Tiến hoá</a>}
+        {chuyenStages.length > 0 && <a className="hero-control" href="#rebirth">Chuyển sinh</a>}
+        {hasSuperEvo && <a className="hero-control" href="#super-evolution">Siêu tiến hoá</a>}
+        {breakthroughStages.length > 0 && <a className="hero-control" href="#breakthrough">Đột phá</a>}
+        <a className="hero-control" href="#equipment">Trang bị</a>
+      </nav>
+
       {/* 1. CẤP ĐỘ (LEVEL 1 - 255) & BẢNG THUỘC TÍNH TỔNG HỢP */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      <HeroSection id="level" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
             <div className="flex items-center gap-2">
               <span className="text-2xl">🎯</span>
               <h2 className="text-xl font-bold text-white">
-                1. Cấp Độ (Level 1 - 255) & Bảng Thuộc Tính Tổng Hợp
+                1. Cấp Độ (Level 1 - {levelLimit}) & Bảng Thuộc Tính Tổng Hợp
               </h2>
             </div>
             <p className="text-xs text-slate-400 mt-1">
-              Chỉ số tự động tính toán dựa trên: <b>Cấp độ ({level})</b> + <b>Tiến hóa (+{strengthenLevel})</b> + <b>Chuyển sinh ({selectedChuyenStage > 0 ? `Chuyển ${selectedChuyenStage}` : "Gốc"})</b> + <b>Siêu tiến hóa ({superEvoLabel})</b> + <b>Đột phá ({selectedBreakthroughStep > 0 ? `Cấp ${selectedBreakthroughStep}` : "Chưa đột phá"})</b> + <b>Set Con Giáp ({activeZodiacId.toUpperCase()})</b> + <b>Vận mệnh</b>.
+              Chỉ số mô phỏng (chưa gồm hiệu ứng trong chiến đấu), dựa trên: <b>Cấp độ ({level})</b> + <b>Tiến hóa (+{strengthenLevel})</b> + <b>Chuyển sinh ({selectedChuyenStage > 0 ? `Chuyển ${selectedChuyenStage}` : "Gốc"})</b> + <b>Siêu tiến hóa ({superEvoLabel})</b> + <b>Đột phá ({selectedBreakthroughStep > 0 ? `Cấp ${selectedBreakthroughStep}` : "Chưa đột phá"})</b> + <b>Set Con Giáp ({activeZodiacId.toUpperCase()})</b> + <b>Vận mệnh</b>.
             </p>
           </div>
 
@@ -1036,7 +797,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                 setSelectedChuyenStage(0);
                 setSelectedSuperEvoId(defaultSuperEvoId);
                 setSelectedBreakthroughStep(defaultBreakthroughStep);
-                setActiveZodiacId("none");
+                setEquipmentSelection(emptySelection);
                 setAllVanMenh(false);
               }}
               className="rounded-xl border border-slate-700 bg-slate-800/80 px-3 py-1.5 text-xs text-slate-400 hover:text-white transition-colors"
@@ -1045,16 +806,17 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
             </button>
             <button
               onClick={() => {
-                setLevel(255);
-                setStrengthenLevel(60);
+                setLevel(levelLimit);
+                setStrengthenLevel(maxStrengthenAtLevel(levelLimit, supportsStrengthening, strengthenTable));
                 const lastRebirthStage = chuyenStages.at(-1)?.stage || 0;
                 setSelectedChuyenStage(lastRebirthStage);
                 setActiveTabChuyen(lastRebirthStage || 1);
                 setSelectedSuperEvoId(superEvoStages.at(-1)?.id || "none");
                 setSelectedBreakthroughStep(breakthroughStages.at(-1)?.step || 0);
-                setActiveZodiacId(zodiacRecommendation.recommendedSetId);
-                setActiveZodiacElement(zodiacRecommendation.recommendedElementKey);
-                setIsZodiacRainbow(true);
+                const rec = recommendations(hero.id, { level: levelLimit, rebirth: lastRebirthStage,
+                  superEvo: mapSuperEvoIdToStage(superEvoStages.at(-1)?.id),
+                  breakthrough: breakthroughStages.at(-1)?.step ?? 0 }, true)[0];
+                setEquipmentSelection(rec?.selection ?? emptySelection);
                 setAllVanMenh(true);
               }}
               className="rounded-xl border border-amber-500/40 bg-amber-500/10 px-3 py-1.5 text-xs font-semibold text-amber-300 hover:bg-amber-500/20 transition-colors shadow-lg shadow-amber-500/10"
@@ -1068,16 +830,17 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
         <div className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-950/60 p-5">
           <div className="flex items-center justify-between">
             <span className="text-sm font-bold text-white flex items-center gap-2">
-              <span>🎯</span> Cấp Độ Tướng (Level 1 - 255)
+              <span>🎯</span> Cấp Độ Tướng (Level 1 - {levelLimit})
             </span>
             <div className="flex items-center gap-2">
               <span className="text-xs text-slate-400">Cấp:</span>
               <input
                 type="number"
+                aria-label="Cấp độ tướng"
                 min={1}
-                max={255}
+                max={levelLimit}
                 value={level}
-                onChange={(e) => setLevel(Math.min(255, Math.max(1, parseInt(e.target.value) || 1)))}
+                onChange={(e) => setLevel(Math.min(levelLimit, Math.max(1, parseInt(e.target.value) || 1)))}
                 className="w-20 rounded-xl border border-slate-700 bg-slate-900 px-3 py-1 text-center font-mono text-sm font-bold text-sky-400 focus:border-sky-500 focus:outline-none"
               />
             </div>
@@ -1086,7 +849,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
           <input
             type="range"
             min={1}
-            max={255}
+            max={levelLimit}
             value={level}
             onChange={(e) => setLevel(parseInt(e.target.value, 10))}
             className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-500"
@@ -1094,7 +857,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
 
           <div className="flex flex-wrap items-center gap-2 pt-1">
             <span className="text-[11px] text-slate-500">Mốc nhanh:</span>
-            {[1, 50, 100, 150, 200, 255].map((lv) => (
+            {[...new Set([1, 50, 100, 150, 200, levelLimit])].filter(lv => lv <= levelLimit).map((lv) => (
               <button
                 key={lv}
                 onClick={() => setLevel(lv)}
@@ -1196,30 +959,29 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
           {calculatedStats.total.elementalDamage > 0 && (
             <div className="rounded-2xl border border-cyan-500/40 bg-gradient-to-br from-cyan-950/30 to-blue-950/20 p-4 space-y-1 shadow-lg shadow-cyan-500/10">
               <div className="text-xs text-cyan-400 font-bold flex items-center justify-between">
-                <span>ST Nguyên Tố</span>
+                <span>Công nguyên tố · chưa tính kháng địch</span>
                 {isZodiacRainbow && (
                   <span className="text-[9px] px-1.5 py-0.2 rounded bg-gradient-to-r from-red-500 to-amber-400 text-slate-950 font-black">
                     🌈 Rainbow
                   </span>
                 )}
               </div>
-              <div className="text-2xl font-black text-cyan-300 font-mono">
-                +{formatNumber(calculatedStats.total.elementalDamage)}
+              <div className="space-y-2 pt-2">
+                {Object.values(elements).filter(element => calculatedStats.elementTotals[element.id] > 0).map(element =>
+                  <div key={element.id} className="flex flex-wrap items-center gap-2 text-sm" data-total-element={element.id}>
+                    <ElementBadge id={element.id} /><b>+{formatNumber(calculatedStats.elementTotals[element.id])}</b>
+                  </div>)}
               </div>
-              <div className="text-[11px] text-slate-300">
-                Bộ: <span className="text-amber-300 font-bold">{activeZodiacId.toUpperCase()}</span> ({zodiacRecommendation.recommendedElement.label})
-              </div>
-              <div className="text-[10px] text-cyan-200/80 font-sans">
-                Khuếch đại trực tiếp kỹ năng theo mỗi điểm nguyên tố
-              </div>
+              <p className="text-xs text-slate-300">Cộng từ đúng hệ trang bị đang mang và chỉ số công đột phá; không cộng phòng nguyên tố vào công.</p>
             </div>
           )}
         </div>
-      </section>
+      </HeroSection>
 
 
       {/* 2. TIẾN HÓA (+1 ĐẾN +60) — CƯỜNG HÓA CHỈ SỐ CƠ BẢN */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-5">
+      {supportsStrengthening && (
+      <HeroSection id="evolution" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-5">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
             <div className="flex items-center gap-2">
@@ -1255,7 +1017,8 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
           <input
             type="range"
             min={0}
-            max={60}
+            max={maxStrengthen}
+            aria-label="Cấp tiến hoá"
             value={strengthenLevel}
             onChange={(e) => setStrengthenLevel(parseInt(e.target.value, 10))}
             className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-500"
@@ -1263,7 +1026,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
 
           <div className="flex flex-wrap items-center gap-2 pt-1">
             <span className="text-[11px] text-slate-500">Cấp chọn nhanh:</span>
-            {[0, 10, 20, 30, 40, 50, 60].map((stVal) => (
+            {[0, 10, 20, 30, 40, 50, 60].filter(stVal => stVal <= maxStrengthen).map((stVal) => (
               <button
                 key={stVal}
                 onClick={() => setStrengthenLevel(stVal)}
@@ -1304,10 +1067,12 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
             </div>
           )}
         </div>
-      </section>
+      </HeroSection>
+      )}
 
       {/* 3. MỤC CHUYỂN SINH (MỐC 1 ĐẾN 7) — GIAO DIỆN CHUẨN GAME */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      {chuyenStages.length > 0 && (
+      <HeroSection id="rebirth" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
             <div className="flex items-center gap-2">
@@ -1332,80 +1097,6 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
         {chuyenStages.length > 0 ? (
           <div className="space-y-6">
             {/* Nagato 3 Elemental Playstyles Selector Card (Requirement 6) */}
-            {hero.elemental_builds && hero.elemental_builds.length > 0 && (
-              <div className="rounded-2xl border border-amber-500/40 bg-gradient-to-br from-amber-950/40 via-red-950/20 to-black p-4 sm:p-5 space-y-3 shadow-xl">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-amber-500/30 pb-2.5">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🔥⛰️💧</span>
-                    <div>
-                      <h3 className="text-xs sm:text-sm uppercase font-black text-amber-300 tracking-wider">
-                        3 Phong Cách Chơi Theo 3 Nguyên Tố Của Nagato (Cơ Chế Chuyển Sinh)
-                      </h3>
-                      <p className="text-[11px] text-slate-300 mt-0.5">
-                        Nagato nên sử dụng thuộc tính <b>Địa (Thổ Độn)</b> vì đánh Boss Titan dame sẽ cao hơn vượt trội! Dưới đây là 3 phong cách chơi dựa theo 3 nguyên tố ở các mốc Chuyển Sinh (CS1: Hỏa, CS2: Thủy, CS4 & CS7: Địa).
-                      </p>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-mono text-amber-300 bg-amber-950/80 border border-amber-500/40 px-2.5 py-1 rounded-full font-bold shrink-0">
-                    Đặc Quyền Nagato
-                  </span>
-                </div>
-
-                {/* 3 Playstyle Buttons */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                  {hero.elemental_builds.map((build: any) => {
-                    const isSelected = nagatoBuildStyle === build.id;
-                    return (
-                      <button
-                        key={build.id}
-                        onClick={() => {
-                          setNagatoBuildStyle(build.id);
-                          if (build.id === "tho") {
-                            setActiveTabChuyen(7);
-                            setSelectedChuyenStage(7);
-                          } else if (build.id === "hoa") {
-                            setActiveTabChuyen(1);
-                            setSelectedChuyenStage(1);
-                          } else if (build.id === "thuy") {
-                            setActiveTabChuyen(2);
-                            setSelectedChuyenStage(2);
-                          }
-                        }}
-                        className={`rounded-xl p-3 text-left transition-all border flex flex-col justify-between gap-2 ${
-                          isSelected
-                            ? "border-amber-400 bg-amber-950/60 shadow-lg shadow-amber-500/30 scale-[1.02]"
-                            : "border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 opacity-80 hover:opacity-100"
-                        }`}
-                      >
-                        <div className="space-y-1">
-                          <div className="flex items-center justify-between">
-                            <span className="text-sm font-black text-white flex items-center gap-1.5">
-                              <span>{build.icon}</span>
-                              <span>{build.element}</span>
-                            </span>
-                            <span className={`text-[9px] px-2 py-0.5 rounded-full font-mono font-bold border ${
-                              isSelected
-                                ? "bg-amber-400 text-slate-950 border-amber-300"
-                                : "bg-slate-800 text-slate-400 border-slate-700"
-                            }`}>
-                              {build.tag}
-                            </span>
-                          </div>
-                          <p className="text-[11px] text-slate-300 leading-relaxed font-sans line-clamp-3">
-                            {build.description}
-                          </p>
-                        </div>
-
-                        <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[10px]">
-                          <span className="text-slate-400">Gợi ý trang bị:</span>
-                          <span className="font-bold text-amber-300">{build.recommended_set_name}</span>
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
             {/* Top row: Circular badges with wings & star ratings matching Image 1 */}
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 py-2">
               {/* Nút mốc Gốc (Chưa chuyển) */}
@@ -1574,10 +1265,12 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
             Bản thể tướng này chưa có dữ liệu mốc Chuyển sinh riêng.
           </div>
         )}
-      </section>
+      </HeroSection>
+      )}
 
       {/* 4. MỤC SIÊU TIẾN HÓA (CAM ➔ ĐỎ ➔ VÀNG) — NÂNG CẤP PHẨM CHẤT THẺ */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      {hasSuperEvo && (
+      <HeroSection id="super-evolution" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         {!hasSuperEvo ? (
           <div>
             <h2 className="text-xl font-bold text-white">4. Siêu Tiến Hoá</h2>
@@ -1681,7 +1374,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                 animation: hero.animation || null,
                 is_world: hero.is_world,
                 quality: hero.quality,
-                occupation: hero.occupation_type ?? 0,
+                occupation: hero.occupation_type,
               }}
               superQualityStage={frameStage}
               rebirthStage={selectedChuyenStage}
@@ -1934,7 +1627,8 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
         </div>
         </>
         )}
-      </section>
+      </HeroSection>
+      )}
 
       {/* 5. MỤC ĐỘT PHÁ TƯỚNG (20 CẤP ĐỘT PHÁ NGUYÊN TỐ) */}
       {(() => {
@@ -1971,7 +1665,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
         })();
 
         return (
-          <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+          <HeroSection id="breakthrough" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
               <div>
                 <div className="flex items-center gap-2">
@@ -2018,7 +1712,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                     <span>Chọn Cấp Đột Phá (1 - 20):</span>
                     <div className="flex items-center gap-1.5 font-mono text-[11px] normal-case">
                       <span className="text-slate-400">Bước nhảy nhanh:</span>
-                      {[1, 5, 10, 15, 20].map((stepVal) => (
+                      {[0, 1, 5, 10, 15, 20].filter(step => step <= btStages.length).map((stepVal) => (
                         <button
                           key={stepVal}
                           onClick={() => setSelectedBreakthroughStep(stepVal)}
@@ -2028,7 +1722,7 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                               : "border-slate-800 bg-slate-900 text-slate-300 hover:bg-slate-800"
                           }`}
                         >
-                          Cấp {stepVal}
+                          {stepVal === 0 ? "Chưa đột phá" : `Cấp ${stepVal}`}
                         </button>
                       ))}
                     </div>
@@ -2036,10 +1730,11 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
 
                   {/* Range Slider for smooth scrubbing */}
                   <div className="flex items-center gap-4 bg-slate-950/60 p-3 rounded-2xl border border-slate-800">
-                    <span className="text-xs font-mono font-bold text-slate-400">Cấp 1</span>
+                    <span className="text-xs font-mono font-bold text-slate-400">Chưa đột phá</span>
                     <input
                       type="range"
-                      min="1"
+                      min="0"
+                      aria-label="Cấp đột phá"
                       max={btStages.length}
                       value={selectedBreakthroughStep}
                       onChange={(e) => setSelectedBreakthroughStep(Number(e.target.value))}
@@ -2216,516 +1911,16 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
                 Bản thể tướng này không có dữ liệu Đột Phá 20 cấp riêng biệt trong file cấu hình game.
               </div>
             )}
-          </section>
+          </HeroSection>
         );
       })()}
 
-      {/* 6. TRANG BỊ (5 ĐẠI BỘ TRANG BỊ CON GIÁP) */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">🛡️</span>
-              <h2 className="text-xl font-bold text-white">
-                6. Trang Bị (5 Đại Bộ Trang Bị Con Giáp)
-              </h2>
-            </div>
-            <p className="text-xs text-slate-400 mt-1">
-              5 bộ trang bị hoàng đạo uy lực tối thượng trong game: <b>Bộ Năm Hợi</b>, <b>Bộ Năm Chuột</b>, <b>Bộ Năm Rồng</b>, <b>Bộ Năm Tị</b>, <b>Bộ Năm Ngựa</b> với mốc Cầu Vồng đột phá thần khí. Tự động đề xuất set tối ưu theo cơ chế sát thương của từng tướng.
-            </p>
-          </div>
+      <EquipmentAdvisor heroId={hero.id} heroName={hero.name}
+        state={{ level, rebirth: selectedChuyenStage, superEvo: mapSuperEvoIdToStage(selectedSuperEvoId), breakthrough: selectedBreakthroughStep }}
+        selection={equipmentSelection} onSelect={setEquipmentSelection} />
 
-          <div className="flex items-center gap-2">
-            {activeZodiacId !== "none" ? (
-              <button
-                onClick={() => setActiveZodiacId("none")}
-                className="rounded-xl border border-red-500/40 bg-red-950/60 px-4 py-2 text-xs font-bold text-red-300 hover:bg-red-900/60 transition-all shadow"
-              >
-                ✕ Bỏ trang bị Set {activeZodiacId.toUpperCase()}
-              </button>
-            ) : (
-              <div className="text-xs text-slate-400 italic">
-                (Chưa trang bị set con giáp)
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* RECOMMENDATION ENGINE BANNER - REQUIREMENT 4, 5, 6 */}
-        <div className={`rounded-3xl border p-5 sm:p-6 backdrop-blur-xl transition-all shadow-xl space-y-4 ${
-          zodiacRecommendation.hasElemental
-            ? "border-rose-500/40 bg-gradient-to-br from-rose-950/40 via-amber-950/20 to-black shadow-rose-950/30"
-            : "border-sky-500/40 bg-gradient-to-br from-sky-950/40 via-indigo-950/20 to-black shadow-sky-950/30"
-        }`}>
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 border-b border-slate-800/80 pb-4">
-            <div className="space-y-1">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="text-xl">🎯</span>
-                <span className="text-xs uppercase font-extrabold tracking-wider text-amber-400">
-                  Gợi Ý Trang Bị Con Giáp & Nguyên Tố Cho {hero.name}
-                </span>
-                <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-black border ${
-                  zodiacRecommendation.hasElemental
-                    ? "bg-rose-500/20 text-rose-300 border-rose-500/40 animate-pulse"
-                    : "bg-sky-500/20 text-sky-300 border-sky-500/40"
-                }`}>
-                  {zodiacRecommendation.hasElemental ? "⚡ Tướng Có Sát Thương Nguyên Tố" : "🛡️ Tướng Thuần Sát Thương (Không Phụ Thuộc ST Nguyên Tố)"}
-                </span>
-              </div>
-              <p className="text-xs text-slate-300 leading-relaxed font-sans">
-                {zodiacRecommendation.reason}
-              </p>
-            </div>
-
-            <button
-              onClick={() => {
-                setActiveZodiacId(zodiacRecommendation.recommendedSetId);
-                setActiveZodiacTab(zodiacRecommendation.recommendedSetId);
-                setActiveZodiacElement(zodiacRecommendation.recommendedElementKey);
-                setIsZodiacRainbow(true);
-              }}
-              className="shrink-0 rounded-2xl border border-amber-400 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 px-4 py-2.5 text-xs font-black text-slate-950 shadow-lg shadow-amber-500/30 transition-all flex items-center gap-2"
-            >
-              <span>⚡</span>
-              <span>Áp Dụng Gợi Ý Chuẩn ({zodiacRecommendation.recommendedSetName} - {zodiacRecommendation.recommendedElement.label})</span>
-            </button>
-          </div>
-
-          {/* Nagato 3 Playstyles Quick Selector inside Zodiac Recommendation Card (Requirement 6) */}
-          {hero.elemental_builds && hero.elemental_builds.length > 0 && (
-            <div className="p-3.5 rounded-2xl bg-black/60 border border-amber-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-inner">
-              <div className="flex items-center gap-2">
-                <span className="text-lg">🌀</span>
-                <span className="text-xs font-bold text-amber-300">
-                  Chọn Phong Cách Chơi Của Nagato Để Tự Động Đổi Set & Nguyên Tố:
-                </span>
-              </div>
-              <div className="flex items-center gap-2 flex-wrap">
-                {hero.elemental_builds.map((build: any) => {
-                  const isCur = nagatoBuildStyle === build.id;
-                  return (
-                    <button
-                      key={build.id}
-                      onClick={() => {
-                        setNagatoBuildStyle(build.id);
-                        setActiveZodiacId(build.recommended_set_id);
-                        setActiveZodiacTab(build.recommended_set_id);
-                        setActiveZodiacElement(build.recommended_element_key);
-                        setIsZodiacRainbow(true);
-                      }}
-                      className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition-all flex items-center gap-1.5 ${
-                        isCur
-                          ? "border-amber-400 bg-amber-500 text-slate-950 font-black shadow-md shadow-amber-500/30 scale-105"
-                          : "border-slate-800 bg-slate-900 text-slate-300 hover:bg-slate-800"
-                      }`}
-                    >
-                      <span>{build.icon}</span>
-                      <span>{build.element}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-            {/* Priority Order List */}
-            <div className="space-y-2 rounded-2xl border border-slate-800/90 bg-slate-950/60 p-4">
-              <div className="text-[11px] font-bold text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
-                <span>🏆</span> Thứ Tự Ưu Tiên Set Con Giáp Khuyên Dùng:
-              </div>
-              <div className="space-y-1.5">
-                {zodiacRecommendation.recommendedPriorityList.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className={`flex items-center justify-between p-2 rounded-xl border text-xs ${
-                      item.isBest
-                        ? "border-amber-400/60 bg-amber-950/40 text-white font-bold"
-                        : "border-slate-800 bg-slate-900/40 text-slate-300"
-                    }`}
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className={`h-5 w-5 rounded-full flex items-center justify-center text-[10px] font-mono font-black ${
-                        item.isBest ? "bg-amber-400 text-black" : "bg-slate-800 text-slate-400"
-                      }`}>
-                        {idx + 1}
-                      </span>
-                      <span>{item.name}</span>
-                    </div>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono ${
-                      item.isBest ? "bg-amber-400/20 text-amber-300 border border-amber-400/30 font-black" : "text-slate-500"
-                    }`}>
-                      {item.tag}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Element Recommendation */}
-            <div className="space-y-2 rounded-2xl border border-slate-800/90 bg-slate-950/60 p-4 flex flex-col justify-between">
-              <div className="space-y-2">
-                <div className="text-[11px] font-bold text-sky-300 uppercase tracking-wider flex items-center gap-1.5">
-                  <span>🌀</span> Gợi Ý Nguyên Tố Cho Set Con Giáp:
-                </div>
-                <div className="flex items-center gap-3 p-2.5 rounded-xl border border-sky-500/30 bg-sky-950/30">
-                  <span className="text-3xl">{zodiacRecommendation.recommendedElement.icon}</span>
-                  <div>
-                    <div className="font-extrabold text-sm text-sky-200">
-                      Nguyên Tố: {zodiacRecommendation.recommendedElement.label}
-                    </div>
-                    <div className="text-[11px] text-slate-300 mt-0.5">
-                      {zodiacRecommendation.elementReason}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
-                <span>🌈 Có hỗ trợ Mốc Cầu Vồng (Rainbow Tier) siêu chỉ số:</span>
-                <span className="font-bold text-amber-400">✓ Đạt chuẩn tối đa</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 5 Zodiac Tab Switcher */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
-          {zodiacSetsList.map((z) => (
-            <button
-              key={z.id}
-              onClick={() => setActiveZodiacTab(z.id)}
-              className={`rounded-2xl p-3 text-center transition-all border ${
-                activeZodiacTab === z.id
-                  ? "border-amber-400 bg-amber-950/50 shadow-lg shadow-amber-500/20"
-                  : "border-slate-800 bg-slate-950/60 hover:bg-slate-900 text-slate-400"
-              }`}
-            >
-              <span className="text-2xl block mb-1">{z.icon}</span>
-              <div className="text-xs font-extrabold text-white truncate">{z.name}</div>
-            </button>
-          ))}
-        </div>
-
-        {/* Selected Zodiac Set Detail */}
-        {(() => {
-          const zSet = zodiacSetsList.find((z) => z.id === activeZodiacTab) || zodiacSetsList[0];
-          if (!zSet) return null;
-
-          const isSimulated = activeZodiacId === zSet.id;
-
-          // Determine active variant based on activeZodiacElement
-          let currentVariant = zSet.variants[0];
-          if (activeZodiacElement !== "auto") {
-            const foundV = zSet.variants.find((v: any) => {
-              const el = v.element.toLowerCase();
-              if (activeZodiacElement === "hoa" && (el.includes("hỏa") || el.includes("lửa"))) return true;
-              if (activeZodiacElement === "thuy" && (el.includes("thủy") || el.includes("nước"))) return true;
-              if (activeZodiacElement === "phong" && (el.includes("phong") || el.includes("gió"))) return true;
-              if (activeZodiacElement === "tho" && (el.includes("thổ") || el.includes("địa") || el.includes("đất"))) return true;
-              return false;
-            });
-            if (foundV) currentVariant = foundV;
-          } else {
-            // Auto match recommended element
-            const recKey = zodiacRecommendation.recommendedElementKey;
-            const foundRec = zSet.variants.find((v: any) => {
-              const el = v.element.toLowerCase();
-              if (recKey === "hoa" && (el.includes("hỏa") || el.includes("lửa"))) return true;
-              if (recKey === "thuy" && (el.includes("thủy") || el.includes("nước"))) return true;
-              if (recKey === "phong" && (el.includes("phong") || el.includes("gió"))) return true;
-              if (recKey === "tho" && (el.includes("thổ") || el.includes("địa") || el.includes("đất"))) return true;
-              return false;
-            });
-            if (foundRec) currentVariant = foundRec;
-          }
-
-          return (
-            <div className={`rounded-2xl border p-6 space-y-5 transition-all ${
-              isZodiacRainbow
-                ? "border-amber-500/50 bg-gradient-to-br from-slate-950 via-amber-950/20 to-black shadow-xl shadow-amber-500/10"
-                : "border-slate-800 bg-slate-950/80"
-            }`}>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-2xl">{zSet.icon}</span>
-                    <h3 className="text-lg font-black text-white">{zSet.name}</h3>
-                    {isZodiacRainbow && (
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-red-500 via-amber-400 via-emerald-400 via-cyan-400 to-purple-500 text-slate-950 animate-pulse">
-                        🌈 Mốc Cầu Vồng
-                      </span>
-                    )}
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => setActiveZodiacId(isSimulated ? "none" : zSet.id)}
-                    className={`rounded-xl px-4 py-2 text-xs font-bold transition-all shadow ${
-                      isSimulated
-                        ? "bg-amber-500 text-slate-950 font-black shadow-amber-500/40"
-                        : "border border-amber-500/40 bg-amber-950/40 text-amber-300 hover:bg-amber-900/60"
-                    }`}
-                  >
-                    {isSimulated ? "✓ Đang trang bị vào chỉ số tướng" : "+ Trang bị thử bộ này vào tướng"}
-                  </button>
-                </div>
-              </div>
-
-              {/* Element Variant Selector within this set */}
-              <div className="space-y-2">
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider flex flex-wrap items-center justify-between gap-2">
-                  <span>Chọn Biến Thể Nguyên Tố Cho Bộ Trang Bị:</span>
-                  <span className="text-[11px] text-amber-300 font-sans">
-                    Gợi ý nguyên tố cho {hero.name}: <b>{zodiacRecommendation.recommendedElement.label}</b>
-                  </span>
-                </div>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                  {zSet.variants.map((v: any, vIdx: number) => {
-                    const elLower = v.element.toLowerCase();
-                    const vElemKey = elLower.includes("hỏa") ? "hoa" : elLower.includes("thủy") ? "thuy" : elLower.includes("phong") ? "phong" : "tho";
-                    const isSelected = v.suit_id === currentVariant.suit_id;
-                    const isRecommended = vElemKey === zodiacRecommendation.recommendedElementKey;
-
-                    return (
-                      <button
-                        key={vIdx}
-                        onClick={() => setActiveZodiacElement(vElemKey)}
-                        className={`rounded-xl p-2.5 text-xs font-bold transition-all flex items-center justify-between border ${
-                          isSelected
-                            ? "border-amber-400 bg-amber-500/20 text-white shadow-md shadow-amber-500/20"
-                            : "border-slate-800 bg-slate-900/60 text-slate-400 hover:bg-slate-800 hover:text-white"
-                        }`}
-                      >
-                        <span className="flex items-center gap-1.5 truncate">
-                          <span>{vElemKey === "hoa" ? "🔥" : vElemKey === "thuy" ? "💧" : vElemKey === "phong" ? "🌪️" : "⛰️"}</span>
-                          <span className="truncate">{v.element}</span>
-                        </span>
-                        {isRecommended && (
-                          <span className="text-[9px] bg-amber-400/20 text-amber-300 border border-amber-400/30 px-1.5 py-0.2 rounded font-mono shrink-0">
-                            Khuyên dùng
-                          </span>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Rainbow Tier Toggle Card */}
-              <div className="rounded-2xl border border-purple-500/40 bg-gradient-to-r from-purple-950/40 via-red-950/30 to-amber-950/30 p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl select-none">🌈</span>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-amber-300 to-cyan-300">
-                        Mốc Cầu Vồng (Rainbow Tier - Đột Phá Thần Khí)
-                      </span>
-                      <span className="text-[10px] bg-amber-400/20 border border-amber-400/40 text-amber-300 px-2 py-0.2 rounded-full font-bold">
-                        Tăng Rất Nhiều Chỉ Số
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-300 mt-0.5">
-                      Gia tăng vượt bậc chỉ số toàn diện: <b>+1,200,000 Công</b>, <b>+450,000 Thủ</b>, <b>+1,500,000 HP</b>, và <b>+1,000,000 Sát Thương Nguyên Tố</b>.
-                    </p>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => setIsZodiacRainbow(!isZodiacRainbow)}
-                  className={`shrink-0 rounded-xl px-4 py-2 text-xs font-black transition-all shadow ${
-                    isZodiacRainbow
-                      ? "bg-gradient-to-r from-red-500 via-amber-500 via-emerald-500 to-indigo-500 text-white shadow-lg shadow-purple-500/30 border border-white/40"
-                      : "border border-slate-700 bg-slate-800 text-slate-400 hover:text-white"
-                  }`}
-                >
-                  {isZodiacRainbow ? "✓ Mốc Cầu Vồng (Đang Bật)" : "Bật Mốc Cầu Vồng"}
-                </button>
-              </div>
-
-              {/* 4 Parts Display */}
-              <div className="space-y-2">
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center justify-between">
-                  <span>
-                    4 Món Trang Bị Thuộc Bộ ({isZodiacRainbow ? (currentVariant.rainbow_suit_name || currentVariant.suit_name) : currentVariant.suit_name}):
-                  </span>
-                  <span className="text-[10px] text-amber-400">
-                    {isZodiacRainbow ? "🌈 Đang hiển thị trang bị Mốc Cầu Vồng (Phẩm 8)" : "🌟 Đang hiển thị trang bị Mốc Thường (Phẩm 7)"}
-                  </span>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                  {(() => {
-                    const activeParts = isZodiacRainbow && currentVariant.rainbow_parts ? currentVariant.rainbow_parts : currentVariant.parts;
-                    return activeParts.map((p: any, idx: number) => {
-                      const normalPart = currentVariant.parts?.[idx];
-                      const rainbowPart = currentVariant.rainbow_parts?.[idx];
-                      return (
-                        <div
-                          key={idx}
-                          className={`rounded-xl border p-3 flex flex-col justify-between gap-2.5 transition-all ${
-                            isZodiacRainbow
-                              ? "border-amber-400/60 bg-gradient-to-br from-amber-950/40 via-purple-950/20 to-black shadow-lg shadow-amber-500/10"
-                              : "border-slate-800 bg-slate-900/80"
-                          }`}
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className="h-12 w-12 shrink-0 rounded-lg border border-amber-500/40 bg-slate-950 p-1 flex items-center justify-center overflow-hidden">
-                              <ImageWithFallback
-                                src={p.icon}
-                                alt={p.name}
-                                className="h-full w-full object-contain"
-                                fallbackIcon={p.slot_name === "Vũ khí" ? "⚔️" : p.slot_name === "Áo giáp" ? "🛡️" : p.slot_name === "Trang sức" ? "💍" : "👢"}
-                              />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="text-[10px] text-amber-400 font-bold flex items-center justify-between">
-                                <span className="flex items-center gap-1">
-                                  <span>{p.slot_name}</span>
-                                  {isZodiacRainbow ? (
-                                    <span className="text-[9px] px-1 rounded bg-purple-900/80 text-yellow-300 font-mono">Phẩm 8</span>
-                                  ) : (
-                                    <span className="text-[9px] px-1 rounded bg-slate-800 text-slate-300 font-mono">Phẩm 7</span>
-                                  )}
-                                </span>
-                                <span className="text-[9px] text-slate-500 font-mono">#{p.id}</span>
-                              </div>
-                              <div className="text-xs font-bold text-white truncate" title={p.name}>{p.name}</div>
-                            </div>
-                          </div>
-
-                          {/* In-game special combat effect */}
-                          {p.special_effect && (
-                            <div className={`text-[11px] font-medium p-2 rounded-lg leading-relaxed shadow-sm border ${
-                              isZodiacRainbow
-                                ? "text-amber-200 bg-amber-950/50 border-amber-500/40"
-                                : "text-emerald-400 bg-emerald-950/40 border-emerald-500/30"
-                            }`} title={p.special_effect}>
-                              <div className="flex items-center justify-between text-[10px] uppercase font-bold text-slate-400 mb-0.5">
-                                <span>{isZodiacRainbow ? "⚡ Hiệu Ứng Cầu Vồng:" : "⚡ Hiệu Ứng Thường:"}</span>
-                                {normalPart && rainbowPart && isZodiacRainbow && normalPart.effect_value !== rainbowPart.effect_value && (
-                                  <span className="text-yellow-300 font-mono">
-                                    {normalPart.effect_value}% → {rainbowPart.effect_value}%
-                                  </span>
-                                )}
-                              </div>
-                              <div>{p.special_effect}</div>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    });
-                  })()}
-                </div>
-              </div>
-
-              {/* Special Attributes Before & After Rainbow Tier - Requirement 1 */}
-              {zSet.special_attributes && (
-                <div className="rounded-2xl border border-amber-500/40 bg-gradient-to-r from-amber-950/40 via-purple-950/20 to-black p-5 space-y-4 shadow-xl">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-amber-500/30 pb-3">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xl">✨</span>
-                      <div>
-                        <h4 className="text-sm uppercase font-extrabold text-amber-300 tracking-wider">
-                          {zSet.special_attributes.title || `Chỉ Số Đặc Biệt Trước & Sau Khi Lên Cầu Vồng (${zSet.name})`}
-                        </h4>
-                        <p className="text-[11px] text-slate-300 mt-0.5">
-                          Kiểm tra chính xác chỉ số hiệu ứng chiến đấu của từng món trang bị khi nâng từ Mốc Thường (Phẩm 7) lên Mốc Cầu Vồng (Phẩm 8).
-                        </p>
-                      </div>
-                    </div>
-                    <span className="text-[10px] text-yellow-300 font-mono bg-yellow-950/80 border border-yellow-500/40 px-2.5 py-1 rounded-full font-bold shrink-0">
-                      Chỉ Số Chuẩn Game 100%
-                    </span>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {/* Normal Tier Attributes */}
-                    <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-3.5 space-y-2">
-                      <div className="flex items-center justify-between border-b border-slate-800/80 pb-1.5">
-                        <span className="text-xs font-bold text-slate-300 flex items-center gap-1.5">
-                          <span>🌟</span>
-                          <span>Trước Khi Lên Cầu Vồng (Phẩm 7 - Thường)</span>
-                        </span>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-400">Phẩm 7</span>
-                      </div>
-                      <div className="space-y-1.5 text-xs">
-                        {(zSet.special_attributes.normal_highlights || []).map((hl: string, hlIdx: number) => (
-                          <div key={hlIdx} className="p-2 rounded-lg bg-black/40 border border-slate-800/70 text-slate-300 flex items-start gap-2">
-                            <span className="leading-relaxed">{hl}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Rainbow Tier Attributes */}
-                    <div className={`rounded-xl border p-3.5 space-y-2 transition-all ${
-                      isZodiacRainbow
-                        ? "border-amber-400/80 bg-gradient-to-br from-amber-950/50 to-purple-950/40 shadow-lg shadow-amber-500/20"
-                        : "border-purple-500/40 bg-purple-950/20"
-                    }`}>
-                      <div className="flex items-center justify-between border-b border-amber-500/30 pb-1.5">
-                        <span className="text-xs font-extrabold text-amber-300 flex items-center gap-1.5">
-                          <span>🌈</span>
-                          <span>Sau Khi Lên Cầu Vồng (Phẩm 8)</span>
-                        </span>
-                        <span className="text-[10px] font-bold font-mono px-2 py-0.5 rounded bg-gradient-to-r from-red-500 via-amber-400 to-cyan-400 text-black">
-                          Gấp 2 Lần Chỉ Số
-                        </span>
-                      </div>
-                      <div className="space-y-1.5 text-xs">
-                        {(zSet.special_attributes.rainbow_highlights || []).map((hl: string, hlIdx: number) => (
-                          <div key={hlIdx} className="p-2 rounded-lg bg-black/60 border border-amber-500/30 text-amber-200 flex items-start gap-2 font-medium">
-                            <span className="leading-relaxed">{hl}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Set Effects & Best Heroes Synergy */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pt-1">
-                {/* Set Bonuses */}
-                <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-4 space-y-2">
-                  <div className="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center justify-between">
-                    <span>Hiệu Ứng Kích Hoạt Bộ Trang Bị</span>
-                    <span className={`text-[10px] px-2 py-0.5 rounded font-bold ${
-                      isZodiacRainbow
-                        ? "text-yellow-300 bg-yellow-950/80 border border-yellow-500/40"
-                        : "text-slate-400 bg-slate-800"
-                    }`}>
-                      {isZodiacRainbow ? "🌈 Mốc Cầu Vồng (Phẩm 8)" : "🌟 Mốc Thường (Phẩm 7)"}
-                    </span>
-                  </div>
-                  <div className="space-y-1.5 text-xs">
-                    <div className="flex items-center justify-between text-slate-300 py-1.5 border-b border-slate-800/60">
-                      <span>Mốc 2 món:</span>
-                      <span className="font-mono text-emerald-400 font-semibold">
-                        {isZodiacRainbow && currentVariant.rainbow_bonuses ? currentVariant.rainbow_bonuses.two_piece : currentVariant.bonuses.two_piece}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between text-slate-300 py-1.5 border-b border-slate-800/60">
-                      <span>Mốc 3 món:</span>
-                      <span className="font-mono text-emerald-400 font-semibold">
-                        {isZodiacRainbow && currentVariant.rainbow_bonuses ? currentVariant.rainbow_bonuses.three_piece : currentVariant.bonuses.three_piece}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between text-slate-300 py-1.5">
-                      <span>Mốc 4 món {isZodiacRainbow ? "(Cầu Vồng)" : "(Cơ bản)"}:</span>
-                      <span className="font-mono text-amber-400 font-bold">
-                        {isZodiacRainbow && currentVariant.rainbow_bonuses ? currentVariant.rainbow_bonuses.four_piece : currentVariant.bonuses.four_piece}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })()}
-      </section>      {/* 7. HUY HIỆU CỦA TƯỚNG (NẾU CÓ) */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      {/* 7. HUY HIỆU CỦA TƯỚNG */}
+      <HeroSection className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
             <div className="flex items-center gap-2">
@@ -2837,10 +2032,10 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
             Hiện tại 14 thẻ tướng chủ lực sở hữu Huy Hiệu cá nhân trong cấu hình game.
           </div>
         )}
-      </section>
+      </HeroSection>
 
       {/* 8. VẬN MỆNH (KÍCH HOẠT VẬN MỆNH) */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      <HeroSection className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
@@ -2967,10 +2162,10 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
             Chưa có cấu hình Vận Mệnh cho bản thể này.
           </div>
         )}
-      </section>
+      </HeroSection>
 
       {/* 9. SKILLS LIST (7 Ô KỸ NĂNG NGUYÊN BẢN) */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      <HeroSection className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         <div className="border-b border-slate-800 pb-4">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             <span>⚡</span>
@@ -2982,70 +2177,13 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {hero.skills_detailed?.map((sk: any, idx: number) => (
-            <div
-              key={idx}
-              className="rounded-2xl border border-slate-800 bg-slate-950/60 p-5 flex items-start gap-4 hover:border-slate-700 transition-colors"
-            >
-              <div className="h-14 w-14 shrink-0 rounded-xl border border-slate-700 bg-slate-900 p-1">
-                <ImageWithFallback
-                  src={sk.icon}
-                  alt={sk.name || `Kỹ năng #${sk.skill_id}`}
-                  className="h-full w-full object-contain"
-                  fallbackIcon="⚡"
-                  fallbackText="Chưa tìm thấy ảnh"
-                />
-              </div>
-
-              <div className="flex-1 space-y-1.5 min-w-0">
-                <div className="flex items-center justify-between gap-2">
-                  <h4 className="font-bold text-white text-sm truncate">
-                    {sk.name || `Kỹ năng #${sk.skill_id}`}
-                  </h4>
-                  <span className="shrink-0 rounded-full border border-sky-500/30 bg-sky-500/10 px-2 py-0.5 text-[10px] text-sky-400 font-mono">
-                    Slot {sk.slot}
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-3 text-[11px] text-slate-400">
-                  {sk.cd !== undefined && (
-                    <span>
-                      Hồi: <span className="text-slate-200 font-mono">{sk.cd}</span>
-                    </span>
-                  )}
-                  {sk.rate !== undefined && (
-                    <span>
-                      Tỷ lệ: <span className="text-slate-200 font-mono">{sk.rate}%</span>
-                    </span>
-                  )}
-                  {sk.skill_type && (
-                    <span className="text-purple-400 font-mono">{sk.skill_type}</span>
-                  )}
-                </div>
-
-                <p className="text-xs text-slate-300 leading-relaxed line-clamp-3">
-                  {sk.description || "Chưa có mô tả kỹ năng."}
-                </p>
-
-                {sk.skill_id && (
-                  <div className="pt-1">
-                    <Link
-                      href={`/skills/${sk.skill_id}`}
-                      className="text-[11px] text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1"
-                    >
-                      <span>Xem chi tiết kỹ năng</span>
-                      <span>→</span>
-                    </Link>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
+          {hero.skills_detailed?.map(sk => <HeroSkillCard key={`${sk.slot}-${sk.skill_id}`} skill={sk}
+            required={combatProfiles[hero.id]?.skill_unlocks[String(sk.slot)]} superEvo={mapSuperEvoIdToStage(selectedSuperEvoId)} />)}
         </div>
-      </section>
+      </HeroSection>
 
       {/* 10. SYSTEM & METADATA */}
-      <section className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6 backdrop-blur text-xs space-y-3">
+      <HeroSection className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6 backdrop-blur text-xs space-y-3">
         <h3 className="text-sm font-bold text-slate-300 uppercase tracking-wider">Thông Tin Bản Thể & Cấu Hình</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
           <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
@@ -3058,14 +2196,14 @@ export default function HeroInteractiveView({ hero }: HeroInteractiveViewProps) 
           </div>
           <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
             <span className="text-slate-500">Cấp Tối Đa Cấu Hình:</span>
-            <div className="font-mono text-white font-bold">{hero.level_max || 255}</div>
+            <div className="font-mono text-white font-bold">{hero.level_max > 0 ? hero.level_max : "0 (nguồn chưa nêu giới hạn)"}</div>
           </div>
           <div className="rounded-xl border border-slate-800 bg-slate-950 p-3">
             <span className="text-slate-500">Trạng Thái Độc Quyền (is_only):</span>
             <div className="font-mono text-white font-bold">{hero.is_only ?? 0}</div>
           </div>
         </div>
-      </section>
+      </HeroSection>
     </div>
   );
 }

@@ -1,0 +1,10 @@
+{
+  "base": "http://localhost:3000",
+  "steps": [
+    {"url":"/heroes/83100", "width":1440,"height":900,"shot":"elaina-desktop.png"},
+    {"scrollTo":"section:nth-of-type(7)","shot":"equipment-desktop.png"},
+    {"url":"/heroes/83100", "width":390,"height":844,"shot":"elaina-mobile.png"},
+    {"clickText":"Bộ Năm Ngựa","within":"button","shot":"equipment-mobile.png"},
+    {"url":"/heroes/82400", "width":390,"height":844,"shot":"nagato-mobile.png"}
+  ]
+}

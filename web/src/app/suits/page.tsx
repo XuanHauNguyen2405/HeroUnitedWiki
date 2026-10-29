@@ -3,6 +3,9 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
+import ElementBadge from "@/components/ElementBadge";
+import { SetBonuses } from "@/components/EquipmentDetails";
+import { elements } from "@/lib/game-attributes";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { stripVietnameseAccents } from "@/lib/utils";
@@ -18,6 +21,7 @@ const ZODIAC_SUIT_MAP: Record<string, string[]> = {
 
 export default function SuitsPage() {
   const [search, setSearch] = useState("");
+  const [elementFilter, setElementFilter] = useState("all");
   const [zodiacFilter, setZodiacFilter] = useState<string | null>(null);
   const [onlyCompleteImages, setOnlyCompleteImages] = useState(false);
   const [page, setPage] = useState(1);
@@ -25,6 +29,7 @@ export default function SuitsPage() {
 
   const filteredSuits = useMemo(() => {
     let list = suitsCatalog as any[];
+    if (elementFilter !== "all") list = list.filter(suit => elementFilter === "unknown" ? !suit.element_id : suit.element_id === elementFilter);
 
     if (zodiacFilter && ZODIAC_SUIT_MAP[zodiacFilter]) {
       const allowedIds = ZODIAC_SUIT_MAP[zodiacFilter];
@@ -51,11 +56,11 @@ export default function SuitsPage() {
     }
 
     return list;
-  }, [search, zodiacFilter, onlyCompleteImages]);
+  }, [elementFilter, search, zodiacFilter, onlyCompleteImages]);
 
   useEffect(() => {
     setPage(1);
-  }, [search, zodiacFilter, onlyCompleteImages]);
+  }, [elementFilter, search, zodiacFilter, onlyCompleteImages]);
 
   const totalPages = Math.ceil(filteredSuits.length / pageSize) || 1;
   const paginatedSuits = filteredSuits.slice(
@@ -67,6 +72,13 @@ export default function SuitsPage() {
     <div className="space-y-6">
       <Breadcrumbs items={[{ label: "Bộ Trang Bị (Suits)" }]} />
 
+      <label className="block text-sm text-slate-300 space-y-2"><span>Lọc thuộc tính theo bộ</span>
+        <select aria-label="Lọc thuộc tính theo bộ" className="hero-control" value={elementFilter} onChange={e => setElementFilter(e.target.value)}>
+          <option value="all">Tất cả thuộc tính</option>
+          {Object.values(elements).map(e => <option key={e.id} value={e.id}>{e.name}</option>)}
+          <option value="unknown">Chưa xác minh thuộc tính</option>
+        </select>
+      </label>
       {/* Header */}
       <div className="p-6 sm:p-8 rounded-2xl border border-gray-800 bg-gradient-to-r from-emerald-950/40 via-gray-900 to-gray-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
@@ -226,24 +238,7 @@ export default function SuitsPage() {
                   ))}
                 </div>
 
-                {/* Set Bonuses Preview */}
-                <div className="text-[11px] text-gray-400 space-y-1 bg-gray-950/50 p-2.5 rounded-lg border border-gray-800 font-mono">
-                  {suit.bonuses?.suit_add2 && (
-                    <div className="truncate text-amber-400/90">
-                      • 2 món: {JSON.stringify(suit.bonuses.suit_add2)}
-                    </div>
-                  )}
-                  {suit.bonuses?.suit_add3 && (
-                    <div className="truncate text-blue-400/90">
-                      • 3 món: {JSON.stringify(suit.bonuses.suit_add3)}
-                    </div>
-                  )}
-                  {suit.bonuses?.suit_add4 && (
-                    <div className="truncate text-purple-400/90">
-                      • 4 món: {JSON.stringify(suit.bonuses.suit_add4)}
-                    </div>
-                  )}
-                </div>
+                <ElementBadge id={suit.element_id} /><SetBonuses bonuses={suit.bonuses} />
               </div>
 
               <Link

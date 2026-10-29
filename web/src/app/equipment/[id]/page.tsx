@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getEquipmentById, getSuitById } from "@/lib/data";
 import { getQualityConfig, formatNumber } from "@/lib/utils";
+import ElementBadge from "@/components/ElementBadge";
+import { EquipmentStatLine } from "@/components/EquipmentDetails";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ImageWithFallback from "@/components/ImageWithFallback";
 
@@ -118,47 +120,7 @@ export default async function EquipmentDetailPage({ params }: { params: Promise<
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Primary Stat */}
-              <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
-                <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Chỉ số chính (Primary)</div>
-                {eq.primary_stat && eq.primary_stat.ability_id ? (
-                  <div className="space-y-1">
-                    <div className="text-lg font-bold text-sky-400">
-                      +{formatNumber(eq.primary_stat.value)}
-                    </div>
-                    <div className="text-xs text-slate-400">
-                      Tăng mỗi cấp: <span className="font-mono text-slate-300">+{eq.primary_stat.level_add}</span>
-                    </div>
-                    <div className="text-[11px] text-slate-500 font-mono">
-                      Mã thuộc tính: {eq.primary_stat.ability_id}{" "}
-                      <span className="text-amber-400/80">(Chưa xác minh tên gọi thuộc tính)</span>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="text-sm text-slate-500 italic">Không có chỉ số chính</div>
-                )}
-              </div>
-
-              {/* Secondary Stat */}
-              <div className="rounded-xl border border-slate-800 bg-slate-950/60 p-4">
-                <div className="text-xs text-slate-400 uppercase tracking-wider mb-1">Chỉ số phụ (Secondary)</div>
-                {eq.secondary_stat && eq.secondary_stat.ability_id ? (
-                  <div className="space-y-1">
-                    <div className="text-lg font-bold text-purple-400">
-                      +{formatNumber(eq.secondary_stat.value)}
-                    </div>
-                    <div className="text-xs text-slate-400">
-                      Tăng mỗi cấp: <span className="font-mono text-slate-300">+{eq.secondary_stat.level_add}</span>
-                    </div>
-                    <div className="text-[11px] text-slate-500 font-mono">
-                      Mã thuộc tính: {eq.secondary_stat.ability_id}{" "}
-                      <span className="text-amber-400/80">(Chưa xác minh tên gọi thuộc tính)</span>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="text-sm text-slate-500 italic">Không có chỉ số phụ</div>
-                )}
-              </div>
+              <div className="rounded-xl border border-slate-700 p-4 space-y-2"><ElementBadge id={eq.element_id} /><p><EquipmentStatLine stat={eq.primary_stat} /></p><p><EquipmentStatLine stat={eq.secondary_stat} /></p></div>
             </div>
           </div>
 

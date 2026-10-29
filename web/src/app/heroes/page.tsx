@@ -4,13 +4,16 @@
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ImageWithFallback from "@/components/ImageWithFallback";
-import { stripVietnameseAccents, getQualityConfig } from "@/lib/utils";
+import HeroSummaryCard from "@/components/HeroSummaryCard";
+import { elements, rawDomainLabel } from "@/lib/game-attributes";
+import { combatProfiles } from "@/lib/equipment-advisor";
+import { stripVietnameseAccents } from "@/lib/utils";
 import heroesData from "@/data/heroes_catalog.json";
 
 export default function HeroesPage() {
   const [search, setSearch] = useState("");
   const [qualityFilter, setQualityFilter] = useState<string>("all");
+  const [elementFilter, setElementFilter] = useState("all");
   const [careerFilter, setCareerFilter] = useState<string>("all");
   const [raceFilter, setRaceFilter] = useState<string>("all");
   const [onlyWithImage, setOnlyWithImage] = useState(false);
@@ -42,6 +45,7 @@ export default function HeroesPage() {
     }
 
     // 3. Filter Career
+    if (elementFilter !== "all") list = list.filter(h => combatProfiles[h.id]?.evidence.some(e => e.slot > 0 && e.element_ids.includes(elementFilter)));
     if (careerFilter !== "all") {
       const c = parseInt(careerFilter, 10);
       list = list.filter((h) => h.career === c);
@@ -78,12 +82,12 @@ export default function HeroesPage() {
     });
 
     return list;
-  }, [search, qualityFilter, careerFilter, raceFilter, onlyWithImage, sortBy]);
+  }, [search, qualityFilter, careerFilter, raceFilter, elementFilter, onlyWithImage, sortBy]);
 
   // Reset page to 1 when filters change
   useEffect(() => {
     setPage(1);
-  }, [search, qualityFilter, careerFilter, raceFilter, onlyWithImage, sortBy]);
+  }, [search, qualityFilter, careerFilter, raceFilter, elementFilter, onlyWithImage, sortBy]);
 
   const totalPages = Math.ceil(filteredHeroes.length / pageSize) || 1;
   const paginatedHeroes = filteredHeroes.slice(
@@ -159,37 +163,37 @@ export default function HeroesPage() {
             </select>
           </div>
 
+          <div><label htmlFor="skill-element-filter" className="block text-gray-400 mb-1 font-medium">Thuộc tính trong kỹ năng</label>
+            <select id="skill-element-filter" value={elementFilter} onChange={e => setElementFilter(e.target.value)} className="hero-control w-full">
+              <option value="all">Tất cả thuộc tính kỹ năng</option>
+              {Object.values(elements).map(e => <option key={e.id} value={e.id}>{e.name}</option>)}
+            </select>
+          </div>
           {/* Career Filter */}
           <div>
             <label className="block text-gray-400 mb-1 font-medium">Nghề (Career)</label>
             <select
+              aria-label="Nghề của tướng"
               value={careerFilter}
               onChange={(e) => setCareerFilter(e.target.value)}
               className="w-full bg-gray-950 border border-gray-800 rounded-lg p-2 text-gray-200 focus:outline-none focus:border-indigo-500"
             >
               <option value="all">Tất cả nghề</option>
-              <option value="1">Nghề 1</option>
-              <option value="2">Nghề 2</option>
-              <option value="3">Nghề 3</option>
-              <option value="4">Nghề 4</option>
-              <option value="5">Nghề 5</option>
+              {[...new Set(heroesData.map(h => h.career))].filter(id => id !== null && id !== undefined).sort((a, b) => a - b).map(id => <option key={id} value={String(id)}>{rawDomainLabel("career", id)}</option>)}
             </select>
           </div>
 
           {/* Race Filter */}
           <div>
-            <label className="block text-gray-400 mb-1 font-medium">Hệ/Tộc (Race)</label>
+            <label className="block text-gray-400 mb-1 font-medium">Tộc (ID nguồn)</label>
             <select
+              aria-label="Tộc của tướng"
               value={raceFilter}
               onChange={(e) => setRaceFilter(e.target.value)}
               className="w-full bg-gray-950 border border-gray-800 rounded-lg p-2 text-gray-200 focus:outline-none focus:border-indigo-500"
             >
-              <option value="all">Tất cả hệ tộc</option>
-              <option value="1">Tộc 1</option>
-              <option value="2">Tộc 2</option>
-              <option value="3">Tộc 3</option>
-              <option value="4">Tộc 4</option>
-              <option value="5">Tộc 5</option>
+              <option value="all">Tất cả tộc</option>
+              {[...new Set(heroesData.map(h => h.race))].filter(id => id !== null && id !== undefined).sort((a, b) => a - b).map(id => <option key={id} value={String(id)}>{rawDomainLabel("race", id)}</option>)}
             </select>
           </div>
 
@@ -238,82 +242,7 @@ export default function HeroesPage() {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {paginatedHeroes.map((hero) => {
-            const qConfig = getQualityConfig(hero.quality);
-            return (
-              <Link
-                key={hero.id}
-                href={`/heroes/${hero.id}`}
-                className="p-4 rounded-xl border border-gray-800/80 bg-gray-900/40 hover:bg-gray-850 hover:border-gray-700 transition-all hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden border border-gray-700/80 bg-gray-950 flex-shrink-0 group-hover:scale-105 transition-transform">
-                      <ImageWithFallback
-                        src={hero.avatar}
-                        alt={hero.name}
-                        className="w-full h-full object-cover"
-                        fallbackText="No Pic"
-                        fallbackIcon="👤"
-                      />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-1.5 mb-0.5">
-                        <span className="text-[10px] font-mono text-gray-400">
-                          #{hero.id}
-                        </span>
-                        <span
-                          className={`text-[9px] px-1.5 py-0.2 rounded border font-semibold ${qConfig.badgeClass}`}
-                        >
-                          Phẩm {hero.quality}
-                        </span>
-                      </div>
-                      <h3 className="font-bold text-white text-sm truncate group-hover:text-indigo-400 transition-colors">
-                        {hero.name}
-                      </h3>
-                      <div className="text-[11px] text-amber-400 font-medium flex items-center gap-1">
-                        <img
-                          src="/assets/card/public_equip_star.png"
-                          alt="Sao"
-                          className="w-3.5 h-3.5 object-contain filter drop-shadow"
-                        />
-                        <span>{hero.star} / {hero.star_max} Sao</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Quick Stats Grid */}
-                  <div className="grid grid-cols-3 gap-1 py-2 px-2.5 rounded-lg bg-gray-950/70 border border-gray-800 text-center text-[10px]">
-                    <div>
-                      <div className="text-gray-500 uppercase">HP</div>
-                      <div className="font-bold text-gray-200">
-                        {hero.hp?.toLocaleString()}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-gray-500 uppercase">V.Công</div>
-                      <div className="font-bold text-gray-200">
-                        {hero.patk?.toLocaleString()}
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-gray-500 uppercase">Tốc độ</div>
-                      <div className="font-bold text-gray-200">
-                        {hero.speed?.toLocaleString()}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-3 pt-2.5 border-t border-gray-800/60 flex items-center justify-between text-[11px] text-gray-400">
-                  <span>Nghề {hero.career} • Tộc {hero.race}</span>
-                  <span className="text-indigo-400 font-semibold group-hover:translate-x-1 transition-transform">
-                    Chi tiết ➔
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
+          {paginatedHeroes.map(hero => <HeroSummaryCard key={hero.id} hero={hero} />)}
         </div>
       )}
 

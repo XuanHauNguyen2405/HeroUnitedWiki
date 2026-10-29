@@ -52,8 +52,14 @@ export function getHeroById(id: string): any | null {
   return allHeroes[id] || null;
 }
 
+// Batch consumers (card library) read the detail file once for all forms.
+export function getHeroesDetails(): Record<string, ReturnType<typeof getHeroById>> {
+  return readJsonFile("heroes_detail.json", {});
+}
+
 // 2. Suits (Equipment Sets)
 export interface SuitSummary {
+  element_id?: string | null;
   id: string;
   name: string;
   parts_count: number;
@@ -84,6 +90,7 @@ export function getSuitById(id: string): SuitSummary | null {
 
 // 3. Equipment
 export interface EquipmentSummary {
+  element_id?: string | null;
   id: string;
   name: string;
   slot: number;
@@ -151,6 +158,90 @@ export function getHeroBanSucRecommendation(heroId: string): any | null {
 // 6. Editorial
 export function getEditorialData(): any {
   return readJsonFile<any>("editorial_data.json", { tier_list: { status: "draft" }, guides: [] });
+}
+
+// 6.1 Tier List
+export interface TierListHero {
+  id: string;
+  name: string;
+  game_name: string;
+  tier: "UBER" | "TIER 0" | "TIER 1" | "TIER 2" | "TIER 3" | "TIER 4";
+  role: "DEALER" | "SUPPORT";
+  role_label: string;
+  career_id: number;
+  career_name: string;
+  quality: number;
+  avatar: string | null;
+  standing_image: string | null;
+  image: string;
+  image_2x: string;
+  url: string;
+  notes: string;
+  hp: number;
+  patk: number;
+  matk: number;
+  def: number;
+  speed: number;
+  is_world: boolean;
+}
+
+export interface TierListSection {
+  tier: string;
+  title: string;
+  description: string;
+  badge: string;
+  border: string;
+  bg: string;
+  accent: string;
+  heroes: TierListHero[];
+}
+
+export interface TierListGroup {
+  role: "DEALER" | "SUPPORT";
+  title: string;
+  subtitle: string;
+  description: string;
+  infographic_image: string;
+  infographic_image_2x: string;
+  total_heroes: number;
+  sections: TierListSection[];
+  heroes: TierListHero[];
+}
+
+export interface TierListData {
+  version: string;
+  status: string;
+  title: string;
+  subtitle: string;
+  last_updated: string;
+  original_graphic: string;
+  stats: {
+    total_ranked_heroes: number;
+    dealer_count: number;
+    support_count: number;
+    tiers_count: number;
+  };
+  tier_legend: Array<{
+    tier: string;
+    title: string;
+    color: string;
+    desc: string;
+  }>;
+  groups: TierListGroup[];
+}
+
+export function getTierListData(): TierListData {
+  return readJsonFile<TierListData>("tier_list.json", {
+    version: "2026.10",
+    status: "draft",
+    title: "Bảng Xếp Hạng Tướng (Tier List)",
+    subtitle: "",
+    last_updated: "",
+    original_graphic: "",
+    stats: { total_ranked_heroes: 0, dealer_count: 0, support_count: 0, tiers_count: 0 },
+    tier_legend: [],
+    groups: [],
+  });
 }
 
 // 7. Search Index

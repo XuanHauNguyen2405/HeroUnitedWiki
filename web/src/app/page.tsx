@@ -72,14 +72,14 @@ export default function HomePage() {
       accent: "text-indigo-400",
     },
     {
-      title: "Tier List & Cẩm Nang",
-      count: "Biên Tập Chuyên Sâu",
-      desc: "Khu vực bài viết, đánh giá xếp hạng và đội hình thực chiến từ các biên tập viên. Dữ liệu biên tập tách biệt rõ ràng với cấu hình game.",
-      icon: "📖",
+      title: "Bảng Xếp Hạng (Tier List)",
+      count: "46 Tướng • Meta 2026",
+      desc: "Xếp hạng thực chiến Dealer và Support + Hybrid (UBER đến Tier 4) theo meta giải đấu mới nhất.",
+      icon: "🏆",
       href: "/tier-list",
-      gradient: "from-pink-900/40 via-pink-950/20 to-transparent",
-      border: "hover:border-pink-500/50",
-      accent: "text-pink-400",
+      gradient: "from-amber-900/40 via-red-950/20 to-transparent",
+      border: "hover:border-amber-500/50",
+      accent: "text-amber-400",
     },
   ];
 

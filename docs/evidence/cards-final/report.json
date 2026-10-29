@@ -1,0 +1,81 @@
+{
+  "console": [],
+  "exceptions": [],
+  "failedRequests": [],
+  "badResponses": [],
+  "steps": [
+    {
+      "i": 0,
+      "url": "/cards",
+      "width": 1440,
+      "height": 900,
+      "shot": "cards-desktop.png",
+      "assert": "document.querySelector('[aria-label=\"Tướng trên thẻ\"]').options.length === 721 && !document.querySelector('[aria-label=\"Đột phá thẻ\"]')",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\cards-final\\cards-desktop.png"
+    },
+    {
+      "i": 1,
+      "url": "/cards",
+      "width": 390,
+      "height": 844,
+      "shot": "cards-mobile.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\cards-final\\cards-mobile.png"
+    },
+    {
+      "i": 2,
+      "select": {
+        "selector": "[aria-label=\"Tướng trên thẻ\"]",
+        "value": "84000"
+      },
+      "assert": "!!document.querySelector('[aria-label=\"Đột phá thẻ\"]')",
+      "selectResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 3,
+      "select": {
+        "selector": "[aria-label=\"Đột phá thẻ\"]",
+        "value": "20"
+      },
+      "selectResult": "OK",
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 4,
+      "select": {
+        "selector": "[aria-label=\"Tướng trên thẻ\"]",
+        "value": "43900"
+      },
+      "assert": "!document.querySelector('[aria-label=\"Đột phá thẻ\"]') && document.querySelector('[aria-label=\"Cấp độ thẻ\"]').value === '1'",
+      "selectResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 5,
+      "url": "/heroes/84000",
+      "width": 1440,
+      "height": 900,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 6,
+      "scrollTo": "#super-evolution",
+      "shot": "sasuke-card-desktop.png",
+      "scrollResult": "OK",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\cards-final\\sasuke-card-desktop.png"
+    }
+  ]
+}

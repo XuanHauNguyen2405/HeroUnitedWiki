@@ -1,0 +1,365 @@
+{
+  "elements": {
+    "fire": {
+      "id": "fire",
+      "name": "Hỏa (Lửa)",
+      "symbol": "🔥",
+      "color": "#fca5a5",
+      "attack_id": 201,
+      "defense_id": 301,
+      "meaning": "Hỏa công",
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE"
+    },
+    "water": {
+      "id": "water",
+      "name": "Thủy (Nước)",
+      "symbol": "💧",
+      "color": "#7dd3fc",
+      "attack_id": 202,
+      "defense_id": 302,
+      "meaning": "Thủy công",
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE"
+    },
+    "wind": {
+      "id": "wind",
+      "name": "Phong (Gió)",
+      "symbol": "🌪️",
+      "color": "#6ee7b7",
+      "attack_id": 203,
+      "defense_id": 303,
+      "meaning": "Phong công",
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE"
+    },
+    "earth": {
+      "id": "earth",
+      "name": "Địa (Thổ)",
+      "symbol": "⛰️",
+      "color": "#fcd34d",
+      "attack_id": 204,
+      "defense_id": 304,
+      "meaning": "Địa công",
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE"
+    }
+  },
+  "abilities": {
+    "1": {
+      "id": 1,
+      "name": "Vật công",
+      "key": "patk",
+      "type_value": 1,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_phsc.png"
+    },
+    "2": {
+      "id": 2,
+      "name": "Ma Công",
+      "key": "matk",
+      "type_value": 2,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_mgc.png"
+    },
+    "3": {
+      "id": 3,
+      "name": "Phòng ngự",
+      "key": "def",
+      "type_value": 3,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_dfs.png"
+    },
+    "4": {
+      "id": 4,
+      "name": "Tốc độ",
+      "key": "speed",
+      "type_value": 4,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_speed.png"
+    },
+    "5": {
+      "id": 5,
+      "name": "HP",
+      "key": "hp",
+      "type_value": 5,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_hp.png"
+    },
+    "6": {
+      "id": 6,
+      "name": "Bạo kích",
+      "key": "crit",
+      "type_value": 6,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_crit.png"
+    },
+    "7": {
+      "id": 7,
+      "name": "Chính xác",
+      "key": "hr",
+      "type_value": 7,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_hr.png"
+    },
+    "8": {
+      "id": 8,
+      "name": "Giảm thương",
+      "key": "subhurt",
+      "type_value": 8,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_subhurt.png"
+    },
+    "9": {
+      "id": 9,
+      "name": "Né tránh",
+      "key": "dr",
+      "type_value": 9,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_dr.png"
+    },
+    "10": {
+      "id": 10,
+      "name": "Tỉ lệ kĩ năng trước trận",
+      "key": "probability",
+      "type_value": 10,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_probability.png"
+    },
+    "11": {
+      "id": 11,
+      "name": "Khóa",
+      "key": "block",
+      "type_value": 11,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_sec_block.png"
+    },
+    "12": {
+      "id": 12,
+      "name": "Phá giáp",
+      "key": "deSub",
+      "type_value": 12,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_sec_deSub.png"
+    },
+    "13": {
+      "id": 13,
+      "name": "Bạo thương",
+      "key": "critHurt",
+      "type_value": 13,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_sec_critHurt.png"
+    },
+    "14": {
+      "id": 14,
+      "name": "Bạo kháng",
+      "key": "deCrit",
+      "type_value": 14,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_sec_deCrit.png"
+    },
+    "15": {
+      "id": 15,
+      "name": "Bạo miễn",
+      "key": "deCrithurt",
+      "type_value": 15,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_sec_deCrithurt.png"
+    },
+    "16": {
+      "id": 16,
+      "name": "Linh hoạt",
+      "key": "deBlock",
+      "type_value": 16,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_sec_deBlock.png"
+    },
+    "101": {
+      "id": 101,
+      "name": "Vật công",
+      "key": "patk",
+      "type_value": 1,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_phsc.png"
+    },
+    "102": {
+      "id": 102,
+      "name": "Ma Công",
+      "key": "matk",
+      "type_value": 2,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_mgc.png"
+    },
+    "103": {
+      "id": 103,
+      "name": "Phòng ngự",
+      "key": "def",
+      "type_value": 3,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_dfs.png"
+    },
+    "104": {
+      "id": 104,
+      "name": "Tốc độ",
+      "key": "speed",
+      "type_value": 4,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_speed.png"
+    },
+    "105": {
+      "id": 105,
+      "name": "HP",
+      "key": "hp",
+      "type_value": 5,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_hp.png"
+    },
+    "201": {
+      "id": 201,
+      "name": "Hỏa công",
+      "key": "fire",
+      "type_value": 201,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_hg.png"
+    },
+    "202": {
+      "id": 202,
+      "name": "Thủy công",
+      "key": "water",
+      "type_value": 202,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_bg.png"
+    },
+    "203": {
+      "id": 203,
+      "name": "Phong công",
+      "key": "wind",
+      "type_value": 203,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_fg.png"
+    },
+    "204": {
+      "id": 204,
+      "name": "Địa công",
+      "key": "earth",
+      "type_value": 204,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_dg.png"
+    },
+    "301": {
+      "id": 301,
+      "name": "Hỏa phòng",
+      "key": "fire_dfs",
+      "type_value": 301,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_hf.png"
+    },
+    "302": {
+      "id": 302,
+      "name": "Thủy phòng",
+      "key": "water_dfs",
+      "type_value": 302,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_bf.png"
+    },
+    "303": {
+      "id": 303,
+      "name": "Phong phòng",
+      "key": "wind_dfs",
+      "type_value": 303,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_ff.png"
+    },
+    "304": {
+      "id": 304,
+      "name": "Địa phòng",
+      "key": "earth_dfs",
+      "type_value": 304,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_df.png"
+    },
+    "401": {
+      "id": 401,
+      "name": "Hỏa-Công",
+      "key": "fire",
+      "type_value": 401,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_hg.png"
+    },
+    "402": {
+      "id": 402,
+      "name": "Thủy-Công",
+      "key": "water",
+      "type_value": 402,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_bg.png"
+    },
+    "403": {
+      "id": 403,
+      "name": "Gió-Công",
+      "key": "wind",
+      "type_value": 403,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_fg.png"
+    },
+    "404": {
+      "id": 404,
+      "name": "Địa-Công",
+      "key": "earth",
+      "type_value": 404,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_dg.png"
+    },
+    "501": {
+      "id": 501,
+      "name": "Hỏa-Phòng",
+      "key": "fire_dfs",
+      "type_value": 501,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_hf.png"
+    },
+    "502": {
+      "id": 502,
+      "name": "Thủy-Phòng",
+      "key": "water_dfs",
+      "type_value": 502,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_bf.png"
+    },
+    "503": {
+      "id": 503,
+      "name": "Gió-Phòng",
+      "key": "wind_dfs",
+      "type_value": 503,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_ff.png"
+    },
+    "504": {
+      "id": 504,
+      "name": "Địa-Phòng",
+      "key": "earth_dfs",
+      "type_value": 504,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_df.png"
+    },
+    "601": {
+      "id": 601,
+      "name": "Rơi Thức Ăn",
+      "key": "meats",
+      "type_value": 601,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_food.png"
+    },
+    "701": {
+      "id": 701,
+      "name": "Rơi Sắt",
+      "key": "iron",
+      "type_value": 701,
+      "source": "lua_decrypted/game_config.lua:PUBLIC_ABILITY_TABLE",
+      "game_icon": "public_icon_metal.png"
+    }
+  },
+  "slots": {
+    "0": "Tạp vật",
+    "1": "Vũ khí",
+    "2": "Trang sức",
+    "3": "Phòng cụ",
+    "4": "Giày"
+  }
+}

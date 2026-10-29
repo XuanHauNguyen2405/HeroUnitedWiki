@@ -1,0 +1,309 @@
+{
+  "console": [],
+  "exceptions": [],
+  "failedRequests": [],
+  "badResponses": [],
+  "steps": [
+    {
+      "i": 0,
+      "url": "/heroes/83100",
+      "width": 1440,
+      "height": 900,
+      "shot": "elaina-desktop.png",
+      "assert": "!!document.querySelector('[data-hero-identity=\"83100\"]')",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\elaina-desktop.png"
+    },
+    {
+      "i": 1,
+      "assert": "getComputedStyle(document.querySelector('.hero-control')).minHeight === '44px' && getComputedStyle(document.querySelector('.element-badge')).borderTopWidth === '1px'",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 2,
+      "scrollTo": "#equipment",
+      "shot": "equipment-desktop.png",
+      "scrollResult": "OK",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\equipment-desktop.png"
+    },
+    {
+      "i": 3,
+      "click": "#equipment [aria-label=\"Biến thể thuộc tính\"] button:nth-child(4)",
+      "clickResult": "OK",
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 4,
+      "clickText": "Trang bị bộ đang xem",
+      "within": "#equipment button",
+      "shot": "wind-equipped-desktop.png",
+      "assert": "document.querySelector('[data-equipped-element]').dataset.equippedElement === 'wind'",
+      "clickResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\wind-equipped-desktop.png"
+    },
+    {
+      "i": 5,
+      "url": "/heroes/83100",
+      "width": 390,
+      "height": 844,
+      "shot": "elaina-mobile.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\elaina-mobile.png"
+    },
+    {
+      "i": 6,
+      "scrollTo": "#hero-overview",
+      "shot": "standing-mobile.png",
+      "scrollResult": "OK",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\standing-mobile.png"
+    },
+    {
+      "i": 7,
+      "scrollTo": "#equipment",
+      "shot": "equipment-mobile.png",
+      "scrollResult": "OK",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\equipment-mobile.png"
+    },
+    {
+      "i": 8,
+      "click": "#equipment [aria-label=\"Biến thể thuộc tính\"] button:nth-child(4)",
+      "clickResult": "OK",
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 9,
+      "clickText": "Trang bị bộ đang xem",
+      "within": "#equipment button",
+      "shot": "wind-equipped-mobile.png",
+      "assert": "document.querySelector('[data-equipped-element]').dataset.equippedElement === 'wind'",
+      "clickResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\wind-equipped-mobile.png"
+    },
+    {
+      "i": 10,
+      "reload": true,
+      "assert": "document.querySelector('[data-equipped-element]').dataset.equippedElement === 'none'",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 11,
+      "clickText": "Tối đa theo dữ liệu bản thể",
+      "clickResult": "OK",
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 12,
+      "clickText": "Lv.1",
+      "within": "#level button",
+      "assert": "document.querySelector('[aria-label=\"Cấp tiến hoá\"]').max === '0' && document.querySelector('[aria-label=\"Cấp tiến hoá\"]').value === '0'",
+      "clickResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 13,
+      "click": "a[href=\"/heroes/83200\"]",
+      "assert": "document.querySelector('[data-hero-identity]').dataset.heroIdentity === '83200' && document.querySelector('[data-equipped-element]').dataset.equippedElement === 'none' && document.querySelector('[aria-label=\"Cấp độ tướng\"]').value === '1'",
+      "clickResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 14,
+      "url": "/heroes/83200",
+      "shot": "elaina-form-mobile.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\elaina-form-mobile.png"
+    },
+    {
+      "i": 15,
+      "clickText": "Tối đa theo dữ liệu bản thể",
+      "assert": "document.querySelector('#super-evolution').innerText.includes('Vàng')",
+      "clickResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 16,
+      "scrollTo": "#equipment",
+      "shot": "elaina-form-equipment-mobile.png",
+      "assert": "document.querySelector('[data-recommendations]').innerText.includes('Hỏa')",
+      "scrollResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\elaina-form-equipment-mobile.png"
+    },
+    {
+      "i": 17,
+      "url": "/heroes/83000",
+      "width": 1440,
+      "height": 900,
+      "shot": "shadow-desktop.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\shadow-desktop.png"
+    },
+    {
+      "i": 18,
+      "scrollTo": "#equipment",
+      "shot": "shadow-equipment-desktop.png",
+      "assert": "document.querySelector('[data-recommendations]').innerText.includes('Phong') && !document.querySelector('[data-recommendations]').innerText.includes('Địa (Thổ)')",
+      "scrollResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\shadow-equipment-desktop.png"
+    },
+    {
+      "i": 19,
+      "url": "/heroes/82400",
+      "width": 390,
+      "height": 844,
+      "shot": "nagato-mobile.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\nagato-mobile.png"
+    },
+    {
+      "i": 20,
+      "scrollTo": "#equipment",
+      "shot": "nagato-equipment-mobile.png",
+      "assert": "document.querySelector('[data-recommendations]').innerText.includes('Gedo Mazo')",
+      "scrollResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\nagato-equipment-mobile.png"
+    },
+    {
+      "i": 21,
+      "url": "/heroes/84000",
+      "width": 390,
+      "height": 844,
+      "shot": "sasuke-mobile.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\sasuke-mobile.png"
+    },
+    {
+      "i": 22,
+      "clickText": "Tối đa theo dữ liệu bản thể",
+      "clickResult": "OK",
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 23,
+      "scrollTo": "#breakthrough",
+      "shot": "breakthrough-mobile.png",
+      "assert": "document.querySelector('[aria-label=\"Cấp đột phá\"]').value === '20'",
+      "scrollResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\breakthrough-mobile.png"
+    },
+    {
+      "i": 24,
+      "clickText": "Chưa đột phá",
+      "within": "#breakthrough button",
+      "assert": "document.querySelector('[aria-label=\"Cấp đột phá\"]').value === '0'",
+      "clickResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 25,
+      "click": "a[href=\"/heroes/43900\"]",
+      "assert": "!document.querySelector('[aria-label=\"Cấp đột phá\"]') && document.querySelector('[data-equipped-element]').dataset.equippedElement === 'none'",
+      "clickResult": "OK",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": []
+    },
+    {
+      "i": 26,
+      "url": "/heroes/1",
+      "shot": "unsupported-mobile.png",
+      "assert": "!document.querySelector('#evolution') && !document.querySelector('#rebirth') && !document.querySelector('#super-evolution')",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\unsupported-mobile.png"
+    },
+    {
+      "i": 27,
+      "url": "/heroes",
+      "width": 390,
+      "height": 844,
+      "shot": "heroes-mobile.png",
+      "assert": "!!document.querySelector('#skill-element-filter')",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\heroes-mobile.png"
+    },
+    {
+      "i": 28,
+      "url": "/heroes",
+      "width": 1440,
+      "height": 900,
+      "shot": "heroes-desktop.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\heroes-desktop.png"
+    },
+    {
+      "i": 29,
+      "url": "/equipment/119705",
+      "width": 390,
+      "height": 844,
+      "shot": "wind-item-mobile.png",
+      "assert": "document.body.innerText.includes('Phong (Gió)')",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\wind-item-mobile.png"
+    },
+    {
+      "i": 30,
+      "url": "/suits/1690",
+      "width": 1440,
+      "height": 900,
+      "shot": "wind-suit-desktop.png",
+      "assert": "document.querySelector('[data-set-bonuses]').innerText.includes('Phong công')",
+      "assertResult": true,
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-after\\wind-suit-desktop.png"
+    }
+  ]
+}

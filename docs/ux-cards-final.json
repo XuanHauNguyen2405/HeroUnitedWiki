@@ -1,0 +1,12 @@
+{
+  "base": "http://127.0.0.1:3001",
+  "steps": [
+    {"url":"/cards","width":1440,"height":900,"shot":"cards-desktop.png","assert":"document.querySelector('[aria-label=\"Tướng trên thẻ\"]').options.length === 721 && !document.querySelector('[aria-label=\"Đột phá thẻ\"]')"},
+    {"url":"/cards","width":390,"height":844,"shot":"cards-mobile.png"},
+    {"select":{"selector":"[aria-label=\"Tướng trên thẻ\"]","value":"84000"},"assert":"!!document.querySelector('[aria-label=\"Đột phá thẻ\"]')"},
+    {"select":{"selector":"[aria-label=\"Đột phá thẻ\"]","value":"20"}},
+    {"select":{"selector":"[aria-label=\"Tướng trên thẻ\"]","value":"43900"},"assert":"!document.querySelector('[aria-label=\"Đột phá thẻ\"]') && document.querySelector('[aria-label=\"Cấp độ thẻ\"]').value === '1'"},
+    {"url":"/heroes/84000","width":1440,"height":900},
+    {"scrollTo":"#super-evolution","shot":"sasuke-card-desktop.png"}
+  ]
+}

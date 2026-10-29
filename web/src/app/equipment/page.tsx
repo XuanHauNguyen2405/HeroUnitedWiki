@@ -3,6 +3,9 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
+import ElementBadge from "@/components/ElementBadge";
+import { EquipmentStatLine } from "@/components/EquipmentDetails";
+import { elements } from "@/lib/game-attributes";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ImageWithFallback from "@/components/ImageWithFallback";
 import { stripVietnameseAccents, getQualityConfig } from "@/lib/utils";
@@ -10,6 +13,7 @@ import equipmentCatalog from "@/data/equipment_catalog.json";
 
 export default function EquipmentPage() {
   const [search, setSearch] = useState("");
+  const [elementFilter, setElementFilter] = useState("all");
   const [slotFilter, setSlotFilter] = useState("all");
   const [qualityFilter, setQualityFilter] = useState("all");
   const [suitFilter, setSuitFilter] = useState("all"); // all, suited, unsuited
@@ -18,6 +22,7 @@ export default function EquipmentPage() {
 
   const filteredEquipment = useMemo(() => {
     let list = equipmentCatalog as any[];
+    if (elementFilter !== "all") list = list.filter(eq => elementFilter === "unknown" ? !eq.element_id : eq.element_id === elementFilter);
 
     if (search.trim()) {
       const cleanSearch = stripVietnameseAccents(search);
@@ -49,11 +54,11 @@ export default function EquipmentPage() {
     }
 
     return list;
-  }, [search, slotFilter, qualityFilter, suitFilter]);
+  }, [elementFilter, search, slotFilter, qualityFilter, suitFilter]);
 
   useEffect(() => {
     setPage(1);
-  }, [search, slotFilter, qualityFilter, suitFilter]);
+  }, [elementFilter, search, slotFilter, qualityFilter, suitFilter]);
 
   const totalPages = Math.ceil(filteredEquipment.length / pageSize) || 1;
   const paginatedEquips = filteredEquipment.slice(
@@ -65,6 +70,13 @@ export default function EquipmentPage() {
     <div className="space-y-6">
       <Breadcrumbs items={[{ label: "Kho Trang Bị" }]} />
 
+      <label className="block text-sm text-slate-300 space-y-2"><span>Lọc thuộc tính theo bộ</span>
+        <select aria-label="Lọc thuộc tính theo bộ" className="hero-control" value={elementFilter} onChange={e => setElementFilter(e.target.value)}>
+          <option value="all">Tất cả thuộc tính</option>
+          {Object.values(elements).map(e => <option key={e.id} value={e.id}>{e.name}</option>)}
+          <option value="unknown">Chưa xác minh thuộc tính</option>
+        </select>
+      </label>
       {/* Header */}
       <div className="p-6 sm:p-8 rounded-2xl border border-gray-800 bg-gradient-to-r from-blue-950/40 via-gray-900 to-gray-950 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
@@ -206,16 +218,17 @@ export default function EquipmentPage() {
                     )}
                   </div>
 
+                  <ElementBadge id={eq.element_id} />
                   {/* Stats snippet */}
                   <div className="text-[10px] text-gray-400 bg-gray-950/60 p-2 rounded-lg border border-gray-800 space-y-0.5">
                     {eq.primary_stat && (
                       <div className="truncate">
-                        • Ability {eq.primary_stat.ability_id}: +{eq.primary_stat.value} (+{eq.primary_stat.level_add}/cấp)
+                        <EquipmentStatLine stat={eq.primary_stat} />
                       </div>
                     )}
                     {eq.secondary_stat && (
                       <div className="truncate">
-                        • Ability {eq.secondary_stat.ability_id}: +{eq.secondary_stat.value}
+                        <EquipmentStatLine stat={eq.secondary_stat} />
                       </div>
                     )}
                   </div>

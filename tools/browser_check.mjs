@@ -149,6 +149,16 @@ async function main() {
         await waitIdle(step.timeout || 20000);
         await sleep(step.settle ?? 400);
       }
+      if (step.reload) {
+        await send('Page.reload', { ignoreCache: !!step.ignoreCache });
+        await sleep(300);
+        await waitIdle(20000);
+      }
+      if (step.select) {
+        rec.selectResult = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(step.select.selector)}); if (!el) return 'NOT_FOUND'; el.value = ${JSON.stringify(step.select.value)}; el.dispatchEvent(new Event('change', {bubbles:true})); return 'OK'; })()`);
+        await sleep(step.wait ?? 400);
+        await waitIdle(8000);
+      }
       if (step.click) {
         rec.clickResult = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(step.click)}); if (!el) return 'NOT_FOUND'; el.scrollIntoView({block:'center'}); el.click(); return 'OK'; })()`);
         await sleep(step.wait ?? 400);
@@ -160,7 +170,7 @@ async function main() {
         await waitIdle(8000);
       }
       if (step.scrollTo) {
-        rec.scrollResult = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(step.scrollTo)}); if (!el) return 'NOT_FOUND'; el.scrollIntoView({block:'start'}); window.scrollBy(0, -70); return 'OK'; })()`);
+        rec.scrollResult = await evaluate(`(() => { const el = document.querySelector(${JSON.stringify(step.scrollTo)}); if (!el) return 'NOT_FOUND'; el.scrollIntoView({block:'start'}); if (!(parseFloat(getComputedStyle(el).scrollMarginTop) > 0)) window.scrollBy(0, -(document.querySelector('header')?.getBoundingClientRect().height ?? 70) - 12); return 'OK'; })()`);
         await sleep(300);
       }
       if (step.scrollY !== undefined) {
@@ -168,6 +178,10 @@ async function main() {
         await sleep(300);
       }
       if (step.eval) rec.evalResult = await evaluate(step.eval);
+      if (step.assert) {
+        rec.assertResult = await evaluate(step.assert);
+        if (rec.assertResult !== true) throw new Error(`Assertion failed: ${step.assert} -> ${JSON.stringify(rec.assertResult)}`);
+      }
       rec.overflowX = await evaluate('Math.max(document.documentElement.scrollWidth, document.body ? document.body.scrollWidth : 0) - window.innerWidth');
       rec.brokenImages = await evaluate(`[...document.images].filter(im => im.complete && im.naturalWidth === 0 && im.getAttribute('src')).map(im => im.getAttribute('src')).slice(0, 30)`);
       if (step.shot) {
@@ -192,6 +206,8 @@ async function main() {
   console.log(`console=${report.console.length} exceptions=${report.exceptions.length} failedRequests=${report.failedRequests.length} badResponses=${report.badResponses.length}`);
   for (const c of [...report.exceptions, ...report.console].slice(0, 30)) console.log(' -', JSON.stringify(c).slice(0, 300));
   for (const b of report.badResponses.slice(0, 30)) console.log(' - HTTP', b.status, b.url);
+  if (report.steps.some(s => s.error || s.clickResult === 'NOT_FOUND' || s.selectResult === 'NOT_FOUND' || s.scrollResult === 'NOT_FOUND' || s.overflowX > 0 || s.brokenImages?.length)
+      || report.exceptions.length || report.failedRequests.length || report.badResponses.length) process.exitCode = 1;
   ws.close();
   chrome.kill();
   await sleep(300);

@@ -1,5 +1,9 @@
 # TIẾN ĐỘ RÀ SOÁT & KHẮC PHỤC DỮ LIỆU WIKI (AUDIT_STATUS.md)
 
+> **Cập nhật 25/10/2026:** Đã sửa UX/UI và độ chính xác gợi ý trang bị. Đọc [EQUIPMENT_UX_AUDIT.md](EQUIPMENT_UX_AUDIT.md) trước khi tiếp tục; bảng mapping tại [ATTRIBUTE_MAPPING.md](ATTRIBUTE_MAPPING.md). Phiên này không commit. Nguyên nhân chính: tính biến thể đầu tiên (Địa) dù chọn Gió, suy hệ từ lore, và đảo công/phòng nguyên tố khi chuyển đổi đột phá. Đã sửa pipeline, tái tạo dữ liệu, dùng component chung và thêm kiểm tra nguồn độc lập.
+
+> Kết quả mới: 20 test Node + 1 test bảo toàn ảnh đạt; typecheck/build đạt; 6 audit đạt; 39 bước trình duyệt ở 390/1440px không tràn ngang/ảnh vỡ/runtime/network error. Lint còn 52 lỗi có sẵn (ban đầu 60), không có lỗi mới. Các mục chưa xác minh được ghi rõ, không gán hệ mặc định. Phần tài liệu bên dưới là checkpoint cũ ngày 20/10.
+
 *Cập nhật lần cuối: 2026-10-20 (Phiên rà soát toàn diện)*
 *Checkpoint Git gốc: `dbca424` -> `4507e79` (tag: `audit-start-2026-10-20`)*
 

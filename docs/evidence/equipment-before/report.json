@@ -1,0 +1,57 @@
+{
+  "console": [],
+  "exceptions": [],
+  "failedRequests": [],
+  "badResponses": [],
+  "steps": [
+    {
+      "i": 0,
+      "url": "/heroes/83100",
+      "width": 1440,
+      "height": 900,
+      "shot": "elaina-desktop.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-before\\elaina-desktop.png"
+    },
+    {
+      "i": 1,
+      "scrollTo": "section:nth-of-type(7)",
+      "shot": "equipment-desktop.png",
+      "scrollResult": "OK",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-before\\equipment-desktop.png"
+    },
+    {
+      "i": 2,
+      "url": "/heroes/83100",
+      "width": 390,
+      "height": 844,
+      "shot": "elaina-mobile.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-before\\elaina-mobile.png"
+    },
+    {
+      "i": 3,
+      "clickText": "Bộ Năm Ngựa",
+      "within": "button",
+      "shot": "equipment-mobile.png",
+      "clickResult": "OK",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-before\\equipment-mobile.png"
+    },
+    {
+      "i": 4,
+      "url": "/heroes/82400",
+      "width": 390,
+      "height": 844,
+      "shot": "nagato-mobile.png",
+      "overflowX": 0,
+      "brokenImages": [],
+      "file": "docs\\evidence\\equipment-before\\nagato-mobile.png"
+    }
+  ]
+}

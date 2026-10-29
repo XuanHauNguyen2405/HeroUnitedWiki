@@ -63,6 +63,12 @@ def copy_web_images(src_dir="public/assets", dst_dir="web/public/assets"):
             
             if ext in image_exts:
                 os.makedirs(os.path.dirname(dst_file), exist_ok=True)
+                # Engine-rendered hero assets in web/ are newer than the public/
+                # staging exports. Do not overwrite verified artwork on data rebuild.
+                if rel_path.replace("\\", "/").startswith(("heroes/full_", "heroes/standing_", "heroes/card_")) and os.path.exists(dst_file):
+                    copied += 1
+                    total_bytes += os.path.getsize(dst_file)
+                    continue
                 if not os.path.exists(dst_file) or os.path.getsize(dst_file) != os.path.getsize(src_file):
                     shutil.copy2(src_file, dst_file)
                 copied += 1
@@ -74,6 +80,8 @@ def copy_web_images(src_dir="public/assets", dst_dir="web/public/assets"):
     print(f"  Excluded {skipped_non_image} non-image files (.lua, .plist, .wav, etc.) from web public bundle.")
 
 def prepare_data(output_dir="output", web_data_dir="web/src/data"):
+    from game_semantics import definitions, progression_stats
+    attribute_definitions = definitions()
     print(f"\n[2/5] Loading datasets from '{output_dir}' and 'config/'...")
     os.makedirs(web_data_dir, exist_ok=True)
     
@@ -424,6 +432,8 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
 
         summary_entry = {
             "id": hid,
+            "career": h.get("career"),
+            "race": h.get("race"),
             "character_id": h.get("character_id"),
             "name": h.get("name") or "Chưa có dữ liệu",
             "quality": h.get("quality", 1),
@@ -446,11 +456,12 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
         heroes_catalog.append(summary_entry)
 
         # Chuyen Sinh (7 stages + conditions)
-        cb_data = character_break_new.get(hid) or cb_by_char_id.get(str(h.get("character_id"))) or (cb_by_name.get(h.get("name", "").lower().strip()) if h.get("name") else None)
+        # Keys address exact forms. Family character_ID and display names are not form IDs.
+        cb_data = character_break_new.get(hid)
         stages = []
         if cb_data:
             stage_prefixes = ["Dũng Sĩ", "Đấu Sĩ", "Anh Hùng", "Thần Thoại", "Thần", "Linh", "Hồn"]
-            for i in range(1, 8):
+            for i in range(1, min(cb_data.get("high_break", 0), 7) + 1):
                 st_title = cb_data.get(f"name{i}") or f"{stage_prefixes[i-1]}·{h.get('name') or hid}"
                 st_story = cb_data.get(f"break_story{i}", "")
                 st_detail = cb_data.get(f"story_detail{i}", "")
@@ -571,17 +582,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             })
 
         def parse_abilitys(abilitys_list):
-            res = {"hp": 0, "patk": 0, "matk": 0, "def": 0, "speed": 0, "ele_atk": 0, "ele_def": 0}
-            for ab in abilitys_list:
-                aid, aval = ab[0], ab[1]
-                if aid == 1: res["patk"] = aval
-                elif aid == 2: res["matk"] = aval
-                elif aid == 3: res["def"] = aval
-                elif aid == 4: res["speed"] = aval
-                elif aid == 5: res["hp"] = aval
-                elif aid in [301, 302, 303, 304]: res["ele_atk"] = aval
-                elif aid in [201, 202, 203, 204]: res["ele_def"] = aval
-            return res
+            return progression_stats(abilitys_list, attribute_definitions)
 
         # 1. Breakthrough System (20 cấp Đột Phá từ config/breakthrough.config)
         # Ground truth: only for heroes that actually possess breakthrough (no cross-family inheritance)
@@ -646,6 +647,8 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             step_stats = parse_abilitys(entry.get("abilitys", []))
             breakthrough_stages.append({
                 "step": step_num,
+                "source_id": str(sid),
+                "raw_abilities": entry.get("abilitys", []),
                 "step_name": f"Đột Phá Cấp {step_num}",
                 "need_money": need_gold,
                 "materials": mats,
@@ -808,44 +811,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
                     "synergy_desc": syn["effect"]
                 })
 
-        # 3 Elemental Builds / Playstyles for Nagato (Requirement 6)
-        elemental_builds = None
-        if str(cid) == "431" or "nagato" in h_name_lower or "pain" in h_name_lower:
-            elemental_builds = [
-                {
-                    "id": "tho",
-                    "name": "Phong Cách Địa (Thổ Độn - Đỉnh Phong & Tuyệt Diệt)",
-                    "element": "Thổ (Địa)",
-                    "icon": "⛰️",
-                    "tag": "Khuyên Dùng: Đánh Boss Titan (Dame Cao Nhất)",
-                    "description": "Nagato nên sử dụng thuộc tính Địa vì đánh Boss Titan dame sẽ cao hơn vượt trội! Kích hoạt tại Chuyển Sinh 4 (Tăng 5 lần công Địa, mỗi 1M công Địa nhân đôi ST kĩ năng) và Chuyển Sinh 7 (Diệt 1 đơn vị địch; mỗi 350.000 điểm công Địa cơ bản sẽ xóa bỏ 1 lần hồi sinh của mục tiêu, tối đa xóa 4 lần).",
-                    "recommended_set_id": "ti",
-                    "recommended_element_key": "tho",
-                    "recommended_set_name": "Bộ Năm Tị (Nguyên Tố Thổ/Địa)"
-                },
-                {
-                    "id": "hoa",
-                    "name": "Phong Cách Hỏa (Hỏa Độn - Truy Kích Bộc Phát)",
-                    "element": "Hỏa (Lửa)",
-                    "icon": "🔥",
-                    "tag": "Kích Hoạt CS1 (Truy Kích 1M Công)",
-                    "description": "Kích hoạt tại Chuyển Sinh 1 (Tăng 5 lần công Hỏa, chuyển hóa toàn bộ công khác sang Hỏa; Sau khi chuyển đổi, mỗi 1,000,000 điểm công Hỏa truy kích thêm 1 lần mục tiêu bị kĩ năng gây ra ST thuộc tính).",
-                    "recommended_set_id": "ti",
-                    "recommended_element_key": "hoa",
-                    "recommended_set_name": "Bộ Năm Tị (Nguyên Tố Hỏa)"
-                },
-                {
-                    "id": "thuy",
-                    "name": "Phong Cách Thủy (Thủy Độn - Hộ Giá & Bất Tử)",
-                    "element": "Thủy (Nước)",
-                    "icon": "💧",
-                    "tag": "Kích Hoạt CS2 (Thần Ngự & Hộ Giá)",
-                    "description": "Kích hoạt tại Chuyển Sinh 2 (Tăng 5 lần công Thủy, chuyển hóa toàn bộ công khác sang Thủy; Nhận Thần Ngự và sau khi chuyển đổi, mỗi 3,000,000 điểm công Thủy nhận thêm 1 tầng 'Hộ Giá' bảo hộ toàn diện).",
-                    "recommended_set_id": "ti",
-                    "recommended_element_key": "thuy",
-                    "recommended_set_name": "Bộ Năm Tị (Nguyên Tố Thủy)"
-                }
-            ]
+        elemental_builds = None  # Exact-form evidence is generated by game_semantics.py.
 
         detail_entry = {
             **h,
@@ -1039,3 +1005,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
 if __name__ == "__main__":
     copy_web_images()
     prepare_data()
+    from game_semantics import generate
+    from build_zodiac_data import build
+    generate()
+    build()

@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import "./globals.css";
+import "./hero-ui.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 

@@ -1,0 +1,9022 @@
+{
+  "hero_forms": {
+    "51200": {
+      "name": "Zombie Cuồng Bạo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "1": {
+      "name": "Songoku",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "2": {
+      "name": "Thần bài",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "3": {
+      "name": "Phượng Hoàng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "4": {
+      "name": "Luffy",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5": {
+      "name": "Dracula",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "6": {
+      "name": "Yusuke",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "7": {
+      "name": "Wesker",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "8": {
+      "name": "Ma",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "61100": {
+      "name": "CT-Dương Tiễn",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "12": {
+      "name": "50e血没输出",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12301": {
+      "name": "Luffy clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12302": {
+      "name": "Luffy clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12303": {
+      "name": "Luffy clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "67600": {
+      "name": "CT-Grimmjow",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "71700": {
+      "name": "Quỷ Ăn Xác Cuồng Bạo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "71701": {
+      "name": "Quỷ Ăn Xác Cuồng Bạo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "4100": {
+      "name": "Sonkoku",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "79900": {
+      "name": "CT-Piccolo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "32800": {
+      "name": "Hatake",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "36900": {
+      "name": "Gaara",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "51201": {
+      "name": "Zombie Cuồng Bạo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41000": {
+      "name": "Emiya Shirou",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "8200": {
+      "name": "Dương Tiễn",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50": {
+      "name": "Thẻ Tím Vạn Năng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "51": {
+      "name": "Thẻ Cam Vạn Năng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "52": {
+      "name": "Thẻ Đỏ Vạn Năng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "53": {
+      "name": "Thẻ Vàng Vạn Năng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "54": {
+      "name": "Nguyên Lực Hồn",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "55": {
+      "name": "Hồn thần lực",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "56": {
+      "name": "Thẻ nguyên liệu Thần thú",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "57": {
+      "name": null,
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "58": {
+      "name": null,
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "59": {
+      "name": "Hồn Thần Thú hình 1",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "60": {
+      "name": "Hồn Thần Thú hình 2",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10301": {
+      "name": "Michonne clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10302": {
+      "name": "Michonne clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10303": {
+      "name": "Michonne clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "65600": {
+      "name": "CT-Kurosaki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "14401": {
+      "name": "Yusuke clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14402": {
+      "name": "Yusuke clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14403": {
+      "name": "Yusuke clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "69700": {
+      "name": "CT-Kuchiki Byakuya",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73800": {
+      "name": "Thú Ăn Thịt Người Gầy (Nâu)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73801": {
+      "name": "Thú Ăn Thịt Người Gầy (Nâu)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "82000": {
+      "name": "DK - Rimuru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34900": {
+      "name": "Shin",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39000": {
+      "name": "Klaus",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "32100": {
+      "name": "Sasuke (Susano)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43100": {
+      "name": "Pain",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "100": {
+      "name": "Alice",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "51301": {
+      "name": "Lính Đặc Chủng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "4200": {
+      "name": "Veheta",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "8300": {
+      "name": "Na Tra",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "63600": {
+      "name": "CT-Ma Nhân",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "67700": {
+      "name": "CT-Triệu Vân",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "10601": {
+      "name": "Alisa clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "71800": {
+      "name": "Sói Đột Biến",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "71801": {
+      "name": "Sói Đột Biến",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80000": {
+      "name": "CT-Kikyo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "32900": {
+      "name": "Zoro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37000": {
+      "name": "Lữ Bố",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41100": {
+      "name": "Overlord",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "2200": {
+      "name": "Ichigo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "60100": {
+      "name": "CT-Venus",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "6300": {
+      "name": "Roger",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "61600": {
+      "name": "CT-Hoàng Phủ Kiếm",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "65700": {
+      "name": "CT-Shaka",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "14501": {
+      "name": "Hiei clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14502": {
+      "name": "Hiei clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14503": {
+      "name": "Hiei clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "69800": {
+      "name": "CT-Vlad III",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73900": {
+      "name": "Quỷ Hút Máu",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73901": {
+      "name": "Quỷ Hút Máu",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78000": {
+      "name": "CT-Obito Uchiha",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82100": {
+      "name": "CT - Râu Trắng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35000": {
+      "name": "Levi Ackerman",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39100": {
+      "name": "Hisoka",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43200": {
+      "name": "Trunks",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84000": {
+      "name": "Lục Đạo Sasuke",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "200": {
+      "name": "Ada",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "4300": {
+      "name": "Kẻ Hủy Diệt",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "8400": {
+      "name": "Blademaster",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "63700": {
+      "name": "CT-Boa Hancock",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "67800": {
+      "name": "Arutoria·Nero",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "71900": {
+      "name": "Lính Đặc Chủng A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "71901": {
+      "name": "Lính Đặc Chủng A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80100": {
+      "name": "CT-Broli",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33000": {
+      "name": "Batman",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37100": {
+      "name": "Quạ Đen",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41200": {
+      "name": "Tsunade",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "425000": {
+      "name": "Songoku Siêu Xayda 3",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "2300": {
+      "name": "Luffy",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "6400": {
+      "name": "Vehito",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "60800": {
+      "name": "CT-Athena",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "61700": {
+      "name": "CT-Heimdall",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "10501": {
+      "name": "Wesker clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10502": {
+      "name": "Wesker clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10503": {
+      "name": "Wesker clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "65800": {
+      "name": "CT-Mihawk",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "14601": {
+      "name": "Kenshin clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14602": {
+      "name": "Kenshin clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14603": {
+      "name": "Kenshin clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "69900": {
+      "name": "Vlad III·Ma",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "74000": {
+      "name": "Người Indian",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74001": {
+      "name": "Người Indian",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78100": {
+      "name": "Obito.Ma",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82200": {
+      "name": "Edward Newgate",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35100": {
+      "name": "Gintoki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39200": {
+      "name": "Gilgamesh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43300": {
+      "name": "Frieren",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84700": {
+      "name": "圣の宇智波斑",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "300": {
+      "name": "Michonne",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "63500": {
+      "name": "Gogeta.Siêu 4",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "4400": {
+      "name": "Yasuke",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "8500": {
+      "name": "Gaten",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "63800": {
+      "name": "CT-Shin",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "12601": {
+      "name": "Alina clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12602": {
+      "name": "Alina clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12603": {
+      "name": "Alina clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "67900": {
+      "name": "CT-Thanos",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72000": {
+      "name": "Lính Đặc Chủng B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72001": {
+      "name": "Lính Đặc Chủng B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80200": {
+      "name": "CuồnBroli",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33100": {
+      "name": "Boruto",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37200": {
+      "name": "Kula",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "6200": {
+      "name": "Lục Đạo Tiên Nhân",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41300": {
+      "name": "Albedo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "2400": {
+      "name": "Tiến Sĩ Rocky",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "6500": {
+      "name": "Tề Thiên Đại Thánh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "61800": {
+      "name": "CT-Sesshoumaru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "61500": {
+      "name": "CT-Gaten",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "10602": {
+      "name": "Alisa clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10603": {
+      "name": "Alisa clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "65900": {
+      "name": "CT-Shermie",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "70000": {
+      "name": "Hoa Ăn Thịt Người",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "70001": {
+      "name": "Hoa Ăn Thịt Người",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74100": {
+      "name": "Quái Nhân Dây Xích",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74101": {
+      "name": "Quái Nhân Dây Xích",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78200": {
+      "name": "CT-Esdese",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82300": {
+      "name": "CT - Pain",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35200": {
+      "name": "Kaio",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39300": {
+      "name": "Mục",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43400": {
+      "name": "Cid Kageno",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "400": {
+      "name": "Andy",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "4500": {
+      "name": "Hiei",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "8600": {
+      "name": "Samurai",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "63900": {
+      "name": "CT-Levi",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "12701": {
+      "name": "Damin clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12702": {
+      "name": "Damin clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12703": {
+      "name": "Damin clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "68000": {
+      "name": "CT-Mai Shiranui",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72100": {
+      "name": "Lính Đặc Chủng C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72101": {
+      "name": "Lính Đặc Chủng C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80300": {
+      "name": "CT-Kamado Tanjiro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33200": {
+      "name": "Lich King",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37300": {
+      "name": "Saga",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41400": {
+      "name": "Kenpachi Zaraki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "32500": {
+      "name": "CT-Odin",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "61900": {
+      "name": "CT-Constantine",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "66000": {
+      "name": "CT-Hashirama",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "14801": {
+      "name": "Seiya clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14802": {
+      "name": "Seiya clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14803": {
+      "name": "Seiya clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74200": {
+      "name": "Nữ Hoàng Ong",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74201": {
+      "name": "Nữ Hoàng Ong",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78300": {
+      "name": "CT-Aizen",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82400": {
+      "name": "Nagato",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35300": {
+      "name": "Uchiha",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39400": {
+      "name": "Deadpool",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43500": {
+      "name": "Elaina",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "500": {
+      "name": "Wesker",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "4600": {
+      "name": "Kensin",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "60500": {
+      "name": "CT-Hades",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "8700": {
+      "name": "Master Yi",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64000": {
+      "name": "CT-Gintoki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "12801": {
+      "name": "Barack clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12802": {
+      "name": "Barack clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12803": {
+      "name": "Barack clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "68100": {
+      "name": "Arutoria·Alter",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72200": {
+      "name": "Kiếm Sĩ (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72201": {
+      "name": "Kiếm Sĩ (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80400": {
+      "name": "HỏaKamado Tanjiro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33300": {
+      "name": "Sesshoumaru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37400": {
+      "name": "Tobirama",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41500": {
+      "name": "Kusajishi Yachiru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84400": {
+      "name": "夏姆洛克",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "2600": {
+      "name": "Alina",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "6700": {
+      "name": "Ultron",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "62000": {
+      "name": "CT-Ma Hành Giả",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "10801": {
+      "name": "Daryl Dixon clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10802": {
+      "name": "Daryl Dixon clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10803": {
+      "name": "Daryl Dixon clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "66100": {
+      "name": "CT-Asamiya Athena",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "74300": {
+      "name": "Người Cây Cuồng Bạo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74301": {
+      "name": "Người Cây Cuồng Bạo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78400": {
+      "name": "CT-Kurumi",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82500": {
+      "name": "CT - Trunks",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35400": {
+      "name": "Gray",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39500": {
+      "name": "Chizuru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43600": {
+      "name": "Vegeta",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "600": {
+      "name": "Alessa",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "51300": {
+      "name": "Lính Đặc Chủng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "4700": {
+      "name": "Ghost Rider",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "8800": {
+      "name": "Hoàng Phủ Kiếm",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64100": {
+      "name": "CT-Kaio",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "12901": {
+      "name": "Edward clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12902": {
+      "name": "Edward clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12903": {
+      "name": "Edward clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "68200": {
+      "name": "CT-Laxus Dreyar",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72300": {
+      "name": "Du Khách (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72301": {
+      "name": "Du Khách (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80500": {
+      "name": "CT-Maple",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33400": {
+      "name": "Sakura",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37500": {
+      "name": "Lý Nguyên Bá",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41600": {
+      "name": "Số 18",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "2700": {
+      "name": "Damin",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "6800": {
+      "name": "Hades",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "62100": {
+      "name": "CT-Thánh Hành Giả",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "10901": {
+      "name": "Ace clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10902": {
+      "name": "Ace clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10903": {
+      "name": "Ace clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "66200": {
+      "name": "CT-Gaara",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "74400": {
+      "name": "Nữ Hoàng Nhện",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74401": {
+      "name": "Nữ Hoàng Nhện",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78500": {
+      "name": "CT-Beerus",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82600": {
+      "name": "Kiếm Hy Vọng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35500": {
+      "name": "Monkey D. Luffy",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39600": {
+      "name": "Shirakami Goku",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "32200": {
+      "name": "Ma Hành Giả",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43700": {
+      "name": "Thợ Săn - Zoro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "700": {
+      "name": "Pyramid Head",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "4800": {
+      "name": "Seya",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "8900": {
+      "name": "Nidhogg",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64200": {
+      "name": "CT-Uchiha",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "68300": {
+      "name": "CT-Oozara Tsubasa",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72400": {
+      "name": "Phi Công A (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72401": {
+      "name": "Phi Công A (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80600": {
+      "name": "MG -Maple",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "442000": {
+      "name": "CT - vegetto",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33500": {
+      "name": "Mị Nương",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37600": {
+      "name": "Frieza",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41700": {
+      "name": "Shalltear",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "353000": {
+      "name": "Dark·Uchiha",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "2800": {
+      "name": "Bola",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "60200": {
+      "name": "CT-Võ Thánh Quan Vũ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "6900": {
+      "name": "Poseidon",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "62200": {
+      "name": "CT-Người Hùng Tia Chớp",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "66300": {
+      "name": "CT-Lữ Bố",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "74500": {
+      "name": "Thanh Xuân Thảo Nima",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78600": {
+      "name": "CT-Akame",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82700": {
+      "name": "CT - Frieren",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35600": {
+      "name": "Natsu",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39700": {
+      "name": "Jiraiya",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43800": {
+      "name": "Kochou Shinobu",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84100": {
+      "name": "CT - Meliodas",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "800": {
+      "name": "Daryl Dixon",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "9000": {
+      "name": "Loki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64300": {
+      "name": "CT-Gray",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "13101": {
+      "name": "Chopper clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13102": {
+      "name": "Chopper clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13103": {
+      "name": "Chopper clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "68400": {
+      "name": "CT-Sir",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72500": {
+      "name": "Phi Công B (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72501": {
+      "name": "Phi Công B (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80700": {
+      "name": "CT-Satoru Gojo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33600": {
+      "name": "Medusa",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37700": {
+      "name": "Yagami Iori",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41800": {
+      "name": "Piccolo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50000": {
+      "name": "Cảnh Sát Chống Bạo Động",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50001": {
+      "name": "Cảnh Sát Chống Bạo Động",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "2900": {
+      "name": "Edward Bé Nhỏ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "85000": {
+      "name": "席利乌斯",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "7000": {
+      "name": "Zeus",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "60900": {
+      "name": "CT-Võ Thánh Quan Vũ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "62300": {
+      "name": "CT-Mị Nương",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "66400": {
+      "name": "CT-Quạ Đen",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "15201": {
+      "name": "Bé Mai clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15202": {
+      "name": "Bé Mai clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15203": {
+      "name": "Bé Mai clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74600": {
+      "name": "Tịnh Lệ Thảo Nima",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78700": {
+      "name": "CT-Tachibana",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82800": {
+      "name": "Bikini - Frieren",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35700": {
+      "name": "Kurosaki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "347000": {
+      "name": "Bikini·Boa Hancock",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43900": {
+      "name": "Chú Nguyền Sasuke",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84800": {
+      "name": "因陀罗",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "900": {
+      "name": "Ace",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "5000": {
+      "name": "Kayako",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "9100": {
+      "name": "Odin",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64400": {
+      "name": "CT-Luffy",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "13201": {
+      "name": "Extractor clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13202": {
+      "name": "Extractor clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13203": {
+      "name": "Extractor clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "68500": {
+      "name": "CT-Cell",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72600": {
+      "name": "Y Tá (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72601": {
+      "name": "Y Tá (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80800": {
+      "name": "GiácSatoru Gojo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33700": {
+      "name": "Sơn Tinh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37800": {
+      "name": "saber",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "41900": {
+      "name": "Kikyo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50100": {
+      "name": "Cảnh Sát",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50101": {
+      "name": "Cảnh Sát",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "3000": {
+      "name": "Người tay kéo",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "7100": {
+      "name": "Hằng Nga",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "62400": {
+      "name": "CT-Medusa",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "66500": {
+      "name": "CT-Kula",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "74700": {
+      "name": "Phiêu Dật Thảo Nima",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78800": {
+      "name": "CT-Shana",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "82900": {
+      "name": "CT - Cid Kageno",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35800": {
+      "name": "Sanji",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39900": {
+      "name": "Vlad III",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "44000": {
+      "name": "Meliodas",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "1000": {
+      "name": "Người sói",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5100": {
+      "name": "A Trinh",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "9200": {
+      "name": "Nữ thần Sấm",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64500": {
+      "name": "CT-Natsu",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "13301": {
+      "name": "Magneto clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13302": {
+      "name": "Magneto clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13303": {
+      "name": "Magneto clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "68600": {
+      "name": "CT-Klaus",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72700": {
+      "name": "Học Gạo (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72701": {
+      "name": "Học Gạo (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "80900": {
+      "name": "CT - Luffy Gear 4",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33800": {
+      "name": "Âu Cơ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "37900": {
+      "name": "Madara",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42000": {
+      "name": "Broli",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "32600": {
+      "name": "CT-Vehito",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "50200": {
+      "name": "Xác Ướp Gầy",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50201": {
+      "name": "Xác Ướp Gầy",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "3100": {
+      "name": "Copper",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "62500": {
+      "name": "CT-Sơn Tinh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "66600": {
+      "name": "CT-Saga",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "15401": {
+      "name": "Người nhện clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15402": {
+      "name": "Người nhện clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15403": {
+      "name": "Người nhện clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "74800": {
+      "name": "Soái Khí Thảo Nima",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "78900": {
+      "name": "CT-Champa",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83000": {
+      "name": "Shadow",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "35900": {
+      "name": "Saitama",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40000": {
+      "name": "Uchiha Obito",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "44100": {
+      "name": "香克斯",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "5200": {
+      "name": "Bé Mai",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "60600": {
+      "name": "CT-Poseidon",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "9300": {
+      "name": "Heimdall",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64600": {
+      "name": "CT-Kurosaki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "13401": {
+      "name": "Tiến sĩ X clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13402": {
+      "name": "Tiến sĩ X clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13403": {
+      "name": "Tiến sĩ X clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "68700": {
+      "name": "CT-Hisoka",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72800": {
+      "name": "Học Vẹt (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72801": {
+      "name": "Học Vẹt (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81000": {
+      "name": "Luffy Snakeman",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "33900": {
+      "name": "Thủy Tinh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38000": {
+      "name": "Kefla",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42100": {
+      "name": "Kamado Tanjiro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84500": {
+      "name": "CT - vegetto",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "3200": {
+      "name": "Extractor",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "7300": {
+      "name": "Cỗ Máy Chiến Tranh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "62600": {
+      "name": "CT-Âu Cơ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "11401": {
+      "name": "Edward Elric clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11402": {
+      "name": "Edward Elric clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11403": {
+      "name": "Edward Elric clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "66700": {
+      "name": "CT-Tobirama",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "15501": {
+      "name": "Lý Hồng Long clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15502": {
+      "name": "Lý Hồng Long clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15503": {
+      "name": "Lý Hồng Long clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "79000": {
+      "name": "CT-Tornado",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83100": {
+      "name": "3.0",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36000": {
+      "name": "Erza",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40100": {
+      "name": "Esdese",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "44200": {
+      "name": "Vegetto",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "1200": {
+      "name": "Nemesis",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5300": {
+      "name": "Đội trưởng",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "9400": {
+      "name": "Người Hùng Tia Chớp",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64700": {
+      "name": "CT-Sanji",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "13501": {
+      "name": "Phượng Hoàng clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13502": {
+      "name": "Phượng Hoàng clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13503": {
+      "name": "Phượng Hoàng clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "68800": {
+      "name": "CT-Gilgamesh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "72900": {
+      "name": "Vận Động Viên (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "72901": {
+      "name": "Vận Động Viên (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81100": {
+      "name": "CT - Songoku",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34000": {
+      "name": "Thunderbird",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "39800": {
+      "name": "Kuchiki Byakuya",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38100": {
+      "name": "Namikaze Minato",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42200": {
+      "name": "Maple",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50400": {
+      "name": "Chó Zombie Lốc Xoáy",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50401": {
+      "name": "Chó Zombie Lốc Xoáy",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "3300": {
+      "name": "Magneto",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "7400": {
+      "name": "Đội Trưởng Mỹ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "62700": {
+      "name": "CT-Thủy Tinh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "11501": {
+      "name": "Tyrant clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11502": {
+      "name": "Tyrant clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11503": {
+      "name": "Tyrant clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "66800": {
+      "name": "CT-Lý Nguyên Bá",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "79100": {
+      "name": "CT-Emiya Shirou",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83200": {
+      "name": "Phù Thủy - Elaina",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36100": {
+      "name": "Kil'jaeden",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40200": {
+      "name": "Aizen",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "32300": {
+      "name": "CT-Tề Thiên Đại Thánh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "44300": {
+      "name": "宇智波斑",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "1300": {
+      "name": "Đồ tể Pudge",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5400": {
+      "name": "Người Nhện",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "9500": {
+      "name": "Superman",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64800": {
+      "name": "CT-Saitama",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "68900": {
+      "name": "CT-Mục",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73000": {
+      "name": "Nông dân (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73001": {
+      "name": "Nông dân (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81200": {
+      "name": "Kakarot",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34100": {
+      "name": "Mei",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38200": {
+      "name": "Grimmjow",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42300": {
+      "name": "Satoru Gojo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50500": {
+      "name": "Chó Zombie Hơi Nước",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50501": {
+      "name": "Chó Zombie Hơi Nước",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "3400": {
+      "name": "Tiến sĩ X",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "60300": {
+      "name": "CT-Gaten",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "7500": {
+      "name": "Mũi Tên Xanh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "62800": {
+      "name": "CT-Sói Trắng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "11601": {
+      "name": "Rei clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11602": {
+      "name": "Rei clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11603": {
+      "name": "Rei clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "66900": {
+      "name": "CT-Frieza",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "79200": {
+      "name": "CT-Overlord",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83300": {
+      "name": "CT - Vegeta",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36200": {
+      "name": "Chris",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40300": {
+      "name": "Kurumi",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "44400": {
+      "name": "阿尔泰尔",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84200": {
+      "name": "Ma Thần Meliodas",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "1400": {
+      "name": "Edward Elric",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5500": {
+      "name": "Bé Li",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "9600": {
+      "name": "Lý Tiểu Long",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "64900": {
+      "name": "CT-Erza",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "13701": {
+      "name": "Kenshiro clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13702": {
+      "name": "Kenshiro clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13703": {
+      "name": "Kenshiro clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "69000": {
+      "name": "CT-Deadpool",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73100": {
+      "name": "Pharaon",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73101": {
+      "name": "Pharaon",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81300": {
+      "name": "Luffy - Nika",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34200": {
+      "name": "Sói Trắng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38300": {
+      "name": "Triệu Vân",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42400": {
+      "name": "Luffy Gear 4",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50600": {
+      "name": "Nhện Đột Biến",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50601": {
+      "name": "Nhện Đột Biến",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "3500": {
+      "name": "Phượng Hoàng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "7600": {
+      "name": "Linh Hồn Thù Hận",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "61000": {
+      "name": "CT-Hậu Nghệ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "62900": {
+      "name": "CT-Ảo Ảnh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "11701": {
+      "name": "Người mèo clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11702": {
+      "name": "Người mèo clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11703": {
+      "name": "Người mèo clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "67000": {
+      "name": "CT-Yagami Iori",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "15801": {
+      "name": "Thor clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15802": {
+      "name": "Thor clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15803": {
+      "name": "Thor clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "79300": {
+      "name": "CT-Tsunade",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83400": {
+      "name": "圣の贝吉塔2",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36300": {
+      "name": "InuYasha",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40400": {
+      "name": "Beerus",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84900": {
+      "name": "圣の阿尔泰尔",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "1500": {
+      "name": "Tyrant",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5600": {
+      "name": "Thằng Hề",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "9700": {
+      "name": "Người Tí Hon",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "65000": {
+      "name": "CT-Sakura",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "69100": {
+      "name": "CT-Chizuru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73200": {
+      "name": "Zombie",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73201": {
+      "name": "Zombie",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81400": {
+      "name": "CT - Songohan",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34300": {
+      "name": "Ảo Ảnh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38400": {
+      "name": "Thanos",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "32000": {
+      "name": "Naruto (Tiên nhân)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42500": {
+      "name": "Songoku",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50700": {
+      "name": "Ong Đột Biến",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50701": {
+      "name": "Ong Đột Biến",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "7700": {
+      "name": "Athena",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "63000": {
+      "name": "CT-Búa Khủng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "11801": {
+      "name": "Batwoman clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11802": {
+      "name": "Batwoman clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11803": {
+      "name": "Batwoman clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "67100": {
+      "name": "CT-saber",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "15901": {
+      "name": "Cảnh Sát Ngân Hà clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15902": {
+      "name": "Cảnh Sát Ngân Hà clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "15903": {
+      "name": "Cảnh Sát Ngân Hà clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "79400": {
+      "name": "CT-Albedo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83500": {
+      "name": "CT - Thợ Săn - Zoro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36400": {
+      "name": "Shaka",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40500": {
+      "name": "Akame",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "1600": {
+      "name": "Rei",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5700": {
+      "name": "Captain Jack",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "9800": {
+      "name": "Constantine",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "65100": {
+      "name": "CT-Kil'jaeden",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "13901": {
+      "name": "Thần bài clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13902": {
+      "name": "Thần bài clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "13903": {
+      "name": "Thần bài clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "69200": {
+      "name": "CT-Shirakami Goku",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73300": {
+      "name": "Shaman",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73301": {
+      "name": "Shaman",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81500": {
+      "name": "Songohan Kong",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "2100": {
+      "name": "Xaxuke",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "34400": {
+      "name": "Búa Khủng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38500": {
+      "name": "Mai Shiranui",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42600": {
+      "name": "Songohan",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "32700": {
+      "name": "Kaneki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50800": {
+      "name": "Người Cây Đột Biến",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50801": {
+      "name": "Người Cây Đột Biến",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "3700": {
+      "name": "Kensiro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "7800": {
+      "name": "Venus",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "63100": {
+      "name": "CT-Thunderbird",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "11901": {
+      "name": "Madaro clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11902": {
+      "name": "Madaro clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "11903": {
+      "name": "Madaro clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "67200": {
+      "name": "CT-Madara",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "79500": {
+      "name": "CT-Kenpachi Zaraki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "32400": {
+      "name": "CT-Samurai",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36500": {
+      "name": "Mihawk",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40600": {
+      "name": "Tachibana",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "1700": {
+      "name": "Người mèo",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5800": {
+      "name": "Thor",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "60700": {
+      "name": "CT-Zeus",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "9900": {
+      "name": "Thánh Hành Giả",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "65200": {
+      "name": "CT-Chris",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "14001": {
+      "name": "Mũi Tên Xanh clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14002": {
+      "name": "Mũi Tên Xanh clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14003": {
+      "name": "Mũi Tên Xanh clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "69300": {
+      "name": "CT-Jiraiya",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73400": {
+      "name": "Chuột Zombie",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73401": {
+      "name": "Chuột Zombie",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81600": {
+      "name": "CT -のYatogami Tohka",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34500": {
+      "name": "Bạch Liên Sư",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38600": {
+      "name": "Laxus Dreyar",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42700": {
+      "name": "Yatogami Tohka",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84600": {
+      "name": "12.0",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "50900": {
+      "name": "Zombie Thường Dân (Nam)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "50901": {
+      "name": "Zombie Thường Dân (Nam)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "3800": {
+      "name": "Người Sắt",
+      "changes": [
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "7900": {
+      "name": "Võ Thánh Quan Vũ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "63200": {
+      "name": "CT-Mei",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "12001": {
+      "name": "Naruto clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12002": {
+      "name": "Naruto clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12003": {
+      "name": "Naruto clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "67300": {
+      "name": "CT-Kefla",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "71400": {
+      "name": "Bảo Vệ Mỏ B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "71401": {
+      "name": "Bảo Vệ Mỏ B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "79600": {
+      "name": "CT-Kusajishi Yachiru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83700": {
+      "name": "CT - Kochou Shinobu",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36600": {
+      "name": "Shermie",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40700": {
+      "name": "Shana",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "1800": {
+      "name": "Batwoman",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "5900": {
+      "name": "Cảnh Sát Ngân Hà",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "61200": {
+      "name": "CT-Na Tra",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "65300": {
+      "name": "CT-InuYasha",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "14101": {
+      "name": "Songoku clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14102": {
+      "name": "Songoku clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14103": {
+      "name": "Songoku clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "69400": {
+      "name": "Jiraiya.Thông linh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73500": {
+      "name": "Thú Ăn Thịt Người (Đỏ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73501": {
+      "name": "Thú Ăn Thịt Người (Đỏ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81700": {
+      "name": "Yatogami Tenka",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34600": {
+      "name": "Ma Nhân",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38700": {
+      "name": "Oozara Tsubasa",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42800": {
+      "name": "Inori",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "51000": {
+      "name": "Zombie Thường Dân (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "51001": {
+      "name": "Zombie Thường Dân (Nữ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "3900": {
+      "name": "Thần bài",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "69600": {
+      "name": "Jiraiya.Tiên",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "63300": {
+      "name": "Black.Thánh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "12101": {
+      "name": "Sasuke clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12102": {
+      "name": "Sasuke clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12103": {
+      "name": "Sasuke clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "67400": {
+      "name": "CT-Namikaze Minato",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "71500": {
+      "name": "Bảo Vệ Mỏ C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "71501": {
+      "name": "Bảo Vệ Mỏ C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "79700": {
+      "name": "CT-Số 18",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83800": {
+      "name": "Kanae",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36700": {
+      "name": "Hashirama",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40800": {
+      "name": "Champa",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "83600": {
+      "name": "Quỷ Thần - Zoro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "1900": {
+      "name": "Mabara",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "6000": {
+      "name": "Cảnh Trưởng Thép",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "61300": {
+      "name": "CT-Hằng Nga",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "10101": {
+      "name": "Alice clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10102": {
+      "name": "Alice clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "10103": {
+      "name": "Alice clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "65400": {
+      "name": "Khuyển Đại Tướng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "14201": {
+      "name": "Vegeta clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14202": {
+      "name": "Vegeta clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "14203": {
+      "name": "Vegeta clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "69500": {
+      "name": "Cực.Goku",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "73600": {
+      "name": "Thú Ăn Thịt Người (Lam)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73601": {
+      "name": "Thú Ăn Thịt Người (Lam)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81800": {
+      "name": "CT - Inori",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34700": {
+      "name": "Boa Hancock",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38800": {
+      "name": "Sir",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "42900": {
+      "name": "Rimuru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "4000": {
+      "name": "Mũi Tên Xanh",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "rebirth_exact_form_or_stage_cap"
+      ]
+    },
+    "60400": {
+      "name": "CT-Nidhogg",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "8100": {
+      "name": "Hậu Nghệ",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "63400": {
+      "name": "Vehito.Blue",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "12201": {
+      "name": "Ichigo clone A",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12202": {
+      "name": "Ichigo clone B",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "12203": {
+      "name": "Ichigo clone C",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "67500": {
+      "name": "CT-Zoro",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "71600": {
+      "name": "Quỷ Ăn Xác",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "71601": {
+      "name": "Quỷ Ăn Xác",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "79800": {
+      "name": "CT-Shalltear",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "83900": {
+      "name": "CT - Chú Nguyền Sasuke",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "36800": {
+      "name": "Asamiya Athena",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "40900": {
+      "name": "Tornado",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "84300": {
+      "name": "圣の香克斯",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "2000": {
+      "name": "Nanato",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "61400": {
+      "name": "CT-Lý Tiểu Long",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "65500": {
+      "name": "CT-Kurosaki",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "428000": {
+      "name": "Hắc Vũ Chi Dạ - Inori",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73700": {
+      "name": "Thú Ăn Thịt Người Gầy (Đỏ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "73701": {
+      "name": "Thú Ăn Thịt Người Gầy (Đỏ)",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "81900": {
+      "name": "CT - Rimuru",
+      "changes": [
+        "occupation_no_longer_defaults_to_0",
+        "breakthrough_attack_defense_domain_fix"
+      ]
+    },
+    "34800": {
+      "name": "Black",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "38900": {
+      "name": "Cell",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    },
+    "43000": {
+      "name": "Râu Trắng",
+      "changes": [
+        "occupation_no_longer_defaults_to_0"
+      ]
+    }
+  },
+  "zodiac_item_ids": [
+    "56105",
+    "66105",
+    "76105",
+    "86105",
+    "56106",
+    "66106",
+    "76106",
+    "86106",
+    "56305",
+    "66305",
+    "76305",
+    "86305",
+    "56306",
+    "66306",
+    "76306",
+    "86306",
+    "56205",
+    "66205",
+    "76205",
+    "86205",
+    "56206",
+    "66206",
+    "76206",
+    "86206",
+    "56405",
+    "66405",
+    "76405",
+    "86405",
+    "56406",
+    "66406",
+    "76406",
+    "86406",
+    "58005",
+    "68005",
+    "78005",
+    "88005",
+    "58006",
+    "68006",
+    "78006",
+    "88006",
+    "58205",
+    "68205",
+    "78205",
+    "88205",
+    "58206",
+    "68206",
+    "78206",
+    "88206",
+    "58105",
+    "68105",
+    "78105",
+    "88105",
+    "58106",
+    "68106",
+    "78106",
+    "88106",
+    "58305",
+    "68305",
+    "78305",
+    "88305",
+    "58306",
+    "68306",
+    "78306",
+    "88306",
+    "59405",
+    "69405",
+    "79405",
+    "89405",
+    "59406",
+    "69406",
+    "79406",
+    "89406",
+    "59605",
+    "69605",
+    "79605",
+    "89605",
+    "59606",
+    "69606",
+    "79606",
+    "89606",
+    "59505",
+    "69505",
+    "79505",
+    "89505",
+    "59506",
+    "69506",
+    "79506",
+    "89506",
+    "59705",
+    "69705",
+    "79705",
+    "89705",
+    "59706",
+    "69706",
+    "79706",
+    "89706",
+    "109405",
+    "110405",
+    "111405",
+    "112405",
+    "109406",
+    "110406",
+    "111406",
+    "112406",
+    "109605",
+    "110605",
+    "111605",
+    "112605",
+    "109606",
+    "110606",
+    "111606",
+    "112606",
+    "109505",
+    "110505",
+    "111505",
+    "112505",
+    "109506",
+    "110506",
+    "111506",
+    "112506",
+    "109705",
+    "110705",
+    "111705",
+    "112705",
+    "109706",
+    "110706",
+    "111706",
+    "112706",
+    "119405",
+    "120405",
+    "121405",
+    "122405",
+    "119406",
+    "120406",
+    "121406",
+    "122406",
+    "119605",
+    "120605",
+    "121605",
+    "122605",
+    "119606",
+    "120606",
+    "121606",
+    "122606",
+    "119505",
+    "120505",
+    "121505",
+    "122505",
+    "119506",
+    "120506",
+    "121506",
+    "122506",
+    "119705",
+    "120705",
+    "121705",
+    "122705",
+    "119706",
+    "120706",
+    "121706",
+    "122706"
+  ],
+  "equipment_ids_with_verified_set_element": {
+    "fire": [
+      "16404",
+      "16405",
+      "16406",
+      "73805",
+      "73806",
+      "24704",
+      "24705",
+      "24706",
+      "57504",
+      "57505",
+      "57506",
+      "65804",
+      "65805",
+      "65806",
+      "82205",
+      "82206",
+      "49504",
+      "49505",
+      "49506",
+      "65904",
+      "65905",
+      "65906",
+      "16804",
+      "16806",
+      "25004",
+      "25005",
+      "25006",
+      "66004",
+      "66005",
+      "66006",
+      "74204",
+      "74205",
+      "74206",
+      "25104",
+      "25105",
+      "25106",
+      "33404",
+      "33405",
+      "33406",
+      "49804",
+      "49805",
+      "49806",
+      "66205",
+      "66206",
+      "82605",
+      "82606",
+      "58105",
+      "58106",
+      "74504",
+      "74505",
+      "74506",
+      "25404",
+      "25405",
+      "25406",
+      "17304",
+      "17305",
+      "17306",
+      "33704",
+      "33705",
+      "33706",
+      "50104",
+      "50105",
+      "50106",
+      "74705",
+      "74706",
+      "17404",
+      "17405",
+      "17406",
+      "33804",
+      "33805",
+      "33806",
+      "50204",
+      "50205",
+      "50206",
+      "83005",
+      "83006",
+      "17604",
+      "17605",
+      "17606",
+      "66804",
+      "66805",
+      "66806",
+      "17804",
+      "17805",
+      "17806",
+      "42404",
+      "42405",
+      "42406",
+      "83405",
+      "83406",
+      "26104",
+      "26105",
+      "26106",
+      "67104",
+      "67105",
+      "67106",
+      "42704",
+      "42705",
+      "42706",
+      "26404",
+      "26405",
+      "26406",
+      "83805",
+      "83806",
+      "34704",
+      "34705",
+      "34706",
+      "67504",
+      "67505",
+      "67506",
+      "75804",
+      "75805",
+      "75806",
+      "18504",
+      "18505",
+      "18506",
+      "59505",
+      "59506",
+      "75904",
+      "75905",
+      "75906",
+      "18605",
+      "18606",
+      "26804",
+      "26805",
+      "26806",
+      "35004",
+      "35005",
+      "35006",
+      "76004",
+      "76005",
+      "76006",
+      "84204",
+      "84205",
+      "84206",
+      "35104",
+      "35105",
+      "35106",
+      "18804",
+      "18805",
+      "18806",
+      "43404",
+      "43405",
+      "43406",
+      "76205",
+      "76206",
+      "51704",
+      "51705",
+      "51706",
+      "68105",
+      "68106",
+      "84504",
+      "84505",
+      "84506",
+      "19005",
+      "19006",
+      "35404",
+      "35405",
+      "35406",
+      "27304",
+      "27305",
+      "27306",
+      "43704",
+      "43705",
+      "43706",
+      "51904",
+      "51905",
+      "51906",
+      "60104",
+      "60105",
+      "60106",
+      "84705",
+      "84706",
+      "27404",
+      "27405",
+      "27406",
+      "43804",
+      "43805",
+      "43806",
+      "60204",
+      "60205",
+      "60206",
+      "109505",
+      "27604",
+      "27605",
+      "27606",
+      "52205",
+      "52206",
+      "76804",
+      "76805",
+      "76806",
+      "19504",
+      "19505",
+      "19506",
+      "27804",
+      "27805",
+      "27806",
+      "36104",
+      "36105",
+      "36106",
+      "77104",
+      "77105",
+      "77106",
+      "19804",
+      "19805",
+      "19806",
+      "52605",
+      "52606",
+      "109506",
+      "36404",
+      "36405",
+      "36406",
+      "44704",
+      "44705",
+      "44706",
+      "77504",
+      "77505",
+      "77506",
+      "53005",
+      "53006",
+      "85804",
+      "85805",
+      "85806",
+      "12104",
+      "12105",
+      "12106",
+      "28504",
+      "28505",
+      "28506",
+      "69505",
+      "69506",
+      "85905",
+      "85906",
+      "110506",
+      "28605",
+      "28606",
+      "36804",
+      "36805",
+      "36806",
+      "45004",
+      "45005",
+      "45006",
+      "86004",
+      "86005",
+      "86006",
+      "45104",
+      "45105",
+      "45106",
+      "12404",
+      "12405",
+      "12406",
+      "28804",
+      "28805",
+      "28806",
+      "53405",
+      "53406",
+      "86205",
+      "86206",
+      "61704",
+      "61705",
+      "61706",
+      "78105",
+      "78106",
+      "29005",
+      "29006",
+      "45404",
+      "45405",
+      "45406",
+      "12704",
+      "12705",
+      "12706",
+      "37304",
+      "37305",
+      "37306",
+      "61904",
+      "61905",
+      "61906",
+      "70104",
+      "70105",
+      "70106",
+      "37404",
+      "37405",
+      "37406",
+      "53805",
+      "53806",
+      "70204",
+      "70205",
+      "70206",
+      "119505",
+      "119506",
+      "37604",
+      "37605",
+      "37606",
+      "62205",
+      "62206",
+      "86804",
+      "86805",
+      "86806",
+      "29504",
+      "29505",
+      "29506",
+      "16805",
+      "37804",
+      "37805",
+      "37806",
+      "54204",
+      "54205",
+      "54206",
+      "46104",
+      "46106",
+      "87104",
+      "87105",
+      "87106",
+      "13404",
+      "13405",
+      "13406",
+      "29804",
+      "29805",
+      "29806",
+      "62605",
+      "62606",
+      "54504",
+      "54505",
+      "54506",
+      "46405",
+      "46406",
+      "111505",
+      "13704",
+      "13705",
+      "13706",
+      "54705",
+      "54706",
+      "87504",
+      "87505",
+      "87506",
+      "13804",
+      "13805",
+      "13806",
+      "63005",
+      "63006",
+      "22104",
+      "22105",
+      "22106",
+      "38504",
+      "38505",
+      "38506",
+      "79505",
+      "79506",
+      "38605",
+      "38606",
+      "46804",
+      "46805",
+      "46806",
+      "112505",
+      "112506",
+      "22404",
+      "22405",
+      "22406",
+      "38804",
+      "38805",
+      "38806",
+      "63405",
+      "63406",
+      "71704",
+      "71705",
+      "71706",
+      "88105",
+      "88106",
+      "39005",
+      "39006",
+      "120506",
+      "46105",
+      "22704",
+      "22705",
+      "22706",
+      "111506",
+      "47304",
+      "47305",
+      "47306",
+      "71904",
+      "71905",
+      "71906",
+      "80104",
+      "80105",
+      "80106",
+      "47404",
+      "47405",
+      "47406",
+      "63805",
+      "63806",
+      "80204",
+      "80205",
+      "80206",
+      "14704",
+      "14705",
+      "14706",
+      "47604",
+      "47605",
+      "47606",
+      "55804",
+      "55805",
+      "55806",
+      "72205",
+      "72206",
+      "39504",
+      "39505",
+      "39506",
+      "55904",
+      "55905",
+      "55906",
+      "120505",
+      "15004",
+      "15005",
+      "15006",
+      "121505",
+      "47804",
+      "47805",
+      "47806",
+      "56004",
+      "56005",
+      "56006",
+      "64204",
+      "64205",
+      "64206",
+      "15104",
+      "15105",
+      "15106",
+      "23404",
+      "23405",
+      "23406",
+      "39804",
+      "39805",
+      "39806",
+      "56205",
+      "56206",
+      "72605",
+      "72606",
+      "64504",
+      "64505",
+      "64506",
+      "15404",
+      "15405",
+      "15406",
+      "23704",
+      "23705",
+      "23706",
+      "64705",
+      "64706",
+      "23804",
+      "23805",
+      "23806",
+      "73005",
+      "73006",
+      "85904",
+      "32104",
+      "32105",
+      "32106",
+      "48504",
+      "48505",
+      "48506",
+      "89505",
+      "89506",
+      "48605",
+      "48606",
+      "56804",
+      "56805",
+      "56806",
+      "110505",
+      "122505",
+      "122506",
+      "32404",
+      "32405",
+      "32406",
+      "48804",
+      "48805",
+      "48806",
+      "73405",
+      "73406",
+      "16104",
+      "16105",
+      "16106",
+      "57104",
+      "57105",
+      "57106",
+      "81704",
+      "81705",
+      "81706",
+      "49005",
+      "49006",
+      "46404",
+      "32704",
+      "32705",
+      "32706",
+      "121506",
+      "81904",
+      "81905",
+      "81906"
+    ],
+    "water": [
+      "57404",
+      "57405",
+      "57406",
+      "65604",
+      "65605",
+      "65606",
+      "16504",
+      "16505",
+      "16506",
+      "49304",
+      "49305",
+      "49306",
+      "73905",
+      "73906",
+      "16705",
+      "16706",
+      "82305",
+      "82306",
+      "74304",
+      "74305",
+      "74306",
+      "25204",
+      "25205",
+      "25206",
+      "66305",
+      "66306",
+      "82705",
+      "82706",
+      "17204",
+      "17205",
+      "17206",
+      "58205",
+      "58206",
+      "58404",
+      "58405",
+      "58406",
+      "66604",
+      "66605",
+      "66606",
+      "74805",
+      "74806",
+      "66704",
+      "66705",
+      "66706",
+      "83105",
+      "83106",
+      "25804",
+      "25805",
+      "25806",
+      "75004",
+      "75005",
+      "75006",
+      "110606",
+      "34104",
+      "34105",
+      "34106",
+      "66904",
+      "66905",
+      "66906",
+      "26004",
+      "26005",
+      "26006",
+      "50604",
+      "50605",
+      "50606",
+      "67004",
+      "67005",
+      "67006",
+      "80805",
+      "42504",
+      "42505",
+      "42506",
+      "83505",
+      "83506",
+      "26204",
+      "26205",
+      "26206",
+      "50804",
+      "50805",
+      "50806",
+      "75404",
+      "75405",
+      "75406",
+      "75504",
+      "75505",
+      "75506",
+      "67404",
+      "67405",
+      "67406",
+      "75604",
+      "75605",
+      "75606",
+      "26504",
+      "26505",
+      "26506",
+      "83905",
+      "83906",
+      "51204",
+      "51205",
+      "51206",
+      "26705",
+      "26706",
+      "51404",
+      "51405",
+      "51406",
+      "59605",
+      "59606",
+      "84304",
+      "84305",
+      "84306",
+      "35204",
+      "35205",
+      "35206",
+      "76305",
+      "76306",
+      "27204",
+      "27205",
+      "27206",
+      "68206",
+      "19105",
+      "19106",
+      "68404",
+      "68405",
+      "68406",
+      "76604",
+      "76605",
+      "76606",
+      "84805",
+      "84806",
+      "19304",
+      "19305",
+      "19306",
+      "76704",
+      "76705",
+      "76706",
+      "35804",
+      "35805",
+      "35806",
+      "85004",
+      "85005",
+      "85006",
+      "109605",
+      "109606",
+      "44104",
+      "44105",
+      "44106",
+      "52305",
+      "52306",
+      "76904",
+      "76905",
+      "76906",
+      "36004",
+      "36005",
+      "36006",
+      "60604",
+      "60605",
+      "60606",
+      "77004",
+      "77005",
+      "77006",
+      "16204",
+      "36204",
+      "36205",
+      "36206",
+      "60804",
+      "60805",
+      "60806",
+      "85404",
+      "85405",
+      "85406",
+      "52705",
+      "52706",
+      "85504",
+      "85505",
+      "85506",
+      "77404",
+      "77405",
+      "77406",
+      "85604",
+      "85605",
+      "85606",
+      "36504",
+      "36505",
+      "36506",
+      "61204",
+      "61205",
+      "61206",
+      "36705",
+      "36706",
+      "53105",
+      "53106",
+      "61404",
+      "61405",
+      "61406",
+      "69605",
+      "69606",
+      "110605",
+      "45204",
+      "45205",
+      "45206",
+      "12504",
+      "12505",
+      "12506",
+      "53505",
+      "53506",
+      "86305",
+      "86306",
+      "37204",
+      "37205",
+      "37206",
+      "78205",
+      "78206",
+      "29105",
+      "29106",
+      "78404",
+      "78405",
+      "78406",
+      "86604",
+      "86605",
+      "86606",
+      "29304",
+      "29305",
+      "29306",
+      "53905",
+      "53906",
+      "86704",
+      "86705",
+      "86706",
+      "45804",
+      "45805",
+      "45806",
+      "119606",
+      "62305",
+      "62306",
+      "86904",
+      "86905",
+      "86906",
+      "46004",
+      "46005",
+      "46006",
+      "70604",
+      "70605",
+      "70606",
+      "87004",
+      "87005",
+      "87006",
+      "81405",
+      "111606",
+      "54304",
+      "54305",
+      "54306",
+      "46204",
+      "46205",
+      "46206",
+      "70804",
+      "70805",
+      "70806",
+      "62705",
+      "62706",
+      "119605",
+      "87404",
+      "87405",
+      "87406",
+      "16004",
+      "46504",
+      "46505",
+      "46506",
+      "54805",
+      "54806",
+      "71204",
+      "71205",
+      "71206",
+      "46705",
+      "46706",
+      "63105",
+      "63106",
+      "55004",
+      "55005",
+      "55006",
+      "71404",
+      "71405",
+      "71406",
+      "79605",
+      "79606",
+      "14104",
+      "14105",
+      "14106",
+      "120605",
+      "120606",
+      "111605",
+      "112605",
+      "112606",
+      "22504",
+      "22505",
+      "22506",
+      "63505",
+      "63506",
+      "47204",
+      "47205",
+      "47206",
+      "55404",
+      "55405",
+      "55406",
+      "88205",
+      "88206",
+      "39105",
+      "39106",
+      "55504",
+      "55505",
+      "55506",
+      "55604",
+      "55605",
+      "55606",
+      "88404",
+      "88405",
+      "88406",
+      "39304",
+      "39305",
+      "39306",
+      "63905",
+      "63906",
+      "72305",
+      "72306",
+      "80604",
+      "80605",
+      "80606",
+      "121605",
+      "121606",
+      "64304",
+      "64305",
+      "64306",
+      "15204",
+      "15205",
+      "15206",
+      "80804",
+      "80806",
+      "56305",
+      "56306",
+      "72705",
+      "72706",
+      "56604",
+      "56605",
+      "56606",
+      "64805",
+      "64806",
+      "81204",
+      "81205",
+      "81206",
+      "56704",
+      "56705",
+      "56706",
+      "73105",
+      "73106",
+      "15804",
+      "15805",
+      "15806",
+      "65004",
+      "65005",
+      "65006",
+      "81404",
+      "81406",
+      "89605",
+      "89606",
+      "24104",
+      "24105",
+      "24106",
+      "56904",
+      "56905",
+      "56906",
+      "16005",
+      "16006",
+      "68205",
+      "57004",
+      "57005",
+      "57006",
+      "122605",
+      "122606",
+      "32504",
+      "32505",
+      "32506",
+      "73505",
+      "73506",
+      "16205",
+      "16206",
+      "65404",
+      "65405",
+      "65406",
+      "49105",
+      "49106",
+      "65504",
+      "65505",
+      "65506"
+    ],
+    "wind": [
+      "49205",
+      "49206",
+      "90204",
+      "32904",
+      "32905",
+      "32906",
+      "90304",
+      "16604",
+      "16605",
+      "16606",
+      "123104",
+      "24804",
+      "74005",
+      "74006",
+      "90404",
+      "116105",
+      "116106",
+      "123204",
+      "24904",
+      "24905",
+      "24906",
+      "57704",
+      "57705",
+      "57706",
+      "74104",
+      "74105",
+      "74106",
+      "90504",
+      "115104",
+      "123304",
+      "123306",
+      "49604",
+      "49605",
+      "49606",
+      "82405",
+      "82406",
+      "90604",
+      "115204",
+      "16904",
+      "16905",
+      "16906",
+      "123404",
+      "123406",
+      "57904",
+      "57905",
+      "57906",
+      "90704",
+      "107104",
+      "107106",
+      "107107",
+      "115304",
+      "107204",
+      "107205",
+      "107206",
+      "115404",
+      "17104",
+      "17105",
+      "17106",
+      "25304",
+      "25305",
+      "25306",
+      "33504",
+      "33505",
+      "33506",
+      "107304",
+      "107305",
+      "107306",
+      "33604",
+      "50004",
+      "50005",
+      "50006",
+      "66405",
+      "66406",
+      "82805",
+      "82806",
+      "107404",
+      "107405",
+      "107406",
+      "116205",
+      "124405",
+      "58305",
+      "58306",
+      "17504",
+      "17505",
+      "17506",
+      "25704",
+      "25705",
+      "25706",
+      "33904",
+      "33905",
+      "33906",
+      "50304",
+      "50305",
+      "50306",
+      "74905",
+      "74906",
+      "124104",
+      "50404",
+      "50405",
+      "50406",
+      "58604",
+      "58605",
+      "58606",
+      "83205",
+      "83206",
+      "124204",
+      "50504",
+      "50505",
+      "50506",
+      "58704",
+      "58705",
+      "58706",
+      "75104",
+      "75105",
+      "75106",
+      "116104",
+      "124304",
+      "58804",
+      "58805",
+      "58806",
+      "116305",
+      "116204",
+      "116206",
+      "124404",
+      "34304",
+      "58904",
+      "58905",
+      "58906",
+      "75304",
+      "75305",
+      "75306",
+      "108104",
+      "108105",
+      "108106",
+      "116304",
+      "34404",
+      "34405",
+      "34406",
+      "42605",
+      "42606",
+      "42607",
+      "59004",
+      "59005",
+      "59006",
+      "67204",
+      "67205",
+      "67206",
+      "83605",
+      "83606",
+      "108204",
+      "108205",
+      "108206",
+      "116404",
+      "18104",
+      "18105",
+      "18106",
+      "59104",
+      "59105",
+      "59106",
+      "100104",
+      "100105",
+      "100106",
+      "108304",
+      "18204",
+      "18205",
+      "18206",
+      "59204",
+      "59205",
+      "59206",
+      "100204",
+      "100205",
+      "100206",
+      "108404",
+      "18304",
+      "18305",
+      "18306",
+      "42904",
+      "42905",
+      "42906",
+      "51104",
+      "51105",
+      "51106",
+      "59304",
+      "59305",
+      "59306",
+      "100304",
+      "100305",
+      "100306",
+      "26604",
+      "26605",
+      "26606",
+      "34804",
+      "84005",
+      "84006",
+      "100404",
+      "100405",
+      "100406",
+      "34904",
+      "34905",
+      "34906",
+      "51304",
+      "51305",
+      "51306",
+      "67704",
+      "67705",
+      "67706",
+      "84104",
+      "84105",
+      "84106",
+      "125104",
+      "18705",
+      "18706",
+      "125204",
+      "26904",
+      "26905",
+      "26906",
+      "59705",
+      "59706",
+      "67904",
+      "67905",
+      "67906",
+      "117104",
+      "125304",
+      "51604",
+      "51605",
+      "51606",
+      "59804",
+      "59805",
+      "59806",
+      "115105",
+      "117204",
+      "117205",
+      "117206",
+      "125404",
+      "125405",
+      "27104",
+      "27105",
+      "27106",
+      "35304",
+      "35305",
+      "35306",
+      "43504",
+      "43505",
+      "43506",
+      "123305",
+      "59904",
+      "59905",
+      "59906",
+      "117304",
+      "117305",
+      "117306",
+      "43604",
+      "51804",
+      "51805",
+      "51806",
+      "60004",
+      "60005",
+      "60006",
+      "108305",
+      "108306",
+      "76405",
+      "76406",
+      "117404",
+      "117405",
+      "117406",
+      "68305",
+      "68306",
+      "101104",
+      "101105",
+      "101106",
+      "106206",
+      "19205",
+      "19206",
+      "101204",
+      "101205",
+      "101206",
+      "27504",
+      "27505",
+      "27506",
+      "35704",
+      "35705",
+      "35706",
+      "43904",
+      "43905",
+      "43906",
+      "19606",
+      "60304",
+      "60305",
+      "60306",
+      "84905",
+      "84906",
+      "101304",
+      "101305",
+      "101306",
+      "60404",
+      "60405",
+      "60406",
+      "68604",
+      "68605",
+      "68606",
+      "101404",
+      "101405",
+      "101406",
+      "115205",
+      "123405",
+      "60504",
+      "60505",
+      "60506",
+      "68704",
+      "68705",
+      "68706",
+      "85104",
+      "85105",
+      "85106",
+      "109705",
+      "19604",
+      "126104",
+      "126105",
+      "126106",
+      "52405",
+      "52406",
+      "108405",
+      "68804",
+      "68805",
+      "68806",
+      "126204",
+      "126206",
+      "44304",
+      "108406",
+      "68904",
+      "68905",
+      "68906",
+      "85304",
+      "85305",
+      "85306",
+      "118104",
+      "126304",
+      "126306",
+      "44404",
+      "44405",
+      "44406",
+      "69004",
+      "69005",
+      "69006",
+      "77204",
+      "77205",
+      "77206",
+      "118204",
+      "126404",
+      "126405",
+      "126406",
+      "28104",
+      "28105",
+      "28106",
+      "69104",
+      "69105",
+      "69106",
+      "28204",
+      "28205",
+      "28206",
+      "52805",
+      "52806",
+      "69204",
+      "69205",
+      "69206",
+      "115305",
+      "118404",
+      "118405",
+      "118406",
+      "28304",
+      "28305",
+      "28306",
+      "61104",
+      "61105",
+      "61106",
+      "69304",
+      "69305",
+      "69306",
+      "102104",
+      "102105",
+      "102106",
+      "36604",
+      "36605",
+      "36606",
+      "44804",
+      "102204",
+      "102205",
+      "102206",
+      "44904",
+      "44905",
+      "44906",
+      "61304",
+      "61305",
+      "61306",
+      "77704",
+      "77705",
+      "77706",
+      "123105",
+      "102304",
+      "102305",
+      "102306",
+      "53205",
+      "53206",
+      "102404",
+      "102405",
+      "102406",
+      "15704",
+      "118106",
+      "28705",
+      "28706",
+      "36904",
+      "36905",
+      "36906",
+      "126305",
+      "69705",
+      "69706",
+      "77904",
+      "77905",
+      "77906",
+      "110705",
+      "127104",
+      "127106",
+      "61604",
+      "61605",
+      "61606",
+      "69804",
+      "69805",
+      "69806",
+      "123106",
+      "115405",
+      "115406",
+      "127204",
+      "127205",
+      "127206",
+      "37104",
+      "37105",
+      "37106",
+      "45304",
+      "45305",
+      "45306",
+      "69904",
+      "69905",
+      "69906",
+      "12605",
+      "12606",
+      "12607",
+      "127304",
+      "127305",
+      "127306",
+      "53605",
+      "53606",
+      "61804",
+      "61805",
+      "61806",
+      "70004",
+      "70005",
+      "70006",
+      "86405",
+      "86406",
+      "127404",
+      "127405",
+      "127406",
+      "78305",
+      "78306",
+      "29205",
+      "29206",
+      "12904",
+      "12905",
+      "12906",
+      "37504",
+      "37505",
+      "37506",
+      "45704",
+      "45705",
+      "45706",
+      "70304",
+      "70305",
+      "70306",
+      "103104",
+      "103105",
+      "103106",
+      "54005",
+      "54006",
+      "70404",
+      "70405",
+      "70406",
+      "78604",
+      "78605",
+      "78606",
+      "103204",
+      "103205",
+      "103206",
+      "54104",
+      "54105",
+      "54106",
+      "70504",
+      "70506",
+      "78704",
+      "78705",
+      "78706",
+      "103304",
+      "103305",
+      "103306",
+      "119705",
+      "119706",
+      "29604",
+      "29605",
+      "29606",
+      "62405",
+      "62406",
+      "78804",
+      "78805",
+      "78806",
+      "103404",
+      "103405",
+      "103406",
+      "125105",
+      "125106",
+      "78904",
+      "78905",
+      "78906",
+      "23905",
+      "111706",
+      "70505",
+      "79004",
+      "79005",
+      "79006",
+      "87204",
+      "87205",
+      "87206",
+      "13504",
+      "13505",
+      "13506",
+      "124205",
+      "118305",
+      "38104",
+      "38105",
+      "38106",
+      "79104",
+      "79105",
+      "79106",
+      "126205",
+      "13604",
+      "123205",
+      "38204",
+      "38205",
+      "38206",
+      "123206",
+      "124406",
+      "62805",
+      "62806",
+      "79204",
+      "79205",
+      "79206",
+      "118205",
+      "38304",
+      "38305",
+      "38306",
+      "71104",
+      "71105",
+      "71106",
+      "79304",
+      "79305",
+      "79306",
+      "118206",
+      "46604",
+      "46605",
+      "46606",
+      "124305",
+      "118304",
+      "124306",
+      "13904",
+      "13905",
+      "13906",
+      "115206",
+      "118306",
+      "54905",
+      "54906",
+      "125205",
+      "115306",
+      "71304",
+      "71305",
+      "71306",
+      "87704",
+      "87705",
+      "87706",
+      "104104",
+      "104105",
+      "104106",
+      "63205",
+      "63206",
+      "104204",
+      "104205",
+      "104206",
+      "38705",
+      "38706",
+      "46905",
+      "46906",
+      "55104",
+      "55105",
+      "55106",
+      "79705",
+      "79706",
+      "87904",
+      "87905",
+      "87906",
+      "104304",
+      "104305",
+      "104306",
+      "120705",
+      "120706",
+      "116406",
+      "71604",
+      "71605",
+      "71606",
+      "79804",
+      "79805",
+      "79806",
+      "104404",
+      "104405",
+      "104406",
+      "14304",
+      "47104",
+      "47105",
+      "47106",
+      "55304",
+      "55305",
+      "55306",
+      "79904",
+      "79905",
+      "79906",
+      "112705",
+      "112706",
+      "14404",
+      "14405",
+      "14406",
+      "22605",
+      "22606",
+      "22607",
+      "63605",
+      "63606",
+      "71804",
+      "71805",
+      "71806",
+      "80004",
+      "80005",
+      "80006",
+      "117105",
+      "117106",
+      "125305",
+      "88305",
+      "88306",
+      "39205",
+      "39206",
+      "22904",
+      "22905",
+      "22906",
+      "47504",
+      "47505",
+      "47506",
+      "80304",
+      "80305",
+      "80306",
+      "113104",
+      "14804",
+      "64005",
+      "64006",
+      "80404",
+      "80405",
+      "80406",
+      "111705",
+      "88604",
+      "88606",
+      "113204",
+      "113205",
+      "14904",
+      "14905",
+      "14906",
+      "64104",
+      "64105",
+      "64106",
+      "80504",
+      "80505",
+      "80506",
+      "88704",
+      "88705",
+      "88706",
+      "125306",
+      "105104",
+      "105105",
+      "105106",
+      "113304",
+      "39604",
+      "39605",
+      "39606",
+      "72405",
+      "72406",
+      "88804",
+      "88805",
+      "88806",
+      "113105",
+      "113106",
+      "105204",
+      "105205",
+      "105206",
+      "113404",
+      "113405",
+      "113406",
+      "125406",
+      "88904",
+      "88905",
+      "88906",
+      "105304",
+      "105305",
+      "105306",
+      "121705",
+      "121706",
+      "116306",
+      "89004",
+      "89005",
+      "89006",
+      "105404",
+      "105405",
+      "105406",
+      "15304",
+      "15305",
+      "15306",
+      "23504",
+      "23505",
+      "23506",
+      "19605",
+      "48104",
+      "48105",
+      "48106",
+      "89104",
+      "89105",
+      "89106",
+      "23604",
+      "48204",
+      "48205",
+      "48206",
+      "56405",
+      "56406",
+      "109706",
+      "72805",
+      "72806",
+      "89204",
+      "89205",
+      "89206",
+      "88605",
+      "48304",
+      "48305",
+      "48306",
+      "124106",
+      "81104",
+      "81105",
+      "81106",
+      "89304",
+      "89305",
+      "89306",
+      "113206",
+      "15705",
+      "15706",
+      "23904",
+      "23906",
+      "116405",
+      "64905",
+      "64906",
+      "81304",
+      "81305",
+      "81306",
+      "114104",
+      "114105",
+      "114106",
+      "73205",
+      "73206",
+      "114204",
+      "114205",
+      "114206",
+      "48705",
+      "48706",
+      "46904",
+      "65104",
+      "65105",
+      "65106",
+      "89705",
+      "89706",
+      "106104",
+      "106105",
+      "106106",
+      "114304",
+      "114305",
+      "114306",
+      "127105",
+      "110706",
+      "124105",
+      "81604",
+      "81605",
+      "81606",
+      "89804",
+      "89805",
+      "89806",
+      "106204",
+      "106205",
+      "118105",
+      "114404",
+      "114405",
+      "114406",
+      "24304",
+      "115106",
+      "124206",
+      "65304",
+      "65305",
+      "65306",
+      "89904",
+      "89905",
+      "89906",
+      "106304",
+      "106305",
+      "106306",
+      "122705",
+      "122706",
+      "24404",
+      "24405",
+      "24406",
+      "32605",
+      "32606",
+      "32607",
+      "57204",
+      "57205",
+      "57206",
+      "73605",
+      "73606",
+      "81804",
+      "81805",
+      "81806",
+      "90004",
+      "113305",
+      "113306",
+      "106404",
+      "106405",
+      "106406",
+      "125206",
+      "90104"
+    ],
+    "earth": [
+      "24604",
+      "24605",
+      "24606",
+      "82004",
+      "82005",
+      "82006",
+      "65704",
+      "65705",
+      "65706",
+      "82105",
+      "82106",
+      "49404",
+      "49405",
+      "49406",
+      "57604",
+      "57605",
+      "57606",
+      "33204",
+      "33205",
+      "33206",
+      "57804",
+      "57805",
+      "57806",
+      "33304",
+      "33305",
+      "33306",
+      "49704",
+      "49705",
+      "49706",
+      "66105",
+      "66106",
+      "82505",
+      "82506",
+      "17004",
+      "17005",
+      "17006",
+      "58005",
+      "58006",
+      "74404",
+      "74405",
+      "74406",
+      "49904",
+      "49905",
+      "49906",
+      "74605",
+      "74606",
+      "66504",
+      "66505",
+      "66506",
+      "82905",
+      "82906",
+      "25604",
+      "25605",
+      "25606",
+      "58504",
+      "58505",
+      "58506",
+      "34004",
+      "34005",
+      "34006",
+      "17704",
+      "17705",
+      "17706",
+      "25904",
+      "25905",
+      "25906",
+      "83305",
+      "83306",
+      "34204",
+      "34205",
+      "34206",
+      "75204",
+      "75205",
+      "75206",
+      "17904",
+      "17905",
+      "50704",
+      "50705",
+      "50706",
+      "18004",
+      "18005",
+      "18006",
+      "26304",
+      "26305",
+      "26306",
+      "34504",
+      "34505",
+      "34506",
+      "50904",
+      "50905",
+      "50906",
+      "67304",
+      "67305",
+      "67306",
+      "83705",
+      "83706",
+      "34604",
+      "34605",
+      "34606",
+      "51004",
+      "51005",
+      "51006",
+      "75704",
+      "75705",
+      "75706",
+      "18404",
+      "18405",
+      "18406",
+      "59405",
+      "59406",
+      "67604",
+      "67605",
+      "67606",
+      "43204",
+      "43205",
+      "43206",
+      "67804",
+      "67805",
+      "67806",
+      "43304",
+      "43305",
+      "43306",
+      "51504",
+      "51505",
+      "51506",
+      "76105",
+      "76106",
+      "27004",
+      "27005",
+      "27006",
+      "68005",
+      "68006",
+      "84404",
+      "84405",
+      "84406",
+      "18905",
+      "18906",
+      "84605",
+      "84606",
+      "76504",
+      "76505",
+      "76506",
+      "35604",
+      "35605",
+      "35606",
+      "52004",
+      "52005",
+      "52006",
+      "109405",
+      "109406",
+      "52105",
+      "52106",
+      "68504",
+      "68505",
+      "68506",
+      "63305",
+      "19404",
+      "19405",
+      "19406",
+      "44004",
+      "44005",
+      "44006",
+      "14205",
+      "27704",
+      "27705",
+      "27706",
+      "35904",
+      "35905",
+      "35906",
+      "44204",
+      "44205",
+      "44206",
+      "85204",
+      "85205",
+      "85206",
+      "19704",
+      "19706",
+      "27904",
+      "27905",
+      "27906",
+      "52505",
+      "52506",
+      "60704",
+      "60705",
+      "60706",
+      "28004",
+      "28005",
+      "28006",
+      "19904",
+      "19906",
+      "36304",
+      "36305",
+      "36306",
+      "19705",
+      "44504",
+      "44505",
+      "44506",
+      "39904",
+      "60904",
+      "60905",
+      "60906",
+      "77304",
+      "77305",
+      "77306",
+      "44604",
+      "44605",
+      "44606",
+      "61004",
+      "61005",
+      "61006",
+      "52905",
+      "52906",
+      "85704",
+      "85705",
+      "85706",
+      "28404",
+      "28405",
+      "28406",
+      "69405",
+      "69406",
+      "77604",
+      "77605",
+      "77606",
+      "77804",
+      "77805",
+      "77806",
+      "53305",
+      "53306",
+      "61504",
+      "61505",
+      "61506",
+      "86105",
+      "86106",
+      "37004",
+      "37005",
+      "37006",
+      "78005",
+      "78006",
+      "28905",
+      "28906",
+      "53705",
+      "53706",
+      "86504",
+      "86505",
+      "86506",
+      "88005",
+      "45604",
+      "45605",
+      "45606",
+      "62004",
+      "62005",
+      "62006",
+      "19905",
+      "62105",
+      "62106",
+      "78504",
+      "78505",
+      "78506",
+      "29404",
+      "29405",
+      "29406",
+      "111405",
+      "111406",
+      "37704",
+      "37705",
+      "37706",
+      "45904",
+      "45905",
+      "45906",
+      "13204",
+      "13205",
+      "13206",
+      "13304",
+      "13305",
+      "13306",
+      "29704",
+      "29705",
+      "29706",
+      "37904",
+      "37905",
+      "37906",
+      "62505",
+      "62506",
+      "70704",
+      "70705",
+      "70706",
+      "38004",
+      "38005",
+      "38006",
+      "54404",
+      "54405",
+      "54406",
+      "17906",
+      "29904",
+      "29905",
+      "29906",
+      "46304",
+      "46305",
+      "46306",
+      "70904",
+      "70905",
+      "70906",
+      "87304",
+      "87305",
+      "87306",
+      "54605",
+      "54606",
+      "71004",
+      "71005",
+      "71006",
+      "62905",
+      "62906",
+      "38404",
+      "38405",
+      "38406",
+      "79405",
+      "79406",
+      "87604",
+      "87605",
+      "87606",
+      "120406",
+      "14004",
+      "14005",
+      "14006",
+      "87804",
+      "87805",
+      "87806",
+      "112405",
+      "112406",
+      "63306",
+      "71504",
+      "71505",
+      "71506",
+      "119405",
+      "14204",
+      "119406",
+      "14206",
+      "47004",
+      "47005",
+      "47006",
+      "55204",
+      "55205",
+      "55206",
+      "64406",
+      "88006",
+      "38905",
+      "38906",
+      "14504",
+      "14505",
+      "14506",
+      "63705",
+      "63706",
+      "14604",
+      "14605",
+      "14606",
+      "72004",
+      "72005",
+      "72006",
+      "55704",
+      "55705",
+      "55706",
+      "72105",
+      "72106",
+      "88504",
+      "88505",
+      "88506",
+      "39404",
+      "39405",
+      "39406",
+      "121405",
+      "121406",
+      "47704",
+      "47705",
+      "47706",
+      "23204",
+      "23205",
+      "23206",
+      "23304",
+      "23305",
+      "23306",
+      "39704",
+      "39705",
+      "39706",
+      "47904",
+      "47905",
+      "47906",
+      "56105",
+      "56106",
+      "72505",
+      "72506",
+      "80704",
+      "80705",
+      "80706",
+      "48004",
+      "48005",
+      "48006",
+      "64404",
+      "64405",
+      "110405",
+      "110406",
+      "39905",
+      "39906",
+      "80904",
+      "80905",
+      "80906",
+      "64605",
+      "64606",
+      "81004",
+      "81005",
+      "81006",
+      "56504",
+      "56505",
+      "56506",
+      "72905",
+      "72906",
+      "15604",
+      "15605",
+      "15606",
+      "48404",
+      "48405",
+      "48406",
+      "89405",
+      "89406",
+      "24004",
+      "24005",
+      "24006",
+      "15904",
+      "15905",
+      "15906",
+      "122405",
+      "122406",
+      "73305",
+      "73306",
+      "81504",
+      "81505",
+      "81506",
+      "24204",
+      "24205",
+      "24206",
+      "65204",
+      "65205",
+      "65206",
+      "48905",
+      "48906",
+      "16304",
+      "16305",
+      "16306",
+      "24504",
+      "24505",
+      "24506",
+      "57304",
+      "57305",
+      "57306",
+      "120405",
+      "73705",
+      "73706"
+    ]
+  },
+  "unverified_element_equipment_ids": [
+    "16401",
+    "16402",
+    "16403",
+    "24601",
+    "24602",
+    "24603",
+    "32801",
+    "32802",
+    "41001",
+    "41002",
+    "41003",
+    "57401",
+    "57402",
+    "57403",
+    "65601",
+    "65602",
+    "65603",
+    "12301",
+    "82001",
+    "82002",
+    "82003",
+    "90201",
+    "90202",
+    "90203",
+    "16501",
+    "16502",
+    "16503",
+    "24701",
+    "24702",
+    "24703",
+    "32901",
+    "32902",
+    "32903",
+    "41101",
+    "41102",
+    "41103",
+    "49301",
+    "49302",
+    "49303",
+    "57501",
+    "57502",
+    "57503",
+    "65701",
+    "65702",
+    "65703",
+    "90301",
+    "90302",
+    "90303",
+    "22102",
+    "16601",
+    "16602",
+    "16603",
+    "123103",
+    "24801",
+    "24802",
+    "24803",
+    "33001",
+    "33002",
+    "33003",
+    "33004",
+    "41201",
+    "41202",
+    "41203",
+    "49401",
+    "49402",
+    "49403",
+    "57601",
+    "57602",
+    "57603",
+    "65801",
+    "65802",
+    "65803",
+    "90401",
+    "90402",
+    "90403",
+    "123203",
+    "24901",
+    "24902",
+    "24903",
+    "33101",
+    "33102",
+    "33103",
+    "41301",
+    "41302",
+    "41303",
+    "41304",
+    "41305",
+    "41306",
+    "41307",
+    "49501",
+    "49502",
+    "49503",
+    "57701",
+    "57702",
+    "57703",
+    "65901",
+    "65902",
+    "65903",
+    "124401",
+    "74101",
+    "74102",
+    "74103",
+    "90501",
+    "90502",
+    "90503",
+    "30103",
+    "115101",
+    "115102",
+    "115103",
+    "16801",
+    "16802",
+    "16803",
+    "123301",
+    "123303",
+    "25001",
+    "25003",
+    "38301",
+    "33201",
+    "33202",
+    "33203",
+    "41401",
+    "41402",
+    "41403",
+    "41404",
+    "41405",
+    "41406",
+    "41407",
+    "49601",
+    "49602",
+    "49603",
+    "57801",
+    "57802",
+    "57803",
+    "77901",
+    "66001",
+    "66002",
+    "66003",
+    "74201",
+    "74202",
+    "74203",
+    "90601",
+    "90602",
+    "90603",
+    "15101",
+    "15102",
+    "115201",
+    "115202",
+    "115203",
+    "16901",
+    "16902",
+    "16903",
+    "123403",
+    "25101",
+    "25103",
+    "33301",
+    "33302",
+    "33303",
+    "41501",
+    "41502",
+    "41503",
+    "41504",
+    "41505",
+    "41506",
+    "41507",
+    "49701",
+    "49702",
+    "49703",
+    "57901",
+    "57902",
+    "57903",
+    "74301",
+    "74302",
+    "74303",
+    "90701",
+    "90702",
+    "90703",
+    "107101",
+    "107102",
+    "107103",
+    "115301",
+    "115302",
+    "115303",
+    "17001",
+    "17002",
+    "17003",
+    "25201",
+    "25202",
+    "25203",
+    "33401",
+    "33402",
+    "33403",
+    "41601",
+    "41602",
+    "41603",
+    "41604",
+    "41605",
+    "41606",
+    "41607",
+    "49801",
+    "49802",
+    "49803",
+    "74401",
+    "74402",
+    "74403",
+    "12401",
+    "47901",
+    "107201",
+    "107202",
+    "107203",
+    "115401",
+    "115402",
+    "115403",
+    "17101",
+    "17102",
+    "17103",
+    "25301",
+    "25302",
+    "25303",
+    "33501",
+    "33502",
+    "33503",
+    "41701",
+    "49901",
+    "49902",
+    "49903",
+    "74501",
+    "74502",
+    "74503",
+    "28802",
+    "64303",
+    "107301",
+    "107302",
+    "107303",
+    "24202",
+    "17201",
+    "17202",
+    "17203",
+    "25401",
+    "25402",
+    "25403",
+    "33601",
+    "33602",
+    "33603",
+    "41801",
+    "50001",
+    "50002",
+    "50003",
+    "23301",
+    "22701",
+    "107401",
+    "107402",
+    "107403",
+    "17301",
+    "17302",
+    "17303",
+    "33701",
+    "33702",
+    "33703",
+    "41901",
+    "50101",
+    "50102",
+    "50103",
+    "66501",
+    "66502",
+    "66503",
+    "22401",
+    "23302",
+    "17401",
+    "17402",
+    "17403",
+    "25601",
+    "25602",
+    "25603",
+    "33801",
+    "33802",
+    "33803",
+    "42001",
+    "50201",
+    "50202",
+    "50203",
+    "58401",
+    "58402",
+    "58403",
+    "66601",
+    "66602",
+    "66603",
+    "11101",
+    "17501",
+    "17502",
+    "17503",
+    "25701",
+    "25702",
+    "25703",
+    "33901",
+    "33902",
+    "33903",
+    "23401",
+    "50301",
+    "50302",
+    "50303",
+    "58501",
+    "58502",
+    "58503",
+    "66701",
+    "66702",
+    "66703",
+    "17601",
+    "17602",
+    "17603",
+    "124103",
+    "25801",
+    "25802",
+    "25803",
+    "34001",
+    "34002",
+    "34003",
+    "42201",
+    "42202",
+    "42203",
+    "42204",
+    "50401",
+    "50402",
+    "50403",
+    "78603",
+    "58601",
+    "58602",
+    "58603",
+    "66801",
+    "66802",
+    "66803",
+    "75001",
+    "75002",
+    "75003",
+    "12501",
+    "13102",
+    "17701",
+    "17702",
+    "17703",
+    "124203",
+    "25901",
+    "25902",
+    "25903",
+    "123102",
+    "34102",
+    "34103",
+    "42301",
+    "42302",
+    "42303",
+    "42304",
+    "50501",
+    "50502",
+    "50503",
+    "58701",
+    "58702",
+    "58703",
+    "66901",
+    "66902",
+    "66903",
+    "75101",
+    "75102",
+    "75103",
+    "24301",
+    "116101",
+    "116102",
+    "116103",
+    "17801",
+    "17802",
+    "17803",
+    "124303",
+    "26001",
+    "26002",
+    "26003",
+    "34201",
+    "34202",
+    "34203",
+    "42401",
+    "42402",
+    "42403",
+    "50601",
+    "50602",
+    "50603",
+    "58801",
+    "58802",
+    "58803",
+    "67001",
+    "67002",
+    "67003",
+    "75201",
+    "75202",
+    "75203",
+    "13902",
+    "116201",
+    "116202",
+    "116203",
+    "17901",
+    "17903",
+    "124402",
+    "124403",
+    "26101",
+    "26102",
+    "26103",
+    "34301",
+    "34302",
+    "34303",
+    "42501",
+    "42502",
+    "42503",
+    "50701",
+    "50702",
+    "50703",
+    "58901",
+    "58902",
+    "58903",
+    "67101",
+    "67102",
+    "67103",
+    "75301",
+    "75302",
+    "75303",
+    "108101",
+    "108102",
+    "108103",
+    "116301",
+    "116302",
+    "116303",
+    "18001",
+    "18002",
+    "18003",
+    "26201",
+    "26202",
+    "26203",
+    "34401",
+    "34402",
+    "34403",
+    "42602",
+    "42603",
+    "42604",
+    "50801",
+    "50802",
+    "50803",
+    "59001",
+    "59002",
+    "59003",
+    "67201",
+    "67202",
+    "67203",
+    "11201",
+    "75401",
+    "75402",
+    "75403",
+    "108201",
+    "108202",
+    "108203",
+    "116401",
+    "116402",
+    "116403",
+    "18101",
+    "18102",
+    "18103",
+    "26301",
+    "26302",
+    "26303",
+    "34501",
+    "34502",
+    "34503",
+    "42701",
+    "42702",
+    "42703",
+    "50901",
+    "50902",
+    "50903",
+    "59101",
+    "59102",
+    "59103",
+    "67301",
+    "67302",
+    "67303",
+    "75501",
+    "75502",
+    "75503",
+    "100101",
+    "100102",
+    "100103",
+    "108301",
+    "108302",
+    "108303",
+    "10001",
+    "10002",
+    "10003",
+    "10004",
+    "18201",
+    "18202",
+    "18203",
+    "71301",
+    "26401",
+    "26402",
+    "26403",
+    "34601",
+    "34602",
+    "34603",
+    "42801",
+    "42802",
+    "51001",
+    "51002",
+    "51003",
+    "59201",
+    "59202",
+    "59203",
+    "67401",
+    "67402",
+    "67403",
+    "75601",
+    "75602",
+    "75603",
+    "100201",
+    "100202",
+    "100203",
+    "108401",
+    "108402",
+    "108403",
+    "10101",
+    "10102",
+    "10103",
+    "18301",
+    "18302",
+    "18303",
+    "26501",
+    "26502",
+    "26503",
+    "34701",
+    "34702",
+    "34703",
+    "42901",
+    "42902",
+    "42903",
+    "51101",
+    "51102",
+    "51103",
+    "59301",
+    "59302",
+    "59303",
+    "67501",
+    "67502",
+    "67503",
+    "75701",
+    "75702",
+    "75703",
+    "100301",
+    "100302",
+    "100303",
+    "10201",
+    "10202",
+    "10203",
+    "18401",
+    "18402",
+    "18403",
+    "26601",
+    "26602",
+    "26603",
+    "34801",
+    "34802",
+    "34803",
+    "43001",
+    "43002",
+    "43003",
+    "43004",
+    "51201",
+    "51202",
+    "51203",
+    "67601",
+    "67602",
+    "67603",
+    "75801",
+    "75802",
+    "75803",
+    "100401",
+    "100402",
+    "100403",
+    "10301",
+    "10302",
+    "10303",
+    "18501",
+    "18502",
+    "18503",
+    "34901",
+    "34902",
+    "34903",
+    "43101",
+    "43102",
+    "43103",
+    "51301",
+    "51302",
+    "51303",
+    "67701",
+    "67702",
+    "67703",
+    "75901",
+    "75902",
+    "75903",
+    "84101",
+    "84102",
+    "84103",
+    "10401",
+    "10402",
+    "10403",
+    "125103",
+    "26801",
+    "26802",
+    "26803",
+    "35001",
+    "35002",
+    "35003",
+    "43201",
+    "43202",
+    "43203",
+    "51401",
+    "51402",
+    "51403",
+    "67801",
+    "67802",
+    "67803",
+    "11301",
+    "76001",
+    "76002",
+    "76003",
+    "84201",
+    "84202",
+    "84203",
+    "123101",
+    "10501",
+    "10502",
+    "10503",
+    "125203",
+    "26901",
+    "26902",
+    "26903",
+    "35101",
+    "35102",
+    "35103",
+    "43301",
+    "43302",
+    "43303",
+    "51501",
+    "51502",
+    "51503",
+    "67901",
+    "67902",
+    "67903",
+    "84301",
+    "84302",
+    "84303",
+    "10601",
+    "10602",
+    "10603",
+    "117101",
+    "117102",
+    "117103",
+    "18801",
+    "18802",
+    "18803",
+    "125303",
+    "27001",
+    "27002",
+    "27003",
+    "35201",
+    "35202",
+    "35203",
+    "43401",
+    "43402",
+    "43403",
+    "51601",
+    "51602",
+    "51603",
+    "59801",
+    "59802",
+    "59803",
+    "84401",
+    "84402",
+    "84403",
+    "10701",
+    "10702",
+    "10703",
+    "117201",
+    "117202",
+    "117203",
+    "125403",
+    "27102",
+    "27103",
+    "123302",
+    "35302",
+    "35303",
+    "43501",
+    "43502",
+    "43503",
+    "51701",
+    "51702",
+    "25002",
+    "59902",
+    "59903",
+    "84501",
+    "84502",
+    "84503",
+    "10801",
+    "10802",
+    "10803",
+    "117301",
+    "117302",
+    "117303",
+    "24302",
+    "27201",
+    "27202",
+    "27203",
+    "35401",
+    "35402",
+    "35403",
+    "43601",
+    "43602",
+    "43603",
+    "51801",
+    "51802",
+    "51803",
+    "60001",
+    "60002",
+    "60003",
+    "14101",
+    "14102",
+    "10901",
+    "10902",
+    "10903",
+    "117401",
+    "117402",
+    "117403",
+    "27301",
+    "27302",
+    "27303",
+    "22301",
+    "43701",
+    "43702",
+    "43703",
+    "22303",
+    "51901",
+    "51902",
+    "51903",
+    "60101",
+    "60102",
+    "60103",
+    "76501",
+    "76502",
+    "76503",
+    "30501",
+    "101101",
+    "101102",
+    "101103",
+    "11001",
+    "11002",
+    "11003",
+    "27401",
+    "27402",
+    "27403",
+    "35601",
+    "35602",
+    "35603",
+    "43801",
+    "43802",
+    "43803",
+    "52001",
+    "52002",
+    "52003",
+    "60201",
+    "60202",
+    "60203",
+    "68401",
+    "68402",
+    "68403",
+    "11401",
+    "76601",
+    "76602",
+    "76603",
+    "24101",
+    "101201",
+    "101202",
+    "101203",
+    "11103",
+    "19301",
+    "19302",
+    "19303",
+    "24102",
+    "27501",
+    "27502",
+    "27503",
+    "35701",
+    "35702",
+    "35703",
+    "43901",
+    "43902",
+    "43903",
+    "60301",
+    "60302",
+    "60303",
+    "68501",
+    "68502",
+    "68503",
+    "76701",
+    "76702",
+    "76703",
+    "101301",
+    "101302",
+    "101303",
+    "11202",
+    "11203",
+    "19401",
+    "19402",
+    "19403",
+    "27601",
+    "27602",
+    "27603",
+    "35801",
+    "35802",
+    "35803",
+    "40101",
+    "44001",
+    "44002",
+    "44003",
+    "60401",
+    "60402",
+    "60403",
+    "68601",
+    "68602",
+    "68603",
+    "76801",
+    "76802",
+    "76803",
+    "85001",
+    "85002",
+    "85003",
+    "101401",
+    "101402",
+    "101403",
+    "123401",
+    "11303",
+    "11304",
+    "11305",
+    "11306",
+    "11307",
+    "19501",
+    "19502",
+    "19503",
+    "27701",
+    "27702",
+    "27703",
+    "87903",
+    "35901",
+    "35902",
+    "35903",
+    "44101",
+    "44102",
+    "44103",
+    "25102",
+    "60502",
+    "60503",
+    "68701",
+    "68702",
+    "68703",
+    "76901",
+    "76902",
+    "76903",
+    "85101",
+    "85102",
+    "85103",
+    "65301",
+    "11402",
+    "11403",
+    "11404",
+    "11405",
+    "11406",
+    "11407",
+    "19601",
+    "19602",
+    "19603",
+    "126101",
+    "126102",
+    "126103",
+    "27803",
+    "36001",
+    "36002",
+    "36003",
+    "44201",
+    "44202",
+    "44203",
+    "60601",
+    "60602",
+    "60603",
+    "68801",
+    "68802",
+    "68803",
+    "77001",
+    "77002",
+    "77003",
+    "85201",
+    "85202",
+    "85203",
+    "14201",
+    "14202",
+    "11501",
+    "11502",
+    "11503",
+    "11504",
+    "11505",
+    "11506",
+    "11507",
+    "19701",
+    "19702",
+    "19703",
+    "126201",
+    "126203",
+    "27901",
+    "27903",
+    "36101",
+    "36102",
+    "36103",
+    "44301",
+    "44302",
+    "44303",
+    "60701",
+    "60702",
+    "60703",
+    "68901",
+    "68902",
+    "68903",
+    "77101",
+    "77102",
+    "77103",
+    "85301",
+    "85302",
+    "85303",
+    "11601",
+    "11602",
+    "11603",
+    "11604",
+    "11605",
+    "11606",
+    "11607",
+    "19801",
+    "19802",
+    "19803",
+    "126303",
+    "28001",
+    "28003",
+    "36201",
+    "36202",
+    "36203",
+    "44401",
+    "44402",
+    "44403",
+    "60801",
+    "60802",
+    "60803",
+    "69001",
+    "69002",
+    "69003",
+    "77201",
+    "77202",
+    "77203",
+    "85401",
+    "85402",
+    "85403",
+    "11701",
+    "118201",
+    "118202",
+    "118203",
+    "19901",
+    "19902",
+    "19903",
+    "126401",
+    "126403",
+    "28103",
+    "36301",
+    "36302",
+    "36303",
+    "44501",
+    "44502",
+    "11302",
+    "126202",
+    "60901",
+    "60902",
+    "60903",
+    "69101",
+    "69102",
+    "69103",
+    "27902",
+    "77302",
+    "77303",
+    "85501",
+    "85502",
+    "85503",
+    "11801",
+    "118301",
+    "118302",
+    "118303",
+    "20001",
+    "20002",
+    "20003",
+    "20004",
+    "28201",
+    "28202",
+    "28203",
+    "36401",
+    "36402",
+    "36403",
+    "44601",
+    "44602",
+    "44603",
+    "61001",
+    "61002",
+    "61003",
+    "69201",
+    "69202",
+    "69203",
+    "77401",
+    "77402",
+    "77403",
+    "85601",
+    "85602",
+    "85603",
+    "11901",
+    "24401",
+    "118401",
+    "118402",
+    "118403",
+    "20103",
+    "28301",
+    "28302",
+    "28303",
+    "36501",
+    "36502",
+    "36503",
+    "44701",
+    "44702",
+    "44703",
+    "61101",
+    "61102",
+    "61103",
+    "69301",
+    "69302",
+    "69303",
+    "77501",
+    "77502",
+    "77503",
+    "85701",
+    "85702",
+    "85703",
+    "102101",
+    "102102",
+    "102103",
+    "12001",
+    "20201",
+    "20202",
+    "20203",
+    "28401",
+    "28402",
+    "28403",
+    "36601",
+    "36602",
+    "36603",
+    "44801",
+    "44802",
+    "44803",
+    "61201",
+    "61202",
+    "61203",
+    "77601",
+    "77602",
+    "77603",
+    "85801",
+    "85802",
+    "85803",
+    "14301",
+    "14302",
+    "102201",
+    "102202",
+    "102203",
+    "12101",
+    "12102",
+    "12103",
+    "20301",
+    "20302",
+    "20303",
+    "28501",
+    "28502",
+    "28503",
+    "44901",
+    "44902",
+    "44903",
+    "61301",
+    "61302",
+    "61303",
+    "77701",
+    "77702",
+    "77703",
+    "85901",
+    "85902",
+    "85903",
+    "102301",
+    "102302",
+    "102303",
+    "12201",
+    "12203",
+    "12204",
+    "20401",
+    "20402",
+    "20403",
+    "70303",
+    "36801",
+    "36802",
+    "36803",
+    "45001",
+    "45002",
+    "45003",
+    "61401",
+    "61402",
+    "61403",
+    "78501",
+    "77801",
+    "77802",
+    "77803",
+    "86001",
+    "86002",
+    "86003",
+    "118101",
+    "102401",
+    "102402",
+    "102403",
+    "118103",
+    "12302",
+    "12303",
+    "12304",
+    "20501",
+    "20502",
+    "20503",
+    "36901",
+    "36902",
+    "36903",
+    "45101",
+    "45102",
+    "45103",
+    "126302",
+    "61501",
+    "61502",
+    "61503",
+    "28002",
+    "77902",
+    "77903",
+    "12402",
+    "12403",
+    "20601",
+    "20602",
+    "20603",
+    "127101",
+    "127102",
+    "127103",
+    "28801",
+    "28803",
+    "37001",
+    "37002",
+    "37003",
+    "45201",
+    "45202",
+    "45203",
+    "40303",
+    "61601",
+    "61602",
+    "61603",
+    "69801",
+    "69802",
+    "69803",
+    "48501",
+    "48502",
+    "12502",
+    "12503",
+    "20701",
+    "20702",
+    "20703",
+    "127201",
+    "127202",
+    "127203",
+    "21201",
+    "37101",
+    "37102",
+    "37103",
+    "45301",
+    "45302",
+    "45303",
+    "61701",
+    "61702",
+    "61703",
+    "69901",
+    "69902",
+    "69903",
+    "12602",
+    "12603",
+    "12604",
+    "20801",
+    "20802",
+    "20803",
+    "127301",
+    "127302",
+    "127303",
+    "37201",
+    "37202",
+    "37203",
+    "45401",
+    "45402",
+    "45403",
+    "61801",
+    "61802",
+    "61803",
+    "70001",
+    "70002",
+    "70003",
+    "14401",
+    "81303",
+    "14402",
+    "12701",
+    "12702",
+    "12703",
+    "20901",
+    "20902",
+    "20903",
+    "127401",
+    "127402",
+    "127403",
+    "37301",
+    "37302",
+    "37303",
+    "61901",
+    "61902",
+    "61903",
+    "70101",
+    "70102",
+    "70103",
+    "86501",
+    "86502",
+    "86503",
+    "12801",
+    "12802",
+    "21001",
+    "21002",
+    "21003",
+    "37401",
+    "37402",
+    "37403",
+    "45601",
+    "45602",
+    "45603",
+    "62001",
+    "62002",
+    "62003",
+    "70201",
+    "70202",
+    "70203",
+    "78401",
+    "78402",
+    "78403",
+    "86601",
+    "86602",
+    "86603",
+    "15801",
+    "15802",
+    "12901",
+    "12902",
+    "12903",
+    "21101",
+    "21102",
+    "21103",
+    "29301",
+    "29302",
+    "29303",
+    "37501",
+    "37502",
+    "37503",
+    "45701",
+    "45702",
+    "126402",
+    "24003",
+    "70301",
+    "70302",
+    "28101",
+    "28102",
+    "78502",
+    "78503",
+    "86701",
+    "86702",
+    "86703",
+    "103101",
+    "103102",
+    "103103",
+    "13001",
+    "13002",
+    "13003",
+    "13004",
+    "21203",
+    "29401",
+    "29402",
+    "29403",
+    "37601",
+    "37602",
+    "37603",
+    "45801",
+    "45802",
+    "45803",
+    "70401",
+    "70402",
+    "70403",
+    "78601",
+    "78602",
+    "44503",
+    "13101",
+    "86801",
+    "86802",
+    "86803",
+    "103201",
+    "103202",
+    "103203",
+    "13103",
+    "21301",
+    "21303",
+    "21304",
+    "21305",
+    "21306",
+    "21307",
+    "29501",
+    "29502",
+    "29503",
+    "21302",
+    "37702",
+    "37703",
+    "45901",
+    "45902",
+    "45903",
+    "54101",
+    "54102",
+    "54103",
+    "70501",
+    "70502",
+    "70503",
+    "78701",
+    "78702",
+    "78703",
+    "86901",
+    "86902",
+    "86903",
+    "103301",
+    "103302",
+    "103303",
+    "13201",
+    "13202",
+    "13203",
+    "21403",
+    "21404",
+    "21405",
+    "21406",
+    "37701",
+    "29601",
+    "29602",
+    "29603",
+    "37801",
+    "37802",
+    "37803",
+    "46001",
+    "46002",
+    "46003",
+    "54201",
+    "54202",
+    "54203",
+    "77301",
+    "70601",
+    "70602",
+    "70603",
+    "78801",
+    "78802",
+    "78803",
+    "87001",
+    "87002",
+    "87003",
+    "103401",
+    "103402",
+    "103403",
+    "13301",
+    "13303",
+    "21501",
+    "21502",
+    "21503",
+    "21504",
+    "21505",
+    "21506",
+    "21507",
+    "29701",
+    "29702",
+    "29703",
+    "22402",
+    "37901",
+    "37902",
+    "125101",
+    "125102",
+    "46102",
+    "46103",
+    "17902",
+    "54301",
+    "54302",
+    "54303",
+    "70702",
+    "70703",
+    "78901",
+    "78902",
+    "78903",
+    "87101",
+    "87102",
+    "87103",
+    "13401",
+    "13403",
+    "21601",
+    "21602",
+    "21603",
+    "21604",
+    "21605",
+    "21606",
+    "21607",
+    "29801",
+    "29802",
+    "29803",
+    "38001",
+    "38002",
+    "38003",
+    "46201",
+    "46202",
+    "46203",
+    "54401",
+    "54402",
+    "54403",
+    "70802",
+    "70803",
+    "79001",
+    "79002",
+    "79003",
+    "47301",
+    "87201",
+    "87202",
+    "87203",
+    "123201",
+    "15901",
+    "15902",
+    "13501",
+    "13502",
+    "13503",
+    "21701",
+    "123202",
+    "29901",
+    "29902",
+    "29903",
+    "38101",
+    "38102",
+    "38103",
+    "46301",
+    "46302",
+    "46303",
+    "54501",
+    "54502",
+    "54503",
+    "70901",
+    "70902",
+    "70903",
+    "79101",
+    "79102",
+    "79103",
+    "87301",
+    "87302",
+    "87303",
+    "13601",
+    "13602",
+    "13603",
+    "21801",
+    "30001",
+    "30002",
+    "30003",
+    "30004",
+    "16002",
+    "38201",
+    "38202",
+    "38203",
+    "46401",
+    "46402",
+    "46403",
+    "71001",
+    "71002",
+    "71003",
+    "79201",
+    "79202",
+    "79203",
+    "87401",
+    "87402",
+    "87403",
+    "13701",
+    "13702",
+    "13703",
+    "21901",
+    "30101",
+    "30102",
+    "21401",
+    "21402",
+    "38302",
+    "38303",
+    "46501",
+    "46502",
+    "46503",
+    "124301",
+    "21407",
+    "71101",
+    "71102",
+    "71103",
+    "79301",
+    "79302",
+    "79303",
+    "87501",
+    "87502",
+    "87503",
+    "124302",
+    "65103",
+    "13801",
+    "13802",
+    "13803",
+    "22001",
+    "30201",
+    "30202",
+    "30203",
+    "38401",
+    "38402",
+    "38403",
+    "46601",
+    "46602",
+    "46603",
+    "71201",
+    "71202",
+    "71203",
+    "126301",
+    "87601",
+    "87602",
+    "87603",
+    "13901",
+    "13903",
+    "22101",
+    "22103",
+    "30301",
+    "30302",
+    "30303",
+    "106303",
+    "11102",
+    "38501",
+    "38502",
+    "38503",
+    "125202",
+    "71302",
+    "71303",
+    "87701",
+    "87702",
+    "87703",
+    "104101",
+    "104102",
+    "104103",
+    "14001",
+    "14002",
+    "14003",
+    "22201",
+    "22202",
+    "22203",
+    "22204",
+    "30401",
+    "30402",
+    "30403",
+    "46801",
+    "46802",
+    "46803",
+    "55001",
+    "55002",
+    "55003",
+    "71401",
+    "71402",
+    "71403",
+    "87801",
+    "87802",
+    "87803",
+    "16001",
+    "24201",
+    "104201",
+    "104202",
+    "104203",
+    "14103",
+    "20101",
+    "22304",
+    "20102",
+    "30502",
+    "30503",
+    "46901",
+    "46902",
+    "46903",
+    "21202",
+    "55101",
+    "55102",
+    "55103",
+    "45703",
+    "71501",
+    "71502",
+    "71503",
+    "87901",
+    "87902",
+    "104301",
+    "104302",
+    "104303",
+    "14203",
+    "22403",
+    "30601",
+    "30602",
+    "30603",
+    "38801",
+    "38802",
+    "38803",
+    "47001",
+    "47002",
+    "47003",
+    "55201",
+    "55202",
+    "55203",
+    "71601",
+    "71602",
+    "71603",
+    "79801",
+    "79802",
+    "79803",
+    "13302",
+    "104401",
+    "104402",
+    "104403",
+    "14303",
+    "22501",
+    "22502",
+    "22503",
+    "30701",
+    "30702",
+    "30703",
+    "47101",
+    "47102",
+    "47103",
+    "55301",
+    "55302",
+    "55303",
+    "71701",
+    "71702",
+    "71703",
+    "79901",
+    "79902",
+    "79903",
+    "14403",
+    "22602",
+    "22603",
+    "22604",
+    "30801",
+    "30802",
+    "30803",
+    "37903",
+    "47201",
+    "47202",
+    "47203",
+    "55401",
+    "55402",
+    "55403",
+    "71801",
+    "71802",
+    "71803",
+    "46101",
+    "80001",
+    "80002",
+    "80003",
+    "14501",
+    "14502",
+    "22702",
+    "22703",
+    "30901",
+    "30902",
+    "30903",
+    "125301",
+    "125302",
+    "47302",
+    "47303",
+    "55501",
+    "55502",
+    "55503",
+    "71901",
+    "71902",
+    "71903",
+    "80101",
+    "80102",
+    "80103",
+    "14601",
+    "14602",
+    "14603",
+    "70701",
+    "22801",
+    "22802",
+    "31001",
+    "31002",
+    "31003",
+    "47401",
+    "47402",
+    "47403",
+    "55601",
+    "55602",
+    "55603",
+    "72001",
+    "72002",
+    "72003",
+    "80201",
+    "80202",
+    "80203",
+    "88401",
+    "88402",
+    "88403",
+    "60501",
+    "16101",
+    "22302",
+    "16102",
+    "14701",
+    "14702",
+    "14703",
+    "22901",
+    "22902",
+    "22903",
+    "31101",
+    "31102",
+    "31103",
+    "39301",
+    "39302",
+    "39303",
+    "47501",
+    "47502",
+    "47503",
+    "55701",
+    "55702",
+    "55703",
+    "80301",
+    "80302",
+    "80303",
+    "88501",
+    "88502",
+    "88503",
+    "32503",
+    "113101",
+    "113102",
+    "113103",
+    "14801",
+    "14802",
+    "14803",
+    "23001",
+    "23002",
+    "23003",
+    "23004",
+    "31201",
+    "31202",
+    "31203",
+    "39401",
+    "39402",
+    "39403",
+    "40701",
+    "47601",
+    "47602",
+    "47603",
+    "55801",
+    "55802",
+    "55803",
+    "80401",
+    "80402",
+    "80403",
+    "88601",
+    "88602",
+    "88603",
+    "13402",
+    "113201",
+    "113202",
+    "113203",
+    "14902",
+    "14903",
+    "23103",
+    "31301",
+    "31302",
+    "31303",
+    "31304",
+    "31305",
+    "31306",
+    "31307",
+    "39501",
+    "39502",
+    "39503",
+    "47701",
+    "47702",
+    "47703",
+    "57103",
+    "55901",
+    "55902",
+    "55903",
+    "64101",
+    "64102",
+    "64103",
+    "80501",
+    "80502",
+    "80503",
+    "88701",
+    "88702",
+    "88703",
+    "105101",
+    "105102",
+    "105103",
+    "113301",
+    "113302",
+    "113303",
+    "15001",
+    "15002",
+    "15003",
+    "23202",
+    "23203",
+    "31401",
+    "31402",
+    "31403",
+    "31404",
+    "31405",
+    "31406",
+    "31407",
+    "39601",
+    "39602",
+    "39603",
+    "47801",
+    "47802",
+    "47803",
+    "56001",
+    "56002",
+    "56003",
+    "64201",
+    "64202",
+    "64203",
+    "80601",
+    "80602",
+    "80603",
+    "14503",
+    "88801",
+    "88802",
+    "88803",
+    "105201",
+    "105202",
+    "105203",
+    "113401",
+    "113402",
+    "113403",
+    "15103",
+    "23303",
+    "31501",
+    "31502",
+    "31503",
+    "31504",
+    "31505",
+    "31506",
+    "31507",
+    "39701",
+    "39702",
+    "39703",
+    "125402",
+    "47902",
+    "47903",
+    "64301",
+    "64302",
+    "27101",
+    "80701",
+    "80702",
+    "80703",
+    "88901",
+    "88902",
+    "88903",
+    "105301",
+    "105302",
+    "105303",
+    "125401",
+    "35301",
+    "15201",
+    "15202",
+    "15203",
+    "70801",
+    "23403",
+    "31601",
+    "31602",
+    "31603",
+    "31604",
+    "31605",
+    "31606",
+    "31607",
+    "39801",
+    "39802",
+    "39803",
+    "48001",
+    "48002",
+    "48003",
+    "64401",
+    "64402",
+    "64403",
+    "80801",
+    "80802",
+    "80803",
+    "89001",
+    "89002",
+    "89003",
+    "105401",
+    "105402",
+    "105403",
+    "15301",
+    "15302",
+    "15303",
+    "51703",
+    "23501",
+    "23502",
+    "23503",
+    "31701",
+    "39901",
+    "39902",
+    "39903",
+    "48101",
+    "48102",
+    "48103",
+    "24402",
+    "59901",
+    "64501",
+    "64502",
+    "64503",
+    "80901",
+    "80902",
+    "80903",
+    "89101",
+    "89102",
+    "89103",
+    "15401",
+    "15402",
+    "15403",
+    "23601",
+    "23602",
+    "23603",
+    "31801",
+    "40001",
+    "40002",
+    "40003",
+    "40004",
+    "48201",
+    "48202",
+    "48203",
+    "81001",
+    "81002",
+    "81003",
+    "89201",
+    "89202",
+    "89203",
+    "23701",
+    "23702",
+    "23703",
+    "31901",
+    "124101",
+    "124102",
+    "40102",
+    "40103",
+    "48301",
+    "48302",
+    "56501",
+    "56502",
+    "56503",
+    "81101",
+    "81102",
+    "81103",
+    "89301",
+    "89302",
+    "89303",
+    "15601",
+    "15602",
+    "15603",
+    "23801",
+    "23802",
+    "23803",
+    "32001",
+    "40201",
+    "40202",
+    "40203",
+    "48401",
+    "48402",
+    "48403",
+    "56601",
+    "56602",
+    "56603",
+    "81201",
+    "81202",
+    "81203",
+    "14901",
+    "15701",
+    "15702",
+    "15703",
+    "27801",
+    "23901",
+    "23902",
+    "23903",
+    "32101",
+    "32102",
+    "32103",
+    "40301",
+    "40302",
+    "23101",
+    "23102",
+    "27802",
+    "48503",
+    "56701",
+    "56702",
+    "56703",
+    "81301",
+    "81302",
+    "48303",
+    "114101",
+    "114102",
+    "114103",
+    "15803",
+    "24001",
+    "24002",
+    "123402",
+    "32201",
+    "32202",
+    "32203",
+    "32204",
+    "40401",
+    "40402",
+    "40403",
+    "56801",
+    "56802",
+    "56803",
+    "65001",
+    "65002",
+    "65003",
+    "81401",
+    "81402",
+    "81403",
+    "12202",
+    "114201",
+    "114202",
+    "114203",
+    "15903",
+    "24103",
+    "32301",
+    "32302",
+    "32303",
+    "32304",
+    "40501",
+    "40502",
+    "40503",
+    "56901",
+    "56902",
+    "56903",
+    "65101",
+    "65102",
+    "40903",
+    "81501",
+    "81502",
+    "81503",
+    "106101",
+    "106102",
+    "106103",
+    "114301",
+    "114302",
+    "114303",
+    "16003",
+    "118102",
+    "24203",
+    "32401",
+    "32402",
+    "32403",
+    "23402",
+    "40601",
+    "40602",
+    "40603",
+    "48801",
+    "48802",
+    "48803",
+    "57001",
+    "57002",
+    "57003",
+    "65201",
+    "65202",
+    "65203",
+    "81601",
+    "81602",
+    "81603",
+    "89801",
+    "89802",
+    "89803",
+    "106201",
+    "106202",
+    "106203",
+    "114401",
+    "114402",
+    "114403",
+    "16103",
+    "24303",
+    "32501",
+    "32502",
+    "124201",
+    "124202",
+    "40702",
+    "40703",
+    "57101",
+    "57102",
+    "65302",
+    "65303",
+    "81701",
+    "81702",
+    "81703",
+    "89901",
+    "89902",
+    "89903",
+    "106301",
+    "106302",
+    "34101",
+    "16201",
+    "16202",
+    "16203",
+    "125201",
+    "24403",
+    "32602",
+    "32603",
+    "32604",
+    "40801",
+    "40802",
+    "40803",
+    "57201",
+    "57202",
+    "57203",
+    "65401",
+    "65402",
+    "65403",
+    "81801",
+    "81802",
+    "81803",
+    "90001",
+    "90002",
+    "90003",
+    "106401",
+    "106402",
+    "106403",
+    "16301",
+    "16302",
+    "16303",
+    "24501",
+    "24502",
+    "24503",
+    "32701",
+    "32702",
+    "32703",
+    "40901",
+    "40902",
+    "23201",
+    "57301",
+    "57302",
+    "57303",
+    "65501",
+    "65502",
+    "65503",
+    "81901",
+    "81902",
+    "81903",
+    "90101",
+    "90102",
+    "90103"
+  ],
+  "hero_forms_without_parsed_element_formula": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "61100",
+    "12",
+    "12301",
+    "12302",
+    "12303",
+    "67600",
+    "71700",
+    "71701",
+    "4100",
+    "32800",
+    "36900",
+    "41000",
+    "8200",
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
+    "10301",
+    "10302",
+    "10303",
+    "65600",
+    "14401",
+    "14402",
+    "14403",
+    "69700",
+    "73800",
+    "73801",
+    "39000",
+    "32100",
+    "100",
+    "4200",
+    "8300",
+    "12401",
+    "12402",
+    "12403",
+    "67700",
+    "10601",
+    "32900",
+    "37000",
+    "2200",
+    "60100",
+    "6300",
+    "10401",
+    "10402",
+    "10403",
+    "65700",
+    "14501",
+    "14502",
+    "14503",
+    "69800",
+    "73900",
+    "73901",
+    "78000",
+    "35000",
+    "39100",
+    "200",
+    "4300",
+    "63700",
+    "12501",
+    "12502",
+    "12503",
+    "67800",
+    "71900",
+    "71901",
+    "33000",
+    "41200",
+    "2300",
+    "6400",
+    "60800",
+    "61700",
+    "10501",
+    "10502",
+    "10503",
+    "14601",
+    "14602",
+    "14603",
+    "69900",
+    "74000",
+    "74001",
+    "78100",
+    "35100",
+    "39200",
+    "84700",
+    "300",
+    "4400",
+    "8500",
+    "63800",
+    "12601",
+    "12602",
+    "12603",
+    "67900",
+    "72000",
+    "72001",
+    "33100",
+    "37200",
+    "6200",
+    "41300",
+    "2400",
+    "6500",
+    "61500",
+    "10602",
+    "10603",
+    "65900",
+    "14701",
+    "14702",
+    "14703",
+    "70000",
+    "70001",
+    "74100",
+    "74101",
+    "78200",
+    "35200",
+    "39300",
+    "400",
+    "4500",
+    "8600",
+    "63900",
+    "12701",
+    "12702",
+    "12703",
+    "68000",
+    "72100",
+    "72101",
+    "33200",
+    "37300",
+    "32500",
+    "2500",
+    "61900",
+    "10701",
+    "10702",
+    "10703",
+    "66000",
+    "14803",
+    "70100",
+    "70101",
+    "78300",
+    "35300",
+    "39400",
+    "500",
+    "4600",
+    "60500",
+    "8700",
+    "64000",
+    "12801",
+    "12802",
+    "12803",
+    "68100",
+    "37400",
+    "84400",
+    "2600",
+    "6700",
+    "62000",
+    "10801",
+    "10802",
+    "10803",
+    "66100",
+    "14901",
+    "14902",
+    "14903",
+    "78400",
+    "35400",
+    "39500",
+    "600",
+    "4700",
+    "64100",
+    "12901",
+    "12902",
+    "12903",
+    "68200",
+    "33400",
+    "37500",
+    "2700",
+    "6800",
+    "62100",
+    "10901",
+    "10902",
+    "10903",
+    "66200",
+    "15001",
+    "15002",
+    "15003",
+    "70300",
+    "70301",
+    "35500",
+    "39600",
+    "32200",
+    "700",
+    "8900",
+    "64200",
+    "13001",
+    "13002",
+    "13003",
+    "68300",
+    "37600",
+    "353000",
+    "2800",
+    "60200",
+    "62200",
+    "11001",
+    "11002",
+    "11003",
+    "66300",
+    "15101",
+    "15102",
+    "15103",
+    "74500",
+    "78600",
+    "35600",
+    "39700",
+    "800",
+    "4900",
+    "64300",
+    "13101",
+    "13102",
+    "13103",
+    "68400",
+    "33600",
+    "37700",
+    "2900",
+    "85000",
+    "60900",
+    "11101",
+    "11102",
+    "11103",
+    "66400",
+    "15201",
+    "15202",
+    "15203",
+    "70500",
+    "70501",
+    "74600",
+    "78700",
+    "35700",
+    "347000",
+    "84800",
+    "900",
+    "5000",
+    "9100",
+    "64400",
+    "13201",
+    "13202",
+    "13203",
+    "68500",
+    "33700",
+    "37800",
+    "3000",
+    "7100",
+    "62400",
+    "11201",
+    "11202",
+    "11203",
+    "66500",
+    "15301",
+    "15302",
+    "15303",
+    "70600",
+    "70601",
+    "74700",
+    "78800",
+    "35800",
+    "39900",
+    "1000",
+    "5100",
+    "9200",
+    "64500",
+    "13301",
+    "13302",
+    "13303",
+    "68600",
+    "33800",
+    "37900",
+    "32600",
+    "3100",
+    "62500",
+    "11301",
+    "11302",
+    "11303",
+    "66600",
+    "15401",
+    "15402",
+    "15403",
+    "70700",
+    "70701",
+    "74800",
+    "78900",
+    "35900",
+    "40000",
+    "44100",
+    "1100",
+    "5200",
+    "9300",
+    "64600",
+    "13401",
+    "13402",
+    "13403",
+    "68700",
+    "33900",
+    "38000",
+    "3200",
+    "7300",
+    "62600",
+    "11401",
+    "11402",
+    "11403",
+    "66700",
+    "15501",
+    "15502",
+    "15503",
+    "70800",
+    "70801",
+    "36000",
+    "40100",
+    "1200",
+    "5300",
+    "9400",
+    "64700",
+    "13501",
+    "13502",
+    "13503",
+    "68800",
+    "34000",
+    "39800",
+    "38100",
+    "3300",
+    "7400",
+    "62700",
+    "11501",
+    "11502",
+    "11503",
+    "66800",
+    "15601",
+    "15602",
+    "15603",
+    "70900",
+    "70901",
+    "79100",
+    "36100",
+    "40200",
+    "32300",
+    "44300",
+    "1300",
+    "5400",
+    "9500",
+    "64800",
+    "13601",
+    "13602",
+    "13603",
+    "68900",
+    "34100",
+    "38200",
+    "3400",
+    "60300",
+    "7500",
+    "11601",
+    "11602",
+    "11603",
+    "66900",
+    "15701",
+    "15702",
+    "15703",
+    "36200",
+    "40300",
+    "44400",
+    "1400",
+    "5500",
+    "9600",
+    "64900",
+    "13701",
+    "13702",
+    "13703",
+    "69000",
+    "73100",
+    "73101",
+    "38300",
+    "3500",
+    "7600",
+    "61000",
+    "62900",
+    "11701",
+    "11702",
+    "11703",
+    "67000",
+    "15801",
+    "15802",
+    "15803",
+    "71100",
+    "79300",
+    "83400",
+    "36300",
+    "84900",
+    "1500",
+    "5600",
+    "9700",
+    "65000",
+    "13801",
+    "13802",
+    "13803",
+    "69100",
+    "73200",
+    "73201",
+    "34300",
+    "38400",
+    "32000",
+    "3600",
+    "7700",
+    "63000",
+    "11801",
+    "11802",
+    "11803",
+    "67100",
+    "15901",
+    "15902",
+    "15903",
+    "79400",
+    "36400",
+    "40500",
+    "1600",
+    "5700",
+    "9800",
+    "65100",
+    "13901",
+    "13902",
+    "13903",
+    "69200",
+    "73300",
+    "73301",
+    "2100",
+    "34400",
+    "38500",
+    "32700",
+    "3700",
+    "7800",
+    "63100",
+    "11901",
+    "11902",
+    "11903",
+    "67200",
+    "16001",
+    "16002",
+    "16003",
+    "71300",
+    "71301",
+    "32400",
+    "40600",
+    "1700",
+    "5800",
+    "9900",
+    "65200",
+    "14001",
+    "14002",
+    "14003",
+    "69300",
+    "73400",
+    "73401",
+    "34500",
+    "38600",
+    "84600",
+    "3800",
+    "7900",
+    "63200",
+    "12001",
+    "12002",
+    "12003",
+    "67300",
+    "16101",
+    "16102",
+    "16103",
+    "71400",
+    "71401",
+    "36600",
+    "40700",
+    "1800",
+    "5900",
+    "61200",
+    "65300",
+    "14101",
+    "14102",
+    "14103",
+    "69400",
+    "73500",
+    "73501",
+    "38700",
+    "3900",
+    "69600",
+    "12101",
+    "12102",
+    "12103",
+    "67400",
+    "71500",
+    "71501",
+    "36700",
+    "40800",
+    "1900",
+    "6000",
+    "61300",
+    "10101",
+    "10102",
+    "10103",
+    "65400",
+    "14201",
+    "14202",
+    "14203",
+    "69500",
+    "73600",
+    "73601",
+    "34700",
+    "38800",
+    "4000",
+    "60400",
+    "8100",
+    "12201",
+    "12202",
+    "12203",
+    "67500",
+    "71600",
+    "71601",
+    "36800",
+    "84300",
+    "2000",
+    "6100",
+    "61400",
+    "10201",
+    "10202",
+    "10203",
+    "65500",
+    "14301",
+    "14302",
+    "14303",
+    "428000",
+    "73700",
+    "73701",
+    "38900"
+  ],
+  "manual_claims_retired": [
+    "Inference from lore/hero name/skill name",
+    "Sasuke family always Fire/Lightning",
+    "Elaina family always Wind",
+    "Wind universally increases speed",
+    "Earth always maximizes Titan boss damage",
+    "Horse accuracy always guarantees hits"
+  ]
+}
