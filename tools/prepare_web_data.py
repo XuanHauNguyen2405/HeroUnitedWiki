@@ -365,7 +365,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             var_name = (var_h.get("name") or "").lower()
             var_cd_info = character_detail_config.get(str(var_id), {})
             is_world_val = var_cd_info.get("is_world") or var_h.get("is_world")
-            is_skin_val = var_cd_info.get("is_skin") or var_h.get("evolution", {}).get("is_skin")
+            is_skin_val = str(var_id) in {str(v.get("is_skin")) for v in character_detail_config.values() if v.get("is_skin")}
             
             # Base forms first, then transferred/CT, then skins
             if is_skin_val:
@@ -396,7 +396,7 @@ def prepare_data(output_dir="output", web_data_dir="web/src/data"):
             var_has_bt = len(valid_bt_ids) > 0 or str(var_id) in bt_by_cid
             var_bt_count = 20 if var_has_bt else 0
             
-            var_is_skin = bool(var_cd_info.get("is_skin") or var_h.get("evolution", {}).get("is_skin"))
+            var_is_skin = str(var_id) in {str(v.get("is_skin")) for v in character_detail_config.values() if v.get("is_skin")}
             var_is_world = bool(var_cd_info.get("is_world") or var_h.get("is_world") or "ct -" in var_name.lower() or "ct-" in var_name.lower())
             is_base = (str(var_id) == str(base_id))
             
