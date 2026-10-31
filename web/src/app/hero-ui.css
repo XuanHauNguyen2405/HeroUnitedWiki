@@ -48,12 +48,12 @@
   outline-offset: 2px;
 }
 
-.hero-detail > section,
-.hero-detail > div {
+.hero-detail>section,
+.hero-detail>div {
   min-width: 0;
 }
 
-.hero-detail > section,
+.hero-detail>section,
 #hero-overview,
 #stats-simulator,
 #evolution,
@@ -83,9 +83,10 @@
 }
 
 @media (max-width: 639px) {
-  .hero-detail > section {
+  .hero-detail>section {
     padding: 1rem;
   }
+
   .hero-detail .element-badge {
     font-size: 0.75rem;
   }

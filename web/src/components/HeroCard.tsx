@@ -107,7 +107,7 @@ export default function HeroCard({
   maxLevel = 255,
   showAura,
   showElementBadge = true,
-  showRebirthBadge = true,
+  showRebirthBadge = false,
   showOccupation = true,
   showStars = true,
   size = "md",
@@ -212,10 +212,12 @@ export default function HeroCard({
     },
   }[size];
 
-  // Protrusion geometry matching in-game Card View (Images 2 & 4):
-  // Character sprite is scaled up, protruding past the top and side borders of the unmasked card frame.
-  const cardArtWidth = sizeConfig.width * 1.34;
-  const cardArtHeight = sizeConfig.height * 0.88;
+  // Authentic Cocos2d-x card portrait geometry (ui_hero_list_item.ccbi):
+  // Frame is 185x258 px; standardized half-body portrait canvas is 280x220 px anchored at (0.5, 0)
+  // at m_anim_node Y = 91/258 (35.27% from bottom of frame, resting on the inner window border).
+  const cardArtWidth = Math.round(sizeConfig.width * (280 / 185));
+  const cardArtHeight = Math.round(sizeConfig.height * (220 / 258));
+  const cardArtBottom = Math.round(sizeConfig.height * (91 / 258));
 
   // Rebirth stars / moons calculation (Authentic Cocos2d Lua rule):
   const isMoonTier = rebirthStage > 5;
@@ -289,23 +291,23 @@ export default function HeroCard({
         </div>
 
         {/* ==================================================== */}
-        {/* LAYER 3: HERO CHARACTER CARD ART (ZOOMED & PROTRUDING) */}
+        {/* LAYER 3: HERO CHARACTER CARD ART (HALF-BODY PORTRAIT) */}
         {/* ==================================================== */}
         {hasCardArt ? (
           <div
             className="absolute z-20 pointer-events-none flex items-end justify-center"
             style={{
-              top: sizeConfig.popoutTop,
-              bottom: sizeConfig.height * 0.20, // Sits comfortably behind bottom plaque
+              bottom: cardArtBottom,
               width: cardArtWidth,
-              left: (sizeConfig.width - cardArtWidth) / 2,
+              height: cardArtHeight,
+              left: Math.round((sizeConfig.width - cardArtWidth) / 2),
             }}
           >
             <img
               src={effectiveCardUrl!}
               alt={fullName}
               onError={() => setFailedImageSrc(effectiveCardUrl)}
-              className="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.75)] transform transition-transform duration-300 group-hover:scale-105"
+              className="w-full h-full object-contain object-bottom filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.75)] transform transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         ) : (
@@ -366,8 +368,8 @@ export default function HeroCard({
           <div
             className="absolute z-30 pointer-events-none"
             style={{
-              top: sizeConfig.height * 0.04,
-              right: sizeConfig.width * 0.05,
+              top: -Math.round(sizeConfig.badgeSize * 0.35),
+              right: -Math.round(sizeConfig.badgeSize * 0.25),
               width: sizeConfig.badgeSize,
               height: sizeConfig.badgeSize,
             }}

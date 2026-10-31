@@ -11,7 +11,7 @@ import HeroSkillCard from "@/components/HeroSkillCard";
 import HeroCard from "@/components/HeroCard";
 import HeroStandingArt from "@/components/HeroStandingArt";
 import HeroBanSucCard from "@/components/HeroBanSucCard";
-import { getSuperEvoStages, getBreakthroughStages, isSuperEvoUpgrade, maxStrengthenAtLevel } from "@/lib/hero-progression";
+import { getSuperEvoStages, getBreakthroughStages, isSuperEvoUpgrade, maxStrengthenAtLevel, resolveSkillAtEvolution } from "@/lib/hero-progression";
 import { formatNumber, getQualityConfig } from "@/lib/utils";
 import strengthenTableRaw from "@/data/character_strengthen.json";
 import EquipmentAdvisor from "@/components/EquipmentAdvisor";
@@ -328,6 +328,7 @@ function HeroInteractiveViewContent({
 
   // Regular evolution (+1 to +60) - Default to 0 (no +3 default)
   const [strengthenLevel, setStrengthenLevel] = useState<number>(0);
+  const [skillLevel, setSkillLevel] = useState<number>(1);
   const maxStrengthen = 60;
   function setLevel(value: number) {
     const next = Math.min(levelLimit, Math.max(1, value));
@@ -876,6 +877,7 @@ function HeroInteractiveViewContent({
               onClick={() => {
                 setLevel(1);
                 setStrengthenLevel(0);
+                setSkillLevel(1);
                 setSelectedChuyenStage(0);
                 setSelectedSuperEvoId(defaultSuperEvoId);
                 setSelectedBreakthroughStep(defaultBreakthroughStep);
@@ -890,6 +892,7 @@ function HeroInteractiveViewContent({
               onClick={() => {
                 setLevel(levelLimit);
                 setStrengthenLevel(maxStrengthenAtLevel(levelLimit, supportsStrengthening, strengthenTable));
+                setSkillLevel(30);
                 const lastRebirthStage = chuyenStages.at(-1)?.stage || 0;
                 setSelectedChuyenStage(lastRebirthStage);
                 setActiveTabChuyen(lastRebirthStage || 1);
@@ -1150,6 +1153,87 @@ function HeroInteractiveViewContent({
               </div>
             </div>
           )}
+
+          {/* Skill evolution progression summary from +1 to +60 */}
+          {(() => {
+            const evoSkills = (hero.skills_detailed || [])
+              .filter((sk: any) => sk.slot >= 1 && sk.slot <= 3 && (sk.evolution_chain?.length || 0) > 1)
+              .map((sk: any) => resolveSkillAtEvolution(sk, strengthenLevel, skillLevel));
+            if (evoSkills.length === 0) return null;
+            return (
+              <div className="pt-3 border-t border-slate-800/80 space-y-2.5">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                  <span className="font-bold text-amber-300 flex items-center gap-1.5">
+                    <span>🔥</span>
+                    <span>Cấp Kỹ Năng & Sát Thương Mở Theo Mốc Tiến Hóa (+{strengthenLevel}):</span>
+                  </span>
+                  <div className="flex flex-wrap items-center gap-1 text-[11px] font-mono">
+                    <span className="text-slate-400 mr-1">Mốc tăng cấp KN:</span>
+                    {[0, 3, 6, 9, 16, 26, 33, 37, 41, 50, 55, 60].map((mStep) => (
+                      <button
+                        key={mStep}
+                        type="button"
+                        onClick={() => handleStrengthenChange(mStep)}
+                        className={`px-1.5 py-0.5 rounded border transition-colors ${
+                          strengthenLevel === mStep
+                            ? "border-amber-400 bg-amber-500 text-slate-950 font-bold"
+                            : "border-slate-800 bg-slate-900 text-slate-400 hover:text-white"
+                        }`}
+                      >
+                        +{mStep}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
+                  {evoSkills.map((esk) => (
+                    <div
+                      key={esk.slot}
+                      className={`rounded-xl border p-3 text-xs space-y-1.5 ${
+                        esk.stage > 1
+                          ? "border-amber-500/40 bg-amber-950/15"
+                          : "border-slate-800 bg-slate-900/60"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-[11px] font-mono text-slate-400">Ô kỹ năng {esk.slot}</span>
+                        <span
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full border ${
+                            !esk.is_unlocked_by_evo
+                              ? "border-slate-700 bg-slate-900 text-slate-400"
+                              : esk.stage === esk.max_stage
+                              ? "border-amber-400 bg-amber-500/20 text-amber-300"
+                              : "border-sky-500/40 bg-sky-950/60 text-sky-300"
+                          }`}
+                        >
+                          {!esk.is_unlocked_by_evo
+                            ? `Mở tại +${esk.initial_unlock_evo}`
+                            : `Giai ${esk.stage}/${esk.max_stage} (+${esk.unlock_evo})`}
+                        </span>
+                      </div>
+                      <div className="font-bold text-white truncate" title={esk.name}>
+                        {esk.name}
+                      </div>
+                      {esk.effect != null && (
+                        <div className="text-[11px] text-slate-300 font-mono">
+                          Sát thương: <b className="text-amber-300">{esk.effect}%</b>
+                          {esk.evo_effect_gain > 0 && (
+                            <span className="text-emerald-400 ml-1">
+                              (+{esk.evo_effect_gain}% so với +0)
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      <div className="text-[11px] text-slate-400 line-clamp-2 leading-snug">
+                        {esk.description}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </HeroSection>
       )}
@@ -2250,19 +2334,77 @@ function HeroInteractiveViewContent({
 
       {/* 9. SKILLS LIST (7 Ô KỸ NĂNG NGUYÊN BẢN) */}
       <HeroSection id="skills" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
-        <div className="border-b border-slate-800 pb-4">
-          <h2 className="text-xl font-bold text-white flex items-center gap-2">
-            <span>⚡</span>
-            7 Ô Kỹ Năng Bản Thể
-          </h2>
-          <p className="text-xs text-slate-400 mt-1">
-            Toàn bộ 7 kỹ năng từ cấu hình game nguyên bản.
-          </p>
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+          <div>
+            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+              <span>⚡</span>
+              7 Ô Kỹ Năng Bản Thể
+            </h2>
+            <p className="text-xs text-slate-400 mt-1">
+              Toàn bộ 7 kỹ năng từ cấu hình game nguyên bản. Khi tăng mốc <b>Tiến Hóa (+1 đến +60)</b>, 3 kỹ năng đầu tự động thăng cấp từ <b>Giai 1 → Giai 8 (Cấp 1 → Cấp 8)</b> kèm mức tăng sát thương vật lý/ma pháp và sát thương thuộc tính tương ứng.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 bg-slate-950/80 border border-slate-800 rounded-2xl p-3 text-xs">
+            {supportsStrengthening && (
+              <div className="flex items-center gap-1.5 pr-3 border-r border-slate-800">
+                <span className="text-slate-400">Tiến Hóa:</span>
+                <button
+                  type="button"
+                  onClick={() => handleStrengthenChange(0)}
+                  className={`px-2 py-1 rounded-lg font-mono font-bold transition-colors ${
+                    strengthenLevel === 0
+                      ? "bg-amber-500 text-slate-950"
+                      : "bg-slate-900 text-slate-300 hover:bg-slate-800"
+                  }`}
+                >
+                  +0 (Giai 1)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleStrengthenChange(60)}
+                  className={`px-2 py-1 rounded-lg font-mono font-bold transition-colors ${
+                    strengthenLevel === 60
+                      ? "bg-amber-500 text-slate-950"
+                      : "bg-slate-900 text-amber-300 hover:bg-slate-800 border border-amber-500/30"
+                  }`}
+                >
+                  +60 (Giai 8 Max)
+                </button>
+              </div>
+            )}
+
+            <div className="flex items-center gap-1.5">
+              <span className="text-slate-400">Lv Kỹ Năng:</span>
+              {[1, 10, 20, 30].map((sLv) => (
+                <button
+                  key={sLv}
+                  type="button"
+                  onClick={() => setSkillLevel(sLv)}
+                  className={`px-2 py-1 rounded-lg font-mono font-bold transition-colors ${
+                    skillLevel === sLv
+                      ? "bg-sky-500 text-white"
+                      : "bg-slate-900 text-slate-300 hover:bg-slate-800"
+                  }`}
+                >
+                  Lv.{sLv}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {hero.skills_detailed?.map(sk => <HeroSkillCard key={`${sk.slot}-${sk.skill_id}`} skill={sk}
-            required={combatProfiles[hero.id]?.skill_unlocks[String(sk.slot)]} superEvo={mapSuperEvoIdToStage(selectedSuperEvoId)} />)}
+          {hero.skills_detailed?.map(sk => (
+            <HeroSkillCard
+              key={`${sk.slot}-${sk.skill_id}`}
+              skill={sk}
+              required={combatProfiles[hero.id]?.skill_unlocks[String(sk.slot)]}
+              superEvo={mapSuperEvoIdToStage(selectedSuperEvoId)}
+              strengthenLevel={strengthenLevel}
+              skillLevel={skillLevel}
+            />
+          ))}
         </div>
       </HeroSection>
 
