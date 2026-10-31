@@ -842,13 +842,18 @@ function HeroInteractiveViewContent({
         </div>
       </div>
 
-      <nav aria-label="Điều khiển tướng" className="flex flex-wrap gap-2">
-        <a className="hero-control" href="#level">Cấp độ</a>
-        {supportsStrengthening && <a className="hero-control" href="#evolution">Tiến hoá</a>}
-        {chuyenStages.length > 0 && <a className="hero-control" href="#rebirth">Chuyển sinh</a>}
-        {hasSuperEvo && <a className="hero-control" href="#super-evolution">Siêu tiến hoá</a>}
-        {breakthroughStages.length > 0 && <a className="hero-control" href="#breakthrough">Đột phá</a>}
-        <a className="hero-control" href="#equipment">Trang bị</a>
+      <nav aria-label="Điều khiển tướng" className="sticky top-16 z-30 flex items-center gap-1.5 overflow-x-auto no-scrollbar rounded-2xl border border-slate-800/90 bg-slate-950/85 p-2 backdrop-blur-xl shadow-xl shadow-black/40">
+        <span className="hidden xl:inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-400 shrink-0">Mục lục:</span>
+        <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-indigo-500/50 hover:bg-indigo-500/15 hover:text-indigo-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#level">🎯 Cấp độ & Chỉ số</a>
+        {supportsStrengthening && <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-amber-500/50 hover:bg-amber-500/15 hover:text-amber-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#evolution">⚡ Tiến hoá</a>}
+        {chuyenStages.length > 0 && <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-rose-500/50 hover:bg-rose-500/15 hover:text-rose-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#rebirth">🔥 Chuyển sinh</a>}
+        {hasSuperEvo && <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-amber-400/50 hover:bg-amber-400/15 hover:text-amber-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#super-evolution">🌟 Siêu tiến hoá</a>}
+        {breakthroughStages.length > 0 && <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-cyan-500/50 hover:bg-cyan-500/15 hover:text-cyan-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#breakthrough">💎 Đột phá</a>}
+        <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-emerald-500/50 hover:bg-emerald-500/15 hover:text-emerald-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#equipment">🛡️ Trang bị</a>
+        <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-purple-500/50 hover:bg-purple-500/15 hover:text-purple-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#badges">🎖️ Huy hiệu</a>
+        <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-amber-500/50 hover:bg-amber-500/15 hover:text-amber-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#fate-bonds">⚜️ Vận mệnh</a>
+        <a className="shrink-0 rounded-xl border border-slate-800 bg-slate-900/90 hover:border-sky-500/50 hover:bg-sky-500/15 hover:text-sky-200 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-all" href="#skills">📖 Kỹ năng</a>
+        <a className="ml-auto shrink-0 rounded-xl border border-slate-700/80 bg-slate-900 hover:bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-300 transition-all" href="#hero-overview" title="Lên đầu trang">⬆️</a>
       </nav>
 
       {/* 1. CẤP ĐỘ (LEVEL 1 - 255) & BẢNG THUỘC TÍNH TỔNG HỢP */}
@@ -1999,7 +2004,7 @@ function HeroInteractiveViewContent({
         selection={equipmentSelection} onSelect={setEquipmentSelection} />
 
       {/* 7. HUY HIỆU CỦA TƯỚNG */}
-      <HeroSection className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      <HeroSection id="badges" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
             <div className="flex items-center gap-2">
@@ -2114,7 +2119,7 @@ function HeroInteractiveViewContent({
       </HeroSection>
 
       {/* 8. VẬN MỆNH (KÍCH HOẠT VẬN MỆNH) */}
-      <HeroSection className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      <HeroSection id="fate-bonds" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
@@ -2244,7 +2249,7 @@ function HeroInteractiveViewContent({
       </HeroSection>
 
       {/* 9. SKILLS LIST (7 Ô KỸ NĂNG NGUYÊN BẢN) */}
-      <HeroSection className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
+      <HeroSection id="skills" className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 md:p-8 backdrop-blur-xl space-y-6">
         <div className="border-b border-slate-800 pb-4">
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
             <span>⚡</span>

@@ -13,52 +13,52 @@ export default function Header() {
   const navLinks = [
     { href: "/heroes", label: "Tướng", icon: "👤" },
     { href: "/suits", label: "Bộ Trang Bị", icon: "🛡️" },
-    { href: "/equipment", label: "Trang Bị", icon: "⚔️" },
     { href: "/ban-suc", label: "Ban Sức", icon: "🔮" },
     { href: "/tier-list", label: "Tier List", icon: "🏆" },
     { href: "/guides", label: "Cẩm Nang", icon: "📖" },
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#070a12]/90 backdrop-blur-xl border-b border-slate-800/80 shadow-lg shadow-black/20 transition-all">
+    <header className="sticky top-0 z-40 bg-[#060911]/88 backdrop-blur-xl border-b border-slate-800/80 shadow-lg shadow-black/30 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-3 xl:gap-5">
-
+        <div className="flex items-center justify-between h-16 gap-4 xl:gap-6">
+          
           {/* Logo & Brand */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 flex items-center justify-center font-black text-white text-base shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 flex items-center justify-center font-black text-white text-base shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
               SA
             </div>
             <div>
               <div className="text-base font-extrabold tracking-tight text-white flex items-center gap-1.5 whitespace-nowrap">
                 <span>SAHHT WIKI</span>
-                <span className="text-[10px] px-1.5 py-0.5 font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded">
+                <span className="text-[10px] px-1.5 py-0.5 font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded-md">
                   v1.2
                 </span>
               </div>
-              <div className="text-[10px] text-gray-400 font-medium tracking-wide whitespace-nowrap">
+              <div className="text-[11px] text-slate-400 font-medium tracking-wide whitespace-nowrap">
                 Siêu Anh Hùng Hội Tụ
               </div>
             </div>
           </Link>
 
           {/* Desktop Search */}
-          <div className="hidden md:block flex-1 min-w-[220px] max-w-xs xl:max-w-md mx-2">
-            <SearchBar placeholder="Tìm tướng, trang bị, bộ đồ..." />
+          <div className="hidden md:block flex-1 min-w-[240px] max-w-md xl:max-w-lg mx-2">
+            <SearchBar placeholder="Tìm nhanh tướng, bộ trang bị, kỹ năng... (nhấn /)" />
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 text-sm font-medium flex-shrink-0">
+          <nav className="hidden lg:flex items-center gap-1.5 text-sm font-medium flex-shrink-0 bg-slate-900/60 p-1 rounded-2xl border border-slate-800/80">
             {navLinks.map((item) => {
               const isActive = pathname.startsWith(item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-xl whitespace-nowrap transition-all ${isActive
-                      ? "bg-indigo-600/20 text-indigo-300 border border-indigo-500/40 font-semibold shadow-sm shadow-indigo-500/10"
-                      : "text-gray-300 hover:text-white hover:bg-slate-800/60 border border-transparent"
-                    }`}
+                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl whitespace-nowrap transition-all ${
+                    isActive
+                      ? "bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-600/30"
+                      : "text-slate-300 hover:text-white hover:bg-slate-800/80"
+                  }`}
                 >
                   <span className="text-sm">{item.icon}</span>
                   <span>{item.label}</span>
@@ -71,7 +71,7 @@ export default function Header() {
           <div className="flex lg:hidden items-center gap-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-gray-900 text-gray-300 hover:text-white border border-gray-800"
+              className="p-2 rounded-xl bg-slate-900 text-slate-300 hover:text-white border border-slate-800"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? "✕" : "☰"}
@@ -82,13 +82,13 @@ export default function Header() {
 
         {/* Mobile Search Input (Visible only on mobile/tablet) */}
         <div className="block md:hidden pb-3">
-          <SearchBar placeholder="Tìm kiếm nhanh..." />
+          <SearchBar placeholder="Tìm tướng, bộ trang bị..." />
         </div>
       </div>
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-800 bg-gray-950/95 px-4 pt-3 pb-6 space-y-1">
+        <div className="lg:hidden border-t border-slate-800 bg-[#060911]/98 px-4 pt-3 pb-6 space-y-1.5">
           {navLinks.map((item) => {
             const isActive = pathname.startsWith(item.href);
             return (
@@ -96,10 +96,11 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${isActive
-                    ? "bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 font-semibold"
-                    : "text-gray-300 hover:text-white hover:bg-gray-900"
-                  }`}
+                className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors ${
+                  isActive
+                    ? "bg-indigo-600/20 text-indigo-300 border border-indigo-500/30 font-semibold"
+                    : "text-slate-300 hover:text-white hover:bg-slate-900"
+                }`}
               >
                 <span className="text-base">{item.icon}</span>
                 <span>{item.label}</span>
